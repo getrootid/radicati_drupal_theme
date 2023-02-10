@@ -1,0 +1,99 @@
+<div id="page" class="full-site-wrapper">
+  {{ site_notification }}
+
+  <header class="header">
+    <div class="header__inner">
+      <div class="header__branding-wrapper">
+        {{ page.header_branding }}
+      </div>
+
+      <div class="header__primary-nav-wrapper">
+        {{ page.primary_navigation }}
+      </div>
+
+      <div class="header__secondary-nav-wrapper">
+        {{ page.secondary_navigation }}
+      </div>
+    </div>
+  </header>
+
+
+  {#  {% include '@organisms/000-header/_header.twig' with {#}
+  {#    regions: {#}
+  {#      header_branding: header_branding,#}
+  {#      secondary_navigation: secondary_navigation,#}
+  {#      primary_navigation: primary_navigation,#}
+  {#      off_canvas_header: off_canvas_header,#}
+  {#      off_canvas: off_canvas,#}
+  {#      off_canvas_footer: off_canvas_footer,#}
+  {#    }#}
+  {#  } only %}#}
+
+  {% block hero %}
+    {{ page.hero }}
+  {% endblock hero %}
+
+  <div class="all-content-wrapper">
+    {% block inline_menu %}
+      {{ page.inline_menu }}
+    {% endblock %}
+
+    {% block breadcrumb %}
+      {{ page.breadcrumb }}
+    {% endblock breadcrumb %}
+
+    {% if page.attributes.has_system_help %}
+      {{ page.system_help }}
+    {% endif %}
+
+    <main>
+      <a id="main-content"></a>
+      {% block pre_content %}
+        {{ page.pre_content }}
+      {% endblock pre_content %}
+
+      {% block page_title %}
+        {{ page.page_title }}
+      {% endblock %}
+
+      {% block page_content %}
+        <div id="main-page-content" class="page-content">
+          {% block content %}
+            {{ page.content }}
+          {% endblock %}
+
+            {{ page.sidebar_one }}
+
+
+            {{ page.sidebar_two }}
+        </div>
+      {% endblock page_content %}
+
+      {% block post_content %}
+        {{ page.post_content }}
+      {% endblock post_content %}
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__footer-region footer__footer-region--footer-one">
+        {{ page.footer_one }}
+      </div>
+
+      <div class="footer__footer-region footer__footer-region--footer-two">
+        {{ page.footer_two }}
+      </div>
+
+      <div class="footer__footer-region footer__footer-region--footer-three">
+        {{ page.footer_three }}
+      </div>
+    </div>
+
+    <div class="footer__copyright-wrapper">
+      <div class="footer__copyright-wrapper-inner">
+        {{ page.copyright }}
+      </div>
+    </div>
+  </footer>
+</div>

@@ -1,0 +1,48 @@
+radicati_drupal_theme.images.mobile:
+  label: Mobile (XS)
+  mediaQuery: ""
+  weight: 0
+  multipliers:
+    - 1x
+    - 2x
+  group: radicati_drupal_theme.images
+radicati_drupal_theme.images.smalltablet:
+  label: Small Tablet (SM)
+  mediaQuery: "(min-width: 576px)"
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x
+  group: radicati_drupal_theme.images
+radicati_drupal_theme.images.largetablet:
+  label: Large Tablet (MD)
+  mediaQuery: "(min-width: 768px)"
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x
+  group: radicati_drupal_theme.images
+radicati_drupal_theme.images.desktop:
+  label: Desktop (LG)
+  mediaQuery: "(min-width: 992px)"
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x
+  group: radicati_drupal_theme.images
+radicati_drupal_theme.images.largedesktop:
+  label: Large Desktop (XL)
+  mediaQuery: "(min-width: 1200px)"
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x
+  group: radicati_drupal_theme.images
+radicati_drupal_theme.images.hugedesktop:
+  label: Huge Desktop (XXL)
+  mediaQuery: "(min-width: 1400px)"
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x
+  group: radicati_drupal_theme.images

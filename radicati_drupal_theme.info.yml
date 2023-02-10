@@ -1,0 +1,43 @@
+name: Radicati Parent Theme
+type: theme
+#base theme: stable9
+base theme: classy
+description: 'Parent theme for sites made with Radicati. Not meant to be used by itself.'
+core_version_requirement: ^8.9 || ^9 || ^10
+
+libraries:
+  - radicati_drupal_theme/global-styles
+
+
+#ckeditor_stylesheets:
+#  - dist/css/theme/accent.css
+#  - dist/css/theme/variables.css
+#  - dist/css/theme/ckeditor.css
+
+ckeditor5-stylesheets: false
+
+# Regions - these aren't inherited by child themes and this needs to be copied into them.
+# if a new region is needed, assess whether this is serving a common need and see about
+# adding it back to the parent theme.
+regions:
+  site_notification: Site Notification
+  header_branding: Header Branding
+  secondary_navigation: Secondary Navigation
+  primary_navigation: Primary Navigation
+  off_canvas_header: Off-Canvas Header
+  off_canvas: Off-Canvas
+  off_canvas_footer: Off-Canvas Footer
+  system_help: System Help/Message
+  hero: Hero Content
+  inline_menu: Inline Menu
+  pre_content: Pre Content
+  breadcrumb: Breadcrumb
+  page_title: Page Title
+  content: Content
+  sidebar_one: Sidebar One
+  sidebar_two: Sidebar Two
+  post_content: Post Content
+  footer_one: Footer One
+  footer_two: Footer Two
+  footer_three: Footer Three
+  copyright: Copyright

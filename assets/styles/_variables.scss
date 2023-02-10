@@ -1,0 +1,53 @@
+@import '../../node_modules/sass-rem/rem';
+@import '../../node_modules/include-media/dist/include-media';
+
+:root {
+  --rad--default-link-color: blue;
+  --rad--default-link-text-decoration: underline;
+
+  --rad--default-font-family: Helvetica, sans-serif;
+  --rad--default-font-size: 1rem;
+  --rad--default-line-height: 1;
+  --rad--default-text-color: black;
+
+  --rad--content-width--xl:       75rem;
+  --rad--content-width--lg:       60rem;
+  --rad--content-width--md:       45rem;
+  --rad--content-width--sm:       90vw;
+  --rad--content-width--default:  90vw;
+
+  --rad--sidebar-one-width--xl:       var(--rad--sidebar-one-width--lg);
+  --rad--sidebar-one-width--lg:       12rem;
+  --rad--sidebar-one-width--md:       8rem;
+  --rad--sidebar-one-width--sm:       100%;
+  --rad--sidebar-one-width--default:  100%;
+
+  --rad--sidebar-two-width--xl:       var(--rad--sidebar-two-width--lg);
+  --rad--sidebar-two-width--lg:       12rem;
+  --rad--sidebar-two-width--md:       8rem;
+  --rad--sidebar-two-width--sm:       100%;
+  --rad--sidebar-two-width--default:  100%;
+
+  --rad--breakpoint--sm: 36rem;
+  --rad--breakpoint--md: 48rem;
+  --rad--breakpoint--lg: 62rem;
+  --rad--brakpoint--xl: 75rem;
+  --rad--breakpoint--xxl: 90rem;
+}
+
+
+// As of 1/26/2023 you can't use ccs3 variables in media queries so we have to stick with sass variables.
+
+$breakpoints: (
+        'sm': 36rem,
+        'md': 48rem,
+        'lg': 62rem,
+        'xl': 75rem,
+        'xxl': 90rem,
+);
+
+$breakpoint-sm: '>=sm';
+$breakpoint-md: '>=md';
+$breakpoint-lg: '>=lg';
+$breakpoint-xl: '>=xl';
+$breakpoint-xxl: '>=xxl';

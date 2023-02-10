@@ -1,0 +1,18 @@
+@import "../../variables";
+
+ul.menu {
+  list-style-type: none;
+}
+
+li.menu-item {
+  list-style-type: none;
+
+  a {
+    text-decoration: none;
+    color: black;
+
+    &:hover, &:focus {
+
+    }
+  }
+}

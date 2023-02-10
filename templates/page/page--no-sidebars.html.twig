@@ -1,0 +1,9 @@
+{% extends "page.html.twig" %}
+
+{% block page_content %}
+  <div id="main-page-content" class="page-content page-content--no-sidebars">
+    {% block content %}
+      {{ page.content }}
+    {% endblock %}
+  </div>
+{% endblock page_content %}

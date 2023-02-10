@@ -1,0 +1,33 @@
+@import "../../variables";
+
+h1 {
+  font-size: rem(24px);
+  font-weight: bold;
+
+  @include media($breakpoint-lg) {
+    font-size: rem(36px);
+  }
+}
+
+
+
+h2 {
+  font-size: rem(22px);
+  font-weight: bold;
+
+  @include media($breakpoint-lg){
+    font-size: rem(34px);
+  }
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+h5 {
+
+}

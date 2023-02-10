@@ -1,0 +1,41 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+{#
+  By default, view embeds don't show their titles.
+  If this is an embed, who the title anyways
+
+#}
+{% if view.getDisplay().getPluginId() == 'embed' and view.getTitle() %}
+  {% set title = view.getTitle() %}
+{% endif %}
+
+{% if title %}
+  <h3 class="view-title">{{ title|raw }}</h3>
+{% endif %}
+<div class="views-rows">
+  {% for row in rows %}
+    {%
+      set row_classes = [
+      default_row_class ? 'views-row',
+    ]
+    %}
+    <div{{ row.attributes.addClass(row_classes) }}>
+      {{- row.content -}}
+    </div>
+  {% endfor %}
+</div>

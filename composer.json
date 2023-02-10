@@ -1,0 +1,12 @@
+{
+    "name": "getrootid/radicati-drupal-theme",
+    "description": "Parent theme for Drupal 8+ Websites using the Radicati suite of tools.",
+    "type": "drupal-theme",
+    "authors": [
+        {
+            "name": "Jason Neumark Mickela",
+            "email": "jason@rootid.com"
+        }
+    ],
+    "require": {}
+}
