@@ -1,5 +1,5 @@
 {
-    "name": "getrootid/radicati-drupal-theme",
+    "name": "getrootid/radicati_drupal_theme",
     "description": "Parent theme for Drupal 8+ Websites using the Radicati suite of tools.",
     "type": "drupal-theme",
     "authors": [
