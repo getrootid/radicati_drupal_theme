@@ -26,6 +26,41 @@ var config = {
   componentDest: "../../modules/radicati/rexe/components",
 };
 
+
+// In the child theme, change the default localServerUrl to match the current project!
+if (fs.existsSync("./gulpfile.local.json")) {
+  config = Object.assign(config, require("./gulpfile.local.json"));
+} else {
+  config.localServerUrl = "https://example-site.lndo.site/";
+}
+
+/**
+ * Browsersync reload function that announces it's done
+ * so the sync function doesn't hang
+ */
+function browserSyncReload(done) {
+  browserSync.reload();
+  done();
+}
+
+/**
+ * Clear Drupal cache
+ */
+function clearcache() {
+  return spawn("drush", ["cache-rebuild"], { stdio: "inherit" });
+}
+
+/**
+ * Clear Lando Drupal cache
+ */
+function clearLandoCache() {
+  return exec("lando drush cr", function cb(err, stdout, stderr) {
+    console.log(stdout); // outputs the normal messages
+    console.log(stderr); // outputs the error messages
+  });
+}
+
+
 /**
  * Compile pattern library scss
  */
@@ -65,8 +100,36 @@ function watch() {
   gulp.watch("./assets/styles/**/*.scss", css);
 }
 
+
+/**
+ * Initialize browser sync with lando drupal site, compile
+ * scss on change, clear drush cache on change, reload
+ * browser sync
+ */
+function landoDrupalServe() {
+  browserSync.init({
+    open: false,
+    proxy: config.localServerUrl,
+  });
+  gulp.watch("./patterns/**/*.scss", css);
+  gulp.watch(
+    [
+      "./patterns/**/*.twig",
+      "./templates/**/*.twig",
+      "./*.theme",
+      "./*.libraries.yml",
+      "./*.info.yml",
+      "../../../modules/custom/**/*.twig",
+      "../../../modules/custom/**/*.yml",
+      "../../../modules/custom/**/*.module",
+    ],
+    gulp.series(clearLandoCache, browserSyncReload)
+  );
+}
+
 exports.css = css;
 exports.styles = css;
 exports.watch = watch;
+// exports.serve = landoDrupalServe;
 
 exports.default = watch;
