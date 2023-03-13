@@ -3,3 +3,5 @@ global-styles:
   css:
     theme:
       dist/css/styles.css: { preprocess: false }
+  js:
+    dist/js/drupalDisplace.js: {}
