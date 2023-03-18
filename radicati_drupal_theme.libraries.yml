@@ -5,3 +5,18 @@ global-styles:
       dist/css/styles.css: { preprocess: false }
   js:
     dist/js/drupalDisplace.js: {}
+
+fitvids:
+  version: 2.x
+  js:
+    dist/libs/fitvids/scrollreveal.min.js: { minified: true }
+
+scroll-reveal:
+  version: 4.x
+  js:
+    dist/libs/scrollreveal/scrollreveal.min.js: { minified: true }
+
+scroll-spy:
+  version: 3.x
+  js:
+    dist/js/vanillajs-scrollspy/vanillajs-scrollspy.min.js: { minified: true }

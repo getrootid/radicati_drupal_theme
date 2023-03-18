@@ -1,4 +1,4 @@
-(function ($, Drupal, once) {
+(function (Drupal) {
   function getOffsets(offset) {
     var root = document.querySelector(":root");
     var offset = Drupal.displace();
@@ -18,4 +18,4 @@
     },
     true
   );
-})(jQuery, Drupal, once);
+})(Drupal);

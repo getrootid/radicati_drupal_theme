@@ -7,24 +7,20 @@
     "lib": "lib"
   },
   "devDependencies": {
-    "@prettier/plugin-php": "^0.18.9",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
-    "gulp-exec": "^4.0.0",
-    "gulp-load-plugins": "^2.0.7",
-    "gulp-minify": "^3.1.0",
-    "gulp-rename": "^2.0.0",
+    "@prettier/plugin-php": "^0.19",
+    "browser-sync": "^2",
+    "gulp": "^4",
+    "gulp-autoprefixer": "^8",
+    "gulp-exec": "^5",
     "gulp-sass": "^5",
-    "gulp-sass-glob": "^1.1.0",
-    "gulp-sourcemaps": "^2.6.5",
-    "include-media": "^1.4.10",
-    "melody-idom": "^1.1.0",
-    "melody-runtime": "^1.1.0",
-    "prettier": "^2.7.1",
-    "prettier-eslint": "^15.0.1",
-    "prettier-plugin-twig-melody": "^0.4",
+    "gulp-sass-glob": "^1",
+    "gulp-sourcemaps": "^3",
+    "include-media": "^2",
+    "prettier": "^2",
+    "prettier-eslint": "^15",
+    "prettier-plugin-twig": "^1",
     "sass": "^1",
-    "sass-rem": "^3.0.0"
+    "sass-rem": "^3"
   },
   "author": "",
   "license": "ISC",
@@ -34,6 +30,11 @@
     "iOS >=12"
   ],
   "dependencies": {
-    "fitvids": "^2.1.1"
+    "fitvids": "^2.1.1",
+    "scrollreveal": "^4.0.9",
+    "vanillajs-scrollspy": "^3.0.3"
+  },
+  "scripts": {
+    "postinstall": "./scripts/copy_npm_scripts.sh"
   }
 }
