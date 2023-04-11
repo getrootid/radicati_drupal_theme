@@ -1,0 +1,50 @@
+// In addition to not being able to get it to work, the new @use syntax seems to not allow using a module from a common
+// import. So we would need to @use sass-rem in every single file.
+@import '../node_modules/sass-rem/rem';
+@import '../node_modules/include-media/dist/include-media';
+
+// Admin Page Colors - Do not remove
+$color--rad-cream: #cccfcc;
+$color--rad-gray--light: #c4c4c4;
+$color--rad-gray--dark: #2a2a2d;
+$color--rad-gray--darker: #1d1d1d;
+$color--rad-gray-green--dark: #384038;
+$color--rad-red: #ee2323;
+$color--rad-orange: #ff6100;
+$color--rad-yellow: yellow;
+$color--rad-green: rgb(88, 133, 36);
+$color--rad-green--light: #d3ffd3;
+$color--rad-blue: #4567fa;
+$color--rad-blue--light: #eeeeff;
+// END COLORS
+
+// Fonts
+$font--arial: Arial, san-serif;
+$font--poppins: 'Poppins', sans-serif;
+$font--times-new-roman: 'Times New Roman', Times, Georgia, 'DejaVu Serif', serif;
+$font--karla: 'Karla', sans-serif;
+$font--times: Times, 'Times New Roman', Georgia, 'DejaVu Serif', serif;
+$font--georgia: Georgia, 'Times New Roman', 'DejaVu Serif', serif;
+$font--verdana: Verdana, Tahoma, 'DejaVu Sans', sans-serif;
+$font--tahoma: Tahoma, Verdana, 'DejaVu Sans', sans-serif;
+$font--helvetica: Helvetica, Arial, 'Nimbus Sans L', sans-serif;
+$font--helvetica-neue: 'HelveticaNeue-Light', 'Helvetica Neue Light',
+  'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+$arial: Arial, Helvetica, 'Nimbus Sans L', sans-serif;
+$font--poppins: 'Poppins', sans-serif;
+$font--courier: 'Courier New', 'DejaVu Sans Mono', monospace, sans-serif;
+$font--fontawesome: 'Font Awesome 5 Pro';
+
+$breakpoints: (
+  'sm': 36rem,
+  'md': 48rem,
+  'lg': 65rem,
+  'xl': 85rem,
+  'xxl': 90rem,
+);
+
+$breakpoint-sm: '>=sm';
+$breakpoint-md: '>=md';
+$breakpoint-lg: '>=lg';
+$breakpoint-xl: '>=xl';
+$breakpoint-xxl: '>=xxl';

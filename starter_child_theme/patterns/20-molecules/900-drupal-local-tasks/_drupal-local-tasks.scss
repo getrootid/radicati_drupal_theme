@@ -1,0 +1,28 @@
+@import '../../variables';
+
+nav.tabs ul.tabs.primary {
+  margin-top: 15px;
+  border-bottom: 1px solid $color--rad-green;
+
+  a {
+    padding: rem(15px 20px 10px 20px);
+    color: black;
+
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    background: $color--rad-blue--light;
+    border-bottom: 5px solid $color--rad-blue--light;
+  }
+
+  a.is-active {
+    background: $color--rad-green;
+    border-bottom: 5px solid $color--rad-green;
+    color: white;
+  }
+
+  a:hover,
+  a:focus {
+    outline: 0;
+    border-bottom: 5px solid $color--rad-orange;
+  }
+}

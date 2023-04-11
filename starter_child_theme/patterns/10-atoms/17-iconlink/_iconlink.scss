@@ -1,0 +1,37 @@
+@import "../../variables";
+
+// NOTE: It's assumed that things like margins will be controlled where this gets used.
+
+.iconlink {
+  width: rem(44px);
+  height: rem(44px);
+  color: black;
+  background: gray;
+  border: 2px solid black;
+  border-radius: 50%;
+  position: relative;
+
+  display: inline-flex !important;
+  justify-content: center;
+  align-items: center;
+
+  .icon {
+    margin: 0;
+  }
+
+  &:hover, &:focus {
+    border-color: red;
+    outline: 0;
+  }
+}
+
+// TODO: Formalize the label in some way. We need a good accessible approach to providing "tooltips" baked in.
+// NOTE: actual tooltips aren't accessible.
+
+// Can have a label that appears to the right (normally used as a tooltip)
+.iconlink__label {
+  font-size: rem(12px);
+  left: 115%;
+  position: absolute;
+  line-height: 1.1;
+}

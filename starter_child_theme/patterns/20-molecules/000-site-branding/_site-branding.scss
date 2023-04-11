@@ -1,0 +1,143 @@
+@import '../../variables';
+
+.header__branding-wrapper {
+  width: rem(280px);
+
+  @include media($breakpoint-xl) {
+    width: rem(323px);
+  }
+}
+
+.block-system-branding-block {
+  margin: 0 !important;
+  padding: 0 !important;
+  background: white;
+
+  img {
+    display: block;
+    height: auto;
+    width: rem(250px);
+
+    @include media('>=22em') {
+      width: rem(280px);
+    }
+
+    @include media($breakpoint-xl) {
+      width: rem(323px);
+    }
+  }
+}
+
+//
+//$logo-width: 175px;
+//
+//#block-sitebranding {
+//  // align-items: center;
+//  // display: flex;
+//  // justify-content: center;
+//  overflow: visible;
+//  padding-top: rem(10px);
+//  // max-width: calc(100% );
+//}
+//
+//.site-branding {
+//  background-color: $color--blue-dark;
+//  // border: 1px solid black;
+//  border-radius: 50%;
+//  box-shadow: 0 0 1px black;
+//  display: block;
+//  height: rem(120px);
+//  padding-top: 100%;
+//  position: relative;
+//  width: rem(120px);
+//
+//  // a {
+//  //   height: rem(100px);
+//  // }
+//}
+//
+//.site-branding svg {
+//  max-height: 100%;
+//  left: 50%;
+//  max-width: calc(100% - rem(2px));
+//  position: absolute;
+//  top: 50%;
+//  transform: translate(-50%, -50%);
+//  // height: 100%;
+//  // @include rem('max-width', 100px);
+//
+//  @include media($breakpoint-lg) {
+//    // @include rem('max-width', 142px);
+//  }
+//
+//  path {
+//    fill: white;
+//  }
+//}
+//
+//.site-branding--default {
+//  svg g#rootie path {
+//    fill: $color--rad-green;
+//  }
+//
+//  svg #name path {
+//    fill: black;
+//  }
+//}
+//
+//$animation_speed: 300ms;
+//
+//.site-branding--razzle_dazzle {
+//  #rootie {
+//    fill: $color--rad-green;
+//    transform-origin: 50% 50%;
+//    animation: rootie 2s linear;
+//  }
+//
+//  g#name path {
+//    fill: black;
+//  }
+//
+//  .rootid-r {
+//    animation: colors $animation_speed infinite ease 1s;
+//  }
+//  .rootid-o1 {
+//    animation: colors $animation_speed infinite ease 3s;
+//  }
+//  .rootid-o2 {
+//    animation: colors $animation_speed infinite ease 5s;
+//  }
+//  .rootid-t {
+//    animation: colors $animation_speed infinite ease 7s;
+//  }
+//  .rootid-i {
+//    animation: colors $animation_speed infinite ease 9s;
+//  }
+//  .rootid-d {
+//    animation: colors $animation_speed infinite ease 11s;
+//  }
+//}
+//
+//@keyframes rootie {
+//  0% {
+//    transform: rotate(0);
+//  }
+//  100% {
+//    transform: rotate(360deg);
+//  }
+//}
+//
+//@keyframes colors {
+//  0% {
+//    fill: $color--rad-green;
+//  }
+//  5% {
+//    fill: $color--rad-orange;
+//  }
+//  30% {
+//    fill: black;
+//  }
+//  100% {
+//    fill: $color--rad-green;
+//  }
+//}

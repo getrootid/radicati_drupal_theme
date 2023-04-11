@@ -1,0 +1,26 @@
+@import "../../variables";
+
+.views-element-container header {
+  margin-bottom: rem(15px);
+
+  a {
+    font-weight: bold;
+
+  }
+}
+
+.ept-reports-list__section__items {
+  list-style-type: none;
+  background: white;
+  border-radius: rem(12px);
+  padding: rem(10px 10px);
+
+  @include media($breakpoint-lg) {
+    padding: rem(46px 38px);
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}

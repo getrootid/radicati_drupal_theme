@@ -1,0 +1,40 @@
+{{ attach_library('radicati_d8/offcanvas-menu') }}
+{{ attach_library('radicati_d8/dropdown-menu') }}
+
+{% set base = 'off-canvas' %}
+
+<div class="oc-overlay"></div>
+
+<aside id="off-canvas"
+  {{ bem(base) }}
+  tabindex="-1"
+  role="region"
+  aria-label="{{ 'Site Menu'|trans }}"
+  aria-expanded="false">
+  <div {{ bem('header', null, 'offcanvas') }}>
+    <div {{ bem('logo', null, 'offcanvas') }}>
+      <a {{ bem('logo--link', null, 'offcanvas') }}
+        href="{{ path('<front>') }}"
+        title="MidPen OpenSpace Homepage">
+        {# <img src="{{base_path ~ active_theme_path()}}/dist/images/mobile_nav_logo.png" alt="ACLUNC Logo"> #}
+      </a>
+    </div>
+
+    <button type="button"
+      {{ bem('close', null, 'offcanvas') }}
+      aria-controls="off-canvas"
+      title="{{ 'Close Off-Canvas Navigation'|trans }}">
+      {{ offcanvas_close_button_contents
+        ? offcanvas_close_button_contents|raw
+        : '<span class="close-button"><span></span><span></span></span>' }}
+    </button>
+  </div>
+
+  <div {{ bem('content', null, 'offcanvas') }}>
+    {{ off_canvas }}
+  </div>
+
+  <div {{ bem('footer', null, 'offcanvas') }}>
+    {{ off_canvas_footer }}
+  </div>
+</aside>

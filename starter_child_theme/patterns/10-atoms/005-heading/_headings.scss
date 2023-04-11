@@ -1,0 +1,52 @@
+@import '../../variables';
+
+h1 {
+  font-size: 28px;
+  line-height: 1.2em;
+  margin: 0 0 5px;
+}
+
+h2 {
+  font-size: rem(24px);
+  color: var(--color--deep-purple);
+  font-weight: bold;
+
+  @include media($breakpoint-md) {
+    font-size: rem(40px);
+    line-height: rem(48px);
+    letter-spacing: rem(-1px);
+  }
+}
+
+h3 {
+  font-size: rem(22px);
+  line-height: 1.2;
+  margin: 0 0 5px;
+  color: var(--color--deep-purple);
+
+  @include media($breakpoint-md) {
+    font-size: rem(40px);
+  }
+}
+
+h4 {
+  font-size: rem(20px);
+  color: var(--color--deep-purple);
+  line-height: 1.55;
+
+  @include media($breakpoint-md) {
+    font-size: rem(30px);
+  }
+}
+
+h5 {
+  font-size: rem(17px);
+}
+
+h6 {
+  font-size: rem(16px);
+}
+
+.block-page-title-block h1, .block-smart-title-block h1 {
+  font-weight: bold;
+}

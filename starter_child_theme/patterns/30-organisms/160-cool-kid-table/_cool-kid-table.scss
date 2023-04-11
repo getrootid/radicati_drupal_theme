@@ -1,0 +1,62 @@
+@import "../../variables";
+
+.cool-kid-table__wrapper {
+  @extend .horizontal-scrollbar;
+
+  width: 100%;
+
+  .view-content {
+    overflow-x: scroll;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: rem(0 19px);
+  }
+
+  thead {
+    text-align: left;
+    vertical-align: bottom;
+
+    tr {
+      background:transparent;
+      color: var(--color--deep-purple);
+      font-size: rem(20px);
+      line-height: 1.2;
+      font-weight: bold;
+    }
+
+    th {
+      padding: rem(0 22.5px 10px 22.5px);
+    }
+
+    th:first-child {
+      padding-left: rem(45px);
+    }
+  }
+
+  tbody {
+    tr {
+      margin-bottom: rem(18px);
+    }
+
+    td {
+      text-align: left;
+      vertical-align: top;
+      background: white;
+      padding: rem(30px 22.5px 50px 22.5px);
+    }
+
+    td:first-child {
+      border-radius: rem(12px) 0 0 rem(12px);
+      padding-left: rem(45px);
+    }
+
+    td:last-child {
+      border-radius: 0 rem(12px) rem(12px) 0;
+      padding-right: rem(45px);
+    }
+  }
+
+}

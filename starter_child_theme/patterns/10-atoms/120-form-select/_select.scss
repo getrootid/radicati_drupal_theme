@@ -1,0 +1,9 @@
+@import "../../variables";
+
+select {
+  width: 100%;
+  height: rem(55px);
+  border: 1px solid #333333;
+  background: var(--color--ept-lavender);
+  padding-left: rem(15px);
+}

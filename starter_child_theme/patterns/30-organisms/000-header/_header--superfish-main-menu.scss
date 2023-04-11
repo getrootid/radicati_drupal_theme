@@ -1,0 +1,109 @@
+//@import '../../variables';
+//
+//// TODO: A depth of three? Most sites don't go that far, but we should be ready for it.
+//
+//.block-superfishmain {
+//  // Top level menu
+//  ul.menu.sf-main {
+//  }
+//
+//  li.sf-depth-1 {
+//    margin: rem(0 45px 0 0) !important;
+//  }
+//
+//  a.sf-depth-1 {
+//    color: white !important;
+//    font-family: $font--poppins;
+//    font-weight: bold;
+//    font-size: rem(12px);
+//    letter-spacing: 0.04rem;
+//    text-transform: uppercase;
+//    height: rem(32px);
+//    border-bottom: 5px solid transparent;
+//    padding: 0;
+//
+//    @include media('>=xl') {
+//      font-size: rem(17px);
+//    }
+//
+//    &:hover,
+//    &:focus {
+//      color: white;
+//      border-color: $color--blue-light;
+//      outline: none;
+//    }
+//  }
+//
+//  li.sf-depth-1.sfHover > ul {
+//    top: 100%;
+//    //padding: rem(26px 0);
+//    background: rgba(38, 99, 131, 0.97);
+//  }
+//
+//  li.sf-depth-2 {
+//    margin-bottom: rem(34px);
+//  }
+//
+//  a.is-active {
+//    font-weight: bold;
+//  }
+//
+//  a.sf-depth-2,
+//  a.sf-depth-2:visited {
+//    color: white;
+//    width: 100%;
+//    border-left: 3px solid transparent;
+//    font-size: rem(12px);
+//    letter-spacing: rem(-0.1px);
+//
+//    @include media('>=xl') {
+//      font-size: rem(16px);
+//    }
+//
+//    &:focus,
+//    &:hover {
+//      border-left: 3px solid $color--blue-light;
+//      //text-decoration: underline;
+//      font-weight: bold;
+//      outline: none;
+//    }
+//  }
+//}
+//
+//// Special Case Menu:
+//#main-menu-link-contentfbbda3d8-87a0-45aa-b9a4-16a6eaf49692 {
+//  ul {
+//    // Grid can't currently flow items down columns
+//    // and also generate as many rows as needed.
+//    // However, column-count does that already :)
+//
+//    // This resizese the content on the fly leading to things shuffling around on display.
+//
+//    //column-count: 2;
+//
+//    // What? I don't know what the above is talking about, this seems to work...
+//
+//    display: grid;
+//    grid-template-columns: 1fr 1fr;
+//
+//    padding-bottom: rem(20px);
+//
+//    @include media('>=md') {
+//      min-width: rem(500px);
+//    }
+//
+//    @include media('>=xl') {
+//      min-width: rem(600px);
+//    }
+//  }
+//
+//  a {
+//    &:focus,
+//    &:hover {
+//      border-left: none;
+//      //text-decoration: underline;
+//      font-weight: bold;
+//      outline: none;
+//    }
+//  }
+//}

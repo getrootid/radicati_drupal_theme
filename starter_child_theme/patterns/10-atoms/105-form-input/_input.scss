@@ -1,0 +1,11 @@
+@import "../../variables";
+
+input[type=text], input[type=password], input[type=email], input[type=number] {
+  font-size: rem(20px);
+  background: #f8f4fa;
+  border: 0;
+  border-bottom: 1px solid #333333;
+  border-radius: 0;
+  padding: rem(16.5px 20px) !important;
+  width: 100%;
+}

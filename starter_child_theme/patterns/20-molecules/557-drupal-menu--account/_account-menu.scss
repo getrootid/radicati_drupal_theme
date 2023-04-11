@@ -1,0 +1,32 @@
+@import "../../variables";
+
+nav.menu--account {
+
+  // top level menu
+  > ul.menu {
+    display: flex;
+    flex-direction: row;
+    gap: rem(8px);
+    margin: 0;
+    padding: 0;
+
+    justify-content: flex-end;
+
+    @include media($breakpoint-xxl) {
+      gap: rem(20px);
+    }
+  }
+
+  li.menu__item {
+    margin: 0;
+    padding: 0;
+
+    a {
+      @extend .menu-item-button;
+    }
+  }
+
+  li.menu-item--purple a {
+    @extend .menu-item-button--purple;
+  }
+}

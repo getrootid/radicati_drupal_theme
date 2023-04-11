@@ -1,0 +1,16 @@
+{% set spancount = 3 %}
+{% if hamburger.style == 1 or hamburger.style == 2 or not hamburger.style %}
+  {% set spancount = 3 %}
+{% elseif hamburger.style == 3 %}
+  {% set spancount = 4 %}
+{% elseif hamburger.style == 4 %}
+  {% set spancount = 6 %}
+{% endif %}
+
+
+<button {{ bem('hamburger', [ hamburger.style ? 'style-' ~ hamburger.style : null ], null) }} aria-expanded="false" aria-controls="off-canvas" tabindex="-1">
+  {% for _ in 1..spancount %}
+    <span></span>
+  {% endfor %}
+  <span class="sr-only">{{ "Show Mobile Menu"|trans }}</span>
+</button>

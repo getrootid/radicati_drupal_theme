@@ -1,0 +1,24 @@
+@import "../../variables";
+
+.page-content--webform {
+  background: var(--color--lightest-gray);
+  padding: rem(54px 5vw 60px 5vw);
+
+  .region-content {
+    width: 90vw;
+    margin: 0 auto;
+    background: white;
+    border: 1px solid #333333;
+
+    @include media($breakpoint-md) {
+
+    }
+
+    @include media($breakpoint-lg) {
+      padding: rem(57px 111px 83px 109px);
+      width: rem(860px);
+    }
+
+  }
+
+}

@@ -1,0 +1,80 @@
+@import "../../variables";
+
+.ept-reports__filters-and-download {
+
+  @include media($breakpoint-lg) {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .form--inline {
+    @include media($breakpoint-lg) {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  .form-item, .form-actions {
+    @include media($breakpoint-lg) {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  .form-actions {
+    @include media($breakpoint-lg) {
+      display: flex;
+      align-items: flex-end;
+    }
+  }
+
+  label {
+    font-size: rem(20px);
+    font-weight: normal;
+  }
+
+  input[type="submit"] {
+    @extend .button;
+    @extend .button--transparent;
+    @extend .button--rounded;
+    @extend .button--small;
+
+    margin: 0;
+  }
+
+  input[type='text'] {
+    width: rem(180px);
+  }
+
+  select, input {
+    background: white;
+  }
+
+  input[type="submit"], a {
+    font-size: rem(16px);
+    line-height: 1.5;
+    margin: rem(0 7px 10px 7px);
+
+    @include media($breakpoint-lg) {
+      font-size: rem(18px);
+    }
+
+    @include media($breakpoint-xl) {
+      font-size: rem(20px);
+    }
+  }
+
+  .csv-feed {
+    display: flex;
+    align-items: flex-end;
+
+    a i {
+      margin-left: rem(10px);
+      font-size: rem(22px);
+
+      @include media($breakpoint-xl) {
+        font-size: rem(25px);
+      }
+    }
+  }
+}

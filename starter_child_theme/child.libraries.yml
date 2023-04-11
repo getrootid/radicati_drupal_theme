@@ -1,0 +1,16 @@
+global-styles:
+  version: 1.x
+  css:
+    theme:
+      dist/css/hip-styles.css: { preprocess: false }
+
+fontawesome:
+  version: VERSION
+  js:
+    "https://kit.fontawesome.com/c387e52f17.js": {
+      type: external,
+      attributes: {
+        data-search-pseudo-elements: false,
+        defer: true
+      },
+    }

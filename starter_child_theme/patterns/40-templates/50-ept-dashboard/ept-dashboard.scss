@@ -1,0 +1,72 @@
+@import "../../variables";
+
+body.path-ept .page-content {
+  background-color: white;
+}
+
+
+.user-dashboard__header {
+  @extend .content-column;
+
+  padding: rem(30px 0 30px 0);
+
+  @include media($breakpoint-md) {
+    padding: rem(80px 0 57px 0);
+  }
+}
+
+.user-dashboard__content__wrapper {
+  background-color: var(--color--ept-lavender);
+}
+
+.user-dashboard__menu,
+.user-dashboard__content {
+  @extend .content-column;
+}
+
+.user-dashboard__content__header {
+  @extend .content-column;
+
+  h2 {
+    margin-top: 0;
+  }
+
+  @include media($breakpoint-md) {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .user-dashboard__content__header-actions {
+    @include media($breakpoint-md) {
+      margin-left: auto;
+    }
+  }
+}
+
+.user-dashboard__content__wrapper {
+  @include media($breakpoint-md) {
+    padding: rem(40px 0 20px 0);
+  }
+
+  @include media($breakpoint-lg) {
+    padding: rem(102px 0 20px 0);
+  }
+}
+
+.user-dashboard__content {
+
+  @include media($breakpoint-md) {
+
+  }
+
+  // view webform button
+  .views-field-view-webform-submission a {
+    @extend .button;
+    @extend .button--small;
+    @extend .button--transparent;
+    @extend .button--rounded;
+
+    font-size: rem(15px);
+    min-width: rem(186px);
+  }
+}

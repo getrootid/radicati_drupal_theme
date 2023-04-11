@@ -1,0 +1,53 @@
+@use 'sass:string';
+
+@function num-to-string($value) {
+  @if type-of($value) == 'number' {
+    @return #{$value};
+  } @else if type-of($value) == 'string' {
+    @return $value;
+  } @else {
+    @error 'Input #{$value} is no number or string';
+  }
+}
+
+@function strip-breakpoint($bp) {
+  @while (
+    (string.slice($bp, 1, 1) == '>') or
+      (string.slice($bp, 1, 1) == '<') or
+      (string.slice($bp, 1, 1) == '=')
+  ) {
+    $bp: string.slice($bp, 2);
+  }
+
+  @return $bp;
+}
+
+@mixin breakpoint($args...) {
+  @if length($args) == 1 {
+    // We'll assume the breakpoint shorthand where the first number is the minimum
+    // To be safe, we'll strip any symbols off the front of the breakpoint
+    $breakpoint1: strip-breakpoint(num-to-string(nth($args, 1)));
+
+    @include media('>=' + $breakpoint1) {
+      @content;
+    }
+  } @else if length($args) == 2 {
+    // We'll assume the breakpoint shorthand where two values define a min and max range for the media query
+    // Unfortunately, the $breakpoint-whatever variables have been changed to include a < symbol
+    // So we need to strip that out and then force the breakpoints into a min and max value :P
+
+    @warn (
+      "A breakpoint with two arguments is being translated to include-media. You should probably double check that it's performing as expected..."
+    );
+
+    $breakpoint1: strip-breakpoint(num-to-string(nth($args, 1)));
+    $breakpoint2: strip-breakpoint(num-to-string(nth($args, 2)));
+
+    @include media('>=' + $breakpoint1, '<=' + $breakpoint2) {
+      @content;
+    }
+  } @else {
+    // Anything fancier than one or two breakpoints needs to be converted by hand
+    @error ("Sorry, but the breakpoint to include-media conversion only works with one or two arguments");
+  }
+}

@@ -1,0 +1,106 @@
+@import '../../variables';
+
+// #off-canvas {
+//   // Styles for site branding (logo)
+//   .block-system-branding-block {
+//     padding: rem(0 15px);
+//     display: flex;
+//     align-items: center;
+
+//     // Height matches the header height at mobile sizes.
+//     height: rem(57px);
+
+//     a {
+//       width: 100%;
+//     }
+//   }
+
+//   // Style for all menu blocks.
+//   .menu--main ul.menu {
+//     margin: 0;
+//     padding: 0;
+//     width: 100%;
+//     display: flex;
+//     flex-direction: column;
+
+//     // Universal Menu Link Styles
+//     a {
+//       flex: 1 1 auto;
+//       display: inline-flex;
+//     }
+
+//     // Universal Menu Item Styles
+//     li {
+//       margin: 0;
+//       padding: 0;
+//       width: 100%;
+
+//       &:first-child {
+//       }
+//     }
+
+//     // Open Dropdown Button
+//     button.menu-item__open-dropdown {
+//     }
+
+//     // Rotate arrows when menus are open
+//     .menu-item--has-dropdown.menu-item--dropdown-open {
+//       > button.menu-item__open-dropdown {
+//         > svg {
+//           transform: rotate(90deg);
+//         }
+//       }
+//     }
+
+//     // Top level menu items -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+//     > li {
+//       border-bottom: 1px solid #999999;
+
+//       > a {
+//         font-size: rem(17px);
+//         padding: rem(8.5px 0 8.5px 34px);
+//         color: white;
+//         font-weight: bold;
+//         text-transform: uppercase;
+//       }
+
+//       // First Level Dropdown -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+//       > ul.sub-menu {
+//         //border-top: 1px solid $color--rad-gray--light;
+//         background-color: rgba(99, 179, 206, 0.3);
+//         flex-direction: column;
+
+//         > li.menu-item {
+//         }
+
+//         > li.menu-item > a {
+//           color: white;
+//           padding: rem(9.5px 0 9.5px 60px);
+//         }
+
+//         // Second Level Dropdown -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+//         > li > ul.sub-menu {
+//           background-color: $color--rad-blue--light;
+//           color: red;
+
+//           > li.menu-item {
+//           }
+
+//           > li.menu-item > a {
+//             padding-left: rem(25px);
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   // Expanding Menus (works the same no matter depth)
+//   a.menu-item--has-dropdown {
+//     width: calc(100% - 44px);
+//   }
+
+//   .region-off-canvas-footer {
+//     .menu--secondary-navigation {
+//     }
+//   }
+// }

@@ -1,0 +1,33 @@
+@import 'variables';
+
+:root {
+
+
+  --rad--default-button-background-color: var(--color--deep-purple);
+  --rad--default-button-text-color: white;
+  --rad--default-link-color: var(--color--ept-orange);
+  --rad--default-font-family: 'Karla', sans-serif;
+  --rad--default-font-size: 1.25rem;
+  --rad--default-line-height: 1.875;
+
+  --rad--content-width--xl: 81.625rem;
+  --rad--content-width--lg: 65rem;
+  --rad--content-width--md: 50rem;
+  --rad--content-width--default: 90vw;
+
+
+
+  --rad--content-width: var(--rad--content-width--default);
+
+  @include media($breakpoint-md) {
+    --rad--content-width: var(--rad--content-width--md);
+  }
+
+  @include media($breakpoint-lg) {
+    --rad--content-width: var(--rad--content-width--lg);
+  }
+
+  @include media($breakpoint-xl) {
+    --rad--content-width: var(--rad--content-width--xl);
+  }
+}

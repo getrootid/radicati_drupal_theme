@@ -1,0 +1,40 @@
+@import "../../variables";
+
+.inline-menu__wrapper {
+
+  ul.menu {
+    padding: 0;
+    margin: 0;
+
+    > li {
+      margin: rem(0 7px);
+
+      a {
+        display: inline-block;
+        padding: rem(15px 15px 15px 15px);
+        text-transform: uppercase;
+        color: white;
+        font-size: rem(22px);
+        line-height: 1.1;
+        font-weight: 800;
+        background-color: var(--color--light-purple);
+
+        @include media($breakpoint-lg) {
+          padding: rem(20px 30px 20px 30px);
+        }
+
+        @include media($breakpoint-xl) {
+          padding: rem(31px 77px 26px 77px);
+        }
+      }
+
+
+      &.menu__item--active-trail {
+        a {
+          background-color: var(--color--ept-lavender);
+          color: var(--color--deep-purple);
+        }
+      }
+    }
+  }
+}

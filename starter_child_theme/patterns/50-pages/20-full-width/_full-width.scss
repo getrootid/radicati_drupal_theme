@@ -1,0 +1,11 @@
+@import "../../variables";
+
+.page-content--full-width {
+  padding: 0;
+  max-width: unset;
+  width: 100%;
+
+  .region-content {
+    width: 100%;
+  }
+}

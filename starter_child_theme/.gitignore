@@ -1,0 +1,18 @@
+# OS generated files #
+#####################
+.DS_Store?
+*.DS_Store
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# Local Files #
+###############
+node_modules
+gulpfile.local.json
+.lando.local.yml
+
+# Stylemaps #
+#############
+**/dist/css/maps
+**/*.css.map

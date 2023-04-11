@@ -1,0 +1,20 @@
+@import "../../variables";
+
+// NOTE: All Drupalisms should do what you would expect from the description in the UI.
+
+// TODO: Verift these all work properly.
+// TODO: Can we add a bold label option to the ui? Should we?
+
+.field--label-visually-hidden .field__label {
+  @extend .sr-only;
+}
+
+.field--label-inline .field__label {
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.field--label-above .field__label {
+  //text-transform: uppercase;
+  //font-weight: normal;
+}

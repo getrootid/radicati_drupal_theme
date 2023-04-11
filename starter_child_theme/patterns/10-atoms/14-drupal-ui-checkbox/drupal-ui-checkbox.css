@@ -1,0 +1,23 @@
+body {
+  background: green;
+}
+
+.node-form .node-add-edit-form__sidebar :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox {
+  position: relative;
+  margin-left: 0;
+}
+.node-form .node-add-edit-form__sidebar :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  word-wrap: normal;
+  width: 40px;
+  height: 24px;
+  clip: auto;
+  margin-left: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 1;
+}

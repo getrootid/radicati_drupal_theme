@@ -1,0 +1,15 @@
+"plugins": ["./node_modules/prettier-plugin-twig-melody"]
+phpVersion: "7.4"
+# This one's controversial. But I like it, so in it goes!
+twigOutputEndblockName: true
+# We prefer single quotes in our scss and css files
+overrides:
+  - files:
+      - "*.css"
+      - "*.scss"
+    options:
+      singleQuote: true
+  - files:
+      - "*.theme"
+    options:
+      - parser: "php"

@@ -1,0 +1,39 @@
+
+.horizontal-scrollbar {
+
+
+  ::-webkit-scrollbar {
+    height: rem(30px);
+    overflow: hidden;
+  };
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color--deep-purple);
+    border-radius: rem(360px);
+  };
+
+  ::-webkit-scrollbar-track {
+    background: var(--color--light-purple);
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    background-clip: padding-box;
+
+    border-radius: rem(360px);
+  };
+
+  //::-webkit-scrollbar {
+  //  width: 12px; //Needed scrollbar thumb width to be 7px, so had to define whole scrollbar to be 7px wide.
+  //};
+  //
+  //::-webkit-scrollbar-thumb {
+  //  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  //  border-radius: 10px;
+  //};
+  //
+  //::-webkit-scrollbar-track {
+  //  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  //  border-radius: 10px;
+  //
+  //};
+
+}

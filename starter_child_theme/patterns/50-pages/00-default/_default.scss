@@ -1,0 +1,22 @@
+@import "../../variables";
+
+
+.page-content {
+  background: var(--color--ept-lavender);
+  padding: rem(54px 5vw 60px 5vw);
+
+  .region-content {
+    width: 90vw;
+    margin: 0 auto;
+
+    @include media($breakpoint-md) {
+
+    }
+
+    @include media($breakpoint-lg) {
+      width: rem(860px);
+    }
+
+  }
+
+}

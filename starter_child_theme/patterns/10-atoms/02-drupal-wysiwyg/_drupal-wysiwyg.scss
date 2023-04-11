@@ -1,0 +1,218 @@
+@import '../../variables';
+
+//Various styles for the Drupal WYSIWYG content.
+
+// Top level div around wysiwyg content
+.text-formatted {
+  a {
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1.2em;
+    margin: rem(0 0 5px);
+  }
+
+  h2 {
+    font-size: rem(24px);
+  }
+
+  h3 {
+    font-size: rem(20px);
+    margin-bottom: rem(5px) !important;
+  }
+
+  h4 {
+    font-size: rem(18px);
+  }
+
+  h5 {
+    font-size: rem(17px);
+  }
+
+  h6 {
+    font-size: rem(16px);
+  }
+
+  // Media captions
+  figure.caption-drupal-media {
+    // Can't tell the difference between different media types by default.
+    display: block;
+    margin: 0;
+
+    figcaption {
+      @include rem('margin', 17px 0 15px 0);
+      @include rem('font-size', 16px);
+      display: block;
+    }
+  }
+
+  // An item placed from the media library
+  .media {
+    width: 100%;
+    @include rem('margin', 25px 0 40px 0);
+
+    img {
+      display: block;
+    }
+
+    &.align-center {
+      @include rem('margin', 25px auto 40px);
+    }
+
+    @include media($breakpoint-sm) {
+      &.align-left,
+      &.align-right {
+        @include rem('max-width', 200px);
+        width: unset;
+      }
+
+      &.align-left {
+        float: left;
+        @include rem('margin', 25px 25px 40px 0);
+      }
+
+      &.align-right {
+        float: right;
+        @include rem('margin', 25px 0 40px 25px);
+      }
+    }
+  }
+
+  // styling for image-specific view modes
+  .media--type-image.media--view-mode-original {
+    display: inline-block;
+    width: auto;
+    @include rem('margin', 25px 10px 40px 0);
+    max-width: 100%;
+
+    &.align-center {
+      display: block;
+      @include rem('margin', 0 auto 40px);
+
+      div {
+        display: inline-block;
+      }
+    }
+
+    &.align-left {
+      display: block;
+      @include rem('margin', 25px 25px 40px 0);
+
+      div {
+        display: inline-block;
+      }
+
+      div.field--caption {
+        display: block;
+      }
+    }
+
+    &.align-right {
+      display: block;
+      @include rem('margin', 25px 0 40px 25px);
+
+      div {
+        display: inline-block;
+      }
+
+      div.field--caption {
+        display: block;
+      }
+    }
+
+    .field--caption {
+      display: block;
+      text-align: left;
+      @include rem('font-size', 12px);
+      font-style: italic;
+    }
+  }
+
+  .media--type-image.media--view-mode-default,
+  .media--type-image.media--view-mode-wysiwyg-square,
+  .media--type-image.media--view-mode-wysiwyg-16x9-small {
+    @include media($breakpoint-sm) {
+      margin: 0 10px 10px 0;
+      @include rem('max-width', 200px);
+
+      &.align-center {
+        margin: 25px auto 40px;
+      }
+
+      &.align-left {
+        @include rem('margin', 25px 25px 40px 0);
+      }
+
+      &.align-right {
+        @include rem('margin', 25px 0 40px 25px);
+      }
+    }
+  }
+
+  .media--type-image.media--view-mode-wysiwyg-16x9-large {
+    @include media($breakpoint-sm) {
+      float: none;
+      margin: 0 auto 10px;
+      @include rem('max-width', 800px);
+
+      // overriding the align-class settings for this image size
+      &.align-left,
+      &.align-right,
+      &.align-center {
+        float: none;
+        margin: 25px auto 40px;
+      }
+    }
+  }
+
+  // Remote video
+  // This is getting the appropriate proportions applied using the fitvids scripts :)
+  .media.media--type-remote-video {
+    max-width: rem(650px);
+    width: auto;
+
+    &.align-left,
+    &.align-right,
+    &.align-center {
+      float: none;
+    }
+
+    &.align-left {
+      margin-left: rem(10px);
+      margin-right: auto;
+    }
+
+    &.align-right {
+      margin-left: auto;
+      margin-right: rem(10px);
+    }
+
+    @include media($breakpoint-sm) {
+      &.align-left {
+        margin-left: rem(10px);
+        margin-right: auto;
+      }
+
+      &.align-right {
+        margin-left: auto;
+        margin-right: rem(10px);
+      }
+    }
+  }
+
+  // By default tables in the wysiwyg have a width filled in. Should we use important here? The user almost never
+  // wants a table with a specific width.
+  table {
+    width: 100%;
+  }
+}

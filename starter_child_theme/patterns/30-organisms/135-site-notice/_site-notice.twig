@@ -1,0 +1,52 @@
+{{ attach_library('radicati_d8/site-notice') }}
+{% set base='site-notice' %}
+
+{% if image_id and image_id is not empty %}
+  {% set view_mode = 'icon' %}
+  {% set image = drupal_entity('media', image_id, view_mode) %}
+{% endif %}
+
+{# This starts out hidden, then the cookie check is done and if the user doesn't have the cookie then the message is displayed. #}
+<aside id="site-notice--{{ notice_id }}" {{ bem(base, [background]) }} data-notice-id="{{ notice_id }}">
+  <div {{ bem('inner', [], base) }}>
+    {% if image or alert %}
+      <div {{ bem('alert-wrapper', [], base) }}>
+        {% if image %}
+          <div {{ bem('image', [], base) }}>
+            {{ image }}
+          </div>
+        {% endif %}
+        {% if alert %}
+          <div {{ bem('alert', [], base) }}>
+            {{ alert }}
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+    {% if title or content or button_url %}
+      <div {{ bem('content-wrapper', [], base) }}>
+        {% if title %}
+          <h2 {{ bem('title', [], base) }}>
+            {{ title }}
+          </h2>
+        {% endif %}
+        {% if content or button_url %}
+          <div {{ bem('content', [], base) }}>
+            {{ content }}
+            {% if button_url %}
+              {# <div {{ bem('link-wrapper', [], base) }}> #}
+                <a {{ bem('link', [], base, []) }} href="{{ button_url }}">
+                  {% trans %}
+                    {{ button_label }} <span class="sr-only">about {{ title }}</span>
+                  {% endtrans %}
+                </a>
+              {# </div> #}
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+
+  <button {{ bem('close', [], base) }} aria-label="{{ "Close this notice."|t }}"><i class="fal fa-times" title="{{ "Close"|t }}"></i></button>
+</aside>

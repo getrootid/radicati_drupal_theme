@@ -1,0 +1,23 @@
+{% set base = list.base|default(null) %}
+{% if list.menu_level %}
+    {% set extra_classes = ['menu--level-' ~ list.menu_level] %}
+{% else %}
+    {% set extra_classes = ['menu--level-0'] %}
+{% endif %}
+
+
+{% if list.type != "ol" and list.type != "ul" %}
+    Invalid List Type, must be ol or ul
+{% else %}
+    <{{ list.type }} {{ bem(base, list.mods, list.parent, extra_classes) }} {{ (list.menu_level > 0 and list.toggle == true) ? 'aria-expanded="false"' : '' }}>
+      {% block list_content %}
+        {% for item in list.items %}
+            <li
+                {% if base != null or item.mods != [] %}
+                    {{ bem("item", item.mods, base) }}
+                {% endif %}
+            >{{ item.content }}</li>
+        {% endfor %}
+      {% endblock %}
+    </{{ list.type }}>
+{% endif %}

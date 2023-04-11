@@ -1,0 +1,71 @@
+{# DEPRECATED #}
+
+{% if 'facebook' in sociallink.href %}
+  {% set slug = 'fab fa-facebook-f' %}
+{% elseif 'instagram' in sociallink.href %}
+  {% set slug = 'fab fa-instagram' %}
+{% elseif 'medium.com' in sociallink.href %}
+  {% set slug = 'fab fa-medium' %}
+{% elseif 'mailto:' in sociallink.href %}
+  {% set slug = 'envelope' %}
+{% elseif 'sharethis' in sociallink.href %}
+  {% set slug = 'sharethis' %}
+{% elseif 'twitter' in sociallink.href %}
+  {% set slug = 'fab fa-twitter' %}
+{% elseif 'yelp' in sociallink.href %}
+  {% set slug = 'yelp' %}
+{% elseif 'youtube' in sociallink.href %}
+  {% set slug = 'fab fa-youtube' %}
+{% elseif 'linkedin' in sociallink.href %}
+  {% set slug = 'fab fa-linkedin' %}
+{% elseif '/feed' in sociallink.href or 'rss' in sociallink.href %}
+  {% set slug = 'rss' %}
+{% else %}
+  {% set slug = null %}
+{% endif %}
+
+{% if slug %}
+  {% if sociallink.attributes is defined and sociallink.attributes is not empty %}
+    {% set attributes = sociallink.attributes|merge({
+      target: '_blank',
+      'aria-label': sociallink.title
+    }) %}
+  {% else %}
+    {% set attributes = {
+      target: '_blank',
+      'aria-label': sociallink.title
+    } %}
+  {% endif %}
+
+  {% include '@atoms/17-iconlink/_iconlink.twig' with {
+    icon_link: {
+      base: 'sociallink',
+      slug: slug,
+      href: sociallink.href,
+      title: sociallink.title,
+      attributes: attributes
+    }
+  } only %}
+{% else %}
+  {% if sociallink.attributes is defined and sociallink.attributes is not empty %}
+    {% set attributes =
+      sociallink.attributes|merge({
+        target: '_blank'
+      })
+    %}
+  {% else %}
+    {% set attributes = {
+      target: '_blank'
+    } %}
+  {% endif %}
+
+  {% include '@atoms/10-link/_link.twig' with {
+    link: {
+      base: 'sociallink',
+      mods: ['no-icon'],
+      href: sociallink.href,
+      content: sociallink.title,
+      attributes: attributes
+    }
+  } %}
+{% endif %}

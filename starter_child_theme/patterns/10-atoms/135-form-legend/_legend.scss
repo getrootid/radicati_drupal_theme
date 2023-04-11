@@ -1,0 +1,7 @@
+@import "../../variables";
+
+legend {
+  @extend h2;
+  display: block;
+  margin: rem(0 0 32px 0);
+}

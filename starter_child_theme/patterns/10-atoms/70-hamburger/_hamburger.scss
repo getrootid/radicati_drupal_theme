@@ -1,0 +1,449 @@
+// edit the following 4 variables to change the appearance of the hamburger menu :)
+
+$hamburger-toggle-width: 34px;
+$hamburger-toggle-height: 14px;
+$hamburger-line-thickness: 2px;
+$hamburger-color: white;
+
+// don't mess with this!
+$hamburger-vertical-spacer: calc(
+  ($hamburger-toggle-height - 3 * $hamburger-line-thickness) / 2
+);
+
+/* General styling */
+
+.hamburger {
+  @include rem('width', $hamburger-toggle-width);
+  @include rem('height', $hamburger-toggle-height);
+  @include rem('padding', 5px 3px);
+
+  border: 0;
+  background: transparent;
+
+  // This looks bad
+  //border: 1px solid $hamburger-color;
+  //border-radius: 4px;
+
+  position: relative;
+  // @include transform(translateX(0) translateY(0) rotate(0deg));
+  // @include transition(.5s ease-in-out);
+  cursor: pointer;
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+
+  span {
+    display: block;
+    position: absolute;
+    @include rem('height', $hamburger-line-thickness);
+    width: 100%;
+    background-color: $hamburger-color;
+    border-radius: $hamburger-line-thickness;
+    opacity: 1;
+    left: 0;
+    transform: translateX(0) translateY(0) rotate(0deg);
+    transition: 0.5s ease-in-out;
+  }
+}
+
+/* Style 1 */
+
+.hamburger--style-1,
+.hamburger--style-2 {
+  span {
+    &:nth-child(1) {
+      top: 0;
+    }
+
+    &:nth-child(2) {
+      // top: 18px;
+      @include rem(
+        'top',
+        $hamburger-line-thickness + $hamburger-vertical-spacer
+      );
+    }
+
+    &:nth-child(3) {
+      // top: 36px;
+      @include rem(
+        'top',
+        2 * ($hamburger-line-thickness + $hamburger-vertical-spacer)
+      );
+    }
+  }
+}
+
+body.offcanvas-open .hamburger--style-1,
+.hamburger--style-1.open {
+  span {
+    &:nth-child(1) {
+      top: 50%;
+      transform: translateY(-50%) rotate(135deg);
+      // @include transform(rotate(135deg) translateY(-50%));
+    }
+
+    &:nth-child(2) {
+      opacity: 0;
+      left: -100%;
+    }
+
+    &:nth-child(3) {
+      top: 50%;
+      transform: translateY(-50%) rotate(-135deg);
+    }
+  }
+}
+
+/* Style 2 */
+
+// see style 1 for unclicked state
+
+body.offcanvas-open .hamburger--style-2,
+.hamburger--style-2.open {
+  span {
+    &:nth-child(1) {
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    &:nth-child(2) {
+      width: 0%;
+      opacity: 0;
+    }
+
+    &:nth-child(3) {
+      top: 50%;
+      transform: translateY(-50%) rotate(-45deg);
+    }
+  }
+}
+
+/* Style 3 */
+
+.hamburger--style-3 {
+  span {
+    &:nth-child(1) {
+      top: 0;
+    }
+
+    &:nth-child(2) {
+      @include rem(
+        'top',
+        $hamburger-line-thickness + $hamburger-vertical-spacer
+      );
+    }
+
+    &:nth-child(3) {
+      @include rem(
+        'top',
+        $hamburger-line-thickness + $hamburger-vertical-spacer
+      );
+    }
+
+    &:nth-child(4) {
+      @include rem(
+        'top',
+        2 * ($hamburger-line-thickness + $hamburger-vertical-spacer)
+      );
+    }
+  }
+}
+
+body.offcanvas-open .hamburger--style-3,
+.hamburger--style-3.open {
+  span {
+    &:nth-child(1),
+    &:nth-child(4) {
+      left: 50%;
+      width: 0%;
+      opacity: 0;
+    }
+
+    &:nth-child(2) {
+      transform: rotate(45deg);
+    }
+
+    &:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+/* Style 4 */
+
+.hamburger--style-4 {
+  span {
+    width: 50%;
+
+    &:nth-child(even) {
+      left: 50%;
+      border-radius: 0 $hamburger-line-thickness $hamburger-line-thickness 0;
+    }
+
+    &:nth-child(odd) {
+      left: 0;
+      border-radius: $hamburger-line-thickness 0 0 $hamburger-line-thickness;
+    }
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      bottom: calc(100% - #{$hamburger-line-thickness});
+    }
+
+    &:nth-child(3),
+    &:nth-child(4) {
+      @include rem(
+        'top',
+        $hamburger-line-thickness + $hamburger-vertical-spacer
+      );
+    }
+
+    &:nth-child(5),
+    &:nth-child(6) {
+      @include rem(
+        'top',
+        2 * ($hamburger-line-thickness + $hamburger-vertical-spacer)
+      );
+    }
+  }
+}
+
+body.offcanvas-open .hamburger--style-4,
+.hamburger--style-4.open {
+  span {
+    &:nth-child(3) {
+      left: -50%;
+      opacity: 0;
+    }
+
+    &:nth-child(4) {
+      left: 100%;
+      opacity: 0;
+    }
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      bottom: 50%;
+    }
+
+    &:nth-child(5),
+    &:nth-child(6) {
+      top: 50%;
+    }
+
+    &:nth-child(1) {
+      transform-origin: bottom right;
+      transform: translateY(calc($hamburger-line-thickness / 2)) rotate(45deg);
+    }
+
+    &:nth-child(2) {
+      transform-origin: bottom left;
+      transform: translateY(calc($hamburger-line-thickness / 2)) rotate(-45deg);
+    }
+
+    &:nth-child(5) {
+      transform-origin: top right;
+      transform: translateY(-1 * $hamburger-line-thickness) rotate(-45deg);
+    }
+
+    &:nth-child(6) {
+      transform-origin: top left;
+      transform: translateY(-1 * $hamburger-line-thickness) rotate(45deg);
+    }
+  }
+}
+
+// body.offcanvas-open {
+//   .hamburger-toggle.style1 {
+//     span {
+//       &:nth-child(1) {
+//         top: 50%;
+//         transform: translateY(-50%) rotate(135deg) ;
+//         // @include transform(rotate(135deg) translateY(-50%));
+//       }
+
+//       &:nth-child(2) {
+//         opacity: 0;
+//         left: -100%;
+//       }
+
+//       &:nth-child(3) {
+//         top: 50%;
+//         transform: translateY(-50%) rotate(-135deg) ;
+//       }
+//     }
+//   }
+
+//   .hamburger-toggle.style2 {
+//     span {
+//       &:nth-child(1) {
+//         top: 50%;
+//         @include transform(translateY(-50%) rotate(45deg) );
+//       }
+
+//       &:nth-child(2) {
+//         width: 0%;
+//         opacity: 0;
+//       }
+
+//       &:nth-child(3) {
+//         top: 50%;
+//         @include transform(translateY(-50%) rotate(-45deg));
+//       }
+//     }
+//   }
+
+//   .hamburger-toggle.style3 {
+//     span {
+//       &:nth-child(1),
+//       &:nth-child(4) {
+//         left: 50%;
+//         width: 0%;
+//         opacity: 0;
+//       }
+
+//       &:nth-child(2) {
+//         @include transform(rotate(45deg));
+//       }
+
+//       &:nth-child(3) {
+//         @include transform(rotate(-45deg));
+//       }
+//     }
+//   }
+
+//   .hamburger-toggle.style4 {
+//     span {
+//       &:nth-child(3) {
+//         left: -50%;
+//         opacity: 0;
+//       }
+
+//       &:nth-child(4) {
+//         left: 100%;
+//         opacity: 0;
+//       }
+
+//       &:nth-child(1),
+//       &:nth-child(2) {
+//         bottom: 50%;
+//       }
+
+//       &:nth-child(5),
+//       &:nth-child(6) {
+//         top: 50%;
+//       }
+
+//       &:nth-child(1) {
+//         @include transform-origin(bottom right);
+//         @include transform(translateY($hamburger-line-thickness / 2)  rotate(45deg));
+//       }
+
+//       &:nth-child(2) {
+//         @include transform-origin(bottom left);
+//         @include transform(translateY($hamburger-line-thickness / 2)  rotate(-45deg));
+//       }
+
+//       &:nth-child(5) {
+//         @include transform-origin(top right);
+//         @include transform(translateY(-1 * $hamburger-line-thickness)  rotate(-45deg));
+//       }
+
+//       &:nth-child(6) {
+//         @include transform-origin(top left);
+//         @include transform(translateY(-1 * $hamburger-line-thickness)  rotate(45deg));
+//       }
+//     }
+//   }
+// }
+
+// /* Icon 3 */
+
+// #hamburger-icon3 span:nth-child(1) {
+//   top: 0px;
+// }
+
+// #hamburger-icon3 span:nth-child(2),#hamburger-icon3 span:nth-child(3) {
+//   // top: 18px;
+//   @include rem('top', 2*$hamburger-line-thickness);
+// }
+
+// #hamburger-icon3 span:nth-child(4) {
+//   // top: 36px;
+//   @include rem('top', 4*$hamburger-line-thickness);
+// }
+
+// #hamburger-icon3.open span:nth-child(1) {
+//   // top: 18px;
+//   @include rem('top', 2*$hamburger-line-thickness);
+//   width: 0%;
+//   left: 50%;
+// }
+
+// #hamburger-icon3.open span:nth-child(2) {
+//   -webkit-transform: rotate(45deg);
+//   -moz-transform: rotate(45deg);
+//   -o-transform: rotate(45deg);
+//   transform: rotate(45deg);
+// }
+
+// #hamburger-icon3.open span:nth-child(3) {
+//   -webkit-transform: rotate(-45deg);
+//   -moz-transform: rotate(-45deg);
+//   -o-transform: rotate(-45deg);
+//   transform: rotate(-45deg);
+// }
+
+// #hamburger-icon3.open span:nth-child(4) {
+//   // top: 18px;
+//   @include rem('top', 2*$hamburger-line-thickness);
+//   width: 0%;
+//   left: 50%;
+// }
+
+// /* Icon 4 */
+
+// #hamburger-icon4 {
+// }
+
+// #hamburger-icon4 span:nth-child(1) {
+//   top: 0px;
+//   @include transform-origin(left center);
+// }
+
+// #hamburger-icon4 span:nth-child(2) {
+//   // top: 18px;
+//   // @include rem('top', 2*$hamburger-line-thickness);
+//   @include transform-origin(left center);
+// }
+
+// #hamburger-icon4 span:nth-child(3) {
+//   // top: 36px;
+//   @include rem('top', 4*$hamburger-line-thickness);
+//   @include transform-origin(left center)
+// }
+
+// #hamburger-icon4.open span:nth-child(1) {
+//   -webkit-transform: rotate(45deg);
+//   -moz-transform: rotate(45deg);
+//   -o-transform: rotate(45deg);
+//   transform: rotate(45deg);
+//   top: -3px;
+//   left: 8px;
+// }
+
+// #hamburger-icon4.open span:nth-child(2) {
+//   width: 0%;
+//   opacity: 0;
+// }
+
+// #hamburger-icon4.open span:nth-child(3) {
+//   -webkit-transform: rotate(-45deg);
+//   -moz-transform: rotate(-45deg);
+//   -o-transform: rotate(-45deg);
+//   transform: rotate(-45deg);
+//   top: 39px;
+//   left: 8px;
+// }

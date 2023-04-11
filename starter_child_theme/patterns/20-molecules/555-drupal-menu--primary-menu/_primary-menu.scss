@@ -1,0 +1,39 @@
+@import '../../variables';
+
+.region-primary-navigation {
+  nav.menu--main {
+    // top level menu
+    > ul.menu {
+      display: flex;
+      flex-direction: row;
+      gap: rem(20px);
+      justify-content: flex-end;
+      margin: 0;
+
+      @include media($breakpoint-xl) {
+        gap: rem(50px);
+      }
+    }
+
+    li.menu__item {
+      margin: 0;
+      padding: 0;
+
+      a {
+        color: var(--color--deep-purple);
+        text-transform: uppercase;
+        font-size: rem(18px);
+        line-height: rem(24px);
+        font-weight: 700;
+
+        @include media($breakpoint-lg) {
+          font-size: rem(20px);
+        }
+
+        @include media($breakpoint-xl) {
+          font-size: rem(22px);
+        }
+      }
+    }
+  }
+}

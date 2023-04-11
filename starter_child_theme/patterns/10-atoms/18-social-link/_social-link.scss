@@ -1,0 +1,23 @@
+@import '../../variables';
+
+//.sociallink {
+//  @include rem('margin-left', 31px);
+//  color: white;
+//  display: inline-block;
+//
+//  &:hover {
+//    color: rgba(white, 0.8);
+//  }
+//
+//  span.icon {
+//    @include rem('font-size', 24px);
+//  }
+//}
+
+.sociallink--no-icon {
+  font-size: rem(16px);
+  letter-spacing: rem(2px);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $color--rad-gray--dark;
+}

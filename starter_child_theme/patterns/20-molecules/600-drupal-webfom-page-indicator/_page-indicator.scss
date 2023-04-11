@@ -1,0 +1,72 @@
+@import "../../variables";
+
+.webform-progress {
+
+  .webform-progress-tracker {
+    margin: rem(0 0 45px 0);
+  }
+
+  li.progress-step {
+
+    .progress-title {
+      color: #333333;
+      font-size: rem(14px);
+      line-height: 1.2;
+    }
+
+    // the circle with the number
+    .progress-marker:before {
+      margin-bottom: rem(5px);
+      width: rem(50px);
+      height: rem(50px);
+      font-size: rem(20px);
+      line-height: 1.5;
+      color: white;
+      border: 3px solid var(--color--deep-purple);
+      background: var(--color--deep-purple) !important;
+      font-weight: bold;
+    }
+
+    .progress-marker:after {
+      top: rem(24px);
+      height: 2px;
+      background: #C3A7D0 !important;
+    }
+
+    &.is-complete {
+      .progress-title {
+        color: var(--color--ept-green);
+      }
+
+      .progress-marker:before {
+        background: var(--color--ept-green) !important;
+        border-color: var(--color--ept-green);
+        content: "\f00c";
+        font-family: $font--fontawesome;
+        font-weight: 900;
+        font-size: rem(24px);
+      }
+    }
+
+    &.is-active {
+      .progress-title {
+        color: var(--color--deep-purple);
+        font-weight: bold;
+      }
+
+      // the currently active circle with the number
+      .progress-marker:before {
+        width: rem(50px);
+        height: rem(50px);
+        font-size: rem(20px);
+        line-height: 1.5;
+        color: var(--color--deep-purple);
+        border: 3px solid var(--color--deep-purple);
+        background: white !important;
+        font-weight: bold;
+      }
+    }
+
+
+  }
+}

@@ -1,0 +1,70 @@
+@import '../../variables';
+
+.login-form {
+  @include media($breakpoint-md) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.login-form__title-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--color--deep-purple);
+  color: white;
+
+  @include media($breakpoint-md) {
+    flex: 0 0 40%;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.login-form__form-wrapper {
+  align-items: center;
+  background: var(--color--ept-lavender);
+  display: flex;
+  justify-content: center;
+  padding-left: rem(15px);
+  padding-right: rem(15px);
+
+  @include media($breakpoint-md) {
+    flex: 0 0 60%;
+    min-height: rem(720px);
+  }
+
+  label {
+    font-weight: bold;
+    color: #333333;
+    font-size: rem(20px);
+  }
+
+  input[type='text'],
+  input[type='password'] {
+    background: white;
+  }
+
+  a {
+    text-decoration: underline;
+    font-size: rem(20px);
+    color: var(--color--deep-purple);
+  }
+
+  .login-form__link--forgot-pass {
+    margin-bottom: rem(50px);
+  }
+
+  input[type='button'],
+  input[type='submit'] {
+    width: 100%;
+    font-weight: bold;
+    font-size: rem(24px);
+    line-height: 1;
+    color: white;
+    border: 0;
+    border-radius: 0;
+    background: var(--color--deep-purple);
+    margin: 0;
+  }
+}

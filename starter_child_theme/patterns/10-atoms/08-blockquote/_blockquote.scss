@@ -1,0 +1,44 @@
+@import '../../variables';
+
+// Note: Styling shouldn't depend on the <figure> wrapper. Blockquotes can get used in raw html that won't
+// invoke the twig file.
+
+blockquote {
+  position: relative;
+  margin: rem(40px 0);
+  padding: rem(40px 0);
+  text-align: center;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+
+  &:before {
+    font-family: "Poppins",sans-serif;
+    content: "\201c";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    pointer-events: none;
+    color: #63B3CE;
+    opacity: 0.2;
+    font-size: rem(300px);
+    line-height: rem(300px);
+    transform: translate(-50%,-30%);
+  }
+
+  p {
+    max-width: rem(700px);
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    &:first-child {
+      margin: 0 0 1em;
+    }
+  }
+}
+
+.blockquote__citation {
+  font-size: rem(15px);
+  margin-top: rem(-10px);
+  font-style: italic;
+  letter-spacing: 0;
+}

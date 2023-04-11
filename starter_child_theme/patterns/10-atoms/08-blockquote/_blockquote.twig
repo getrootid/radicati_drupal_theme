@@ -1,0 +1,12 @@
+{% set base = "blockquote" %}
+
+<figure {{ bem(base, blockquote.variant|default([])) }}>
+  <blockquote {{ bem('quote', [], base) }}>
+    {{ blockquote.quote }}
+  </blockquote>
+  {% if blockquote.citation %}
+    <figcaption {{ bem('citation', [], base) }}>
+      {{ blockquote.citation }}
+    </figcaption>
+  {% endif %}
+</figure>

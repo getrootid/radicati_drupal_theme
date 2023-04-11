@@ -1,0 +1,32 @@
+@import '../../variables';
+
+// Styles for Drupal Admin UI buttons. This is for when the front end theme is used to display edit pages.
+
+.node-form {
+  .node-add-edit-form__sidebar .button {
+    padding: rem(12px 14px);
+    border-width: 1px;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  #edit-actions .button,
+  #edit-actions input.form-submit {
+    min-height: rem(55px);
+    padding-bottom: rem(6px);
+    padding-top: rem(12px);
+  }
+
+  #edit-delete.button--danger:after {
+    font-family: $font--fontawesome;
+    content: '\f2ed';
+    padding-left: 5px;
+  }
+
+  #edit-actions .button--primary {
+    background-color: $color--rad-green;
+    border-color: $color--rad-green;
+    color: white;
+    color: white;
+  }
+}

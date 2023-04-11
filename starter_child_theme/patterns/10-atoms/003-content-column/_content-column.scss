@@ -1,0 +1,18 @@
+@import "../../variables";
+
+.content-column {
+  width: var(--rad--content-width--default);
+  margin: 0 auto;
+
+  @include media($breakpoint-md) {
+    width: var(--rad--content-width--md);
+  }
+
+  @include media($breakpoint-lg) {
+    width: var(--rad--content-width--lg);
+  }
+
+  @include media($breakpoint-xl) {
+    width: var(--rad--content-width--xl);
+  }
+}

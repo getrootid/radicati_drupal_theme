@@ -1,0 +1,89 @@
+// Styles for Drupal Admin UI checkboxes. This is for when the front end theme is used to display edit pages.
+
+// This include depends on having the
+@import 'variables';
+
+.node-form {
+  .node-add-edit-form__sidebar {
+    :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) {
+      > .form-type--checkbox,
+      > .form-type-checkbox {
+        // background: var(--colorGinPrimaryLightHover);
+        line-height: 1.5;
+        margin-left: 0;
+        position: relative;
+
+        input {
+          cursor: pointer;
+          height: 24px;
+          margin-left: 0;
+          opacity: 0;
+          overflow: hidden;
+          position: absolute !important;
+          word-wrap: normal;
+          width: 40px;
+          z-index: 1;
+        }
+
+        .checkbox-toggle {
+          // border-color: var(--colorGinPrimaryLightActive);
+          border-radius: 12px;
+          box-sizing: border-box;
+          display: inline-block;
+          height: 24px;
+          vertical-align: top;
+          width: 40px;
+          z-index: 0;
+        }
+
+        .checkbox-toggle__inner {
+          background-color: var(--colorGinDisabled);
+          background-color: var(--colorGinLayer2Background);
+          border: 3px solid transparent;
+          border-radius: 12px;
+          box-sizing: border-box;
+          clip-path: circle(24px at 50% 50%);
+          display: block;
+          height: 100%;
+          overflow: hidden;
+          position: relative;
+          width: 100%;
+
+          &::before {
+            background-color: var(--colorGinFormElementBorder);
+            border-radius: 21px;
+            content: '';
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            transform: translateX(-16px);
+            transition: transform 0.3s;
+          }
+        }
+
+        label {
+          color: var(--colorGinText);
+          padding-bottom: 0;
+          padding-left: 4px;
+          position: relative;
+        }
+
+        // Changed styles for when the box is checked
+
+        input:checked ~ .checkbox-toggle {
+          border-color: var(--colorGinPrimaryLightActive);
+          background: var(--colorGinPrimaryLightHover);
+
+          .checkbox-toggle__inner {
+            background-color: var(--colorGinPrimaryLightActive);
+          }
+
+          .checkbox-toggle__inner::before {
+            background-color: var(--colorGinPrimaryHover);
+            transform: translateX(16px);
+          }
+        }
+      }
+    }
+  }
+}

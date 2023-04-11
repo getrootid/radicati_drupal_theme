@@ -1,0 +1,72 @@
+@import "../../variables";
+
+// TODO: our menus are in a very bad place. Need to get this into a MUCH better place.
+// We can't end up with five different types of menus all trying to style ul.menu
+// If possible, no extra menu javascript. Find libraries.
+// Whether or not there are icons shouldn't be different templates.
+// Maybe use the menu field module and add some kind of Icon Field or something. Allow this to be re=usable and
+// discoverable in the UI.
+
+
+
+ul.menu {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  width: 100%;
+
+  a {
+    color: black;
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  li {
+    margin: rem(0 20px);
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  ul {
+    align-items: flex-start;
+    flex-basis: 100%;
+    list-style: none;
+    padding-left: 0;
+  }
+}
+
+
+// Provide some minimal styles for the menu dropdown button.
+li.menu-item--has-dropdown {
+  display: flex;
+  flex-direction: row;
+
+  > a {
+    flex: 1 1 auto;
+  }
+
+  > button.menu-item__open-dropdown {
+    flex: 0 0 rem(44px);
+    width: rem(44px);
+    height: rem(44px);
+    font-size: rem(28px);
+    border: 0;
+    background: none;
+    color: white;
+  }
+}
+
+// Provide minimal styles for the dropdown menu
+ul.sub-menu {
+  display: none;
+
+}
+
+li.menu-item--dropdown-open {
+
+  > ul.sub-menu {
+    display: flex;
+  }
+}

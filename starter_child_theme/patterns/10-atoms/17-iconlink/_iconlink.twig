@@ -1,0 +1,35 @@
+{% if icon_link.link_attributes.title is not empty %}
+  {% set title = icon_link.link_attributes.title %}
+{% elseif icon_link.title %}
+  {% set title = icon_link.title %}
+{% endif %}
+
+{% embed '@atoms/10-link/_link.twig'
+  with {
+    link: {
+      mods: icon_link.mods,
+      base: icon_link.base|default('iconlink'),
+      href: icon_link.href,
+      attributes: icon_link.attributes,
+      title: title
+    },
+    icon: {
+      slug: icon_link.slug
+    },
+  }
+%}
+  {% block link_content %}
+    {% include '@atoms/15-icon/_icon.twig' with {
+      icon: icon
+    } only %}
+    <span class="visually-hidden">
+      {{ title }}
+      {% if link.attributes.target is defined and link.attributes.target == '_blank' %}
+        (Opens in new window)
+      {% endif %}
+    </span>
+    {% if icon_link.label %}
+      <span {{ bem('label', [], 'iconlink') }}>{{ icon_link.label }}</span>
+    {% endif %}
+  {% endblock link_content %}
+{% endembed %}

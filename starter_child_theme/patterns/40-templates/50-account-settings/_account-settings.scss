@@ -1,0 +1,81 @@
+@import '../../variables';
+
+.account-settings {
+  width: 90vw;
+  margin: 0 auto;
+  padding: rem(30px 0 30px 0);
+
+  @include media($breakpoint-md) {
+    padding: rem(80px 0 57px 0);
+  }
+
+  @include media($breakpoint-lg) {
+    width: rem(860px);
+  }
+}
+
+.account-settings__sub-section__title--agency-name {
+  margin: rem(10px 0 15px 0);
+
+  @include media($breakpoint-md) {
+    font-size: rem(56px);
+  }
+}
+
+.account-settings__section {
+  background: white;
+  border: 1px solid #333333;
+  padding: rem(15px);
+  margin: rem(0 0 56px 0);
+
+  @include media($breakpoint-md) {
+    padding: rem(60px 110px 67px 109px);
+  }
+}
+
+.account-settings__section__header {
+  display: flex;
+  flex-direction: row;
+
+  .account-settings__section__title {
+  }
+
+  .button {
+    @extend .menu-item-button;
+    margin-left: auto;
+  }
+}
+
+.account-settings table {
+  width: 100%;
+  font-size: rem(20px);
+
+  tr {
+    border-bottom: 1px solid #999999;
+  }
+
+  td {
+    padding: rem(15px 0);
+  }
+
+  .button--small {
+    @extend .menu-item-button;
+    padding: rem(5px 10px 5px);
+
+    @include media($breakpoint-lg) {
+      font-size: rem(16px);
+      border-radius: rem(20px);
+      min-width: rem(70px);
+      padding: rem(5px 10px 5px);
+    }
+  }
+}
+
+.account-settings__table__label {
+  font-weight: bold;
+}
+
+.account-settings__clinic-edit-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}

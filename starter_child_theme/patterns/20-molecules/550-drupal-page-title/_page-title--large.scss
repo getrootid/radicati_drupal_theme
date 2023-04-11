@@ -1,0 +1,52 @@
+@import "../../variables";
+
+#block-pagetitle-3, body.webform-page--1 {
+  .page-title__wrapper {
+    padding: rem(20px 5vw);
+
+    @include media($breakpoint-lg) {
+      padding: rem(46px 0 23px 0);
+    }
+  }
+
+  .page-title__inner {
+    display: block;
+
+    @include media($breakpoint-md) {
+
+    }
+  }
+
+
+  .page-title__site-name {
+    font-size: rem(16px);
+    line-height: 1;
+
+    @include media($breakpoint-md) {
+      font-size: rem(22px);
+    }
+
+    @include media($breakpoint-lg) {
+      font-size: rem(30px);
+    }
+
+    &:after {
+      content: unset;
+    }
+  }
+
+  h1.page-title {
+    margin-bottom: 0;
+    font-size: rem(25px);
+    line-height: 1.2;
+
+    @include media($breakpoint-lg) {
+      font-size: rem(45px);
+    }
+
+    @include media($breakpoint-xl) {
+      font-size: rem(52px);
+      line-height: rem(72px);
+    }
+  }
+}

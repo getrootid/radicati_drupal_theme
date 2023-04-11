@@ -1,0 +1,66 @@
+//@import "../../variables";
+//
+//table {
+//  border-collapse: collapse;
+//  border: 0;
+//  background-color: lightgray;
+//  margin-bottom: 1rem;
+//  max-width: 100%;
+//  width: 100%;
+//}
+//
+//table caption {
+//  font-size: rem(14px);
+//  caption-side: bottom;
+//  font-style: italic;
+//  text-align: left;
+//}
+//
+//thead {
+//  font-size: rem(20px);
+//  background-color: lightgray;
+//  vertical-align: top;
+//  color: white;
+//  line-height: 1.2;
+//
+//  font-weight: bold;
+//
+//  @include media($breakpoint-md) {
+//    font-size: rem(30px);
+//  }
+//}
+//
+//
+//th,
+//td {
+//  border: 6px solid white;
+//  padding: rem(15px 5px);
+//  text-align: left;
+//}
+//
+//th {
+//
+//  @include media($breakpoint-md) {
+//    padding: rem(17px 26px 18px);
+//  }
+//
+//}
+//
+//td {
+//  font-size: rem(12px);
+//  font-weight: 300;
+//  background-color: lightgray;
+//
+//  @include media($breakpoint-md) {
+//    font-size: rem(16px);
+//    padding: rem(16px 26px);
+//  }
+//}
+//
+//tr {
+//  border-bottom: 1px solid $color--primary;
+//
+//  &:last-child {
+//    border: 0;
+//  }
+//}

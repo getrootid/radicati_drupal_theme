@@ -1,0 +1,33 @@
+{% set base = 'icon-button' %}
+{% set mods = mods|default([]) %}
+{% set mods = mods|merge(icon_class ? ['with-icon'] : ['no-icon']) %}
+{% set icon_position = icon_position|default('right') %}
+
+{# TODO: formalize this. Either make a display fomatter or custom field type, something #}
+
+{% embed '@atoms/10-link/_link.twig'
+  with {
+    link: {
+      mods: mods,
+      base: base,
+      href: url,
+      attributes: attributes,
+      content: label
+    }
+  }
+%}
+  {% block link_content %}
+    {% if icon_position == 'left' and icon_class %}
+      <i class="{{ icon_class }} icon-left" aria-hidden="true"></i>
+    {% endif %}
+    <span {{ bem('link-text', [], base) }}>{{ label }}</span>
+    {% if
+      link.attributes.target is defined
+        and link.attributes.target == '_blank' %}
+      <span class="visually-hidden">(Opens in new window)</span>
+    {% endif %}
+    {% if icon_position == 'right' and icon_class %}
+      <i class="{{ icon_class }} icon-right" aria-hidden="true"></i>
+    {% endif %}
+  {% endblock link_content %}
+{% endembed %}

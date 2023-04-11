@@ -1,0 +1,81 @@
+@import "../../variables";
+
+form.webform-submission-form {
+
+  // General styles for more than one button.
+  .form-actions {
+    padding-top: rem(45px);
+    border-top: 1px solid #333333;
+  }
+
+  // This matches if the form only has one button.
+  .form-actions:has(> :first-child:last-child) {
+    input, button {
+      width: 100%;
+    }
+  }
+
+  .form-actions:has(> :nth-child(2):last-child) {
+    padding: rem(45px 20px 0 20px);
+    display: flex;
+    flex-direction: row;
+    gap: rem(77px);
+
+    > * {
+      flex: 1 1 50%;
+
+      input {
+        width: 100%;
+        position: relative;
+        margin: 0;
+      }
+    }
+  }
+
+
+  // Previous button:
+  .webform-btn-wrapper--prev {
+    position: relative;
+
+    &:before {
+      font-family: $font--fontawesome;
+      content: "\f060";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: rem(30px);
+      font-size: rem(25px);
+      font-weight: 900;
+      z-index: 10;
+      pointer-events: none;
+      color: var(--color--deep-purple);
+    }
+
+    &:hover:before {
+      color: white;
+    }
+  }
+
+  // Next Button
+  .webform-btn-wrapper--next {
+    position: relative;
+
+    &:before {
+      font-family: $font--fontawesome;
+      content: "\f061";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: rem(30px);
+      font-size: rem(25px);
+      font-weight: 900;
+      z-index: 10;
+      pointer-events: none;
+      color: white;
+    }
+
+    &:hover:before {
+      color: var(--color--deep-purple);
+    }
+  }
+}
