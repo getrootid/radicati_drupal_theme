@@ -1,7 +1,5 @@
 /*jshint esversion: 6 */
 
-const { clearConfigCache } = require("prettier");
-
 /**
  * Please note that this gulpfile and package.json are set up
  * for Node 16. If you're having problems, check your node version.
@@ -58,7 +56,7 @@ function css() {
   return (
     gulp
       .src([
-        "./patterns/hip-styles.scss",
+        "./assets/styles/hip-styles.scss",
       ])
       .pipe(
         sassGlob({
@@ -71,7 +69,7 @@ function css() {
       .pipe(sourcemaps.init())
       .pipe(
         sass({
-          includePaths: ["./patterns"],
+          includePaths: ["./assets/styles"],
           outputStyle: "compressed",
         }).on("error", sass.logError)
       )
@@ -88,10 +86,9 @@ function css() {
  * drush cc.
  */
 function watch() {
-  gulp.watch("./patterns/**/*.scss", css);
+  gulp.watch("./assets/styles/**/*.scss", css);
   gulp.watch(
     [
-      "./patterns/**/*.twig",
       "./templates/**/*.twig",
       "./*.theme",
       "./*.libraries.yml",
@@ -113,10 +110,9 @@ function landoDrupalServe() {
     open: false,
     proxy: config.localServerUrl,
   });
-  gulp.watch("./patterns/**/*.scss", css);
+  gulp.watch("./assets/styles/**/*.scss", css);
   gulp.watch(
     [
-      "./patterns/**/*.twig",
       "./templates/**/*.twig",
       "./*.theme",
       "./*.libraries.yml",
