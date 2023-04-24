@@ -1,7 +1,7 @@
 // In addition to not being able to get it to work, the new @use syntax seems to not allow using a module from a common
 // import. So we would need to @use sass-rem in every single file.
-@import '../node_modules/sass-rem/rem';
-@import '../node_modules/include-media/dist/include-media';
+@import '../../node_modules/sass-rem/rem';
+@import '../../node_modules/include-media/dist/include-media';
 
 // Admin Page Colors - Do not remove
 $color--rad-cream: #cccfcc;

@@ -1,0 +1,49 @@
+@import '../../variables';
+
+.social-share {
+  display: grid;
+  grid-auto-flow: column;
+  grid-column-gap: rem(15px);
+  grid-template-columns: repeat(auto-fit, rem(45px));
+  margin-bottom: rem(44px);
+  margin-right: auto;
+}
+
+.iconlink--social-link {
+  // @include rem('margin', 0 3px);
+  align-items: center;
+  background-color: var(--color--red);
+  border: rem(3px) solid var(--color--red);
+  border-radius: 50%;
+  color: var(--color--text-secondary);
+  display: inline-flex;
+  height: rem(44px);
+  justify-content: center;
+  width: rem(44px);
+
+  &:active,
+  &:visited {
+    color: var(--color--text-secondary);
+  }
+
+  &:hover {
+    background-color: var(--color--text-secondary);
+    color: var(--color--red);
+  }
+}
+
+// Handle labels:
+.social-share .iconlink--social-copy-link {
+  position: relative;
+
+  .iconlink__label {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    .iconlink__label {
+      display: inline-flex;
+    }
+  }
+}
