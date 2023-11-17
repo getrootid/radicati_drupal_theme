@@ -1,0 +1,11 @@
+@import "../../variables";
+
+.field-component-read-more {
+  text-align: center;
+
+  a {
+    @extend .button;
+    @extend .button--primary;
+  }
+
+}

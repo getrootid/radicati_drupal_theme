@@ -1,0 +1,79 @@
+@import "../../variables";
+
+.highlight {
+  display: flex;
+}
+
+.highlight__media {
+  flex: 0 0 100%;
+  width: 100%;
+
+  @include media($breakpoint-md) {
+    flex: 0 0 50%;
+    width: 50%;
+
+    div:not(.contextual), img {
+      width: 100%;
+      height: 100%;
+    }
+
+    img {
+      display: block;
+      object-fit: cover;
+    }
+  }
+}
+
+.highlight__content {
+  flex: 0 1 100%;
+  width: 100%;
+  padding: rem(15px);
+
+  @include media($breakpoint-md) {
+    flex: 0 1 50%;
+    width: 50%;
+    padding: rem(25px);
+  }
+}
+
+.block--block-content--highlight {
+
+  &.setting-layout--media-on-right {
+    .highlight {
+      flex-direction: row-reverse;
+    }
+
+  }
+
+  &.setting-layout--media-on-left {
+    .highlight {
+      flex-direction: row;
+    }
+  }
+
+  &.setting-layout--media-on-top {
+    .highlight {
+      flex-direction: column;
+    }
+
+    .highlight__media, .highlight__content {
+      flex: 0 0 100%;
+      width: 100%;
+    }
+  }
+
+}
+
+.field-highlight-title {
+  h2 {
+    margin-top: 0;
+  }
+}
+
+.field-highlight-button {
+  a {
+    @extend .button;
+    @extend .button--primary;
+  }
+
+}

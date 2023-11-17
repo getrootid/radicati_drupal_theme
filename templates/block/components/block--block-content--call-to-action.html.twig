@@ -1,0 +1,16 @@
+{% extends "block--block-content.html.twig" %}
+
+{% block content %}
+  <div{{ content_attributes.addClass('cta') }}>
+    <div class="cta__media">
+      {{ content.field_cta_media }}
+    </div>
+    <div class="cta__content block__content__inner">
+      {{ content.field_cta_label }}
+      {{ content.field_cta_title }}
+      {{ content.field_cta_blurb }}
+      {{ content.field_cta_button }}
+    </div>
+  </div>
+{% endblock %}
+

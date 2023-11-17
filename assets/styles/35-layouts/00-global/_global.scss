@@ -1,0 +1,59 @@
+@import "../../variables";
+
+// Temp
+body.page-node-type-layout-page {
+
+  .region-content {
+    width: 100%;
+  }
+
+  //.page-content {
+  //  width: 100%;
+  //  max-width: unset;
+  //  padding: 0;
+  //}
+}
+
+
+.layout {
+
+  max-width: var(--rad--content-width--default);
+  margin: 0 auto;
+
+  @include media($breakpoint-sm) {
+    max-width: var(--rad--content-width--sm);
+  }
+
+  @include media($breakpoint-md) {
+    max-width: var(--rad--content-width--md);
+  }
+
+  @include media($breakpoint-lg) {
+    max-width: var(--rad--content-width--lg);
+  }
+
+  @include media($breakpoint-xl) {
+    max-width: var(--rad--content-width--xl);
+  }
+}
+
+.layout.content-width--wide {
+
+  max-width: var(--rad--content-width-wide--default);
+
+  @include media(">sm") {
+    max-width: var(--rad--content-width-wide--sm);
+  }
+
+  @include media(">md") {
+    max-width: var(--rad--content-width-wide--md);
+  }
+
+  @include media(">lg") {
+    max-width: var(--rad--content-width-wide--lg);
+  }
+
+  @include media(">xl") {
+    max-width: var(--rad--content-width-wide--xl);
+  }
+}

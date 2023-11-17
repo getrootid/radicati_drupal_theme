@@ -1,0 +1,50 @@
+@import "../../variables";
+
+.block--block-content--card-carousel .paragraph--type--card-collection-item  {
+  margin: rem(0 15px 45px 15px);
+
+  .field-card-media {
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    iframe {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16/9;
+    }
+
+
+  }
+
+  .field-card-title {
+    font-size: rem(26px);
+    font-weight: bold;
+    margin-bottom: rem(9px);
+  }
+
+  .field-card-tag {
+    color: var(--component--color--alt);
+    text-transform: uppercase;
+    font-size: rem(16px);
+    margin-bottom: rem(8px);
+  }
+
+  .field-card-blurb {
+    font-size: rem(16px);
+    margin-bottom: rem(20px);
+  }
+
+  .field-card-link {
+    text-align: center;
+    margin-bottom: rem(20px);
+
+    a {
+      text-decoration: none;
+      font-size: rem(18px);
+
+    }
+
+  }
+}

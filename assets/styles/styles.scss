@@ -1,5 +1,8 @@
 @import 'css-variables';
+@import "00-layout-builder/*";
 @import '10-atoms/**/*';
 @import '20-molecules/**/*';
 @import '30-organisms/**/*';
+@import "33-components/**/*";
+@import '35-layouts/**/*';
 @import '40-templates/**/*';

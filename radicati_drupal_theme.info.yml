@@ -1,7 +1,7 @@
 name: Radicati Parent Theme
 type: theme
-#base theme: stable9
-base theme: classy
+base theme: stable9
+#base theme: classy
 description: 'Parent theme for sites made with Radicati. Not meant to be used by itself.'
 core_version_requirement: ^8.9 || ^9 || ^10
 

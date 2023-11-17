@@ -1,0 +1,22 @@
+@import "../../variables";
+
+input[type="radio"] {
+  display: inline-block;
+  width: rem(18px);
+  height: rem(18px);
+  margin: 0;
+  vertical-align: middle;
+  border: 2px solid #7e96a7;
+  border-radius: 0.1875rem;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 1.125rem 1.125rem;
+  -webkit-appearance: none;
+  appearance: none;
+
+
+  &:checked {
+
+  }
+}

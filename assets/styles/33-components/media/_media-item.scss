@@ -1,0 +1,28 @@
+@import "../../variables";
+
+.paragraph--type--media-item {
+
+
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 19/9;
+  }
+
+  .field-media-item__media {
+    margin-bottom: rem(10px);
+  }
+
+  .field-media-item__caption {
+    color: var(--component--color--alt);
+    margin-bottom: rem(20px);
+    padding-left: rem(10px);
+  }
+}

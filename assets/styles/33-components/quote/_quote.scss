@@ -1,0 +1,128 @@
+@import "../../variables";
+
+.block--block-content--quote {
+  display: flex;
+
+  &.setting-alignment--right {
+    justify-content: flex-end;
+  }
+
+  &.setting-alignment--center {
+    justify-content: center;
+  }
+
+  &.setting-alignment--left {
+    justify-content: flex-start;
+  }
+
+  &.setting-background--light .quote__wrapper {
+    --color--background: var(--rad--color--dark--background);
+    --color--text: var(--rad--color--dark--text);
+    --color--link: var(--rad--color--dark--link);
+
+    --color--quote: rgba(144, 144, 144, 0.6);
+    --color--title: #cccccc;
+  }
+
+  &.setting-background--dark .quote__wrapper {
+    --color--background: var(--rad--color--light--background);
+    --color--text: var(--rad--color--light--text);
+    --color--link: var(--rad--color--light--link);
+
+    --color--quote: rgba(33, 8, 8, 0.4);
+    --color--title: #333333;
+  }
+
+  &.setting-background--none .quote__wrapper {
+    --color--background: var(--rad--color--light--background);
+    --color--text: var(--rad--color--light--text);
+    --color--link: var(--rad--color--light--link);
+
+    --color--quote: rgba(144, 144, 144, 0.6);
+    --color--title: #232323;
+  }
+
+  .quote__wrapper {
+    position: relative;
+    padding: rem(10px 0 0 160px);
+    width: 100%;
+  }
+
+  .field-quote-media {
+    position: absolute;
+    left: rem(15px);
+    top: rem(-5px);
+
+    width: rem(150px);
+    height: rem(150px);
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  blockquote {
+    position: relative;
+    display: block;
+    padding: rem(30px 30px 30px 60px);
+    border-radius: rem(10px);
+    background: var(--color--background);
+    color: var(--color--text);
+    text-align: left;
+
+    p:first-child {
+      margin-top: 0;
+      z-index: 1;
+    }
+
+    // make a css triangle
+    &:before {
+      content: "";
+      position: absolute;
+      top: rem(40px);
+      left: rem(-28px);
+      width: 0;
+      height: 0;
+      transform: rotate(90deg);
+      border-top: rem(15px) solid var(--color--background);
+      border-right: rem(15px) solid transparent;
+      border-bottom: rem(15px) solid transparent;
+      border-left: rem(15px) solid var(--color--background);
+    }
+
+    &:after {
+      content: "\f10e";
+      font-family: $font--fontawesome;
+      font-weight: 700;
+      font-size: rem(64px);
+      position: absolute;
+      top: rem(4px);
+      left: rem(30px);
+      color: var(--color--quote);
+      z-index: 0;
+    }
+  }
+
+  .field-quote-quote {
+    position: relative;
+    font-size: rem(24px);
+    z-index: 3;
+  }
+
+  .field-quote-citation-name {
+    font-size: rem(17px);
+    font-weight: bold;
+    margin-bottom: rem(6px);
+  }
+
+  .field-quote-citation-title {
+    font-size: rem(14px);
+    text-transform: uppercase;
+
+    color: var(--color--title);
+  }
+}

@@ -1,0 +1,109 @@
+/**
+This should contain settings for all components that are not specific to a component.
+
+Mostly this applies the settings coming from the config on the components, things like
+background or alignment. If a components needs to apply these thigns in a unique way then
+it should handle that in the component itself.
+ */
+
+// Default block styles. Can be overridden
+.block-layout-builder {
+  padding: rem(40px 0);
+  --component-padding: 40px;
+}
+
+// the "inner" block of all content blocks. All content will, by default, exist
+// within the normal content column.
+.block__content {
+  max-width: var(--rad--content-width-normal);
+  margin: 0 auto;
+}
+
+.setting-content-width--wide  .block__content__inner {
+  max-width: var(--rad--content-width-wide);
+  margin: 0 auto;
+}
+
+.setting-content-width--normal  .block__content__inner {
+  max-width: var(--rad--content-width-normal);
+  margin: 0 auto;
+}
+
+.setting-content-width--narrow  .block__content__inner {
+  max-width: var(--rad--content-width-narrow);
+  margin: 0 auto;
+}
+
+
+
+
+
+// Settings, these are controlled by the component config/taxonomy items.
+.setting-alignment--center {
+  text-align: center;
+}
+
+.setting-alignment--right {
+  text-align: right;
+}
+
+
+.setting-background--none {
+  --component--color--alt: #232323;
+
+  --color--background: transparent;
+  --color--text: var(--rad--color--light--text);
+  --color--link: var(--rad--color--light--link);
+
+  background: var(--color--background);
+  color: var(--color--text);
+
+  a {
+    color: var(--color--link);
+  }
+}
+
+.setting-background--light {
+  --component--color--alt: #232323;
+
+  --color--background: var(--rad--color--light--background);
+  --color--text: var(--rad--color--light--text);
+  --color--link: var(--rad--color--light--link);
+
+  background: var(--color--background);
+  color: var(--color--text);
+
+  a {
+    color: var(--color--link);
+  }
+}
+
+.setting-background--dark {
+  --component--color--alt: #b1b1b1;
+
+  --color--background: var(--rad--color--dark--background);
+  --color--text: var(--rad--color--dark--text);
+  --color--link: var(--rad--color--dark--link);
+
+  background: var(--color--background);
+  color: var(--color--text);
+
+  a {
+    color: var(--color--link);
+  }
+}
+
+// This should always be handled on the component level since it's fairly specific to
+// the component itself.
+.setting-layout--media-on-left {
+
+}
+
+.setting-width--full-width {
+  margin-left: calc( -100vw / 2 + 100% / 2 );
+  margin-right: calc( -100vw / 2 + 100% / 2 );
+  max-width: 100vw;
+  width: 100vw;
+  padding: 0;
+  border: 0;
+}

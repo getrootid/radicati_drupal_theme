@@ -1,0 +1,32 @@
+@import "../../variables";
+
+.block--block-content--card-carousel {
+
+  .field-cards-cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+
+    .field--item {
+
+    }
+  }
+
+  &.setting-items-per-row--three {
+    .field-cards-cards {
+      .field--item {
+        width: calc(33% - 20px);
+        margin: 0 10px;
+      }
+    }
+  }
+
+  &.setting-items-per-row--four {
+    .field-cards-cards {
+      .field--item {
+        width: calc(25% - 20px);
+        margin: 0 10px;
+      }
+    }
+  }
+}

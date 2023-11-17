@@ -1,13 +1,13 @@
 @import "../../variables";
 
-.page-content {
-  display: grid;
-  grid-template-areas: "sidebar_one main sidebar_two";
-  grid-template-columns: auto 1fr auto;
-
-  max-width: var(--rad--content-max-width);
-  margin: 0 auto;
-}
+//.page-content {
+//  display: grid;
+//  grid-template-areas: "sidebar_one main sidebar_two";
+//  grid-template-columns: auto 1fr auto;
+//
+//  max-width: var(--rad--content-max-width);
+//  margin: 0 auto;
+//}
 
 .region-content {
   grid-area: main;

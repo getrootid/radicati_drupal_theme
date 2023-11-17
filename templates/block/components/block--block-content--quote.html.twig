@@ -1,0 +1,18 @@
+{% extends "block--block-content.html.twig" %}
+
+{% block content %}
+  <div{{ content_attributes.addClass('quote__wrapper') }}>
+    {{ content.field_quote_media }}
+
+    <blockquote class="quote">
+      {{ content.field_quote_quote }}
+
+      <footer class="quote__footer">
+        {{ content.field_quote_citation_name }}
+
+        {{ content.field_quote_citation_title }}
+      </footer>
+    </blockquote>
+  </div>
+{% endblock %}
+

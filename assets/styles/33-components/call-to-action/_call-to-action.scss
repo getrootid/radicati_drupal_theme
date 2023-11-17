@@ -1,0 +1,65 @@
+@import "../../variables";
+
+.block--block-content--call-to-action {
+  padding: 0;
+
+}
+
+.cta {
+  padding: rem(var(--component-padding) 0);
+  position: relative;
+  width: 100%;
+}
+
+.cta__media {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: color-mix(in srgb, var(--color--background) 65%, transparent);
+  }
+
+  div:not(.contextual) {
+    width: 100%;
+    height: 100%;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.cta__content {
+  padding: rem(0 45px);
+  position: relative;
+
+  h2, h3, h4, h5, h6 {
+    margin-top: 0;
+  }
+
+  @include media($breakpoint-md) {
+
+  }
+
+  @include media($breakpoint-lg) {
+  }
+
+  .field-cta-button {
+    a {
+      @extend .button;
+      @extend .button--primary;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+@import "../../variables";
+
+.field-group-html-element {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: rem(20px);
+}

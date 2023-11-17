@@ -1,0 +1,94 @@
+@import "../variables";
+
+.layout-builder-block {
+
+  > div.contextual {
+    top: 0;
+    right: 0;
+
+    button.trigger {
+      display: none;
+    }
+  }
+
+
+
+  > div.contextual ul.contextual-links {
+    display: flex;
+    gap: rem(4px);
+    flex-direction: row;
+    top: 0;
+    right: 0;
+    border-radius: 0;
+    border-bottom-left-radius: 4px;
+    min-width: unset;
+
+    opacity: 0.25;
+
+    &:focus, &:hover {
+      opacity: 1;
+    }
+
+    li {
+      font-size: rem(9px);
+
+      a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 10px;
+        padding: 0;
+
+        color: #00000099;
+
+        transition: color 100ms ease-in-out;
+
+        &:focus, &:hover {
+          opacity: 1;
+          color: #000000FF !important;
+          background: transparent !important;
+        }
+      }
+    }
+
+    // Configure Link
+    li:first-child {
+
+      a {
+
+        &:before {
+          content: "\f14b";
+          font-size: rem(22px);
+          margin-bottom: 5px;
+          color: black;
+          opacity: 1 !important;
+          font-family: "Font Awesome 6 Pro";
+        }
+      }
+    }
+
+    li:nth-child(2) {
+      display: none;
+    }
+
+    li:last-child {
+
+      a {
+
+        &:before {
+          content: "\f05e";
+          font-weight: 700;
+          font-size: rem(22px);
+          color: red;
+          margin-bottom: 5px;
+          font-family: "Font Awesome 6 Pro";
+        }
+      }
+
+
+    }
+
+
+  }
+}

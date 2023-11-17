@@ -1,0 +1,25 @@
+@import "../../variables";
+
+/*
+  Utility classes meant to be used throughout other styles.
+ */
+
+.content-container--normal {
+  max-width: var(--rad--content-width--default);
+
+  @include media(">sm") {
+    max-width: var(--rad--content-width--sm);
+  }
+
+  @include media(">md") {
+    max-width: var(--rad--content-width--md);
+  }
+
+  @include media(">lg") {
+    max-width: var(--rad--content-width--lg);
+  }
+
+  @include media(">xl") {
+    max-width: var(--rad--content-width--xl);
+  }
+}

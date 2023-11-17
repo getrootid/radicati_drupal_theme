@@ -1,1 +1,28 @@
 <?php
+
+/**
+ * adds custom block type to the block template as a class name.
+ */
+function radicati_drupal_theme_preprocess_block(&$variables)
+{
+  $block_content = $variables['elements']['content'];
+  if(isset($block_content['#block_content'])) {
+    $bundle = $block_content['#block_content']->bundle();
+    $class = 'block--block-content--' . $bundle;
+    // make sure $class is a clean class name
+    $class = str_replace('_', '-', $class);
+    $variables['attributes']['class'][] = $class;
+  }
+}
+
+function radicati_drupal_theme_theme_suggestions_block_alter(array &$suggestions, array $variables, $hook) {
+  if (isset($variables['elements']['content']['#block_content'])) {
+    /** @var \Drupal\block_content\Entity\BlockContent $content */
+    $content = $variables['elements']['content']['#block_content'];
+    $view_mode = $variables['elements']['content']['#view_mode'];
+    $bundle = $content->bundle();
+    $suggestions[] = "block__block_content__{$bundle}";
+    $suggestions[] = "block__block_content__{$bundle}__{$view_mode}";
+  }
+}
+

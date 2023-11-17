@@ -2,6 +2,11 @@
   --rad--default-link-color: blue;
   --rad--default-link-text-decoration: underline;
 
+  --rad--default-button-background-color: #588524;
+
+  --rad--color--slider--background: #AAAAAA;
+  --rad--color--slider--background-active: #CAAAFA;
+
   --rad--default-font-family: Helvetica, sans-serif;
   --rad--default-font-size: 1rem;
   --rad--default-line-height: 1;
@@ -9,9 +14,23 @@
 
   --rad--content-width--xl: 75rem;
   --rad--content-width--lg: 60rem;
-  --rad--content-width--md: 45rem;
+  --rad--content-width--md: 60rem;
   --rad--content-width--sm: 90vw;
   --rad--content-width--default: 90vw;
+  // --rad--content-width: set below
+
+  --rad--content-width-narrow--xl: 60rem;
+  --rad--content-width-narrow--lg: 30rem;
+  --rad--content-width-narrow--md: 20rem;
+  --rad--content-width-narrow--sm: 90vw;
+  --rad--content-width-narrow--default: 90vw;
+
+  --rad--content-width-wide--xl: 90rem;
+  --rad--content-width-wide--lg: 70rem;
+  --rad--content-width-wide--md: 60rem;
+  --rad--content-width-wide--sm: 95vw;
+  --rad--content-width-wide--default: 95vw;
+  // --rad--content-width-wide: set below
 
   --rad--sidebar-one-width--xl: var(--rad--sidebar-one-width--lg);
   --rad--sidebar-one-width--lg: 12rem;
@@ -28,6 +47,23 @@
   --rad--breakpoint--sm: 36rem;
   --rad--breakpoint--md: 48rem;
   --rad--breakpoint--lg: 62rem;
-  --rad--brakpoint--xl: 75rem;
-  --rad--breakpoint--xxl: 90rem;
+  --rad--brakpoint--xl: 90rem;
+  --rad--breakpoint--xxl: 100rem;
+
+  --rad--color--light--background: lightgray;
+  --rad--color--light--text: black;
+  --rad--color--light--link: blue;
+
+  --rad--color--dark--background: #434343;
+  --rad--color--dark--text: white;
+  --rad--color--dark--link: lightblue;
+
+  --button--primary--background-color: red;
+  --button--primary--text-color: white;
+
+  --color--background: transparent;
+  --color--text: var(--rad--color--light--text);
+  --color--link: var(--rad--color--light--link);
+  --color--text--disabled: #454545;
 }
+

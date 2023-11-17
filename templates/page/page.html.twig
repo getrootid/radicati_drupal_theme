@@ -17,18 +17,6 @@
     </div>
   </header>
 
-
-  {#  {% include '@organisms/000-header/_header.twig' with {#}
-  {#    regions: {#}
-  {#      header_branding: header_branding,#}
-  {#      secondary_navigation: secondary_navigation,#}
-  {#      primary_navigation: primary_navigation,#}
-  {#      off_canvas_header: off_canvas_header,#}
-  {#      off_canvas: off_canvas,#}
-  {#      off_canvas_footer: off_canvas_footer,#}
-  {#    }#}
-  {#  } only %}#}
-
   {% block hero %}
     {{ page.hero }}
   {% endblock hero %}
@@ -43,7 +31,9 @@
     {% endblock breadcrumb %}
 
     {% if page.attributes.has_system_help %}
-      {{ page.system_help }}
+      <div class="content-container--normal">
+        {{ page.system_help }}
+      </div>
     {% endif %}
 
     <main>
@@ -57,15 +47,18 @@
       {% endblock %}
 
       {% block page_content %}
-        <div id="main-page-content" class="page-content">
+        <div id="main-page-content" class="page-content content-container--normal">
           {% block content %}
             {{ page.content }}
           {% endblock %}
 
+          {% block sidebar_one %}
             {{ page.sidebar_one }}
+          {% endblock %}
 
-
+          {% block sidebar_two %}
             {{ page.sidebar_two }}
+          {% endblock %}
         </div>
       {% endblock page_content %}
 

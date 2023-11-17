@@ -1,0 +1,15 @@
+{% extends "block--block-content.html.twig" %}
+
+{% block content %}
+  <div{{ content_attributes.addClass('large-hero') }}>
+    <div class='large-hero__background'>
+      {{ content.field_large_hero_background }}
+    </div>
+    <div class="large-hero__content">
+      {{ content.field_large_hero_title }}
+      {{ content.field_large_hero_blurb }}
+      {{ content.field_large_hero_button }}
+    </div>
+  </div>
+{% endblock %}
+

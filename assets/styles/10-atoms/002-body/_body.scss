@@ -5,4 +5,7 @@ body {
   font-size: var(--rad--default-font-size);
   color: var(--rad--default-text-color);
   line-height: var(--rad-default-line-height);
+  margin: 0;
+
+  overflow-x: hidden;
 }

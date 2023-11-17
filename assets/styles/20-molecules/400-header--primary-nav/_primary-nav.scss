@@ -1,0 +1,53 @@
+@import "../../variables";
+
+.header__primary-nav-wrapper {
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+
+  .block-superfishmain {
+    ul.sf-main {
+      display: flex;
+      flex-direction: row;
+      gap: rem(25px);
+
+      justify-content: flex-end;
+
+
+    }
+
+    li.sf-depth-1 {
+
+      &.sfHover {
+        a {
+          background: green;
+          color: white;
+        }
+      }
+    }
+
+    a.sf-depth-1 {
+      text-decoration: none;
+      color: black;
+      font-size: rem(14px);
+    }
+
+
+    li.sf-depth-2 {
+
+    }
+
+    a.sf-depth-2 {
+      text-decoration: none;
+      color: black;
+      font-size: rem(14px);
+
+      &:focus, &:hover {
+        text-shadow: 1px 0px 0px white;
+      }
+    }
+
+
+  }
+}

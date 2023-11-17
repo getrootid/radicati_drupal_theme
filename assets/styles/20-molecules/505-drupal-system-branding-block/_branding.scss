@@ -1,0 +1,51 @@
+.block-system-branding-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: rem(150px);
+
+  a.site-logo-link {
+    height: 100%;
+  }
+
+  img,
+  svg {
+    height: 100%;
+    // @include rem('max-width', 100px);
+    width: auto;
+
+    // @include media($breakpoint-lg) {
+    //   @include rem('max-width', 210px);
+    // }
+  }
+
+  .site-branding img {
+    object-fit: contain;
+    max-width: rem(210px);
+  }
+
+  .site-name-slogan {
+    flex: 1 1 auto;
+
+    a {
+      text-decoration: none;
+      color: black;
+      font-size: rem(20px);
+      font-weight: bold;
+    }
+  }
+
+  .site-slogan {
+    align-items: center;
+    display: flex;
+    flex: rem(1 0 300px);
+    font-size: rem(20px);
+    font-weight: bold;
+  }
+}
+
+
+
+.site-branding__slogan {
+
+}
