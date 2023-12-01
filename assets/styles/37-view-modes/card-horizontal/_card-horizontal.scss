@@ -1,0 +1,42 @@
+@import "../../variables";
+
+.card-horizontal {
+  @include media($breakpoint-md) {
+    display: grid;
+    grid-template-columns: rem(100px) 1fr;
+    gap: rem(20px);
+  }
+}
+
+.card-horizontal__image {
+  width: 100%;
+
+  div:not(.contextual) {
+    width: 100%;
+  }
+
+  img {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+.card-horizontal__content {
+  color: var(--color--text--alt);
+  font-size: rem(16px);
+
+  .title {
+    h2, h3 {
+      font-size: rem(25px);
+      margin-top: 0;
+      margin-bottom: rem(10px);
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--color--text);
+    }
+  }
+}

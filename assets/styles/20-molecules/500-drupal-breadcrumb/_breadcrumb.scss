@@ -2,7 +2,8 @@
 
 .block-system-breadcrumb-block {
   padding: rem(15px 0);
-  background-color: lightblue;
+  background-color: var(--color--brand--brown);
+  color: var(--color--brand--gold);
 
   nav {
     max-width: var(--rad--content-width-normal);
@@ -35,7 +36,7 @@
     a {
       text-decoration: none;
 
-      color: darkred;
+      color: var(--color--brand--cream);
     }
   }
 

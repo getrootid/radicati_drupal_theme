@@ -1,0 +1,44 @@
+@import "../../variables";
+
+.radicati-button {
+  border: 0;
+  color: var(--color--text);
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 1.5em;
+  cursor: pointer;
+
+  &[aria-expanded=true] {
+    background: var(--color--brand--cream);;
+  }
+
+  .radicati-button__label {
+    margin-left: rem(10px);
+    margin-right: rem(10px);
+  }
+
+  &.radicati-button__label-visually-hidden {
+    .radicati-button__label {
+      position: absolute !important;
+      overflow: hidden;
+      clip: rect(1px, 1px, 1px, 1px);
+      width: 1px;
+      height: 1px;
+      word-wrap: normal;
+    }
+  }
+
+  &.radicati-button__label-left {
+    flex-direction: row-reverse;
+  }
+
+  &.radicati-button__label-top {
+    flex-direction: column-reverse;
+  }
+
+  &.radicati-button__label-bottom {
+    flex-direction: column;
+  }
+}

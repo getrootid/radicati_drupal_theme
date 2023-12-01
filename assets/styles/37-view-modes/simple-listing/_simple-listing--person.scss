@@ -1,0 +1,15 @@
+@import "../../variables";
+
+.node--type-person .simple-listing {
+  margin-bottom: rem(25px);
+
+  .simple-listing__name {
+    font-weight: bold;
+    font-size: rem(18px);
+  }
+
+  .simple-listing__position {
+    color: var(--color--text--alt);
+    font-size: rem(16px);
+  }
+}

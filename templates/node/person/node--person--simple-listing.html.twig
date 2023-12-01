@@ -1,0 +1,19 @@
+{% extends "node.html.twig" %}
+
+{% block default_title %}{% endblock %}
+
+{% block content %}
+  <div{{ content_attributes.addClass('simple-listing') }}>
+    <div class="simple-listing__first-line">
+      <span class="simple-listing__name">
+        {{ content.field_person_first_name.0 }} {{ content.field_person_last_name.0 }}
+      </span>
+      {% if not node.field_person_pronouns.isEmpty %}
+        <span class="simple-listing__pronouns">{{ content.field_person_pronouns.0 }}</span>
+      {% endif %}
+    </div>
+    {% if not node.field_person_position.isEmpty %}
+      <div class="simple-listing__position">{{ content.field_person_position.0 }}</div>
+    {% endif %}
+  </div>
+{% endblock %}

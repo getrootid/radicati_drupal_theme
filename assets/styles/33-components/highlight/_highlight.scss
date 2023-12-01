@@ -1,5 +1,19 @@
 @import "../../variables";
 
+.block-layout-builder.block--block-content--highlight {
+  padding: 0;
+}
+
+// If align center is set, then vertically center the content
+.block--block-content--highlight.setting-alignment--center {
+  .highlight__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
 .highlight {
   display: flex;
 }

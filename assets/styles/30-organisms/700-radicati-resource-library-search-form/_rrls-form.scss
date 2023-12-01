@@ -1,0 +1,46 @@
+@import "../../variables";
+
+.resource-library-search-form {
+
+}
+
+.resource-library-search-form__line-one {
+  @include media($breakpoint-md) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.resource-library-search-form__line-two {
+  @include media($breakpoint-md) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.resource-library-search-form {
+  .form-item-terms {
+    flex: 1 1 auto;
+    max-width: 50vw;
+
+    input {
+      width: 100%;
+    }
+  }
+
+  .form-actions {
+    flex: 0 0 rem(196px);
+    width: rem(196px);
+    color: var(--color--button--primary--text);
+
+    input {
+      background-color: var(--color--button--primary--background);
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}

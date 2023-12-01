@@ -1,0 +1,77 @@
+@import "../../variables";
+
+.block--block-content--webform-call-to-action {
+  &.setting-layout--media-on-right {
+    .webform-cta {
+      @include media($breakpoint-md) {
+        display: grid;
+        grid-template-areas: "content form";
+        grid-template-columns: 1fr rem(300px);
+      }
+    }
+  }
+
+  &.setting-layout--media-on-left {
+    .webform-cta {
+      @include media($breakpoint-md) {
+        display: grid;
+        grid-template-areas: "form content";
+        grid-template-columns: rem(300px) 1fr;
+      }
+    }
+  }
+
+  &.setting-layout--media-on-top {
+    .webform-cta {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .webform-cta__content {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.webform-cta {
+  padding: 0 5vw;
+
+  @include media($breakpoint-md) {
+    padding: 0;
+  }
+
+  @include media($breakpoint-lg) {
+
+  }
+}
+
+.webform-cta__content {
+  grid-area: content;
+
+  h2 {
+    margin-top: 0;
+  }
+}
+
+.webform-cta__form {
+  grid-area: form;
+
+  @include media($breakpoint-md) {
+    max-width: rem(350px);
+  }
+
+  .form-item, .form-actions {
+    margin: rem(15px 0);
+  }
+
+  input {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .form-actions {
+    text-align: right;
+  }
+}
+

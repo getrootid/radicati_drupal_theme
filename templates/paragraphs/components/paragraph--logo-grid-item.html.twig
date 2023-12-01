@@ -1,0 +1,24 @@
+{% extends "paragraph.html.twig" %}
+
+{% block content %}
+  <div class="logo-grid-item">
+    {% set link = paragraph.field_logo_item_link.0.url %}
+
+    {% if link %}
+      <a href="{{ link }}" target="_blank">
+    {% endif %}
+
+    {{ content.field_logo_item_logo }}
+
+    {% if paragraph.field_logo_item_link.0.title %}
+      <span class="logo-grid-item__title">
+        {{ paragraph.field_logo_item_link.0.title }}
+      </span>
+    {% endif %}
+
+    {% if link %}
+      </a>
+    {% endif %}
+
+  </div>
+{% endblock %}

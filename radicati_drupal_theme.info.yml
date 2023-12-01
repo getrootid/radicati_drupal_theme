@@ -24,6 +24,7 @@ regions:
   header_branding: Header Branding
   secondary_navigation: Secondary Navigation
   primary_navigation: Primary Navigation
+  search: Search
   off_canvas_header: Off-Canvas Header
   off_canvas: Off-Canvas
   off_canvas_footer: Off-Canvas Footer

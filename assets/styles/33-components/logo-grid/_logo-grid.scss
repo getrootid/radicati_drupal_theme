@@ -1,0 +1,26 @@
+@import "../../variables";
+
+.block--block-content--logo-grid {
+
+
+  .field-logo-grid-items {
+    display: grid;
+
+    @include media($breakpoint-md) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: rem(20px);
+    }
+
+    @include media($breakpoint-lg) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include media($breakpoint-xl) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include media($breakpoint-xxl) {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+}

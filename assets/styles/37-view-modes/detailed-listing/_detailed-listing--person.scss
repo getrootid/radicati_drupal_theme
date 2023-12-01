@@ -1,0 +1,52 @@
+@import "../../variables";
+
+.node--type-person .detailed-listing {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: rem(40px) !important;
+
+  @include media($breakpoint-md) {
+    flex-direction: row;
+    gap: rem(25px);
+  }
+
+
+  .detailed-listing__media {
+    flex: 0 0 auto;
+    width: 100%;
+
+    @include media($breakpoint-md) {
+      flex-basis: rem(150px);
+      width: rem(150px);
+    }
+
+    @include media($breakpoint-lg) {
+      flex-basis: rem(250px);
+      width: rem(250px);
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .detailed-listing__content {
+    flex: 1 1 auto;
+  }
+
+  .detailed-listing__name {
+    font-weight: bold;
+    font-size: rem(24px);
+  }
+
+  .detailed-listing__position {
+    color: var(--color--text--alt);
+    font-size: rem(16px);
+    margin-bottom: rem(15px);
+  }
+
+  .field-summary {
+    font-size: rem(18px);
+  }
+}

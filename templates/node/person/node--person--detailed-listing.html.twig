@@ -1,0 +1,31 @@
+{% extends "node.html.twig" %}
+
+{% block default_title %}{% endblock %}
+
+{% block content %}
+  <div{{ content_attributes.addClass('detailed-listing') }}>
+    {% if not node.field_featured_image.isEmpty %}
+      <div class="detailed-listing__media">
+        {{ content.field_featured_image.0 }}
+      </div>
+    {% endif %}
+
+
+    <div class="detailed-listing__content">
+      <div class="detailed-listing__name-line">
+        <span class="detailed-listing__name">
+          {{ content.field_person_first_name.0 }} {{ content.field_person_last_name.0 }}
+        </span>
+        {% if not node.field_person_pronouns.isEmpty %}
+          <span class="detailed-listing__pronouns">{{ content.field_person_pronouns.0 }}</span>
+        {% endif %}
+      </div>
+
+      {% if not node.field_person_position.isEmpty %}
+        <div class="detailed-listing__position">{{ content.field_person_position.0 }}</div>
+      {% endif %}
+
+      {{ content|without('field_featured_image', 'field_person_first_name', 'field_person_last_name', 'field_person_pronouns', 'field_person_position') }}
+    </div>
+  </div>
+{% endblock %}

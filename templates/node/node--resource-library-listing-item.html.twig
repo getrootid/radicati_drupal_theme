@@ -1,0 +1,15 @@
+{% extends "node.html.twig" %}
+
+{% block default_title %}{% endblock %}
+
+{% block content %}
+  <div{{ content_attributes.addClass('resource-library-listing-item') }}>
+    <div class="resource-library-listing-item__icon">
+      {{ content.field_resource_type }}
+    </div>
+
+    <div class="resource-library-listing-item__content">
+      {{ content|without('field_resource_type') }}
+    </div>
+  </div>
+{% endblock %}

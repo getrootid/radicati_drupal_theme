@@ -1,7 +1,8 @@
 @import "../../variables";
 
 header.header {
-  background: lightgreen;
+  position: relative;
+  background: var(--color--brand--orange);
 }
 
 .header__inner {
@@ -49,4 +50,10 @@ header.header {
 
 .header__secondary-nav-wrapper {
   grid-area: secondarynav;
+}
+
+.primary_navigation {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
 }

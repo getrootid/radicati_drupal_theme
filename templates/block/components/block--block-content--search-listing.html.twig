@@ -1,0 +1,10 @@
+{% extends "block--block-content.html.twig" %}
+
+{% block content %}
+  <div{{ content_attributes.addClass('search-listing') }}>
+    <div class="search-listing__content">
+      {{ drupal_view('radicati_site_search', 'embed_1') }}
+    </div>
+  </div>
+{% endblock %}
+

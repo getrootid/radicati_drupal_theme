@@ -1,0 +1,48 @@
+@import "../../variables";
+
+.block--block-content--people-listing {
+
+  .field-component-title {
+    margin-bottom: rem(5px);
+
+    h2, h3 {
+      text-align: left;
+      text-transform: uppercase;
+      font-size: rem(20px);
+      margin: 0;
+    }
+  }
+
+  .field-component-sub-title {
+    margin-bottom: rem(5px);
+
+    h3, h4 {
+      text-align: left;
+      text-transform: none;
+      font-size: rem(16px);
+      margin: 0;
+    }
+  }
+
+  .block__content__inner {
+    padding-top: rem(15px);
+    border-top: 3px solid var(--color--text);
+    margin-top: rem(15px);
+  }
+}
+
+
+.field-people-listing-simple {
+  @include media($breakpoint-md) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include media($breakpoint-lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include media($breakpoint-xl) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

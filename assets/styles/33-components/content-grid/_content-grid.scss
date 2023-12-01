@@ -1,0 +1,36 @@
+@import "../../variables";
+
+.block--block-content--content-grid {
+
+  img {
+    max-width: 100%;
+  }
+
+  .field-content-grid-items {
+
+    @include media($breakpoint-md) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: rem(35px);
+    }
+  }
+
+  &.setting-items-per-row--three {
+    .field-content-grid-items {
+      @include media($breakpoint-md) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+
+
+  &.setting-items-per-row--four {
+    .field-content-grid-items {
+      @include media($breakpoint-md) {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  }
+}

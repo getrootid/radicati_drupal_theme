@@ -1,0 +1,17 @@
+@import "../../variables";
+
+.block--block-content--content-grid {
+
+  article {
+    .field--title {
+      h2 {
+        font-size: rem(30px);
+
+        a {
+          text-decoration: none;
+          color: var(--color--text);
+        }
+      }
+    }
+  }
+}

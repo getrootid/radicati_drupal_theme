@@ -1,0 +1,9 @@
+@import "../../variables";
+
+.form-item {
+  margin-bottom: rem(15px);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

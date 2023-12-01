@@ -1,0 +1,50 @@
+@import "../../variables";
+
+.resource-library-listing-item {
+  @include media($breakpoint-md) {
+    display: flex;
+    flex-direction: row;
+    gap: rem(20px);
+  }
+}
+
+.resource-library-listing-item__icon {
+  @include media($breakpoint-md) {
+    flex: 0 0 rem(100px);
+    width: rem(100px);
+  }
+
+  .field-icon {
+    width: 100%;
+    margin-bottom: rem(15px);
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: rem(10px);
+    }
+  }
+
+  .field--name {
+    text-align: center;
+    color: var(--color--text--alt);
+    text-transform: lowercase;
+    font-size: rem(16px);
+  }
+}
+
+.node__content .resource-library-listing-item__content {
+  @include media($breakpoint-md) {
+    flex: 1 1 auto;
+  }
+
+  h2, h3 {
+    margin: rem(0 0 10px 0);
+
+    a {
+      color: var(--color--text);
+      text-decoration: none;
+    }
+
+  }
+}

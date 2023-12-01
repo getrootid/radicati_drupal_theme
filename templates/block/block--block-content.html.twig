@@ -46,11 +46,18 @@
     <h2{{ title_attributes.addClass('block__title') }}>{{ label }}</h2>
   {% endif %}
   {{ title_suffix }}
-  {% block content %}
+  {% block outer_content %}
     <div{{ content_attributes.addClass('block__content') }}>
+      {{ content.field_component_title }}
+
+      {{ content.field_component_sub_title }}
+
       <div class="block__content__inner">
-        {{ content }}
+        {% block content %}
+          {{ content|without('field_component_title', 'field_component_sub_title', 'field_component_link') }}
+        {% endblock %}
       </div>
+      {{ content.field_component_link }}
     </div>
   {% endblock %}
 </div>

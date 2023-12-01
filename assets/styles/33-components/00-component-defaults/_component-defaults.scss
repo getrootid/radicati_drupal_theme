@@ -15,8 +15,8 @@ it should handle that in the component itself.
 // the "inner" block of all content blocks. All content will, by default, exist
 // within the normal content column.
 .block__content {
-  max-width: var(--rad--content-width-normal);
-  margin: 0 auto;
+  //max-width: var(--rad--content-width-normal);
+  //margin: 0 auto;
 }
 
 .setting-content-width--wide  .block__content__inner {
@@ -47,13 +47,37 @@ it should handle that in the component itself.
   text-align: right;
 }
 
-
-.setting-background--none {
+.node__content > .setting-background--none {
   --component--color--alt: #232323;
 
   --color--background: transparent;
   --color--text: var(--rad--color--light--text);
+  --color--text--alt: var(--color--brand--brown);
   --color--link: var(--rad--color--light--link);
+
+  --color--button--primary--text: var(--color--brand--cream);
+  --color--button--primary--background: var(--color--brand--brown);
+
+  background: var(--color--background);
+  color: var(--color--text);
+
+  a {
+    color: var(--color--link);
+  }
+}
+
+
+// For when a component that has its own background setting has none set.
+.layout-builder__section > div.setting-background--none {
+  --component--color--alt: #232323;
+
+  --color--background: transparent;
+  --color--text: var(--rad--color--light--text);
+  --color--text--alt: var(--color--brand--brown);
+  --color--link: var(--rad--color--light--link);
+
+  --color--button--primary--text: var(--color--brand--cream);
+  --color--button--primary--background: var(--color--brand--brown);
 
   background: var(--color--background);
   color: var(--color--text);
@@ -68,7 +92,11 @@ it should handle that in the component itself.
 
   --color--background: var(--rad--color--light--background);
   --color--text: var(--rad--color--light--text);
+  --color--text--alt: var(--color--brand--brown);
   --color--link: var(--rad--color--light--link);
+
+  --color--button--primary--text: var(--color--brand--cream);
+  --color--button--primary--background: var(--color--brand--brown);
 
   background: var(--color--background);
   color: var(--color--text);
@@ -83,7 +111,11 @@ it should handle that in the component itself.
 
   --color--background: var(--rad--color--dark--background);
   --color--text: var(--rad--color--dark--text);
+  --color--text--alt: var(--color--brand--orange);
   --color--link: var(--rad--color--dark--link);
+
+  --color--button--primary--text: var(--color--brand--cream);
+  --color--button--primary--background: var(--color--brand--orange);
 
   background: var(--color--background);
   color: var(--color--text);
