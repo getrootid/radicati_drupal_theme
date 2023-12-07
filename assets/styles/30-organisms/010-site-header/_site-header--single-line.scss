@@ -1,0 +1,23 @@
+@import "../../variables";
+
+// Strongarms some styles to force them to fit in a smaller header.
+
+body.radicati-header-type--single {
+
+  header.header {
+    height: rem(65px);
+  }
+
+  .block-system-branding-block {
+    max-height: rem(65px);
+  }
+
+  .header__inner {
+    @include media($breakpoint-lg) {
+      grid-template-areas:
+        "branding primarynav secondarynav"
+
+    }
+  }
+
+}

@@ -1,0 +1,44 @@
+@import "../../variables";
+
+#off-canvas {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  width: var(--rad--off-canvas-width);
+  color: black;
+  background-color: var(--color--brand--cream);
+  z-index: 1000;
+  visibility: hidden;
+
+  box-shadow: 2px 0 100px black;
+  transform: translateX(-130%);
+  transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+  &[aria-hidden="false"] {
+    transform: translateX(0);
+    visibility: visible;
+  }
+}
+
+.off-canvas__overlay {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: var(--color--brand--cream);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out ;
+  visibility: hidden;
+}
+
+
+.off-canvas__overlay.off-canvas__overlay--active {
+  opacity: 0.5;
+  visibility: visible;
+}

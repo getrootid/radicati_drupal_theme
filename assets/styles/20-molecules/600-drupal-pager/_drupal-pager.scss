@@ -1,0 +1,36 @@
+@import "../../variables";
+
+ul.pager__items {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: rem(5px 15px);
+  list-style-type: none;
+}
+
+li.pager__item {
+  display: inline-flex;
+  margin: 0 rem(5px);
+
+  a {
+    display: flex;
+    min-width: rem(32px);
+    height: rem(32px);
+    text-decoration: none;
+    color: black;
+    border-radius: rem(16px);
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+li.pager__item.is-active {
+  font-weight: bold;
+
+  a {
+    color: white;
+    background: black;
+
+  }
+}

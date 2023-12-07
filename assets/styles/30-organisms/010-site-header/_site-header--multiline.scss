@@ -1,0 +1,15 @@
+@import "../../variables";
+
+body.radicati-header-type--multi {
+  header.header {
+
+  }
+
+  .header__inner {
+    @include media($breakpoint-lg) {
+      grid-template-areas:
+    "branding  secondarynav"
+    "branding  primarynav";
+    }
+  }
+}

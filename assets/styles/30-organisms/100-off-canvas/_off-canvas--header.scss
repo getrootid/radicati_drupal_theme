@@ -1,0 +1,27 @@
+@import "../../variables";
+
+.off_canvas_header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: rem(5px 15px);
+
+  // First item is normally the logo.
+  .block-system-branding-block {
+    height: rem(100px);
+
+    img {
+      //height: rem(75px);
+      //width: auto;
+    }
+  }
+
+  // The close button
+  .block-rad-button-block {
+    margin-left: auto;
+
+    button {
+      font-size: rem(30px);
+    }
+  }
+}

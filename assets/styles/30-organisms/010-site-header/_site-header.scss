@@ -3,40 +3,35 @@
 header.header {
   position: relative;
   background: var(--color--brand--orange);
+  z-index: 10;
 }
 
 .header__inner {
   display: grid;
   margin: 0 auto;
-  max-width: var(--rad--content-width--default);
+  max-width: var(--rad--content-width-normal);
 
 
   grid-template-areas:
     "branding";
 
   @include media($breakpoint-sm) {
-    max-width: var(--rad--content-width--sm);
   }
 
   @include media($breakpoint-md) {
-    max-width: var(--rad--content-width--md);
 
     grid-template-areas:
-    "branding"
-    "secondarynav"
-    "primarynav";
+      "branding"
+      "secondarynav"
+      "primarynav";
   }
 
   @include media($breakpoint-lg) {
-    max-width: var(--rad--content-width--lg);
 
-    grid-template-areas:
-    "branding  secondarynav"
-    "branding  primarynav";
   }
 
   @include media($breakpoint-xl) {
-    max-width: var(--rad--content-width--xl);
+
   }
 }
 

@@ -1,8 +1,0 @@
-@import "../../variables";
-
-.block-radicati-offcanvas {
-
-  @include media($breakpoint-md) {
-    display: none;
-  }
-}

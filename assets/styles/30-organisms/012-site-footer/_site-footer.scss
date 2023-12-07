@@ -1,0 +1,32 @@
+@import "../../variables";
+
+footer.footer {
+  background: black;
+  padding-top: rem(20px);
+  color: var(--color--brand--cream);
+  position: relative;
+  z-index: 10;
+}
+
+.footer__inner {
+  max-width: var(--rad--content-width-normal);
+  margin: 0 auto;
+}
+
+.footer__copyright-wrapper {
+  max-width: var(--rad--content-width-normal);
+  margin: 0 auto;
+  padding: rem(15px) 0 rem(20px) 0;
+
+  .block--block-content {
+    padding: 0;
+    font-size: rem(14px);
+    color: var(--color--brand--gold);
+
+    p {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@import "../../variables";
+
+.off_canvas_footer {
+  margin-top: auto;
+  padding: rem(25px);
+  position: relative;
+
+  .block--block-content {
+    padding: 0;
+  }
+
+  .field-buttons-buttons {
+    a {
+      display: block;
+    }
+  }
+}
+
+// Buttons in the footer should be full width.

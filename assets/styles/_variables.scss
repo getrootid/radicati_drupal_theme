@@ -25,11 +25,13 @@ $breakpoint-xxl: '>=xxl';
   --rad--content-width-narrow: var(--rad--content-width-narrow-default);
   --rad--content-width-normal: var(--rad--content-width--default);
   --rad--content-width-wide: var(--rad--content-width-wide--default);
+  --rad--off-canvas-width: var(--rad--off-canvas-width--default);
 
   @include media($breakpoint-sm) {
     --rad--content-width-narrow: var(--rad--content-width-narrow--sm);
     --rad--content-width-normal: var(--rad--content-width--sm);
     --rad--content-width-wide: var(--rad--content-width-wide--sm);
+    --rad--off-canvas-width: var(--rad--off-canvas-width--sm);
   }
 
   @include media($breakpoint-md) {

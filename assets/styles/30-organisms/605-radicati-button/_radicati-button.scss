@@ -7,7 +7,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1em 1.5em;
+  padding: rem(15px);
   cursor: pointer;
 
   &[aria-expanded=true] {

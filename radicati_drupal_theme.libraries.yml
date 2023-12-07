@@ -11,6 +11,45 @@ fitvids:
   js:
     dist/libs/fitvids/scrollreveal.min.js: { minified: true }
 
+stickybits:
+  version: 1.x
+  js:
+    /libraries/stickybits/dist/stickybits.min.js: { minified: true }
+  dependencies:
+    - core/once
+
+sticky-header:
+  version: 1.x
+  js:
+    assets/styles/30-organisms/010-site-header/_site-header--sticky.js: {}
+  dependencies:
+    - radicati_drupal_theme/stickybits
+
+sticky-footer:
+  version: 1.x
+  js:
+    assets/styles/30-organisms/012-site-footer/_site-footer--sticky.js: {}
+  dependencies:
+    - radicati_drupal_theme/stickybits
+
+offcanvas:
+  version: 1.x
+  js:
+    assets/styles/30-organisms/100-off-canvas/_off-canvas.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/jquery.once
+
+offcanvas-menu:
+  version: 1.x
+  js:
+    assets/styles/20-molecules/410-off-canvas--menu/_offcanvas--menu.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/jquery.once
+
 scroll-reveal:
   version: 4.x
   js:

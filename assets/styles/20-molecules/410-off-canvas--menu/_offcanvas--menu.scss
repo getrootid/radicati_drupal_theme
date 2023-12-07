@@ -1,0 +1,102 @@
+@import "../../variables";
+
+// any menus placed in the off_canvas region.
+.off_canvas {
+  --border-color: var(--color--brand--brown);
+  --text-color: var(--color--brand--brown);
+
+
+  ul.menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  // All Menu items -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+  li.menu__item {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-bottom: 1px solid var(--color--brand--brown);
+
+    &:first-child {
+      border-top: 1px solid var(--color--brand--brown);
+    }
+  }
+
+  a.menu__link {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: none;
+    color: var(--text-color);
+    padding-left: rem(15px);
+    height: rem(44px);
+  }
+
+  button.menu__toggle {
+    flex: 0 0 rem(44px);
+    width: rem(44px);
+    margin-left: auto;
+    margin-right: 0;
+    border: 0;
+    background: transparent;
+    border-left: 1px solid var(--border-color);
+  }
+
+  // Top Level Menu Items -=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+  li.menu__item--level-1 {
+
+  }
+
+  a.menu__link--level-1 {
+    font-weight: bold;
+  }
+
+
+  // Second Level Menu Items -=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+  ul.menu--level-2 {
+    display: none;
+  }
+
+  ul.menu--level-2[aria-hidden="false"] {
+    display: block;
+    flex: 0 0 100%;
+  }
+
+  li.menu__item--level-2 {
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  a.menu__link--level-2 {
+    padding-left: rem(40px);
+  }
+
+  // Third Level Menu items -=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+  ul.menu--level-3 {
+      display: none;
+  }
+
+  ul.menu--level-3[aria-hidden="false"] {
+    display: block;
+    flex: 0 0 100%;
+  }
+
+  li.menu__item--level-3 {
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  a.menu__link--level-3 {
+    padding-left: rem(60px);
+  }
+
+}

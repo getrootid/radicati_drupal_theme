@@ -1,0 +1,22 @@
+@import "../../variables";
+
+.page-node-type-person {
+
+
+  .field-person-full-name {
+
+    .pronouns {
+      font-weight: normal;
+      font-size: rem(16px);
+
+      &:before {
+        content: "{";
+      }
+
+      &:after {
+        content: "}";
+      }
+    }
+  }
+
+}
