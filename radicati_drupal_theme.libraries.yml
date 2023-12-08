@@ -39,7 +39,7 @@ offcanvas:
   dependencies:
     - core/jquery
     - core/drupal
-    - core/jquery.once
+    - core/once
 
 offcanvas-menu:
   version: 1.x
@@ -48,7 +48,7 @@ offcanvas-menu:
   dependencies:
     - core/jquery
     - core/drupal
-    - core/jquery.once
+    - core/once
 
 scroll-reveal:
   version: 4.x
