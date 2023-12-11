@@ -9,23 +9,7 @@
 }
 
 .block-system-branding-block {
-  margin: 0 !important;
-  padding: 0 !important;
-  background: white;
 
-  img {
-    display: block;
-    height: auto;
-    width: rem(250px);
-
-    @include media('>=22em') {
-      width: rem(280px);
-    }
-
-    @include media($breakpoint-xl) {
-      width: rem(323px);
-    }
-  }
 }
 
 //
