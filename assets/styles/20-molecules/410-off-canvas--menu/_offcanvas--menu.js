@@ -7,17 +7,22 @@
       // the behaviour itself is called (it is not sufficient in general
       // to assume an element will only ever appear in a single context).
 
-      $('button.menu__toggle').once('offcanvasMenu').click(function() {
-        var target = $(this).attr('aria-controls');
-        var $target = $('#' + target);
+      once('offcanvasMenu', 'button.menu__toggle', context).forEach((element) => {
 
-        // Get the state of the toggle button
-        var state = $(this).attr('aria-expanded');
+        // Set the onClick listener for the menu toggle button
+        element.addEventListener('click', function(e) {
 
-        // Set the new state of the toggle button, and the state of the menu
-        $(this).attr('aria-expanded', !(state === 'true'));
-        $target.attr('aria-hidden', (state === 'true'));
 
+          var target = $(element).attr('aria-controls');
+          var $target = $('#' + target);
+
+          // Get the state of the toggle button
+          var state = $(this).attr('aria-expanded');
+
+          // Set the new state of the toggle button, and the state of the menu
+          $(element).attr('aria-expanded', !(state === 'true'));
+          $target.attr('aria-hidden', (state === 'true'));
+        });
       });
     }
   };

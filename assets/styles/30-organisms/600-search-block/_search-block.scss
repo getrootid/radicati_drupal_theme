@@ -4,7 +4,7 @@
   position: relative;
 }
 
-.block-rad-search-block {
+.radicati-search-form {
   position: absolute;
   right: 0;
   top: 100%;
@@ -16,5 +16,17 @@
 
   &[aria-hidden="false"] {
     visibility: visible;
+  }
+
+  form {
+    display: flex;
+    flex-direction: row;
+    gap: rem(10px);
+  }
+
+  button {
+    border: 0;
+    background: transparent;
+    font-size: rem(21px);
   }
 }
