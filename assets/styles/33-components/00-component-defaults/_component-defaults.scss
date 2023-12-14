@@ -117,6 +117,9 @@ it should handle that in the component itself.
   --color--button--primary--text: var(--color--brand--cream);
   --color--button--primary--background: var(--color--brand--orange);
 
+  // for the layout builder button.
+  --gin-color-primary: var(--color--button--primary--text);
+
   background: var(--color--background);
   color: var(--color--text);
 

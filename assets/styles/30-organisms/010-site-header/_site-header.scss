@@ -4,6 +4,11 @@ header.header {
   position: relative;
   background: var(--color--brand--orange);
   z-index: 10;
+
+  color: black;
+  a, button {
+    color: black;
+  }
 }
 
 .header__inner {
