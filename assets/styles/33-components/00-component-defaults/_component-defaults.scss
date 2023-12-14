@@ -111,11 +111,11 @@ it should handle that in the component itself.
 
   --color--background: var(--rad--color--dark--background);
   --color--text: var(--rad--color--dark--text);
-  --color--text--alt: var(--color--brand--orange);
+  --color--text--alt: var(--rad--color--dark--text--alt);
   --color--link: var(--rad--color--dark--link);
 
-  --color--button--primary--text: var(--color--brand--cream);
-  --color--button--primary--background: var(--color--brand--orange);
+  --color--button--primary--text: var(--color--text--alt);
+  --color--button--primary--background: var(--rad--color--dark--button--background);
 
   // for the layout builder button.
   --gin-color-primary: var(--color--button--primary--text);
