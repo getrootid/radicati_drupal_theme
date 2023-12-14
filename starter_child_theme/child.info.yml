@@ -8,8 +8,6 @@ libraries:
   - child/global-styles
   - child/fontawesome
 
-logo: dist/images/logo.png
-
 regions:
   site_notification: Site Notification
   header_branding: Header Branding
