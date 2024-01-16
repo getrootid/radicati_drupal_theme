@@ -1,0 +1,11 @@
+global-styles:
+  version: 1.x
+  css:
+    theme:
+      dist/css/hip-styles.css: { preprocess: false }
+
+ckeditor5:
+  version: 1.x
+  css:
+    theme:
+      dist/css/ckeditor.css: { preprocess: false }

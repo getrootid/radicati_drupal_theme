@@ -1,0 +1,38 @@
+@import "../../variables";
+
+header.header {
+
+  a, button {
+  }
+}
+
+.header__inner {
+
+  @include media($breakpoint-sm) {
+  }
+
+  @include media($breakpoint-md) {
+
+  }
+
+  @include media($breakpoint-lg) {
+
+  }
+
+  @include media($breakpoint-xl) {
+
+  }
+}
+
+.header__branding-wrapper {
+}
+
+.header__primary-nav-wrapper {
+}
+
+.header__secondary-nav-wrapper {
+}
+
+.primary_navigation {
+
+}

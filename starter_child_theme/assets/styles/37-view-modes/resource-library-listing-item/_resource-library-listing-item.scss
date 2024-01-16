@@ -1,0 +1,37 @@
+@import "../../variables";
+
+.resource-library-listing-item {
+  @include media($breakpoint-md) {
+
+  }
+}
+
+.resource-library-listing-item__icon {
+  @include media($breakpoint-md) {
+
+  }
+
+  .field-icon {
+
+
+    img {
+
+    }
+  }
+
+  .field--name {
+
+  }
+}
+
+.node__content .resource-library-listing-item__content {
+  @include media($breakpoint-md) {
+  }
+
+  h2, h3 {
+
+    a {
+    }
+
+  }
+}

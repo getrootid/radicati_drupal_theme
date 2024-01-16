@@ -1,0 +1,17 @@
+@import "../../variables";
+
+blockquote.blockquote-with-citation {
+
+  p {
+    &:last-child {
+    }
+  }
+}
+
+footer.blockquote-with-citation__citation {
+
+
+  &:before {
+
+  }
+}

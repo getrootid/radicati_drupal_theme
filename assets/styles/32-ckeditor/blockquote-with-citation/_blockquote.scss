@@ -1,0 +1,20 @@
+@import "../../variables";
+
+blockquote.blockquote-with-citation {
+  font-style: italic;
+
+  p {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+footer.blockquote-with-citation__citation {
+  margin-top: rem(20px);
+
+  &:before {
+    content: "—";
+    margin-right: rem(10px);
+  }
+}

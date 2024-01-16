@@ -1,0 +1,35 @@
+@import "../../variables";
+
+.block--block-content--people-listing {
+
+  .field-component-title {
+
+    h2, h3 {
+
+    }
+  }
+
+  .field-component-sub-title {
+
+    h3, h4 {
+
+    }
+  }
+
+  .block__content__inner {
+
+  }
+}
+
+
+.field-people-listing-simple {
+  @include media($breakpoint-md) {
+
+  }
+
+  @include media($breakpoint-lg) {
+  }
+
+  @include media($breakpoint-xl) {
+  }
+}

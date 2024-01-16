@@ -1,0 +1,9 @@
+// Might need a version of this specifically for ckeditor? This may collide with the
+// admin theme css variables.
+@import "./css-variables";
+
+div.ck-editor {
+
+  @import "10-atoms/**/*";
+  @import "32-ckeditor/**/*";
+}

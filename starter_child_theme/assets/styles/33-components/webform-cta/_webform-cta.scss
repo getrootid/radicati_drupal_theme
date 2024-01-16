@@ -1,0 +1,61 @@
+@import "../../variables";
+
+.block--block-content--webform-call-to-action {
+  &.setting-layout--media-on-right {
+    .webform-cta {
+      @include media($breakpoint-md) {
+
+      }
+    }
+  }
+
+  &.setting-layout--media-on-left {
+    .webform-cta {
+      @include media($breakpoint-md) {
+
+      }
+    }
+  }
+
+  &.setting-layout--media-on-top {
+    .webform-cta {
+
+
+      .webform-cta__content {
+      }
+    }
+  }
+}
+
+.webform-cta {
+
+  @include media($breakpoint-md) {
+  }
+
+  @include media($breakpoint-lg) {
+
+  }
+}
+
+.webform-cta__content {
+
+  h2 {
+  }
+}
+
+.webform-cta__form {
+
+  @include media($breakpoint-md) {
+  }
+
+  .form-item, .form-actions {
+  }
+
+  input {
+
+  }
+
+  .form-actions {
+  }
+}
+

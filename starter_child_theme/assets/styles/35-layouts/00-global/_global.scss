@@ -1,0 +1,51 @@
+@import "../../variables";
+
+// Temp
+body.page-node-type-layout-page {
+
+  .region-content {
+
+  }
+
+  //.page-content {
+  //  width: 100%;
+  //  max-width: unset;
+  //  padding: 0;
+  //}
+}
+
+
+.layout {
+
+
+
+  @include media($breakpoint-sm) {
+  }
+
+  @include media($breakpoint-md) {
+  }
+
+  @include media($breakpoint-lg) {
+  }
+
+  @include media($breakpoint-xl) {
+  }
+}
+
+.layout.content-width--wide {
+
+  max-width: var(--rad--content-width-wide);
+
+  @include media(">sm") {
+  }
+
+  @include media(">md") {
+  }
+
+  @include media(">lg") {
+  }
+
+  @include media(">xl") {
+
+  }
+}

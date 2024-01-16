@@ -1,0 +1,40 @@
+@import "../../variables";
+
+.node--type-person .detailed-listing {
+
+
+  @include media($breakpoint-md) {
+
+  }
+
+
+  .detailed-listing__media {
+
+
+    @include media($breakpoint-md) {
+
+    }
+
+    @include media($breakpoint-lg) {
+
+    }
+
+    img {
+
+    }
+  }
+
+  .detailed-listing__content {
+  }
+
+  .detailed-listing__name {
+
+  }
+
+  .detailed-listing__position {
+
+  }
+
+  .field-summary {
+  }
+}

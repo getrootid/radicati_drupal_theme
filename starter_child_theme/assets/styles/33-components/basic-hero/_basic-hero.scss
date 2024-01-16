@@ -1,0 +1,64 @@
+@import "../../variables";
+
+.block--block-content--basic-hero {
+
+}
+
+.basic-hero {
+
+}
+
+.basic-hero__background {
+
+
+  &:after {
+
+  }
+
+  div:not(.contextual) {
+
+  }
+
+  img {
+
+  }
+}
+
+.basic-hero__content {
+
+  @include media($breakpoint-md) {
+
+  }
+
+  @include media($breakpoint-lg) {
+  }
+}
+
+.block--block-content--basic-hero.setting-layout--media-on-right .basic-hero__content {
+  @include media($breakpoint-md) {
+
+  }
+
+  @include media($breakpoint-lg) {
+
+  }
+}
+
+.block--block-content--basic-hero.setting-layout--media-on-left .basic-hero__content {
+  @include media($breakpoint-md) {
+
+  }
+
+  @include media($breakpoint-lg) {
+
+  }
+}
+
+.block--block-content--basic-hero.setting-layout--media-on-top .basic-hero__content {
+  @include media($breakpoint-md) {
+
+  }
+
+  @include media($breakpoint-lg) {
+  }
+}

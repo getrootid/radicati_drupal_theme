@@ -1,0 +1,26 @@
+@import "../../variables";
+
+h1 {
+
+  @include media($breakpoint-lg) {
+  }
+}
+
+
+
+h2 {
+  @include media($breakpoint-lg){
+  }
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+h5 {
+
+}

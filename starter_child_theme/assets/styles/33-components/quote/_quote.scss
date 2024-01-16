@@ -1,0 +1,66 @@
+@import "../../variables";
+
+.block--block-content--quote {
+
+  &.setting-alignment--right {
+  }
+
+  &.setting-alignment--center {
+  }
+
+  &.setting-alignment--left {
+  }
+
+  &.setting-background--light .quote__wrapper {
+
+  }
+
+  &.setting-background--dark .quote__wrapper {
+
+  }
+
+  &.setting-background--none .quote__wrapper {
+
+  }
+
+  .quote__wrapper {
+
+  }
+
+  .field-quote-media {
+
+
+    img {
+
+    }
+  }
+
+  blockquote {
+
+
+    p:first-child {
+
+    }
+
+    // make a css triangle
+    &:before {
+
+    }
+
+    &:after {
+
+    }
+  }
+
+  .field-quote-quote {
+
+  }
+
+  .field-quote-citation-name {
+
+  }
+
+  .field-quote-citation-title {
+
+  }
+}

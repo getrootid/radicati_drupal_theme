@@ -1,0 +1,29 @@
+@import "../../variables";
+
+.block--block-content--icon-stat-grid {
+
+  img {
+
+  }
+
+  .field-icon-stat-items {
+    @include media($breakpoint-md) {
+
+    }
+  }
+
+  &.setting-items-per-row--three {
+    .field-icon-stat-items {
+      @include media($breakpoint-lg) {
+      }
+    }
+  }
+
+  &.setting-items-per-row--four {
+    .field-icon-stat-items {
+      @include media($breakpoint-lg) {
+      }
+    }
+  }
+
+}

@@ -1,0 +1,13 @@
+@import "../../variables";
+
+.field-component-title {
+  margin-bottom: rem(40px);
+
+  h2 {
+
+    font-size: rem(42px);
+    font-weight: bold;
+    line-height: rem(30px);
+    text-align: center;
+  }
+}

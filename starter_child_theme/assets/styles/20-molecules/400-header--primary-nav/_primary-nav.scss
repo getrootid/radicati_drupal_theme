@@ -1,0 +1,39 @@
+@import "../../variables";
+
+.header__primary-nav-wrapper {
+
+
+  .block-superfishmain {
+    ul.sf-main {
+
+
+    }
+
+    li.sf-depth-1 {
+
+      &.sfHover {
+        a {
+
+        }
+      }
+    }
+
+    a.sf-depth-1 {
+
+    }
+
+
+    li.sf-depth-2 {
+
+    }
+
+    a.sf-depth-2 {
+
+
+      &:focus, &:hover {
+      }
+    }
+
+
+  }
+}

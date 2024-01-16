@@ -1,0 +1,33 @@
+@import "../../variables";
+
+.resource-library-search-form {
+
+}
+
+.resource-library-search-form__line-one {
+  @include media($breakpoint-md) {
+
+  }
+}
+
+.resource-library-search-form__line-two {
+  @include media($breakpoint-md) {
+
+  }
+}
+
+.resource-library-search-form {
+  .form-item-terms {
+
+
+    input {
+    }
+  }
+
+  .form-actions {
+
+    input {
+
+    }
+  }
+}

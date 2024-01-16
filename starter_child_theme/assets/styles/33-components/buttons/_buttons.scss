@@ -1,0 +1,23 @@
+@import "../../variables";
+
+.block--block-content--buttons {
+
+  &.setting-direction--vertical {
+
+  }
+
+  &.setting-direction--horizontal {
+    .field-buttons-buttons {
+
+    }
+  }
+
+  .field-buttons-buttons {
+
+    a {
+      @extend .button;
+      @extend .button--primary;
+    }
+  }
+
+}

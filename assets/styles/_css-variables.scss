@@ -1,3 +1,10 @@
+@import '../../node_modules/sass-rem/rem';
+@import '../../node_modules/include-media/dist/include-media';
+
+// Needed for breakpoint stuff below.
+@import "variables";
+
+
 :root {
   --color--brand--orange: #F4793E;
   --color--brand--brown: #231F20;
@@ -79,3 +86,34 @@
   --color--text--disabled: #454545;
 }
 
+:root {
+  --rad--content-width-narrow: var(--rad--content-width-narrow-default);
+  --rad--content-width-normal: var(--rad--content-width--default);
+  --rad--content-width-wide: var(--rad--content-width-wide--default);
+  --rad--off-canvas-width: var(--rad--off-canvas-width--default);
+
+  @include media($breakpoint-sm) {
+    --rad--content-width-narrow: var(--rad--content-width-narrow--sm);
+    --rad--content-width-normal: var(--rad--content-width--sm);
+    --rad--content-width-wide: var(--rad--content-width-wide--sm);
+    --rad--off-canvas-width: var(--rad--off-canvas-width--sm);
+  }
+
+  @include media($breakpoint-md) {
+    --rad--content-width-narrow: var(--rad--content-width-narrow--md);
+    --rad--content-width-normal: var(--rad--content-width--md);
+    --rad--content-width-wide: var(--rad--content-width-wide--md);
+  }
+
+  @include media($breakpoint-lg) {
+    --rad--content-width-narrow: var(--rad--content-width-narrow--lg);
+    --rad--content-width-normal: var(--rad--content-width--lg);
+    --rad--content-width-wide: var(--rad--content-width-wide--lg);
+  }
+
+  @include media($breakpoint-xl) {
+    --rad--content-width-narrow: var(--rad--content-width-narrow--xl);
+    --rad--content-width-normal: var(--rad--content-width--xl);
+    --rad--content-width-wide: var(--rad--content-width-wide--xl);
+  }
+}

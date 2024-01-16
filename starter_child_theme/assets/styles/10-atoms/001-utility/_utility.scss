@@ -5,21 +5,11 @@
  */
 
 .content-container--normal {
-  max-width: var(--rad--content-width--default);
+  max-width: var(--rad--content-width-normal);
+  margin: 0 auto;
+}
 
-  @include media(">sm") {
-    max-width: var(--rad--content-width--sm);
-  }
-
-  @include media(">md") {
-    max-width: var(--rad--content-width--md);
-  }
-
-  @include media(">lg") {
-    max-width: var(--rad--content-width--lg);
-  }
-
-  @include media(">xl") {
-    max-width: var(--rad--content-width--xl);
-  }
+.content-container--wide {
+  max-width: var(--rad--content-width-wide);
+  margin: 0 auto;
 }

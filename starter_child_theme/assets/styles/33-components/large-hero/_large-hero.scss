@@ -1,0 +1,74 @@
+@import "../../variables";
+
+.block--block-content--large-hero {
+
+
+}
+
+.large-hero {
+
+}
+
+.large-hero__background {
+
+
+  &:after {
+
+  }
+
+  div:not(.contextual) {
+
+  }
+
+  img {
+
+  }
+}
+
+.field-large-hero-button {
+  a {
+    @extend .button;
+    @extend .button--primary;
+  }
+}
+
+
+.large-hero__content {
+
+
+  @include media($breakpoint-md) {
+
+  }
+
+  @include media($breakpoint-lg) {
+  }
+}
+
+.block--block-content--large-hero.setting-layout--media-on-right .large-hero__content {
+  @include media($breakpoint-md) {
+
+  }
+
+  @include media($breakpoint-lg) {
+
+  }
+}
+
+.block--block-content--large-hero.setting-layout--media-on-left .large-hero__content {
+  @include media($breakpoint-md) {
+
+  }
+
+  @include media($breakpoint-lg) {
+
+  }
+}
+
+.block--block-content--large-hero.setting-layout--media-on-top .large-hero__content {
+  @include media($breakpoint-md) {
+
+  }
+
+  @include media($breakpoint-lg) {
+  }
+}

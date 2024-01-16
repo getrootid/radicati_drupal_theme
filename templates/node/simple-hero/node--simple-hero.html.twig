@@ -1,0 +1,22 @@
+{% extends "node.html.twig" %}
+
+{% block default_title %}{% endblock %}
+
+{% block content %}
+  {%
+    set classes = [
+    'simple-hero',
+    not node.field_featured_image.isEmpty() ? 'simple-hero--has-image' : 'simple-hero--no-image',
+  ]
+  %}
+
+  <div{{ content_attributes.addClass(classes) }}>
+    <div class="simple-hero__background">
+      {{ content.field_featured_image }}
+    </div>
+
+    <div class="simple-hero__content">
+      {{ content|without('field_featured_image') }}
+    </div>
+  </div>
+{% endblock %}

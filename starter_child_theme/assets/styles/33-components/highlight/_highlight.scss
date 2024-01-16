@@ -1,0 +1,75 @@
+@import "../../variables";
+
+.block-layout-builder.block--block-content--highlight {
+
+}
+
+.block--block-content--highlight.setting-alignment--center {
+  .highlight__content {
+
+  }
+}
+
+.highlight {
+}
+
+.highlight__media {
+
+
+  @include media($breakpoint-md) {
+
+
+    div:not(.contextual), img {
+
+    }
+
+    img {
+
+    }
+  }
+}
+
+.highlight__content {
+
+
+  @include media($breakpoint-md) {
+
+  }
+}
+
+.block--block-content--highlight {
+
+  &.setting-layout--media-on-right {
+    .highlight {
+    }
+
+  }
+
+  &.setting-layout--media-on-left {
+    .highlight {
+    }
+  }
+
+  &.setting-layout--media-on-top {
+    .highlight {
+    }
+
+    .highlight__media, .highlight__content {
+
+    }
+  }
+
+}
+
+.field-highlight-title {
+  h2 {
+  }
+}
+
+.field-highlight-button {
+  a {
+    @extend .button;
+    @extend .button--primary;
+  }
+
+}

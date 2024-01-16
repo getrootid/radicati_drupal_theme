@@ -1,0 +1,75 @@
+@import "../../variables";
+
+// any menus placed in the off_canvas region.
+.off_canvas {
+  --border-color: var(--color--brand--brown);
+  --text-color: var(--color--brand--brown);
+
+
+  ul.menu {
+
+  }
+
+  // All Menu items -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+  li.menu__item {
+
+
+    &:first-child {
+    }
+  }
+
+  a.menu__link {
+
+  }
+
+  button.menu__toggle {
+
+  }
+
+  // Top Level Menu Items -=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+  li.menu__item--level-1 {
+
+  }
+
+  a.menu__link--level-1 {
+
+  }
+
+
+  // Second Level Menu Items -=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+  ul.menu--level-2 {
+
+  }
+
+  ul.menu--level-2[aria-hidden="false"] {
+
+  }
+
+  li.menu__item--level-2 {
+    &:last-child {
+
+    }
+  }
+
+  a.menu__link--level-2 {
+
+  }
+
+  // Third Level Menu items -=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+  ul.menu--level-3 {
+
+  }
+
+  ul.menu--level-3[aria-hidden="false"] {
+
+  }
+
+  li.menu__item--level-3 {
+    &:last-child {
+    }
+  }
+
+  a.menu__link--level-3 {
+  }
+
+}

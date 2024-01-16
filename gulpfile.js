@@ -69,6 +69,7 @@ function css() {
     gulp
       .src([
         "./assets/styles/styles.scss",
+        "./assets/styles/ckeditor.scss",
       ])
       .pipe(
         sassGlob({

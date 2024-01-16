@@ -1,0 +1,36 @@
+name: Radicati Child Theme
+type: theme
+base theme: radicati_drupal_theme
+description: 'Child theme for sites made with Radicati. This should be copied to another location and renamed.'
+core_version_requirement: ^8.9 || ^9 || ^10
+
+libraries:
+  - starter_child_theme/global-styles
+
+libraries-extend:
+  radicati_drupal_theme/ckeditor5:
+    - starter_child_theme/ckeditor5
+
+regions:
+  site_notification: Site Notification
+  header_branding: Header Branding
+  secondary_navigation: Secondary Navigation
+  primary_navigation: Primary Navigation
+  search: Search
+  off_canvas_header: Off-Canvas Header
+  off_canvas: Off-Canvas
+  off_canvas_footer: Off-Canvas Footer
+  system_help: System Help/Message
+  hero: Hero Content
+  inline_menu: Inline Menu
+  pre_content: Pre Content
+  breadcrumb: Breadcrumb
+  page_title: Page Title
+  content: Content
+  sidebar_one: Sidebar One
+  sidebar_two: Sidebar Two
+  post_content: Post Content
+  footer_one: Footer One
+  footer_two: Footer Two
+  footer_three: Footer Three
+  copyright: Copyright

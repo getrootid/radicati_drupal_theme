@@ -1,0 +1,27 @@
+@import "../../variables";
+
+.block--block-content--card-carousel {
+
+  .field-cards-cards {
+
+    .field--item {
+
+    }
+  }
+
+  &.setting-items-per-row--three {
+    .field-cards-cards {
+      .field--item {
+
+      }
+    }
+  }
+
+  &.setting-items-per-row--four {
+    .field-cards-cards {
+      .field--item {
+
+      }
+    }
+  }
+}

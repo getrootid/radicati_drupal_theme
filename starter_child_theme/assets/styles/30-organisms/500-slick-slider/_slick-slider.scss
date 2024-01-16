@@ -1,0 +1,42 @@
+@import "../../variables";
+
+// Default styles for slick slider. For specific displays use
+// files with the config name in it (slick-slider--card-slider.scss)
+
+div.slick {
+
+  ul.slick-dots {
+
+    li {
+      button {
+
+        &:before {
+        }
+      }
+
+      &.slick-active {
+        button {
+        }
+
+      }
+    }
+  }
+
+  nav.slick__arrow {
+    button {
+
+    }
+
+    .slick-disabled {
+
+    }
+
+    .slick-prev {
+
+    }
+
+    .slick-next {
+
+    }
+  }
+}

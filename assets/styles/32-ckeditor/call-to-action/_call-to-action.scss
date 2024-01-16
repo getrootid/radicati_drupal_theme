@@ -1,0 +1,35 @@
+@import "../../variables";
+@import "../../20-molecules/015-link-button/link-button";
+
+.rad-call-to-action {
+  text-align: center;
+  padding: rem(20px) rem(50px);
+
+  background: var(--rad--color--light--background);
+  color: var(--rad--color--light--text);
+
+  a {
+    color: var(--color--link--alt);
+  }
+
+
+}
+
+.rad-call-to-action__title {
+  text-transform: uppercase;
+  font-size: rem(32px);
+
+}
+
+.rad-call-to-action__link {
+
+  a {
+    @extend .button;
+    @extend .button--primary;
+  }
+}
+
+// Version for when there's a BG image set:
+.rad-call-to-action.rad-call-to-action--has-bg-image {
+  color: var(--rad--color--dark--text);
+}

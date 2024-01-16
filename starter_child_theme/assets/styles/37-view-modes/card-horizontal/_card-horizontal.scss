@@ -1,0 +1,32 @@
+@import "../../variables";
+
+.card-horizontal {
+  @include media($breakpoint-md) {
+
+  }
+}
+
+.card-horizontal__image {
+
+
+  div:not(.contextual) {
+  }
+
+  img {
+
+  }
+}
+
+.card-horizontal__content {
+
+
+  .title {
+    h2, h3 {
+
+    }
+
+    a {
+
+    }
+  }
+}

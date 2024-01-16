@@ -6,6 +6,12 @@ global-styles:
   js:
     dist/js/drupalDisplace.js: {}
 
+ckeditor5:
+  version: 1.x
+  css:
+    theme:
+      dist/css/ckeditor.css: { preprocess: false }
+
 fitvids:
   version: 2.x
   js:

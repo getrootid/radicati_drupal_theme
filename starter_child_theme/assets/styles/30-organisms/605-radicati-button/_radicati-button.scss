@@ -1,0 +1,26 @@
+@import "../../variables";
+
+.radicati-button {
+
+  &[aria-expanded=true] {
+  }
+
+  .radicati-button__label {
+
+  }
+
+  &.radicati-button__label-visually-hidden {
+    .radicati-button__label {
+
+    }
+  }
+
+  &.radicati-button__label-left {
+  }
+
+  &.radicati-button__label-top {
+  }
+
+  &.radicati-button__label-bottom {
+  }
+}
