@@ -52,6 +52,7 @@ it should handle that in the component itself.
 
   --color--background: transparent;
   --color--background--alt: lightgray;
+  --color--background--overlay: rgba(0,0,0,0.5);
   --color--text: var(--rad--color--light--text);
   --color--text--alt: var(--color--brand--brown);
   --color--link: var(--rad--color--light--link);
@@ -73,6 +74,7 @@ it should handle that in the component itself.
   --component--color--alt: #232323;
 
   --color--background: transparent;
+  --color--background--overlay: rgba(0,0,0,0.5);
   --color--text: var(--rad--color--light--text);
   --color--link: var(--rad--color--light--link);
   --color--button--primary--text: var(--color--brand--cream);
@@ -100,6 +102,7 @@ it should handle that in the component itself.
   --component--color--alt: #232323;
 
   --color--background: var(--rad--color--light--background);
+  --color--background--overlay: rgba(200,200,200,0.5);
   --color--text: var(--rad--color--light--text);
   --color--link: var(--rad--color--light--link);
   --color--button--primary--text: var(--color--brand--cream);
@@ -124,6 +127,7 @@ it should handle that in the component itself.
   --component--color--alt: #b1b1b1;
 
   --color--background: var(--rad--color--dark--background);
+  --color--background--overlay: rgba(0,0,0,0.2);
   --color--text: var(--rad--color--dark--text);
   --color--link: var(--rad--color--dark--link);
   --color--button--primary--text: var(--color--text--alt);

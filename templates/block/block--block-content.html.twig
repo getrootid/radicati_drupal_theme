@@ -49,13 +49,16 @@
   {{ title_suffix }}
   {% block outer_content %}
     <div{{ content_attributes.addClass('block__content') }}>
-      {{ content.field_component_title }}
+      {# The background component field should be mutually excluseve with the title
+         and subtitle. They aren't meant to work together. #}
+      {{ content.field_component_background_media }}
 
+      {{ content.field_component_title }}
       {{ content.field_component_sub_title }}
 
       <div class="block__content__inner">
         {% block content %}
-          {{ content|without('field_component_title', 'field_component_sub_title', 'field_component_link') }}
+          {{ content|without('field_component_title', 'field_component_sub_title', 'field_component_link', 'field_component_background_media') }}
         {% endblock %}
       </div>
       {{ content.field_component_link }}

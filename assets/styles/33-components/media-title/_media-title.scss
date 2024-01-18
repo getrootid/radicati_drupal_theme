@@ -1,0 +1,53 @@
+@import "../../variables";
+
+.block--block-content.block--block-content--media-title {
+  padding: 0;
+
+  &.setting-alignment--left {
+    .media-title__content {
+      left: rem(100px);
+    }
+  }
+
+  &.setting-alignment--center {
+    .media-title__content {
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+    }
+  }
+
+  &.setting-alignment--right {
+    .media-title__content {
+      right: rem(100px);
+      text-align: right;
+    }
+  }
+}
+
+.media-title {
+  position: relative;
+  height: 100vh;
+}
+
+.media-title--fixed-background {
+
+
+  .media-title__background {
+    clip: rect(0,auto,auto,0);
+
+    img {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.media-title__content {
+  position: absolute;
+  bottom: rem(75px);
+  color: var(--color--text);
+}
