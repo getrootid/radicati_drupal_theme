@@ -1,0 +1,29 @@
+@import "../../variables";
+
+.setting-background--light {
+  --component--color--alt: #232323;
+
+  --color--background: var(--color--gray--five);
+  --color--background--overlay: rgba(0,0,0,0.5);
+  --color--text: var(--rad--color--light--text);
+  --color--link: var(--rad--color--light--link);
+  --color--button--primary--text: var(--color--gray--five);
+  --color--button--primary--background: var(--color--gray--one);
+
+  /**
+  Alt color styles are meant to be used together when there's a background color
+  set on the component.
+   */
+  --color--background--alt: lightgray;
+  --color--text--alt: var(--color--gray--two);
+  --color--link--alt: var(--rad--color--light--link);
+  --color--button--primary--text--alt: var(--color--text);
+  --color--button--primary--background--alt: var(--color--gray--four);
+
+  background: var(--color--background);
+  color: var(--color--text);
+
+  a {
+    color: var(--color--link);
+  }
+}
