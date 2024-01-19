@@ -21,8 +21,8 @@
 
       &.sfHover {
         a {
-          background: green;
-          color: white;
+          background: var(--color--gray--one);
+          color: var(--color--gray--five);
         }
       }
     }

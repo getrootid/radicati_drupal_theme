@@ -3,7 +3,7 @@
 footer.footer {
   background: black;
   padding-top: rem(20px);
-  color: var(--color--brand--cream);
+  color: var(--color--gray--five);
   position: relative;
   z-index: 10;
 }
@@ -21,7 +21,7 @@ footer.footer {
   .block--block-content {
     padding: 0;
     font-size: rem(14px);
-    color: var(--color--brand--gold);
+    color: var(--color--gray--four);
 
     p {
       &:last-child {

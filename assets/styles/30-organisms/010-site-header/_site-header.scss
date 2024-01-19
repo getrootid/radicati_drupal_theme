@@ -2,12 +2,12 @@
 
 header.header {
   position: relative;
-  background: var(--color--brand--orange);
+  background: var(--color--gray--three);
   z-index: 10;
 
-  color: black;
+  color: var(--color--gray--one);
   a, button {
-    color: black;
+    color: var(--color--gray--one);
   }
 }
 

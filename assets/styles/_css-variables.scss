@@ -4,14 +4,17 @@
 // Needed for breakpoint stuff below.
 @import "variables";
 
-
 :root {
   --color--brand--orange: #F4793E;
   --color--brand--brown: #231F20;
   --color--brand--gold: #C49D6E;
   --color--brand--cream: #E8D8C4;
 
-
+  --color--gray--one: #333333;
+  --color--gray--two: #666666;
+  --color--gray--three: #999999;
+  --color--gray--four: #CCCCCC;
+  --color--gray--five: #EEEEEE;
 
   --rad--default-link-color: blue;
   --rad--default-link-text-decoration: underline;
@@ -71,19 +74,19 @@
   --rad--color--light--text: black;
   --rad--color--light--link: blue;
 
-  --rad--color--dark--background: #434343;
-  --rad--color--dark--button--background: var(--color--brand--orange);
+  --rad--color--dark--background: var(--color--gray--two);
+  --rad--color--dark--button--background: var(--color--gray--one);
   --rad--color--dark--text: white;
-  --rad--color--dark--text--alt: var(--color--brand--cream);
-  --rad--color--dark--link: lightblue;
+  --rad--color--dark--text--alt: var(--color--gray--five);
+  --rad--color--dark--link: var(--color--gray--three);
 
-  --button--primary--background-color: red;
+  --button--primary--background-color: var(--color--gray--one);
   --button--primary--text-color: white;
 
   --color--background: transparent;
   --color--text: var(--rad--color--light--text);
   --color--link: var(--rad--color--light--link);
-  --color--text--disabled: #454545;
+  --color--text--disabled: var(--color--gray--two);
 }
 
 :root {

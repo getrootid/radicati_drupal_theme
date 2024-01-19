@@ -2,7 +2,7 @@
 
 .radicati-button {
   border: 0;
-  color: var(--color--text);
+  color: var(--color--gray--one);
   background: transparent;
   display: flex;
   justify-content: center;
@@ -11,7 +11,8 @@
   cursor: pointer;
 
   &[aria-expanded=true] {
-    background: var(--color--brand--cream);;
+    color: var(--color--gray--five);
+    background: var(--color--gray--two);
   }
 
   .radicati-button__label {

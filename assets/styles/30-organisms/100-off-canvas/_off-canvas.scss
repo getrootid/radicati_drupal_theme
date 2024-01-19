@@ -10,7 +10,7 @@
   left: 0;
   width: var(--rad--off-canvas-width);
   color: black;
-  background-color: var(--color--brand--cream);
+  background-color: var(--color--gray--six);
   z-index: 1000;
   visibility: hidden;
 
@@ -31,7 +31,7 @@
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: var(--color--brand--cream);
+  background-color: var(--color--gray--five);
   opacity: 0;
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out ;
   visibility: hidden;

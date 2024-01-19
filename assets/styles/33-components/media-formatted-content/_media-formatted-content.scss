@@ -4,6 +4,7 @@
 
 .block--block-content.block--block-content--media-formatted-content {
   padding: 0;
+  position: relative;
   //min-height: 100vh;
 
   --color--content--background: rgba(255,255,255,0.7);
@@ -51,7 +52,7 @@
 
   &.setting-alignment--right {
     text-align: left;
-    
+
     .block__content__inner {
       left: 50%;
       transform: translateX(-50%);
