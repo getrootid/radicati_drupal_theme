@@ -2,9 +2,10 @@
 
 // any menus placed in the off_canvas region.
 .off_canvas {
-  --border-color: var(--color--brand--brown);
-  --text-color: var(--color--brand--brown);
+  --border-color: black;
+  --text-color: black;
 
+  background: white;
 
   ul.menu {
     margin: 0;

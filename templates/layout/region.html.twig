@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Theme override to display a region.
+ * Olivero's theme override to display a region.
  *
  * Available variables:
  * - content: The content for this region, typically blocks.
@@ -12,8 +12,15 @@
  * @see template_preprocess_region()
  */
 #}
+{%
+  set classes = [
+    'region',
+    'region--' ~ region|clean_class,
+  ]
+%}
+
 {% if content %}
-  <div{{ attributes.addClass(region) }}>
+  <div{{ attributes.addClass(classes) }}>
     {{ content }}
   </div>
 {% endif %}
