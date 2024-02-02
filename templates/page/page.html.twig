@@ -41,11 +41,7 @@
       {{ page.breadcrumb }}
     {% endblock breadcrumb %}
 
-    {% if page.attributes.has_system_help %}
-      <div class="content-container--normal">
-        {{ page.system_help }}
-      </div>
-    {% endif %}
+    {{ page.system_help }}
 
     <main>
       <a id="main-content"></a>

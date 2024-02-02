@@ -1,15 +1,22 @@
 @import "../../variables";
 
-//.messages {
-//  border: 1px solid black;
-//  padding: rem(5px 20px);
-//  border-radius: 5px;
-//  margin: rem(10px 0);
-//
-//  &.messages--status {
-//    background: #c5f5c5;
-//  }
-//}
+// TODO: More on this!
+
+.messages {
+  border: 1px solid black;
+  padding: rem(5px 20px);
+  border-radius: 5px;
+  margin: rem(10px 0);
+
+  &.messages--status {
+    background: #c5f5c5;
+  }
+
+  &.messages--error {
+    background: #f5c5c5;
+  }
+}
+
 //
 //.messages__container {
 //  display: flex;
