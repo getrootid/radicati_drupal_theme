@@ -28,7 +28,8 @@
     background-color: color-mix(in srgb, var(--color--background) 65%, transparent);
   }
 
-  div:not(.contextual) {
+  // TODO: Move to background media complnent!!!
+  div:not(.contextual, [data-contextual-id]) {
     width: 100%;
     height: 100%;
   }

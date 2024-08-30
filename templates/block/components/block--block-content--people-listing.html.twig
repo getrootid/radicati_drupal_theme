@@ -1,0 +1,11 @@
+{% extends "block--block-content.html.twig" %}
+
+{% block content %}
+
+  <div{{ content_attributes.addClass('cta') }}>
+    {{ content.field_people_listing_details }}
+
+    {{ content.field_people_listing_simple }}
+  </div>
+{% endblock %}
+

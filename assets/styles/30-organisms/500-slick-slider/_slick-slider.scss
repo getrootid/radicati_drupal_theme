@@ -44,6 +44,8 @@ div.slick {
   }
 
   nav.slick__arrow {
+    //display: none;
+
     button {
       font-size: rem(32px);
       position: absolute;
@@ -68,5 +70,15 @@ div.slick {
     .slick-next {
       right: 0;
     }
+  }
+}
+
+div.slick.slick--initialized {
+  ul.slick-dots {
+    display: flex;
+  }
+
+  nav.slick__arrow {
+    display: flex;
   }
 }

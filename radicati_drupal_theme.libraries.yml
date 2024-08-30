@@ -65,3 +65,16 @@ scroll-spy:
   version: 3.x
   js:
     dist/js/vanillajs-scrollspy/vanillajs-scrollspy.min.js: { minified: true }
+
+accessible-tabs:
+  version: 1.x
+  js:
+    assets/styles/10-atoms/75-accessible-tabs/_tabs.js: { minified: false }
+
+icon-tabs:
+  version: 1.x
+  js:
+    assets/styles/33-components/icon-tabs/_icon-tabs.js: { minified: false }
+  dependencies:
+    - radicati_drupal_theme/accessible-tabs
+    - drupal/once

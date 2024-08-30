@@ -1,0 +1,13 @@
+{% extends "paragraph.html.twig" %}
+
+{% block content %}
+  <div class="icon-tab-content">
+    <div class="icon-tab-content__content">
+      {{ content|without('field_icon_tab__content_media') }}
+    </div>
+
+    <div class="icon-tab-content__media">
+      {{ content.field_icon_tab__content_media }}
+    </div>
+  </div>
+{% endblock %}

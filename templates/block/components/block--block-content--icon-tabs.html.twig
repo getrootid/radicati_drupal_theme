@@ -1,0 +1,41 @@
+{% extends "block--block-content.html.twig" %}
+
+{% block content %}
+  {{ attach_library('radicati_drupal_theme/icon-tabs') }}
+  <div class="icon-tabs">
+    <div class="icon-tabs__tabs" role="tablist">
+      {% for key, item in content.field_icon_tabs__tabs %}
+        {% if (key|first) != "#" %}
+          {% set paragraph = item['#paragraph'] %}
+          {% set id = paragraph.id() %}
+
+          <button class="icon-tabs__tab"
+            role="tab"
+            aria-controls="tab--{{ id }}-content"
+            id="tab--{{ id }}-tab"
+            {{ key == 0 ? "aria-selected='true'" : "aria-selected='false'" }}
+          >
+            {# The tab label is controlled via a special view mode. #}
+            {{ paragraph|view('tab_label') }}
+          </button>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    {% for key, item in content.field_icon_tabs__tabs %}
+      {% if (key|first) != "#" %}
+        {% set paragraph = item['#paragraph'] %}
+        {% set id = paragraph.id() %}
+
+        <div id="tab--{{ id }}-content"
+             aria-labelledby="tab--{{ id }}-tab"
+             role="tabpanel"
+
+            {{ key > 0 ? "hidden='hidden'" }}>
+          {{ item }}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endblock %}
+

@@ -1,0 +1,25 @@
+@import "../../variables";
+
+.block--block-content--vertical-numbers-highlight {
+  --component-padding: var(--inline-component-padding);
+
+  .setting-alignment--center {
+    .paragraph--type--number-highlight-item {
+      align-items: center;
+    }
+  }
+
+  .setting-alignment--right {
+    .paragraph--type--number-highlight-item {
+      justify-content: flex-end;
+    }
+  }
+
+  .field-vertical-highlight__item {
+    padding-left: rem(110px);
+  }
+
+  .field-vertical-highlight__item > .field--item {
+    border-bottom: 1px solid var(--color--text--alt);
+  }
+}

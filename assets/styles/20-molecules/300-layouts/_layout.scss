@@ -1,0 +1,57 @@
+@import "../../variables";
+
+.layout-width--normal {
+  max-width: var(--rad--content-width-normal);
+  margin: 0 auto;
+}
+
+.layout-width--narrow {
+  max-width: var(--rad--content-width-narrow);
+  margin: 0 auto;
+}
+
+.layout-width--wide {
+  max-width: var(--rad--content-width-wide);
+  margin: 0 auto;
+}
+
+.layout-width--full {
+  max-width: 100%;
+  margin: 0;
+}
+
+.layout-width--full.layout-inner-width--narrow {
+  .rad-columns__wrapper {
+    max-width: var(--rad--content-width-narrow);
+    margin: 0 auto;
+    width: 100%;
+
+    & > * {
+      width: 100%;
+    }
+  }
+}
+
+.layout-width--full.layout-inner-width--normal {
+  .rad-columns__wrapper {
+    max-width: var(--rad--content-width-normal);
+    margin: 0 auto;
+    width: 100%;
+
+    & > * {
+      width: 100%;
+    }
+  }
+}
+
+.layout-width--full.layout-inner-width--wide {
+  .rad-columns__wrapper {
+    max-width: var(--rad--content-width-wide);
+    margin: 0 auto;
+    width: 100%;
+
+    & > * {
+      width: 100%;
+    }
+  }
+}

@@ -8,8 +8,10 @@ it should handle that in the component itself.
 
 // Default block styles. Can be overridden
 .block--block-content {
-  padding: rem(40px 0);
   --component-padding: 40px;
+  --inline-component-padding: 10px;
+
+  padding: rem( var(--component-padding)) 0;
 }
 
 // the "inner" block of all content blocks. All content will, by default, exist

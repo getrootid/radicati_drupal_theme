@@ -56,6 +56,20 @@ function radicati_drupal_theme_theme_suggestions_menu_alter(array &$suggestions,
   }
 }
 
+/**
+ * Add theme suggestions for pages for each content type.
+ *
+ * @param array $suggestions
+ * @param array $variables
+ * @param $hook
+ * @return void
+ */
+function radicati_drupal_theme_theme_suggestions_page_alter(array &$suggestions, array $variables, $hook) {
+  if ($node = \Drupal::request()->attributes->get('node')) {
+    $suggestions[] = 'page__node__' . $node->getType();
+  }
+}
+
 function radicati_drupal_theme_theme_suggestions_block_alter(array &$suggestions, array $variables, $hook) {
   if (isset($variables['elements']['content']['#block_content'])) {
     /** @var \Drupal\block_content\Entity\BlockContent $content */

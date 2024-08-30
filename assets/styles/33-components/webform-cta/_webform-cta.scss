@@ -1,6 +1,20 @@
 @import "../../variables";
 
 .block--block-content--webform-call-to-action {
+  padding: 0;
+
+  .block__content {
+    position: relative;
+  }
+
+  .block-content__content {
+    text-align: left;
+
+    .field-component-sub-title, .field-component-title h2 {
+      text-align: left;
+    }
+  }
+
   &.setting-layout--media-on-right {
     .webform-cta {
       @include media($breakpoint-md) {
@@ -46,11 +60,18 @@
   }
 }
 
+.block--block-content--webform-call-to-action {
+  .block__content__inner {
+    padding: rem(20px 40px);
+  }
+}
+
 .webform-cta__content {
   grid-area: content;
 
   h2 {
-    margin-top: 0;
+    margin-top: rem(5px);
+    font-size: rem(30px);
   }
 }
 
@@ -72,6 +93,11 @@
 
   .form-actions {
     text-align: right;
+  }
+
+  input[type="submit"] {
+    @extend .button;
+    @extend .button--primary;
   }
 }
 

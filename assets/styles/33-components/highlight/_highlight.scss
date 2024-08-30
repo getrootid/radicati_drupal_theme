@@ -6,6 +6,7 @@
 
 // If align center is set, then vertically center the content
 .block--block-content--highlight.setting-alignment--center {
+
   .highlight__content {
     display: flex;
     align-items: center;
@@ -42,6 +43,7 @@
   flex: 0 1 100%;
   width: 100%;
   padding: rem(15px);
+  box-sizing: border-box;
 
   @include media($breakpoint-md) {
     flex: 0 1 50%;
@@ -80,6 +82,7 @@
 
 .field-highlight-title {
   h2 {
+    font-size: rem(22px);
     margin-top: 0;
   }
 }

@@ -1,0 +1,49 @@
+@import "../../variables";
+
+@keyframes spinner {
+  to {transform: rotate(360deg);}
+}
+
+.ajax-progress-throbber {
+  animation: unset;
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+
+  &:before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: 50% !important;
+    left: 50% !important;
+    width: rem(50px);
+    height: rem(50px);
+    margin-top: rem(-30px);
+    margin-left: rem(-30px);
+    border-radius: 50%;
+    border: rem(5px) solid #ccc;
+    border-top-color: #07d;
+    animation: spinner .6s linear infinite;
+    z-index: 1000;
+  }
+
+  // Add an overlay that is under the throbber but above content
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 999;
+  }
+}

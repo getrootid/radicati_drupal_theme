@@ -2,6 +2,18 @@
 
 .block--block-content--buttons {
 
+  &.setting-alignment--right {
+    .field-buttons-buttons {
+      justify-content: flex-end;
+    }
+  }
+
+  &.setting-alignment--center {
+      .field-buttons-buttons {
+        justify-content: center;
+      }
+  }
+
   &.setting-direction--vertical {
 
   }
@@ -10,7 +22,6 @@
     .field-buttons-buttons {
       display: flex;
       flex-direction: row;
-      justify-content: flex-start;
       flex-wrap: wrap;
     }
   }

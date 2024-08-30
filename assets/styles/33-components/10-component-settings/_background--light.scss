@@ -4,26 +4,25 @@
   --component--color--alt: #232323;
 
   --color--background: var(--color--gray--five);
-  --color--background--overlay: rgba(0,0,0,0.5);
+  //--color--background--overlay: rgba(0,0,0,0.5);
+  --color--background--overlay: color-mix(in srgb, var(--color--background) 65%, transparent);
   --color--text: var(--rad--color--light--text);
   --color--link: var(--rad--color--light--link);
-  --color--button--primary--text: var(--color--gray--five);
-  --color--button--primary--background: var(--color--gray--one);
+  --button--primary--text-color: var(--color--gray--five);
+  --button--primary--background-color: var(--color--gray--one);
 
   /**
-  Alt color styles are meant to be used together when there's a background color
-  set on the component.
-   */
-  --color--background--alt: lightgray;
+Alt color styles are meant to be used together when there's a background color
+set on the component.
+ */
+  --color--background--alt: var(--color--gray--four);
   --color--text--alt: var(--color--gray--two);
   --color--link--alt: var(--rad--color--light--link);
-  --color--button--primary--text--alt: var(--color--text);
-  --color--button--primary--background--alt: var(--color--gray--four);
 
-  background: var(--color--background);
-  color: var(--color--text);
+  --color--tab--text: var(--color--gray--two);
+  --color--tab--background: transparent;
+  --color--tab--selected--text: var(--color--text);
+  --color--tab--selected--background: var(--color--background--alt);
 
-  a {
-    color: var(--color--link);
-  }
+
 }

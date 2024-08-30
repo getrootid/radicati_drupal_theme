@@ -71,14 +71,20 @@
   --rad--off-canvas-width--sm: 20rem;
 
   --rad--color--light--background: lightgray;
+  --rad--color--light--button--background: var(--color--gray--one);
+  --rad--color--light--button--text: white;
   --rad--color--light--text: black;
   --rad--color--light--link: blue;
 
   --rad--color--dark--background: var(--color--gray--two);
-  --rad--color--dark--button--background: var(--color--gray--one);
+  --rad--color--dark--button--background: var(--color--gray--four);
+  --rad--color--dark--button--text: black;
   --rad--color--dark--text: white;
   --rad--color--dark--text--alt: var(--color--gray--five);
   --rad--color--dark--link: var(--color--gray--three);
+
+  --rad--color--dark--button--background-alt: var(--color--gray--four);
+  --rad--color--dark--button--text-alt: black;
 
   --button--primary--background-color: var(--color--gray--one);
   --button--primary--text-color: white;

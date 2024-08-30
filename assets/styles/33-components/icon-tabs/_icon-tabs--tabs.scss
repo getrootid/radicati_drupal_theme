@@ -1,0 +1,45 @@
+@import "../../variables";
+
+.icon-tabs__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;
+
+  @include media($breakpoint-md) {
+    flex-direction: row;
+  }
+}
+
+.icon-tabs__tab {
+  flex: 1 1 auto;
+  border: 0;
+  background: 0;
+  margin-bottom: 0;
+
+  @include media($breakpoint-md) {
+
+    max-width: rem(200px);
+  }
+}
+
+.paragraph--type--icon-tab.paragraph--view-mode--tab-label {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: rem(10px);
+  padding: rem(5px 10px);
+
+  .field-icon-tab__icon {
+    flex: 0 0 rem(50px);
+  }
+
+  .field-icon-tab__label {
+    font-weight: bold;
+    font-size: rem(16px);
+  }
+}

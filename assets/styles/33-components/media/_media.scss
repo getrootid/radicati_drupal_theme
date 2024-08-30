@@ -1,0 +1,19 @@
+@import "../../variables";
+
+
+// Hide images by default so they don't flash in before the JS is loaded
+.block-content--type-media {
+  .slick__slide {
+    display: none;
+  }
+
+  .slick__slide:first-child {
+    display: block;
+  }
+
+  .slick--initialized {
+    .slick__slide {
+      display: block;
+    }
+  }
+}

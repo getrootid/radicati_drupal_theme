@@ -2,25 +2,53 @@
 
 .block--block-content--logo-grid {
 
+  &.setting-alignment--right {
+    .field-logo-grid-items {
+      justify-content: flex-end;
+    }
+  }
+
+  &.setting-alignment--center {
+    .field-logo-grid-items {
+      justify-content: center;
+    }
+  }
 
   .field-logo-grid-items {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
 
-    @include media($breakpoint-md) {
-      grid-template-columns: repeat(2, 1fr);
-      grid-gap: rem(20px);
-    }
+    // Negative margins to counteract padding on the items
+    margin: 0 rem(-15px);
 
-    @include media($breakpoint-lg) {
-      grid-template-columns: repeat(3, 1fr);
-    }
+    .field--item {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 100%;
+      box-sizing: border-box;
+      padding: 0 rem(15px);
 
-    @include media($breakpoint-xl) {
-      grid-template-columns: repeat(4, 1fr);
-    }
+      @include media($breakpoint-md) {
+        //grid-template-columns: repeat(2, 1fr);
+        flex: 0 0 50%;
+      }
 
-    @include media($breakpoint-xxl) {
-      grid-template-columns: repeat(6, 1fr);
+      @include media($breakpoint-lg) {
+        //grid-template-columns: repeat(3, 1fr);
+        flex: 0 0 33.33%;
+      }
+
+      @include media($breakpoint-xl) {
+        //grid-template-columns: repeat(4, 1fr);
+        flex: 0 0 25%;
+      }
+
+      @include media($breakpoint-xxl) {
+        //grid-template-columns: repeat(6, 1fr);
+        flex: 0 0 16%;
+      }
     }
   }
 }

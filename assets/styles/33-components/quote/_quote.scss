@@ -1,6 +1,7 @@
 @import "../../variables";
 
 .block--block-content--quote {
+  --component-padding: var(--inline-component-padding);
   display: flex;
 
   &.setting-alignment--right {
@@ -42,16 +43,21 @@
     --color--title: #232323;
   }
 
+  .block__content {
+    min-height: rem(150px);
+    width: 100%;
+  }
+
   .quote__wrapper {
     position: relative;
-    padding: rem(10px 0 0 160px);
     width: 100%;
+    box-sizing: border-box;
   }
 
   .field-quote-media {
     position: absolute;
     left: rem(15px);
-    top: rem(-5px);
+    top: rem(-25px);
 
     width: rem(150px);
     height: rem(150px);
@@ -69,6 +75,7 @@
     position: relative;
     display: block;
     padding: rem(30px 30px 30px 60px);
+    margin: 0;
     border-radius: rem(10px);
     background: var(--color--background);
     color: var(--color--text);
@@ -79,19 +86,9 @@
       z-index: 1;
     }
 
-    // make a css triangle
+    // Remove the blockquote's default styling.
     &:before {
-      content: "";
-      position: absolute;
-      top: rem(40px);
-      left: rem(-28px);
-      width: 0;
-      height: 0;
-      transform: rotate(90deg);
-      border-top: rem(15px) solid var(--color--background);
-      border-right: rem(15px) solid transparent;
-      border-bottom: rem(15px) solid transparent;
-      border-left: rem(15px) solid var(--color--background);
+      content: none;
     }
 
     &:after {
@@ -107,14 +104,41 @@
     }
   }
 
+  // Changes based on whether there's an image.
+  div.field--quote_media + blockquote {
+    // The top margin here should be the opposite of the top margin on the image.
+    margin: rem(25px 0 0 160px);
+
+
+    // make a css triangle
+    &:before {
+      content: "";
+      position: absolute;
+      top: rem(40px);
+      left: rem(-28px);
+      width: 0;
+      height: 0;
+      transform: rotate(90deg);
+      border-top: rem(15px) solid var(--color--background);
+      border-right: rem(15px) solid transparent;
+      border-bottom: rem(15px) solid transparent;
+      border-left: rem(15px) solid var(--color--background);
+    }
+  }
+
+
+
   .field-quote-quote {
     position: relative;
-    font-size: rem(24px);
     z-index: 3;
+
+    p {
+      font-size: rem(18px);
+    }
   }
 
   .field-quote-citation-name {
-    font-size: rem(17px);
+    font-size: rem(16px);
     font-weight: bold;
     margin-bottom: rem(6px);
   }

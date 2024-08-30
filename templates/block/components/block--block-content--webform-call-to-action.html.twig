@@ -1,12 +1,20 @@
 {% extends "block--block-content.html.twig" %}
 
-{% block content %}
-  <div{{ content_attributes.addClass('webform-cta') }}>
-    <div class='webform-cta__content'>
-      {{ content|without('field_webform_cta_form') }}
-    </div>
-    <div class="webform-cta__form">
-      {{ content.field_webform_cta_form }}
+{% block outer_content %}
+  <div{{ content_attributes.addClass('block__content') }}>
+    {{ content.field_component_background_media }}
+
+    <div class="block__content__inner">
+      {% block content %}
+        <div{{ content_attributes.addClass('webform-cta') }}>
+          <div class='webform-cta__content'>
+            {{ content|without('field_webform_cta_form', 'field_component_background_media') }}
+          </div>
+          <div class="webform-cta__form">
+            {{ content.field_webform_cta_form }}
+          </div>
+        </div>
+      {% endblock %}
     </div>
   </div>
 {% endblock %}

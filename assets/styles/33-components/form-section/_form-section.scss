@@ -1,0 +1,15 @@
+@import "../../variables";
+
+.block--block-content--form-section {
+  &.setting-alignment--center {
+    .form-actions {
+      justify-content: center;
+    }
+  }
+
+  &.setting-alignment--right {
+    .form-actions {
+      justify-content: flex-end;
+    }
+  }
+}

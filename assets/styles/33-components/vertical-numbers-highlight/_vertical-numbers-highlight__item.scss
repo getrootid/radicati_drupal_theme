@@ -1,0 +1,19 @@
+@import "../../variables";
+
+.paragraph--type--number-highlight-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: rem(15px) 0;
+}
+
+.field-number-highlight__value {
+  font-size: rem(55px);
+  font-weight: 700;
+}
+
+.field-number-highlight__label {
+  font-size: rem(24px);
+  margin-left: rem(16px);
+  font-weight: 400;
+}

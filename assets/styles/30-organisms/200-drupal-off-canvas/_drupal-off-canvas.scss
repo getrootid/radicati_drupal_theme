@@ -1,0 +1,123 @@
+@import "../../variables";
+
+#drupal-off-canvas-wrapper td:first-child {
+  display: unset;
+}
+
+#drupal-off-canvas-wrapper {
+  .ui-dialog-titlebar {
+    font-size: rem(13px);
+    height: 45px !important;
+
+    --gin-bg-layer: var(--gin-bg-header);
+    //--gin-color-title: var(--gin-color-info);
+  }
+
+  &:not(.drupal-off-canvas-reset).ui-dialog-content, .ui-dialog-content {
+    height: calc(100% - 45px) !important;
+  }
+
+  .form-item-settings-admin-label {
+    font-size: rem(18px);
+    font-weight: bold;
+
+    .glb-form-item__label {
+      display: none !important;
+    }
+  }
+
+  .glb-form-item {
+    //margin-bottom: 1em !important;
+    //margin-top: 1em !important;
+  }
+
+  fieldset.glb-form-item {
+    margin-bottom: 1em !important;
+    margin-top: 1em !important;
+  }
+
+  div.fieldset__wrapper {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  div.details-wrapper, div.glb-claro-details__wrapper {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  div.messages {
+    --messages-bg-color: white;
+  }
+
+  div.container-inline {
+    padding-left: 20px;
+  }
+
+  .ief-form-row .glb-form-wrapper:not([data-drupal-ck-style-fence] *) {
+    flex-direction: column;
+  }
+
+  .ief-entity-operations {
+    display: flex;
+
+    input.glb-button {
+      border: 0 !important;
+      padding: 0 0 !important;
+
+      &:hover {
+        background: unset;
+        color: unset;
+      }
+    }
+  }
+
+  .field--type-text-long {
+    .form-type--textarea {
+      margin-bottom: 0 !important;
+    }
+
+    .js-filter-wrapper {
+      a {
+        font-size: rem(12px);
+      }
+    }
+
+    .form-type--select {
+      margin-top: rem(5px) !important;
+    }
+  }
+
+  // Remove some of the fieldset borders from media items.
+  .field--name-field-media-items > div > fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0 !important;
+  }
+
+  .ief-form-row .glb-form-wrapper {
+    display: flex;
+  }
+
+  .container-inline.glb-form-wrapper {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+  }
+
+  div.ief-form.ief-form-row .glb-form-wrapper .glb-form-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+
+  // Weird issues with summary/details sections
+  details.glb-claro-details {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+
+    div.glb-claro-details__wrapper {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+  }
+}
