@@ -1,0 +1,31 @@
+@import "../../variables";
+
+.jump-menu {
+
+}
+
+.jump-menu__label {
+  margin-right: rem(15px);
+  font-weight: bold;
+  float: left;
+}
+
+.jump-menu__items {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.jump-menu__item {
+
+  a {
+    text-decoration: none;
+    margin: 0 rem(7px);
+  }
+
+  a.active {
+    font-weight: bold;
+  }
+}

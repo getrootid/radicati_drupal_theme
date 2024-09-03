@@ -66,6 +66,13 @@ scroll-spy:
   js:
     dist/js/vanillajs-scrollspy/vanillajs-scrollspy.min.js: { minified: true }
 
+jump_menu:
+  version: 1.x
+  js:
+    assets/styles/33-components/jump-menu/_jump-menu.js: {}
+  dependencies:
+    - radicati_drupal_theme/scroll-spy
+
 accessible-tabs:
   version: 1.x
   js:

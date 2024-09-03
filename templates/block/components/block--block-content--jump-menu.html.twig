@@ -1,0 +1,23 @@
+{% extends "block--block-content.html.twig" %}
+
+{% block content %}
+  {{ attach_library('radicati_drupal_theme/jump_menu') }}
+  <nav{{ content_attributes.addClass('jump-menu') }}>
+    <span class="jump-menu__label">{{ content.field_jump_menu_label }}</span>
+
+    <ul class="jump-menu__items">
+      {# Iterate through paragraph field field_jump_menu_items #}
+      {% for key, item in content.field_jump_menu_items %}
+        {% if key|first != '#' %}
+          <li class="jump-menu__item">
+            <a href="{{ item['#paragraph'].field_jmi_content_id.0.value }}">
+              {{ item['#paragraph'].field_jmi_label.0.value }}
+            </a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+
+  </nav>
+{% endblock %}
+
