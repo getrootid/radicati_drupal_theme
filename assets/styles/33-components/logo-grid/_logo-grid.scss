@@ -21,7 +21,7 @@
     width: 100%;
 
     // Negative margins to counteract padding on the items
-    margin: 0 rem(-15px);
+    //margin: 0 rem(-15px); - this isn't working...
 
     .field--item {
       display: flex;
