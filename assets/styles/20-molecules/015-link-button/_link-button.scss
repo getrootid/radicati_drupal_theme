@@ -16,8 +16,8 @@
 }
 
 .button--primary {
-  --button--background-color: var(--button--primary--background-color);
-  --button--text-color: var(--button--primary--text-color);
-  --button--background-color--hover: var(--button--primary--text-color);
-  --button--text-color--hover: var(--button--primary--background-color);
+  --button--background-color: var(--color--button--primary--background);
+  --button--text-color: var(--color--button--primary--text);
+  --button--background-color--hover: var(--color--button--primary--hover--background);
+  --button--text-color--hover: var(--color--button--primary--hover--text);
 }
