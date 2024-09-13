@@ -13,14 +13,12 @@
       gap: rem(25px);
 
       justify-content: flex-end;
-
-
     }
 
     li.sf-depth-1 {
 
       &.sfHover {
-        a {
+        > a {
           background: var(--color--gray--one);
           color: var(--color--gray--five);
         }
