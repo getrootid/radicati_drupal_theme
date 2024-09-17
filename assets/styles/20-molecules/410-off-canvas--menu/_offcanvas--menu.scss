@@ -1,11 +1,9 @@
 @import "../../variables";
 
 // any menus placed in the off_canvas region.
-.off_canvas {
+.off-canvas {
   --border-color: black;
   --text-color: black;
-
-  background: white;
 
   ul.menu {
     margin: 0;
