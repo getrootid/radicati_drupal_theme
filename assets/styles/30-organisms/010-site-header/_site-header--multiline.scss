@@ -8,8 +8,8 @@ body.radicati-header-type--multi {
   .header__inner {
     @include media($breakpoint-lg) {
       grid-template-areas:
-    "branding  secondarynav"
-    "branding  primarynav";
+        "branding  secondarynav"
+        "branding  primarynav";
     }
   }
 }

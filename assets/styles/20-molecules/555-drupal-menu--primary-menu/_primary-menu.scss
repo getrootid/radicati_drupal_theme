@@ -1,21 +1,19 @@
 @import "../../variables";
 
-nav.menu--main {
-
-  // top level menu
-  > ul.menu {
-    display: flex;
-    flex-direction: row;
-    gap: rem(25px);
-
-    justify-content: flex-end;
-  }
-
-  li.menu__item {
-
-
-    a {
-      text-transform: uppercase;
-    }
-  }
-}
+//nav.menu--main {
+//
+//  // top level menu
+//  > ul.menu {
+//    display: flex;
+//    flex-direction: row;
+//    gap: rem(25px);
+//
+//    justify-content: flex-end;
+//  }
+//
+//  li.menu__item {
+//    a {
+//      text-transform: uppercase;
+//    }
+//  }
+//}
