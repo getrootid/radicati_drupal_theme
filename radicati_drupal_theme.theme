@@ -40,8 +40,11 @@ function radicati_drupal_theme_preprocess_block(&$variables)
   }
 
   if (isset($variables['elements']['#id'])) {
-    $region = Block::load($variables['elements']['#id'])->getRegion();
-    $variables['content']['#attributes']['region'] = $region;
+    $block = Block::load($variables['elements']['#id']);
+    if(!empty($block)) {
+      $region = $block->getRegion();
+      $variables['content']['#attributes']['region'] = $region;
+    }
   }
 }
 
