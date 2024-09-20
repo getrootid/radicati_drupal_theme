@@ -1,0 +1,25 @@
+{% extends "paragraph.html.twig" %}
+
+{% block content %}
+  {{ attach_library('radicati_drupal_theme/accordion') }}
+  {#  Get value of field_accordion_start_open to see if it should start out open  #}
+  {% set start_open = paragraph.field_accordion_start_open.value %}
+
+  <div class="accordion-item {{ start_open ? "accordion-item--expanded" }}">
+    <div class="accordion-item__header">
+      <button class="accordion-item__button"
+              id="accordion-item--{{ paragraph.id() }}--button"
+              aria-expanded="{{ start_open ? 'true' : 'false' }}"
+              aria-controls="accordion-item--{{ paragraph.id() }}--content">
+        {{ content.field_accordion_title }}
+      </button>
+    </div>
+
+    <div id="accordion-item--{{ paragraph.id() }}--content"
+         class="accordion-item__content"
+         aria-labelledby="accordion-item--{{ paragraph.id() }}--button"
+         aria-hidden="{{ start_open ? 'false' : 'true' }}">
+      {{ content.field_accordion_content }}
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,29 @@
+@import "../../variables";
+
+.paragraph--type--inline-content-call-to-action {
+
+}
+
+.inline-cta {
+  position: relative;
+  width: 100%;
+  background-color: var(--rad--color--light--background);
+}
+
+.inline-cta__inner {
+  padding: rem(50px) 0;
+  text-align: center;
+  position: relative;
+
+  h2, h3, h4, h5, h6 {
+    margin-top: 0;
+  }
+
+  @include media($breakpoint-md) {
+
+  }
+
+  @include media($breakpoint-lg) {
+  }
+
+}

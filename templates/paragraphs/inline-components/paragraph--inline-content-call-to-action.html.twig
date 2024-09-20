@@ -1,0 +1,12 @@
+{% extends "paragraph.html.twig" %}
+
+{% block content %}
+  <div{{ content_attributes.addClass('inline-cta') }}>
+    <div class="inline-cta__inner">
+      {{ content.field_icta_title }}
+      {{ content.field_icta_content }}
+      {{ content.field_icta_button }}
+    </div>
+  </div>
+{% endblock %}
+

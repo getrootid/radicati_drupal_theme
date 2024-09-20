@@ -1,0 +1,9 @@
+@import "../../variables";
+
+.field--inline_content {
+  --inline-component-margins: 1.5rem;
+
+  > .field--item > .paragraph {
+    margin: rem(var(--inline-component-margins) 0);
+  }
+}

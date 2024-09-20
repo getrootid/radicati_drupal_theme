@@ -1,0 +1,18 @@
+@import "../../variables";
+
+.accordion-item {
+
+}
+
+button.accordion-item__button {
+  width: 100%;
+  padding: rem(15px) rem(20px);
+  background-color: var(--color--gray--five);
+  border: 0;
+  cursor: pointer;
+  text-align: left;
+}
+
+.accordion-item__content[aria-hidden="true"] {
+  display: none;
+}

@@ -78,6 +78,14 @@ accessible-tabs:
   js:
     assets/styles/10-atoms/75-accessible-tabs/_tabs.js: { minified: false }
 
+accordion:
+  version: 1.x
+  js:
+      assets/styles/30-organisms/550-accordion/_accordion.js: { minified: false }
+  dependencies:
+    - core/drupal
+    - core/once
+
 icon-tabs:
   version: 1.x
   js:

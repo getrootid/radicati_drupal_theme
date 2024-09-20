@@ -1,0 +1,14 @@
+{% extends "paragraph.html.twig" %}
+
+{% block content %}
+  <div class="inline-quote__wrapper">
+    <blockquote class="inline-quote">
+      {{ content.field_icq_quote_text }}
+
+      <footer class="inline-quote__footer">
+        {{ content.field_icq_quote_byline }}
+      </footer>
+    </blockquote>
+  </div>
+{% endblock %}
+

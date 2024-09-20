@@ -1,0 +1,66 @@
+@import "../../variables";
+
+@import "../../variables";
+
+.block--block-content--quote {
+  display: flex;
+
+  .block__content {
+    min-height: rem(150px);
+    width: 100%;
+  }
+
+  .quote__wrapper {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  blockquote {
+    position: relative;
+    display: block;
+    padding: rem(30px 30px 30px 60px);
+    margin: 0;
+    border-radius: rem(10px);
+    background: var(--color--background);
+    color: var(--color--text);
+    text-align: left;
+
+    p:first-child {
+      margin-top: 0;
+      z-index: 1;
+    }
+
+    // Remove the blockquote's default styling.
+    &:before {
+      content: none;
+    }
+
+    &:after {
+      content: "\f10e";
+      font-family: $font--fontawesome;
+      font-weight: 700;
+      font-size: rem(64px);
+      position: absolute;
+      top: rem(4px);
+      left: rem(30px);
+      color: var(--color--quote);
+      z-index: 0;
+    }
+  }
+
+  .field-icq-quote-text {
+    position: relative;
+    z-index: 3;
+
+    p {
+      font-size: rem(18px);
+    }
+  }
+
+  .field-icq-quote-byline {
+    font-size: rem(16px);
+    font-weight: bold;
+    margin-bottom: rem(6px);
+  }
+}
