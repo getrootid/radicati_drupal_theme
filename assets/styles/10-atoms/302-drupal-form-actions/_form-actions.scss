@@ -1,5 +1,10 @@
 @import "../../variables";
 
 .form-actions {
+  margin-block: unset;
   margin-bottom: .9375rem;
+
+  .button {
+    margin-block: unset;
+  }
 }

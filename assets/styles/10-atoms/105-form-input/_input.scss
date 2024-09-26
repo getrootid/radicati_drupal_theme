@@ -1,6 +1,16 @@
 @import "../../variables";
 
-input {
-  padding: 0.5rem;
-  box-sizing: border-box;
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="url"],
+input[type="number"] {
+  background: white;
+  border: 0;
+  border-bottom: 1px solid black;
+  padding: rem(15px) rem(16px) rem(13px);
+  font-size: rem(16px);
+  line-height: 1.325;
+  width: 100%;
 }
