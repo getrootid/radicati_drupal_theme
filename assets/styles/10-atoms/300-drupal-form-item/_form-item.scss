@@ -2,6 +2,7 @@
 
 .form-item {
   margin-bottom: rem(15px);
+  margin-block: unset;
 
   &:last-child {
     margin-bottom: 0;
