@@ -1,7 +1,17 @@
 @import "../../variables";
 
 #drupal-off-canvas-wrapper td:first-child {
-  display: unset;
+  display: table-cell;
+
+  a.tabledrag-handle .handle {
+    display: none;
+  }
+
+  a.tabledrag-handle.tabledrag-handle-y {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 #drupal-off-canvas-wrapper {
