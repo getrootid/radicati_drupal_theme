@@ -33,7 +33,7 @@ function radicati_drupal_theme_preprocess_block(&$variables) {
 
   if(isset($variables['elements']['#attributes']['data-aos'])) {
     // Add the AOS library.
-
+    $variables['#attached']['library'][] = 'radicati_drupal_theme/radicati-aos';
   }
 
   if(isset($block_content['#block_content'])) {
@@ -50,6 +50,17 @@ function radicati_drupal_theme_preprocess_block(&$variables) {
       $region = $block->getRegion();
       $variables['content']['#attributes']['region'] = $region;
     }
+  }
+}
+
+/**
+ * Alter paragraph items to include the AOS library if the paragraph
+ * has the data-aos attribute.
+ */
+function radicati_drupal_theme_preprocess_paragraph(&$variables) {
+  if(isset($variables['elements']['#attributes']['data-aos'])) {
+    // Add the AOS library.
+    $variables['#attached']['library'][] = 'radicati_drupal_theme/radicati-aos';
   }
 }
 

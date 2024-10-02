@@ -93,3 +93,20 @@ icon-tabs:
   dependencies:
     - radicati_drupal_theme/accessible-tabs
     - drupal/once
+
+radicati-aos:
+  version: 1.x
+  js:
+    assets/styles/20-molecules/001-aos/aos.js: { minified: false }
+  dependencies:
+    - radicati_drupal_theme/aos
+    - core/once
+    - core/drupal
+
+aos:
+  version: 2.3.4
+  css:
+    theme:
+      /libraries/aos/dist/aos.css: { minified: true }
+  js:
+    /libraries/aos/dist/aos.js: { minified: true }
