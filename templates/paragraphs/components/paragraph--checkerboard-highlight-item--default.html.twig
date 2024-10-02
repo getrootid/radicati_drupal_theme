@@ -1,0 +1,13 @@
+{% extends "paragraph.html.twig" %}
+
+{% block content %}
+  <div class="checkerboard-highlight-item">
+    <div class="checkerboard-highlight-item__media">
+      {{ content.field_chi_media }}
+    </div>
+
+    <div class="checkerboard-highlight-item__content">
+      {{ content|without('field_chi_media') }}
+    </div>
+  </div>
+{% endblock %}

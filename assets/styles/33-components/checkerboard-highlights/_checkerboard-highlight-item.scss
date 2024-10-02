@@ -1,0 +1,54 @@
+@import "../../variables";
+
+.checkerboard-highlight-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: rem(30px);
+
+  @include media($breakpoint-md) {
+    flex-direction: row;
+    margin-bottom: 0;
+  }
+}
+
+.field-chhi-items > .field--item:nth-child(odd) {
+
+  @include media($breakpoint-md) {
+    .checkerboard-highlight-item {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+.checkerboard-highlight-item__media {
+  flex: 0 0 100%;
+  width: 100%;
+
+  @include media($breakpoint-md) {
+    flex: 0 0 50%;
+    width: 50%;
+
+    div:not(.contextual), img {
+      width: 100%;
+      height: 100%;
+    }
+
+    img {
+      display: block;
+      object-fit: cover;
+    }
+  }
+}
+
+.checkerboard-highlight-item__content {
+  flex: 0 1 100%;
+  width: 100%;
+  padding: rem(15px);
+  box-sizing: border-box;
+
+  @include media($breakpoint-md) {
+    flex: 0 1 50%;
+    width: 50%;
+    padding: rem(25px);
+  }
+}
