@@ -28,9 +28,14 @@ function radicati_drupal_theme_preprocess_html(&$variables) {
 /**
  * adds custom block type to the block template as a class name.
  */
-function radicati_drupal_theme_preprocess_block(&$variables)
-{
+function radicati_drupal_theme_preprocess_block(&$variables) {
   $block_content = $variables['elements']['content'];
+
+  if(isset($variables['elements']['#attributes']['data-aos'])) {
+    // Add the AOS library.
+
+  }
+
   if(isset($block_content['#block_content'])) {
     $bundle = $block_content['#block_content']->bundle();
     $class = 'block--block-content--' . $bundle;
