@@ -8,22 +8,7 @@
             "email": "jason@rootid.com"
         }
     ],
-    "repositories": [
-        {
-            "type": "package",
-            "package": {
-                "name": "michalsnik/aos",
-                "version": "2.3.4",
-                "type": "drupal-library",
-                "source": {
-                    "url": "https://github.com/michalsnik/aos",
-                    "type": "git",
-                    "reference": "2.3.4"
-                }
-            }
-        }
-    ],
     "require": {
-        "michalsnik/aos": "^2.3"
+
     }
 }
