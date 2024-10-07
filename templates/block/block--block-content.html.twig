@@ -59,7 +59,7 @@
 
       <div class="block__content__inner">
         {% block content %}
-          {{ content|without('field_component_title', 'field_component_sub_title', 'field_component_link', 'field_component_background_media') }}
+          {{ content|without('field_component_title', 'field_component_sub_title', 'field_component_long_sub_title', 'field_component_link', 'field_component_background_media') }}
         {% endblock %}
       </div>
       {{ content.field_component_link }}
