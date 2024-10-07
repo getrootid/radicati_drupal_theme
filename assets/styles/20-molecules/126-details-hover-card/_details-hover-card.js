@@ -1,8 +1,6 @@
 Drupal.behaviors.detailsHoverCard = {
   attach: function (context, settings) {
-
-    console.log('here');
-
+    
     once('detailshover', '.details-hover-card', context).forEach(function (element) {
       element.addEventListener('click', (e) => {
         const card = e.target.closest('.details-hover-card');
