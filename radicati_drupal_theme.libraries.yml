@@ -115,3 +115,11 @@ aos:
       '//cdnjs.cloudflare.com/ajax/libs/aos/3.0.0-beta.6/aos.css': { type: external, minified: true }
   js:
     '//cdnjs.cloudflare.com/ajax/libs/aos/3.0.0-beta.6/aos.js': { type: external, minified: true }
+
+details-hover-card:
+  version: 1.x
+  js:
+    assets/styles/30-organisms/126-details-hover-card/_details-hover-card.js: { preprocess: false }
+  dependencies:
+    - core/once
+    - core/drupal
