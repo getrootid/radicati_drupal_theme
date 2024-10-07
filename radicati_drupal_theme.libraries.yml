@@ -119,7 +119,7 @@ aos:
 details-hover-card:
   version: 1.x
   js:
-    assets/styles/30-organisms/126-details-hover-card/_details-hover-card.js: { preprocess: false }
+    assets/styles/20-molecules/126-details-hover-card/_details-hover-card.js: { preprocess: false }
   dependencies:
     - core/once
     - core/drupal
