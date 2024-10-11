@@ -1,6 +1,9 @@
 @import "../../variables";
 
-.node__content > *, .layout-builder__section > *, .layout-builder__region > * {
+.node--view-mode-full > .node__content > *,
+.layout-builder__section > *,
+.layout-builder__region > * {
+  
   background: var(--color--background);
   color: var(--color--text);
 
