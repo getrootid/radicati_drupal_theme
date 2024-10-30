@@ -3,15 +3,14 @@
 .block-local-tasks-block {
   max-width: var(--rad--content-width-normal);
   margin: 0 auto;
+  padding: rem(5px) 0;
 
   nav.tabs {
     ul {
-      margin-top: 5px;
       display: flex;
       flex-direction: row;
-      gap: 10px;
       padding: 0;
-      border-bottom: 1px solid darkgray;
+      margin: 0;
     }
 
     li {
@@ -22,16 +21,16 @@
 
     a {
       display: block;
-      border: 1px solid darkgray;
+      border-radius: rem(11px);
       text-decoration: none;
-      padding: rem(3px 5px 5px 5px);
+      padding: rem(5px 10px);
       font-size: rem(14px);
-      color: #423983;
-      background: #F8F2D3;
+      color: white;
+      background: #154415;
 
       &.is-active {
-        color: #F8F2D3;
-        background: #423983;
+        color: #f8f2d3;
+        background: rgb(47, 131, 96);
       }
     }
   }
