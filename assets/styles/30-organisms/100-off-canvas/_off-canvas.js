@@ -56,9 +56,12 @@
           var $toggle = $('[aria-controls="off-canvas"]');
 
           var $focusable = $offcanvas.find('a[href], button, input, textarea, select, details, [tabindex]:not([tabindex="-1"])');
+          var keyCode = e.keyCode || e.which;
+
+          // Remove hidden elements from the $focusable list
+          $focusable = $focusable.filter(':visible');
           var $first = $focusable.first();
           var $last = $focusable.last();
-          var keyCode = e.keyCode || e.which;
 
           if (keyCode === 9) {
             if (e.shiftKey) {
@@ -83,17 +86,35 @@
           $offcanvas.attr('aria-hidden', 'false');
           $toggles.attr('aria-expanded', 'true');
 
+          // Add class to show that the oc is activating
+          $offcanvas.removeClass('off-canvas--hidden');
+          $offcanvas.addClass('off-canvas--activating');
+          setTimeout(() => {
+            $first.focus();
+            $offcanvas.removeClass('off-canvas--activating');
+            $offcanvas.addClass('off-canvas--active');
+          }, 200);
+
+
           // Now that it's visible, set the keyboard focus to be on the first focusable element in the off-canvas.
           var $focusable = $offcanvas.find('a[href], button, input, textarea, select, details, [tabindex]:not([tabindex="-1"])');
           var $first = $focusable.first();
 
-          setTimeout(function() { $first.focus(); }, 100);
+
 
           $overlay.addClass('off-canvas__overlay--active');
         } else {
           $offcanvas.attr('aria-hidden', 'true');
           $toggles.attr('aria-expanded', 'false');
           $overlay.removeClass('off-canvas__overlay--active');
+
+          // similar to above, but for deactivating
+          $offcanvas.removeClass('off-canvas--active');
+          $offcanvas.addClass('off-canvas--deactivating');
+          setTimeout(() => {
+            $offcanvas.removeClass('off-canvas--deactivating');
+            $offcanvas.addClass('off-canvas--hidden');
+          }, 200);
         }
       }
     }

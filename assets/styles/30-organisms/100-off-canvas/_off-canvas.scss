@@ -2,7 +2,6 @@
 
 #off-canvas {
   position: fixed;
-  display: flex;
   flex-direction: column;
   overflow-y: auto;
   bottom: 0;
@@ -13,15 +12,27 @@
   background-color: var(--rad--off-canvas-background);
   z-index: 1000;
   visibility: hidden;
+  display: none;
 
   box-shadow: 2px 0 100px black;
   transform: translateX(-130%);
-  transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  transition: transform 0.2s ease-in-out, visibility 0.2s ease-in-out;
 
   &[aria-hidden="false"] {
-    transform: translateX(0);
-    visibility: visible;
+
+
   }
+}
+
+#off-canvas.off-canvas--activating,
+#off-canvas.off-canvas--deactivating,
+#off-canvas.off-canvas--active {
+  display: flex;
+  visibility: visible;
+}
+
+#off-canvas.off-canvas--active {
+  transform: translateX(0);
 }
 
 .off-canvas__overlay {
