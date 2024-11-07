@@ -4,7 +4,7 @@
   border-radius: rem(5px);
 
   background: var(--button--background-color);
-  color: var(--button--text-color) !important;
+  color: var(--button--text-color);
   text-decoration: none;
   border: 2px solid var(--button--background-color);
 
@@ -12,7 +12,7 @@
 
   &:focus, &:hover {
     background: var(--button--background-color--hover);
-    color: var(--button--text-color--hover) !important;
+    color: var(--button--text-color--hover);
     border-color: var(--button--text-color--hover);
   }
 }

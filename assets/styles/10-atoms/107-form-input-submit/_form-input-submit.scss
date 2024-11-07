@@ -12,7 +12,8 @@ button.button--primary {
   border-color: var(--color--button--primary--background);
 
   &:hover {
-    background: var(--color--button--primary--text);
-    color: var(--color--button--primary--background);
+    background: var(--color--button--primary--hover--background);
+    color: var(--color--button--primary--hover--text);
+    border-color: var(--color--button--primary--hover--text);
   }
 }
