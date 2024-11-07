@@ -7,7 +7,7 @@
   background: var(--color--background);
   color: var(--color--text);
 
-  a {
+  a:not(.button) {
     color: var(--color--link);
   }
 
