@@ -29,9 +29,6 @@
   .field-buttons-buttons {
 
     a {
-      @extend .button;
-      @extend .button--primary;
-
       margin-bottom: rem(20px);
       margin-right: rem(20px);
     }
