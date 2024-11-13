@@ -58,8 +58,7 @@
 
   .field-cta-button {
     a {
-      @extend .button;
-      @extend .button--primary;
+      //@extend .button; // TODO: Put in starter instead of here!
     }
   }
 }
