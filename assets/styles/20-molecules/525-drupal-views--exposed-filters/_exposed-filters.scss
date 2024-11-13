@@ -1,0 +1,39 @@
+@import "../../variables";
+
+// Default exposed filter form
+form.views-exposed-form {
+  @include media($breakpoint-md) {
+    display: flex;
+    flex-direction: row;
+    gap: rem(15px);
+  }
+
+  .form-item {
+    flex: 1 1 auto;
+    margin-bottom: rem(15px);
+
+    @include media($breakpoint-md) {
+      margin-bottom: 0;
+    }
+
+    input, select {
+      width: 100%;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="search"] {
+      background: var(--color--osa--lightest-cloud-blue);
+    }
+  }
+
+  .form-actions {
+    margin-top: auto;
+    flex: 0 0 rem(140px);
+    
+    input, button {
+      width: 100%;
+    }
+  }
+}

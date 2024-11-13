@@ -1,0 +1,54 @@
+@import "../../variables";
+
+#block-osa-theme-footer.block-menu {
+
+  ul:not(.contextual-links) {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+    @include media($breakpoint-md) {
+      flex-wrap: wrap;
+      max-height: rem(550px);
+    }
+
+    @include media($breakpoint-lg) {
+      max-height: rem(417px);
+    }
+
+    @include media($breakpoint-xl) {
+      max-height: rem(315px);
+    }
+  }
+
+  ul.menu--level-1 {
+
+  }
+
+  ul.menu--level-2 {
+    margin: 0 rem(52px) rem(27px) 0;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  a.menu__link--level-1 {
+    font-family: var(--font--pt-sans);
+    font-size: rem(16px);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: rem(0.5px);
+    color: var(--color--osa--gray-brown);
+    text-transform: uppercase;
+  }
+
+  a.menu__link--level-2 {
+    font-family: var(--font--pt-sans);
+    font-size: rem(16px);
+    font-weight: 400;
+    line-height: 1.4;
+    color: black;
+  }
+}

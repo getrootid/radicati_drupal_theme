@@ -76,7 +76,7 @@ jump_menu:
 accessible-tabs:
   version: 1.x
   js:
-    assets/styles/10-atoms/75-accessible-tabs/_tabs.js: { minified: false }
+    assets/styles/10-atoms/975-accessible-tabs/_tabs.js: { minified: false }
 
 accordion:
   version: 1.x

@@ -1,0 +1,14 @@
+@import "../../variables";
+
+#block-osa-theme-copyright {
+  p {
+    color: black;
+    font-family: var(--font--pt-sans);
+    font-size: rem(14px);
+    font-weight: 400;
+  }
+
+  a {
+    color: black;
+  }
+}

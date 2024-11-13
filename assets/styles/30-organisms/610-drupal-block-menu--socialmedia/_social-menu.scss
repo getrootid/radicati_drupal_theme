@@ -1,0 +1,49 @@
+@import "../../variables";
+
+#block-osa-theme-socialmedia {
+
+  @include media($breakpoint-lg) {
+    max-width: rem(160px);
+  }
+
+  h2 {
+    font-size: rem(16px);
+    font-family: var(--font--pt-sans);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color--osa--gray-brown);
+    margin: 0 0 rem(22px) 0;
+  }
+
+  ul.menu {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    gap: rem(40px) rem(12px);
+  }
+
+  li.menu__item {
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: rem(44px);
+      height: rem(44px);
+      background: white;
+      border-radius: 50%;
+      text-decoration: none;
+      color: var(--color--osa--green);
+      font-size: rem(18px);
+
+      &:focus, &:hover {
+        //color: white;
+        color: black;
+        background: var(--color--osa--orange);
+      }
+    }
+  }
+}
