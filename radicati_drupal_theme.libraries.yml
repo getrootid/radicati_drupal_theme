@@ -123,3 +123,4 @@ details-hover-card:
   dependencies:
     - core/once
     - core/drupal
+    - core/drupal.displace
