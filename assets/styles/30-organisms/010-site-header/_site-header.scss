@@ -1,13 +1,15 @@
 @import "../../variables";
 
+
+// TODO: Move starting colors to child theme!
 header.header {
   position: relative;
-  background: var(--color--gray--three);
+  //background: var(--color--gray--three);
   z-index: 10;
 
-  color: var(--color--gray--one);
+  //color: var(--color--gray--one);
   a, button {
-    color: var(--color--gray--one);
+    //color: var(--color--gray--one);
   }
 }
 
