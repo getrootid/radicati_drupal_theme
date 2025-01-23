@@ -3,6 +3,8 @@ global-styles:
   css:
     theme:
       dist/css/hip-styles.css: { preprocess: false }
+  dependencies:
+    - radicati_drupal_theme/global-styles
 
 ckeditor5:
   version: 1.x
