@@ -6,7 +6,6 @@ core_version_requirement: ^8.9 || ^9 || ^10
 
 libraries:
   - radicati_drupal_theme/global-styles
-  - radicati_drupal_theme/ckeditor5
   - radicati_drupal_theme/offcanvas
   - radicati_drupal_theme/offcanvas-menu
 

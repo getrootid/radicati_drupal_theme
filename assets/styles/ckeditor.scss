@@ -2,6 +2,11 @@
 // admin theme css variables.
 @import "./css-variables";
 
+
+// REMOVED from default setup:
+// This completely conflicts with child theme css and makes it hard to override
+// a lot of variables.
+
 div.ck-editor {
 
   @import "10-atoms/**/*";
