@@ -2,7 +2,6 @@
 
 .block--block-content--call-to-action {
   margin: 0;
-
 }
 
 .cta {
@@ -28,7 +27,7 @@
     background-color: color-mix(in srgb, var(--color--background) 65%, transparent);
   }
 
-  div:not(.contextual) {
+  div:not(.contextual):not([data-drupal-ajax-container]):not([data-contextual-id]) {
     width: 100%;
     height: 100%;
   }
