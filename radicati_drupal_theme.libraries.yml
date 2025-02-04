@@ -5,6 +5,8 @@ global-styles:
       dist/css/styles.css: { preprocess: false }
   js:
     dist/js/drupalDisplace.js: {}
+  dependencies:
+    - core/drupal.displace
 
 ckeditor5:
   version: 1.x
