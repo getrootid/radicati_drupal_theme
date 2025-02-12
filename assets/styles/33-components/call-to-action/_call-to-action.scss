@@ -1,7 +1,8 @@
 @import "../../variables";
 
 .block--block-content--call-to-action {
-  margin: 0;
+  --component-margins: 0;
+  margin-inline: 0;
 }
 
 .cta {
