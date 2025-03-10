@@ -35,7 +35,7 @@
     text-decoration: none;
     color: var(--text-color);
     padding-left: rem(15px);
-    height: rem(44px);
+    min-height: rem(44px);
   }
 
   button.menu__toggle {
