@@ -1,14 +1,14 @@
 {% extends "block--block-content.html.twig" %}
 
-{% block content %}
+{% block outer_content %}
   <div{{ content_attributes.addClass('highlight') }}>
     <div class="highlight__media">
-      {{ content.field_highlight_media }}
+      {{ content.field_component_media }}
     </div>
     <div class="highlight__content">
-      {{ content.field_highlight_title }}
-      {{ content.field_highlight_blurb }}
-      {{ content.field_highlight_button }}
+      {{ content.field_component_title }}
+      {{ content.field_component_blurb }}
+      {{ content.field_component_read_more }}
     </div>
   </div>
 {% endblock %}

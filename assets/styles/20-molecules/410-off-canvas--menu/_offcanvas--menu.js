@@ -19,6 +19,10 @@
           // Get the state of the toggle button
           var state = $(this).attr('aria-expanded');
 
+          // Set an expanded class on the parent menu item "li.menu__item--expanded"
+          // to allow for styling of the expanded menu item
+          $(this).closest('.menu__item').toggleClass('menu__item--expanded');
+
           // Set the new state of the toggle button, and the state of the menu
           $(element).attr('aria-expanded', !(state === 'true'));
           $target.attr('aria-hidden', (state === 'true'));
