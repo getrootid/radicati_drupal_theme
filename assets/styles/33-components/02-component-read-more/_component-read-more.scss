@@ -3,10 +3,4 @@
 .field-component-read-more {
   text-align: center;
   margin: rem(15px 0 15px 0);
-
-  a {
-    @extend .button;
-    @extend .button--primary;
-  }
-
 }
