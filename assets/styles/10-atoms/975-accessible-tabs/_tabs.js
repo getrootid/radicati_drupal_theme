@@ -10,7 +10,8 @@
 'use strict';
 
 class TabsAutomatic {
-  constructor(groupNode) {
+  constructor(groupNode, allowNoActiveTab = false) {
+    this.allowNoActiveTab = allowNoActiveTab;
     this.tablistNode = groupNode;
 
     this.tabs = [];
@@ -25,7 +26,14 @@ class TabsAutomatic {
       var tab = this.tabs[i];
       var tabpanel = document.getElementById(tab.getAttribute('aria-controls'));
 
-      tab.tabIndex = -1;
+      // If allowNoActiveTab is true, and this is the first tab, then set the tab
+      // index to 0, otherwise set it to -1
+      if (this.allowNoActiveTab && i === 0) {
+        tab.tabIndex = 0;
+      } else {
+        tab.tabIndex = -1;
+      }
+
       tab.setAttribute('aria-selected', 'false');
       this.tabpanels.push(tabpanel);
 
@@ -38,7 +46,10 @@ class TabsAutomatic {
       this.lastTab = tab;
     }
 
-    this.setSelectedTab(this.firstTab, false);
+    if (this.allowNoActiveTab)
+      this.setSelectedTab(null, false);
+    else
+      this.setSelectedTab(this.firstTab, false);
   }
 
   setSelectedTab(currentTab, setFocus) {
@@ -48,17 +59,32 @@ class TabsAutomatic {
     for (var i = 0; i < this.tabs.length; i += 1) {
       var tab = this.tabs[i];
       if (currentTab === tab) {
-        tab.setAttribute('aria-selected', 'true');
-        tab.removeAttribute('tabindex');
-        //this.tabpanels[i].classList.remove('is-hidden');
-        this.tabpanels[i].removeAttribute('hidden');
-        if (setFocus) {
-          tab.focus();
+
+        // If you're allowing no active tab, and the current tab is already selected, de-select it
+        if (this.allowNoActiveTab && tab.getAttribute('aria-selected') === 'true') {
+
+          // Don't remove tab index so user can tab to it
+          tab.setAttribute('aria-selected', 'false');
+          this.tabpanels[i].setAttribute('hidden', 'hidden');
+          return;
+        } else {
+          tab.setAttribute('aria-selected', 'true');
+          tab.removeAttribute('tabindex');
+          //this.tabpanels[i].classList.remove('is-hidden');
+          this.tabpanels[i].removeAttribute('hidden');
+          if (setFocus) {
+            tab.focus();
+          }
         }
       } else {
         tab.setAttribute('aria-selected', 'false');
-        tab.tabIndex = -1;
-        //this.tabpanels[i].classList.add('is-hidden');
+
+        // if there isn't an active tab, and this is the first tab, set the tab index to 0
+        if (this.allowNoActiveTab && i === 0) {
+          tab.tabIndex = 0;
+        } else {
+          tab.tabIndex = -1;
+        }
 
         this.tabpanels[i].setAttribute('hidden', 'hidden');
       }
