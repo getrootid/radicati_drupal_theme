@@ -3,7 +3,7 @@
   'component--section',
   'checkerboard-highlights',
 ] %}
-<section {{ content_attributes.addClass(classes) }}>
+<section class="{{ classes|join(' ') }}">
   <div class="checkerboard-highlights__items">
     {% block items %}{% endblock %}
   </div>

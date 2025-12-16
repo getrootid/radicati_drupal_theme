@@ -4,6 +4,6 @@
   'buttons--direction--' ~ (buttons_direction is defined ? buttons_direction : 'horizontal'),
 ] %}
 
-<div {{ content_attributes.addClass(classes) }}>
+<div class="{{ classes|join(' ') }}">
   {% block buttons %}{% endblock %}
 </div>

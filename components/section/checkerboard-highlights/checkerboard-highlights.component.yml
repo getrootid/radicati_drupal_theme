@@ -2,6 +2,14 @@ $schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schema
 
 name: Checkerboard Highlights
 #replaces: radicati_drupal_theme:checkerboard-highlights
+props:
+  type: object
+  properties:
+    content_attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper attributes.
+      default: {}
 slots:
   items:
     title: Items

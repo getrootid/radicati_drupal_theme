@@ -4,6 +4,7 @@
 
 .checkerboard-highlights__items {
 
+  /* TODO: The below only works in layout builder! */
   .field-chhi-items .field--item:nth-child(even)
   /*.checkerboard-card:nth-child(even) {*/
   {
@@ -31,5 +32,11 @@
 
     }
 
+  }
+}
+
+.checkerboard-highlights__items .checkerboard-card:nth-child(even) {
+  @media (min-width: calc(768/16 * 1em)) {
+    flex-direction: row-reverse;
   }
 }

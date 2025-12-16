@@ -1,0 +1,13 @@
+{
+  "$defs": {
+    "buttonType": {
+      "type": "string",
+      "enum": ["button button--white", "button button--black", "button button--gray", "link"],
+      "enum:meta": {
+        "button button--white": "White",
+        "button button--black": "Black",
+        "button button--gray": "Gray"
+      }
+    }
+  }
+}

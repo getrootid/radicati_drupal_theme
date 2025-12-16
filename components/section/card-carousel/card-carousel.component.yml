@@ -7,6 +7,10 @@ name: Card Carousel
 props:
   type: object
   properties:
+    content_attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper attributes.
     style:
       type: string
       title: Color
@@ -22,5 +26,7 @@ slots:
     title: Content
   cards:
     title: Cards
+    allowedComponents:
+      - radicati_drupal_theme:collection-card
   readmore:
     title: Read More Link

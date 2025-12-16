@@ -1,0 +1,54 @@
+a.button {
+  --button--background-color: black;
+  --button--text-colot: white;
+  --button--background-color--hover: white;
+  --button--text-color--hover: black;
+
+  /* By default the border color is the same as the background color,
+     and opposite on hover */
+  --button--border-color: var(--button--background-color);
+  --button--border-color--hover: var(--button--text-color--hover);
+
+  --color--link: var(--button--text-color);
+
+  display: inline-flex;
+  padding: calc(10/16 * 1rem) calc(25/16 * 1rem);
+  border-radius: calc(5/16 * 1rem);
+
+  background: var(--button--background-color);
+  color: var(--button--text-color);
+  text-decoration: none;
+  border: 2px solid var(--button--border-color);
+
+  box-shadow: unset;
+
+  &:focus, &:hover {
+    background: var(--button--background-color--hover);
+    color: var(--button--text-color--hover);
+    --color--link: var(--button--text-color--hover);
+    border-color: var(--button--border-color--hover);
+  }
+}
+
+a.button--black {
+  --button--background-color: black;
+  --button--text-color: white;
+  --button--background-color--hover: white;
+  --button--text-color--hover: black;
+}
+
+a.button--white {
+  --button--border-color: black;
+  --button--background-color: white;
+  --button--text-color: black;
+  --button--background-color--hover: black;
+  --button--text-color--hover: white;
+  --button--border-color--hover: black;
+}
+
+a.button--gray {
+  --button--background-color: #e0e0e0;
+  --button--text-color: black;
+  --button--background-color--hover: black;
+  --button--text-color--hover: white;
+}
