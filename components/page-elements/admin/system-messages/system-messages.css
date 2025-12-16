@@ -1,0 +1,14 @@
+.messages {
+  border: 1px solid black;
+  padding: calc(5/16 * 1rem) calc(20/16 * 1rem);
+  border-radius: 5px;
+  margin: calc(10/16 * 1rem) 0;
+
+  &.messages--status {
+    background: #c5f5c5;
+  }
+
+  &.messages--error {
+    background: #f5c5c5;
+  }
+}

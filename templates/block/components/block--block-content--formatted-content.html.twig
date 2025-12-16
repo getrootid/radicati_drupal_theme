@@ -1,0 +1,10 @@
+{% extends "block--block-content.html.twig" %}
+
+{% block outer_content %}
+  {% embed "radicati_drupal_theme:formatted-content" with {
+    content_attributes: content_attributes.addClass('highlight'),
+    formatted_content: content
+  } %}
+  {% endembed %}
+{% endblock %}
+

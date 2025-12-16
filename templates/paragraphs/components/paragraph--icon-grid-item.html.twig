@@ -1,0 +1,26 @@
+{% extends "paragraph.html.twig" %}
+
+{% block content %}
+  {% set link_target = "_self" %}
+  {% if paragraph.field_card_link.0.options.attributes.target %}
+    {% set link_target = paragraph.field_card_link.0.options.attributes.target %}
+  {% endif %}
+
+  {% embed "radicati_drupal_theme:icon-card" with {
+    content_attributes: content_attributes,
+    link: paragraph.field_card_link.0.url|default(""),
+    link_target: link_target,
+  } %}
+    {% block media %}
+      {{ content.field_card_media }}
+    {% endblock %}
+
+    {% block title %}
+      {{ content.field_card_title }}
+    {% endblock %}
+
+    {% block body %}
+      {{ content|without('field_card_media', 'field_card_title') }}
+    {% endblock %}
+  {% endembed %}
+{% endblock %}

@@ -1,0 +1,17 @@
+<div {{ content_attributes.addClass('checkerboard-card') }}>
+  {% if block('media') is defined and block('media')|trim is not empty %}
+    <div class="checkerboard-card__media">
+      {% block media %}{% endblock %}
+    </div>
+  {% endif %}
+
+  <div class="checkerboard-card__body">
+    {% block body %}{% endblock %}
+
+    {% if block('actions') is defined and block('actions')|trim is not empty %}
+      <div class="checkerboard-card__actions">
+        {% block actions %}{% endblock %}
+      </div>
+    {% endif %}
+  </div>
+</div>

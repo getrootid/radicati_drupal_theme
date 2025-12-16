@@ -1,0 +1,25 @@
+<div {{ content_attributes.addClass('basic-accordions') }}>
+  {% set accordions_r = block('accordions') %}
+
+  <div class="basic-accordions__accordions-wrapper">
+    {% embed "radicati_drupal_theme:accordions" with {
+      only_one_open: true
+    } %}
+      {% block accordion_items %}
+        {{ accordions_r|raw }}
+      {% endblock %}
+    {% endembed %}
+  </div>
+</div>
+
+{#<div {{ content_attributes.addClass('basic-accordions') }}>#}
+{#  <div class="basic-accordions__accordions-wrapper">#}
+{#    {% embed "radicati_drupal_theme:accordions" with {#}
+{#      only_one_open: true#}
+{#    } %}#}
+{#      {% block accordion_items %}#}
+{#        {{ accordions|raw }}#}
+{#      {% endblock %}#}
+{#    {% endembed %}#}
+{#  </div>#}
+{#</div>#}

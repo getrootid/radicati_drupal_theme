@@ -1,0 +1,20 @@
+{% extends "block--block-content.html.twig" %}
+
+{% block outer_content %}
+  {% embed "radicati_drupal_theme:card-carousel" with {
+    content_attributes: content_attributes
+  } %}
+    {% block title %}
+      {{ content|without('field_carousel_cards', 'field_component_read_more') }}
+    {% endblock %}
+
+    {% block cards %}
+      {{ content.field_carousel_cards }}
+    {% endblock %}
+
+    {% block readmore %}
+      {{ content.field_component_read_more }}
+    {% endblock %}
+
+  {% endembed %}
+{% endblock %}

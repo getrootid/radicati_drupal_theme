@@ -1,0 +1,15 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+name: Accordions Section
+#replaces: radicati_drupal_theme:accordions-section
+props:
+  accordions:
+  type: object
+
+slots:
+  title:
+    title: Content
+#  accordions:
+#    title: Accordions
+  readmore:
+    title: Read More Link

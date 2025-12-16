@@ -1,0 +1,25 @@
+{% extends "block--block-content.html.twig" %}
+
+{% block outer_content %}
+  {% embed "radicati_drupal_theme:media-carousel" with {
+    content_attributes: content_attributes
+  } %}
+
+    {% block title %}
+      {{ content.field_component_title }}
+    {% endblock %}
+
+    {% block body %}
+      {{ content|without('field_component_title', 'field_media_carousel__items', 'field_component_read_more') }}
+    {% endblock %}
+
+    {% block items %}
+      {{ content.field_media_carousel__items }}
+    {% endblock %}
+
+    {% block readmore %}
+      {{ content.field_component_read_more }}
+    {% endblock %}
+
+  {% endembed %}
+{% endblock %}

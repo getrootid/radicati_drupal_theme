@@ -1,0 +1,31 @@
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+
+  /* Without this the buttons will expand to the column width when in vertical layout */
+  > .button {
+    width: fit-content;
+  }
+}
+
+.buttons--alignment--left {
+  text-align: left;
+  justify-content: flex-start;
+}
+
+.buttons--alignment--center {
+  text-align: center;
+  justify-content: center;
+}
+
+.buttons--alignment--right {
+  text-align: right;
+  justify-content: flex-end;
+}
+
+.buttons--direction--vertical {
+  flex-direction: column;
+  gap: calc(10/16 * 1rem);
+}

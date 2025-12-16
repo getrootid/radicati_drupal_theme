@@ -1,11 +1,15 @@
 {% extends "block--block-content.html.twig" %}
 
-{% block content %}
+{% block outer_content %}
+  {% embed "radicati_drupal_theme:people-listing" with {
+    content_attributes: content_attributes,
+  } %}
+    {% block header %}
+      {{ content|without('field_people_listing_simple', 'field_people_listing_details') }}
+    {% endblock %}
 
-  <div{{ content_attributes.addClass('people-listing') }}>
-    {{ content.field_people_listing_details }}
-
-    {{ content.field_people_listing_simple }}
-  </div>
+    {% block detail_items %}{{ content.field_people_listing_details }}{% endblock %}
+    {% block simple_items %}{{ content.field_people_listing_simple }}{% endblock %}
+  {% endembed %}
 {% endblock %}
 

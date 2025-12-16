@@ -1,0 +1,16 @@
+{% extends "paragraph.html.twig" %}
+
+{% block content %}
+  {% embed "radicati_drupal_theme:media-card" with {
+    content_attributes: content_attributes
+  } %}
+
+    {% block media %}
+      {{ content.field_media_item__media }}
+    {% endblock %}
+
+    {% block caption %}
+      {{ content|without('field_media_item__media') }}
+    {% endblock %}
+  {% endembed %}
+{% endblock %}

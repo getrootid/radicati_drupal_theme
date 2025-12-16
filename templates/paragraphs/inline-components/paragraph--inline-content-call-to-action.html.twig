@@ -1,12 +1,20 @@
 {% extends "paragraph.html.twig" %}
 
 {% block content %}
-  <div{{ content_attributes.addClass('inline-cta') }}>
-    <div class="inline-cta__inner">
+  {% embed "radicati_drupal_theme:content-cta" with {
+    content_attributes: content_attributes
+  } %}
+    {% block title %}
       {{ content.field_icta_title }}
+    {% endblock %}
+
+    {% block body %}
       {{ content.field_icta_content }}
+    {% endblock %}
+
+    {% block readmore %}
       {{ content.field_icta_button }}
-    </div>
-  </div>
+    {% endblock %}
+  {% endembed %}
 {% endblock %}
 

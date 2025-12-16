@@ -1,0 +1,38 @@
+@import "../../variables";
+
+.block-local-tasks-block {
+  max-width: var(--rad--content-width-normal);
+  margin: 0 auto;
+  padding: rem(5px) 0;
+
+  nav.tabs {
+    ul {
+      display: flex;
+      flex-direction: row;
+      gap: rem(7px);
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+
+      list-style-type: none;
+
+    }
+
+    a {
+      display: block;
+      border-radius: rem(11px);
+      text-decoration: none;
+      padding: rem(5px 10px);
+      font-size: rem(14px);
+      color: white;
+      background: #154415;
+
+      &.is-active {
+        color: #f8f2d3;
+        background: rgb(47, 131, 96);
+      }
+    }
+  }
+}

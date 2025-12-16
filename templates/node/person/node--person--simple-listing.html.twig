@@ -3,17 +3,11 @@
 {% block default_title %}{% endblock %}
 
 {% block content %}
-  <div{{ content_attributes.addClass('simple-listing') }}>
-    <div class="simple-listing__first-line">
-      <span class="simple-listing__name">
-        {{ content.field_person_first_name.0 }} {{ content.field_person_last_name.0 }}
-      </span>
-      {% if not node.field_person_pronouns.isEmpty %}
-        <span class="simple-listing__pronouns">{{ content.field_person_pronouns.0 }}</span>
-      {% endif %}
-    </div>
-    {% if not node.field_person_position.isEmpty %}
-      <div class="simple-listing__position">{{ content.field_person_position.0 }}</div>
-    {% endif %}
-  </div>
+  {% embed "radicati_drupal_theme:person-listing-simple-card" with {
+    content_attributes: content_attributes,
+    person_full_name: content.field_person_first_name.0|render ~ ' ' ~ content.field_person_last_name.0|render,
+    person_pronouns: not node.field_person_pronouns.isEmpty ? content.field_person_pronouns.0 : null,
+    person_position: not node.field_person_position.isEmpty ? content.field_person_position.0 : null
+  } %}
+  {% endembed %}
 {% endblock %}

@@ -1,18 +1,15 @@
 {% extends "block--block-content.html.twig" %}
 
-{% block content %}
-  <div class="quote__wrapper">
-    {{ content.field_quote_media }}
-
-    <blockquote class="quote">
-      {{ content.field_quote_quote }}
-
-      <footer class="quote__footer">
-        {{ content.field_quote_citation_name }}
-
-        {{ content.field_quote_citation_title }}
-      </footer>
-    </blockquote>
-  </div>
+{% block outer_content %}
+  {% embed "radicati_drupal_theme:testimonial" with {
+    content_attributes: content_attributes,
+    quote_content: content.field_quote_quote,
+    quote_author_name: content.field_quote_citation_name,
+    quote_author_title: content.field_quote_citation_title,
+  } %}
+    {% block media %}
+      {{ content.field_quote_media }}
+    {% endblock %}
+  {% endembed %}
 {% endblock %}
 

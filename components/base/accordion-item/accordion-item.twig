@@ -1,0 +1,19 @@
+{% set id = "accordion-item"|clean_unique_id %}
+
+<div class="accordion-item {{ start_open ? "accordion-item--expanded" }}">
+  <div class="accordion-item__header">
+    <button class="accordion-item__button"
+            id="accordion-item--{{ id }}--button"
+            aria-expanded="{{ start_open ? 'true' : 'false' }}"
+            aria-controls="accordion-item--{{ id }}--content">
+     {{ title }}
+    </button>
+  </div>
+
+  <div id="accordion-item--{{ id }}--content"
+       class="accordion-item__content"
+       aria-labelledby="accordion-item--{{ id }}--button"
+       aria-hidden="{{ start_open ? 'false' : 'true' }}">
+    {% block body %}{% endblock %}
+  </div>
+</div>

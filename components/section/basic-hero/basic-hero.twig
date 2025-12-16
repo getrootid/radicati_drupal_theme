@@ -1,0 +1,12 @@
+{% set classes = [
+  'component',
+  'component--section',
+  'basic-hero'
+] %}
+<section {{ content_attributes.addClass(classes) }}>
+  <div class="basic-hero__media background-media">{% block media %}Media Content{% endblock %}</div>
+
+  <div class="basic-hero__content">
+    {% block body %}Default Content 2{% endblock %}
+  </div>
+</section>

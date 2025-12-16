@@ -1,0 +1,26 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+# This uses the SplideJS library that should be installed.
+
+name: Card Carousel
+#replaces: radicati_drupal_theme:card-carousel
+props:
+  type: object
+  properties:
+    style:
+      type: string
+      title: Color
+      examples: [
+        'purple',
+        'blue',
+        'green'
+      ]
+      description: "Named style to use, generally using the background color as a reference."
+      enum: ['purple', 'blue', 'green']
+slots:
+  title:
+    title: Content
+  cards:
+    title: Cards
+  readmore:
+    title: Read More Link

@@ -1,0 +1,49 @@
+.component {
+  --component-padding: 0;
+  --component-margin: calc(15/16 * 1rem);
+
+  padding: var(--component-padding) 0;
+  margin: var(--component-margin) 0;
+
+  p {
+
+  }
+
+  a {
+
+  }
+
+  h2 {
+
+  }
+
+  h3 {
+
+  }
+
+  h4 {
+
+  }
+
+  h5 {
+
+  }
+
+  h6 {
+
+  }
+}
+
+/* Section components are meant to be full width and typically have more padding, margins,
+   and a background color set.
+
+ */
+.component--section {
+  --component-padding: calc(40/16 * 1rem);
+  --component-margin: 0;
+}
+
+.component--inline {
+  --component-padding: 0;
+  --component-margin: calc(15/16 * 1rem);
+}

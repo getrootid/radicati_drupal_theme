@@ -1,0 +1,24 @@
+{% set classes = [
+  'component',
+  'component--section',
+  'people-listing',
+] %}
+<section {{ content_attributes.addClass(classes) }}>
+  {% if block('header') is defined and block('header')|trim is not empty %}
+    <div class="people-listing__header">
+      {% block header %}{% endblock %}
+    </div>
+  {% endif %}
+
+  {% if block('detail_items') is defined and block('detail_items')|trim is not empty %}
+    <div class="people-listing__detail-items">
+      {% block detail_items %}{% endblock %}
+    </div>
+  {% endif %}
+
+  {% if block('simple_items') is defined and block('simple_items')|trim is not empty %}
+    <div class="people-listing__simple-items">
+      {% block simple_items %}{% endblock %}
+    </div>
+  {% endif %}
+</section>

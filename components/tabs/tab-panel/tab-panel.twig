@@ -1,0 +1,17 @@
+{% set panel_id = label|clean_unique_id %}
+
+<div id="{{ panel_id ~ "--tab" }}" class="tab__label" data-tab="{{ panel_id }}">
+  <div class="tab__label__text">
+    {{ label }}
+  </div>
+  <div class="tab__label__icon">
+    {{ icon|raw }}
+  </div>
+</div>
+
+<div id="{{ panel_id }}"
+     aria-labelledby="{{ panel_id ~ "--tab" }}"
+     class="tab__panel"
+     role="tabpanel">
+  {% block tab_content %}{% endblock %}
+</div>

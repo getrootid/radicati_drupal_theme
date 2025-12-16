@@ -1,0 +1,21 @@
+{% set classes = [
+  'component',
+  'component--section',
+  'icon-stat-grid',
+  items_per_row ? "icon-stat-grid--items-per-row--" ~ items_per_row : '',
+  items_per_row ? 'has-icon-stat-grid--items-per-row',
+] %}
+<section {{ content_attributes.addClass(classes) }}>
+  <div class="icon-stat-grid__header">
+    {% block header %}
+      <h2>Icon Statistics Grid</h2>
+      <p>A n x m grid of statistics with labels.</p>
+    {% endblock %}
+  </div>
+
+  <div class="icon-stat-grid__cards">
+    {% block cards %}{% endblock %}
+  </div>
+
+  {% block readmore %}{% endblock %}
+</section>

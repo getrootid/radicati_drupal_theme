@@ -6,8 +6,16 @@ global-styles:
   dependencies:
     - radicati_drupal_theme/global-styles
 
-ckeditor5:
+component-styles:
   version: 1.x
   css:
     theme:
-      dist/css/ckeditor.css: { preprocess: false }
+      assets/styles/component-defaults/component-defaults.css: { preprocess: false }
+      assets/styles/component-defaults/settings/setting--background-media.css: { preprocess: false }
+      assets/styles/component-defaults/settings/setting--fixed-background.css: { preprocess: false }
+      assets/styles/component-defaults/settings/setting--style.css: { preprocess: false }
+      assets/styles/component-defaults/slots/slot--readmore.css: { preprocess: false }
+      assets/styles/component-defaults/slots/slot--title.css: { preprocess: false }
+      assets/styles/component-defaults/slots/slot--subtitle.css: { preprocess: false }
+  dependencies:
+    - starter_child_theme/global-styles

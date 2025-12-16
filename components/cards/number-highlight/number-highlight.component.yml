@@ -1,0 +1,21 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+name: Number Highlight
+#replaces: radicati_drupal_theme:number-highlight
+props:
+  type: object
+  properties:
+    highlight_value:
+      type: string
+      title: Highlight Value
+      examples: [
+        '100',
+        '1,212,016',
+        'four'
+      ]
+    highlight_label:
+      type: string
+      title: Highlight Label
+      contentMediaType: text/html
+      examples:
+        - '<p>This is a paragraph with <strong>bold</strong> text.</p><ul><li>List item 1</li><li>List item 2</li></ul>'

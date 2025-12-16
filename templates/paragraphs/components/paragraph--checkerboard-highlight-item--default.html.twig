@@ -1,13 +1,24 @@
 {% extends "paragraph.html.twig" %}
 
 {% block content %}
-  <div class="checkerboard-highlight-item">
-    <div class="checkerboard-highlight-item__media">
-      {{ content.field_chi_media }}
-    </div>
+  {% embed "radicati_drupal_theme:checkerboard-card" with {
+    content_attributes: content_attributes
+  } %}
 
-    <div class="checkerboard-highlight-item__content">
-      {{ content|without('field_chi_media') }}
-    </div>
-  </div>
+    {% block media %}
+      {% if not paragraph.field_chi_media.isEmpty() %}
+        {{ content.field_chi_media }}
+      {% endif %}
+    {% endblock %}
+
+    {% block body %}
+      {{ content|without('field_chi_media', 'field_chi_button') }}
+    {% endblock %}
+
+    {% block actions %}
+      {% if not paragraph.field_chi_button.isEmpty() %}
+        {{ content.field_chi_button }}
+      {% endif %}
+    {% endblock %}
+  {% endembed %}
 {% endblock %}

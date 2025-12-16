@@ -1,0 +1,13 @@
+{% extends "block--block-content.html.twig" %}
+
+{% block outer_content %}
+  {% embed "radicati_drupal_theme:buttons" with {
+    buttons_alignment: content.field_setting_alignment|render|striptags|clean_class,
+    buttons_direction: content.field_setting_direction|render|striptags|clean_class,
+  } %}
+    {% block buttons %}
+      {{ content.field_buttons_buttons }}
+    {% endblock %}
+  {% endembed %}
+{% endblock %}
+

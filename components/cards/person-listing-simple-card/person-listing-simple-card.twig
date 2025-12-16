@@ -1,0 +1,16 @@
+<div{{ content_attributes.addClass('simple-listing') }}>
+  <div class="simple-listing__content">
+    <div class="simple-listing__name-line">
+      <span class="simple-listing__name">
+        {{ person_full_name }}
+      </span>
+      {% if person_pronouns %}
+        <span class="simple-listing__pronouns">{{ person_pronouns }}</span>
+      {% endif %}
+    </div>
+
+    {% if person_position %}
+      <div class="simple-listing__position">{{ person_position }}</div>
+    {% endif %}
+  </div>
+</div>

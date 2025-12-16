@@ -14,15 +14,9 @@
  */
 #}
 {% block content %}
-  {% if site_logo %}
-    <a class="site-logo-link" href="{{ path('<front>') }}" rel="home">
-      <img src="{{ site_logo }}" alt="{{ site_name }}" />
-    </a>
-  {% elseif site_name and not site_slogan %}
-    <a class="visually-hidden" href="{{ path('<front>') }}" rel="home">{{ site_name }}</a>
-  {% elseif site_name and site_slogan %}
-    <div class="site-name-slogan">
-      <a href="{{ path('<front>') }}" rel="home">{{ site_name }}</a>
-    </div>
-  {% endif %}
+  {% include "radicati_drupal_theme:system-branding-block" with {
+    site_logo: site_logo,
+    site_name: site_name,
+    site_slogan: site_slogan
+  } %}
 {% endblock %}

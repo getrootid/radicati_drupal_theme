@@ -1,0 +1,18 @@
+<div class="site-branding">
+
+  {% if site_logo %}
+    <a class="site-branding__link" href="/" rel="home">
+      {% if use_svg_logo %}
+{#  TODO: Add svg logo code here. Should output the svg text from the file.      #}
+      {% else %}
+        <img class="site-branding__link__image" src="{{ site_logo }}" alt="{{ site_name }}" />
+      {% endif %}
+    </a>
+  {% elseif site_name and not site_slogan %}
+    <a href="/" rel="home">{{ site_name }}</a>
+  {% elseif site_name and site_slogan %}
+    <div class="site-name-slogan">
+      <a href="/" rel="home">{{ site_name }}</a>
+    </div>
+  {% endif %}
+</div>

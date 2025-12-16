@@ -1,0 +1,11 @@
+{% extends "block--block-content.html.twig" %}
+
+{% block outer_content %}
+  {% embed "radicati_drupal_theme:heading" with {
+    content_attributes: content_attributes,
+    heading_text: content.field_component_heading.0['#text'],
+    heading_level: content.field_component_heading.0['#size']
+  } %}
+  {% endembed %}
+{% endblock %}
+

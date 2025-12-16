@@ -1,0 +1,26 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+name: Stat Card
+#replaces: radicati_drupal_theme:stat-card
+props:
+  type: object
+  properties:
+    stat_value:
+      type: string
+      title: Statistic Value
+      examples: [
+        '100',
+        '1,212,016',
+        'four'
+      ]
+    stat_label:
+      type: string
+      title: Statistic Label
+      contentMediaType: text/html
+      examples:
+        - '<p>This is a paragraph with <strong>bold</strong> text.</p><ul><li>List item 1</li><li>List item 2</li></ul>'
+slots:
+  media:
+    title: Media
+  body:
+    title: Body

@@ -1,0 +1,22 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+# This will likely need updating since keeping it as working
+# in both EX and LB might be tricky/impossible.
+
+name: Media
+# replaces: radicati_drupal_theme:media
+group: Content
+props:
+  type: object
+  properties:
+    image:
+      $ref: json-schema-definitions://canvas.module/image
+      type: object
+      title: Image
+      description: >
+        Image of the singer
+      examples:
+        - src: 'micro.webp'
+          alt: 'Nice picture of the singer'
+          width: 200
+          height: 300

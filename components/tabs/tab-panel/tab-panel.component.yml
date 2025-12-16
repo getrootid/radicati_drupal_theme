@@ -1,0 +1,16 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+name: Tab Panel
+#replaces: radicati_drupal_theme:tab-panel
+props:
+  type: object
+  properties:
+    label:
+      title: "Label"
+      type: string
+    icon:
+      type: [ 'string', 'object' ]
+      title: "Icon"
+slots:
+  tab_content:
+    title: Tab Content

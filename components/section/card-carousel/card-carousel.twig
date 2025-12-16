@@ -1,0 +1,29 @@
+{% set classes = [
+  'component',
+  'component--section',
+  'card-carousel',
+] %}
+<section {{ content_attributes.addClass([classes]) }}>
+  <div class="card-carousel__title slot slot--section-title">
+    {% block title %}<h2>Card Carousel</h2>{% endblock %}
+  </div>
+
+  {% set cards_r = block('cards') %}
+
+  <div class="card-carousel__carousel-wrapper">
+    {% embed "radicati_drupal_theme:carousel" with {
+      title: "Card Carousel",
+      slides_per_page_desktop: 3,
+      slides_per_page_tablet: 2,
+      slides_per_page_default: 2,
+      arrows: true,
+      pagination: true
+    } %}
+      {% block slides %}
+        {{ cards_r|raw }}
+      {% endblock %}
+    {% endembed %}
+  </div>
+
+  {% block readmore %}{% endblock %}
+</section>

@@ -1,0 +1,27 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+name: Heading
+# replaces: radicati_drupal_theme:heading
+group: Content
+props:
+  type: object
+
+  category: Component
+  properties:
+    heading_level:
+      title: Heading Level
+      type: string
+      default: "h2"
+      enum: [
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6"
+      ]
+    heading_text:
+      title: Heading Text
+      type: string
+      examples:
+        - 'This is Heading Text'

@@ -1,0 +1,13 @@
+<nav{{ content_attributes.addClass('jump-menu') }}>
+  <span class="jump-menu__label">{% block label %}Jump Menu{% endblock %}</span>
+
+  <ul class="jump-menu__items">
+    {% for key, item in items %}
+        <li class="jump-menu__item">
+          <a href="{{ item.anchor }}">
+            {{ item.label }}
+          </a>
+        </li>
+    {% endfor %}
+  </ul>
+</nav>

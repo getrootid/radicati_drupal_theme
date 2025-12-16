@@ -1,0 +1,10 @@
+{% extends "paragraph.html.twig" %}
+
+{% block content %}
+  {% embed "radicati_drupal_theme:heading" with {
+    content_attributes: content_attributes,
+    heading_text: content.field_ich_heading.0['#text'],
+    heading_level: content.field_ich_heading.0['#size']
+  } %}
+  {% endembed %}
+{% endblock %}

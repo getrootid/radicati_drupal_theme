@@ -1,0 +1,40 @@
+.collection-card {
+  margin-bottom: 45px;
+
+  .field-card-media {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .field-card-title {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 9px;
+  }
+
+  .field-card-tag {
+    color: var(--component--color--alt);
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .field-card-blurb {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .field-card-link {
+    text-align: center;
+    margin-bottom: 20px;
+
+    a {
+      text-decoration: none;
+      font-size: 18px;
+
+    }
+
+  }
+}

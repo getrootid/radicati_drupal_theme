@@ -2,14 +2,11 @@ name: Radicati Child Theme
 type: theme
 base theme: radicati_drupal_theme
 description: 'Child theme for sites made with Radicati. This should be copied to another location and renamed.'
-core_version_requirement: ^8.9 || ^9 || ^10
+core_version_requirement: ^8.9 || ^9 || ^10 || ^11
 
 libraries:
   - starter_child_theme/global-styles
-
-libraries-extend:
-  radicati_drupal_theme/ckeditor5:
-    - starter_child_theme/ckeditor5
+  - starter_child_theme/component-styles
 
 regions:
   site_notification: Site Notification

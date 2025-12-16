@@ -2,7 +2,7 @@ name: Radicati Parent Theme
 type: theme
 base theme: stable9
 description: 'Parent theme for sites made with Radicati. Not meant to be used by itself.'
-core_version_requirement: ^8.9 || ^9 || ^10
+core_version_requirement: ^8.9 || ^9 || ^10 || ^11
 
 libraries:
   - radicati_drupal_theme/global-styles

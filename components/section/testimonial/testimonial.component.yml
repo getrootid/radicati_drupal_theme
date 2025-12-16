@@ -1,0 +1,39 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+name: Testimonial
+group: Layout
+description: A testimonial or quote section with author details.
+category: Layout
+Folder:  Layout
+folder: Layout
+#replaces: radicati_drupal_theme:testimonial
+props:
+  type: object
+  group: Layout
+  category: Layout
+  Folder: Layout
+  folder: Layout
+  properties:
+    quote_content:
+      title: Quote Content
+      type: string
+      contentMediaType: text/html
+      examples:
+        - '<p>This is a paragraph with <strong>bold</strong> text.</p><ul><li>List item 1</li><li>List item 2</li></ul>'
+    quote_author_name:
+      type: string
+      title: Quote Author
+      examples: [
+        'John Doe',
+        'Jane Smith'
+      ]
+    quote_author_title:
+      type: string
+      title: Author Title
+      examples: [
+        'CEO, Company Inc.',
+        'Marketing Manager, Business Co.'
+      ]
+slots:
+  media:
+    title: Media

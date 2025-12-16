@@ -1,0 +1,17 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+name: Quote
+# replaces: radicati_drupal_theme:quote
+group: Content
+props:
+  type: object
+  properties:
+    quote_text:
+      type: string
+      contentMediaType: text/html
+      examples:
+        - '<p>If I had a fish for every time I saw a mellon then I have have a paddock of haddock.</p>'
+    quote_byline:
+      type: string
+      examples:
+          - 'Jason Neumark Mickela, the first.'

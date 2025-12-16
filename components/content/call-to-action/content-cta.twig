@@ -1,0 +1,19 @@
+<div {{ content_attributes.addClass('content-cta') }}>
+  <div class="content-cta__inner">
+    <div class="content-cta__title">
+      {% block title %}{% endblock %}
+    </div>
+
+    {% if block('body') is defined and block('body')|trim is not empty %}
+      <div class="content-cta__content">
+        {% block body %}{% endblock %}
+      </div>
+    {% endif %}
+
+    {% if block('readmore') is defined and block('readmore')|trim is not empty %}
+      <div class="content-cta__read-more">
+        {% block readmore %}{% endblock %}
+      </div>
+    {% endif %}
+  </div>
+</div>

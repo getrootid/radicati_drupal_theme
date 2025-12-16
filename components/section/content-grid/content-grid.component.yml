@@ -1,0 +1,12 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+# Current, this will always need to be a Drupal Block since it
+# is outputting Drupal content. This means it can't easily directly interact
+# with props, so....
+
+name: Content Grid
+#replaces: radicati_drupal_theme:content-grid
+
+slots:
+  body:
+    title: Content

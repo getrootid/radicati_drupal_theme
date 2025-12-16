@@ -1,0 +1,13 @@
+.media-card {
+  margin-bottom: calc(25/16 * 1rem);
+}
+
+.media-card__caption {
+  font-size: calc(18/16 * 1rem);
+  line-height: calc(28/16 * 1rem);
+
+  padding: calc(25/16 * 1rem) calc(20/16 * 1rem) calc(20/16 * 1rem) calc(20/16 * 1rem);
+
+  border: 1px solid darkgray;
+  border-top: none;
+}

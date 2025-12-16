@@ -1,0 +1,72 @@
+.checkerboard-card {
+  margin-bottom: calc(45/16 * 1rem);
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: calc(768/16 * 1rem)) {
+    flex-direction: row;
+    gap: calc(30/16 * 1rem);
+  }
+
+  .checkerboard-card__media {
+    width: 100%;
+    flex: 1 1 100%;
+    overflow: hidden;
+    border-radius: calc(8/16 * 1rem);
+    margin-bottom: calc(10/16 * 1rem);
+
+    @media (min-width: calc(768/16 * 1rem)) {
+      flex: 0 1 calc(50% - 15/16 * 1rem);
+      width: calc(50% - 15/16 * 1rem);
+      margin-bottom: 0;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .checkerboard-card__body {
+    font-size: 1rem;
+    margin-bottom: 1.1rem;
+
+    width: 100%;
+    flex: 1 1 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: calc(20/16 * 1rem);
+    border-radius: calc(8/16 * 1rem);
+
+    background-color: var(--color--background, #cccccc);
+    color: var(--color--text, #000000);
+
+    a {
+      color: var(--color--link, #0000EE);
+    }
+
+    @media (min-width: calc(768/16 * 1rem)) {
+      flex: 0 1 calc(50% - 15/16 * 1rem);
+      width: calc(50% - 15/16 * 1rem);
+      margin-bottom: 0;
+    }
+
+    h2, h3, h4 {
+      font-size: calc(26/16 * 1rem);
+      font-weight: bold;
+      margin-bottom: calc(9/16 * 1rem);
+    }
+  }
+
+  .checkerboard-card__actions {
+    text-align: center;
+    margin-bottom: calc(20/16 * 1rem);
+
+    a {
+      text-decoration: none;
+      font-size: calc(18/16 * 1rem);
+
+    }
+
+  }
+}

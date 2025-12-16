@@ -1,0 +1,47 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+name: Carousel
+#replaces: radicati_drupal_theme:carousel
+props:
+  type: object
+  properties:
+    content_attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper attributes.
+    title:
+      type: string
+      title: Title
+      description: "Title of the carousel. A descriptive title helps with accessibility."
+      default: "Carousel Title"
+    slides_per_page_desktop:
+      type: integer
+      title: Slides Per Page (Desktop)
+      description: "Number of slides to show per view."
+      default: 3
+    slides_per_page_tablet:
+      type: integer
+      title: Slides Per Page (Tablet)
+      description: "Number of slides to show per view on tablet devices."
+      default: 2
+    slides_per_page_default:
+      type: integer
+      title: Slides Per Page (Mobile)
+      description: "Number of slides to show per view on mobile devices."
+      default: 1
+    arrows:
+      type: boolean
+      title: Show Arrows
+      description: "Whether to show navigation arrows."
+      default: true
+    pagination:
+      type: boolean
+      title: Show Pagination
+      description: "Whether to show pagination dots."
+      default: true
+slots:
+  slides:
+    title: Slides
+libraryOverrides:
+  dependencies:
+    - splide/splide

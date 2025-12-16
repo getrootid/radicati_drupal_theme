@@ -1,0 +1,12 @@
+{% set classes = [
+  'component',
+  'component--section',
+  'call-to-action',
+] %}
+<section {{ content_attributes.addClass([classes]) }}>
+  <div class="call-to-action__media">{% block media %}Media Content{% endblock %}</div>
+
+  <div class="call-to-action__content">
+    {% block body %}Default Content 2{% endblock %}
+  </div>
+</section>

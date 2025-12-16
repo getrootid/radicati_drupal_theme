@@ -1,0 +1,4 @@
+.site-branding__link__image {
+  height: calc(225/16 * 1rem);
+  width: auto;
+}

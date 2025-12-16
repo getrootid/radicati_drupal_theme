@@ -1,0 +1,11 @@
+<div {{ content_attributes.addClass('media-card') }}>
+  <div class="media-card__media">
+    {% block media %}{% endblock %}
+  </div>
+
+  {% if block('caption') is defined and block('caption')|trim is not empty %}
+    <div class="media-card__caption">
+      {% block caption %}{% endblock %}
+    </div>
+  {% endif %}
+</div>

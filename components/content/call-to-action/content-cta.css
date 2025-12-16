@@ -1,0 +1,23 @@
+.content-cta {
+  position: relative;
+  width: 100%;
+  background-color: darkgray;
+}
+
+.content-cta__inner {
+  padding: calc(50/16 * 1rem) calc(20/16 * 1rem);
+  text-align: center;
+  position: relative;
+
+  h2, h3, h4, h5, h6 {
+    margin-top: 0;
+  }
+
+  @media (min-width: calc(768/16 * 1rem)) {
+    padding: calc(75/16 * 1rem) calc(40/16 * 1rem);
+  }
+}
+
+.content-cta__content {
+  margin-bottom: calc(25/16 * 1rem);
+}

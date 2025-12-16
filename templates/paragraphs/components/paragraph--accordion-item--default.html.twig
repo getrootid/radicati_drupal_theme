@@ -1,0 +1,19 @@
+{% extends "paragraph.html.twig" %}
+
+{% block content %}
+  {#  Get value of field_accordion_start_open to see if it should start out open  #}
+  {% set start_open = paragraph.field_accordion_start_open.value == "1" %}
+
+  {% embed "radicati_drupal_theme:accordion-item" with {
+    start_open: start_open
+  }%}
+
+    {% block title %}
+      {{ content.field_accordion_title }}
+    {% endblock %}
+
+    {% block body %}
+      {{ content.field_accordion_content }}
+    {% endblock %}
+  {% endembed %}
+{% endblock %}

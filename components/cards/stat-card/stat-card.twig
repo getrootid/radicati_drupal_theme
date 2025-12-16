@@ -1,0 +1,16 @@
+<div {{ content_attributes.addClass('stat-card') }}>
+  {% if block('media') is defined and block('media')|trim is not empty %}
+    <div class="stat-card__media">
+      {% block media %}{% endblock %}
+    </div>
+  {% endif %}
+
+  <div class="stat-card__value">{{ stat_value }}</div>
+  <div class="stat-card__label">{{ stat_label }}</div>
+
+  {% if block('body') is defined and block('body')|trim is not empty %}
+    <div class="stat-card__body">
+      {% block body %}{% endblock %}
+    </div>
+  {% endif %}
+</div>

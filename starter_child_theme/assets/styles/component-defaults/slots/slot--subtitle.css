@@ -1,0 +1,6 @@
+.slots--section-subtitle {
+  margin-bottom: calc(30/16 * 1em);
+  font-size: calc(22/16 * 1em);
+  line-height: calc(30/16 * 1em);
+  text-align: center;
+}

@@ -1,0 +1,29 @@
+.icon-grid__icons {
+  display: grid;
+  gap: calc(22/16 * 1rem);
+  grid-template-columns: 1fr 1fr;
+}
+
+.icon-grid--items-per-row--three {
+  .icon-grid__icons {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.icon-grid--items-per-row--four {
+  .icon-grid__icons {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.icon-grid--items-per-row--five {
+  .icon-grid__icons {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+.icon-grid--items-per-row--six {
+  .icon-grid__icons {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}

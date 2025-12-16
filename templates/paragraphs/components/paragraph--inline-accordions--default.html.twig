@@ -1,0 +1,13 @@
+{% extends "paragraph.html.twig" %}
+
+{% block content %}
+  {% embed "radicati_drupal_theme:basic-accordions" with {
+    content_attributes: content_attributes,
+    only_one_open: true,
+  } %}
+    {% block accordions %}
+      {{ content.field_accordions_items }}
+    {% endblock %}
+  {% endembed %}
+{% endblock %}
+

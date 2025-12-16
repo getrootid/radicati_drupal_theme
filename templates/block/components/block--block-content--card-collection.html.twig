@@ -1,0 +1,24 @@
+{% extends "block--block-content.html.twig" %}
+
+{% block outer_content %}
+  {#  This is super ugly, has to be a better way! #}
+  {% set items_per_row = content.field_setting_items_per_row|field_target_entity.name.value|lower %}
+
+  {% embed "radicati_drupal_theme:card-collection" with {
+    content_attributes: content_attributes,
+    items_per_row: items_per_row
+  } %}
+    {% block header %}
+      {{ content|without('field_setting_items_per_row', 'field_cards_cards', 'field_component_read_more') }}
+    {% endblock %}
+
+    {% block cards %}
+      {{ content.field_cards_cards }}
+    {% endblock %}
+
+    {% block readmore %}
+      {{ content.field_component_read_more }}
+    {% endblock %}
+
+  {% endembed %}
+{% endblock %}

@@ -1,0 +1,18 @@
+{% set classes = [
+  'component',
+  'component--section',
+  'content-grid',
+] %}
+<section {{ content_attributes.addClass(classes) }}>
+  <div class="slot slot--section-title content-grid__title">
+    {% block title %}Default Title 2{% endblock %}
+  </div>
+
+  <div class="slot slot--body content-grid__content">
+    {% block body %}Default Content 2{% endblock %}
+  </div>
+
+  <div class="slot slot--readmore content-grid__readmore">
+    {% block readmore %}Default Read More 2{% endblock %}
+  </div>
+</section>

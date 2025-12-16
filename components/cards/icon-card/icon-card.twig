@@ -1,0 +1,27 @@
+<div {{ content_attributes.addClass('icon-card') }}>
+
+  {% if block('media') is defined and block('media')|trim is not empty %}
+
+    {% if link %}
+      <a href="{{ link }}" target="{{ link_target }}" class="icon-card__link">
+    {% endif %}
+    <div class="icon-card__media">
+      {% block media %}{% endblock %}
+    </div>
+    {% if link %}</a>{% endif %}
+  {% endif %}
+
+  <div class="icon-card__title">
+    {% if link %}
+      <a href="{{ link }}" target="{{ link_target }}" class="icon-card__link">
+    {% endif %}
+    {% block title %}
+      {{ title }}
+    {% endblock %}
+    {% if link %}</a>{% endif %}
+  </div>
+
+  <div class="icon-card__body">
+    {% block body %}{% endblock %}
+  </div>
+</div>

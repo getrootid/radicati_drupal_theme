@@ -1,0 +1,36 @@
+
+.accordion-item {
+  margin-bottom: calc(10/16 * 1rem);
+}
+
+button.accordion-item__button {
+  position: relative;
+  width: 100%;
+  padding: 1rem;
+  background-color: lightgray;
+  color: #333333;
+  border: 0;
+  cursor: pointer;
+  text-align: left;
+  font-weight: 700;
+  font-size: calc(22/16 * 1rem);
+}
+
+button.accordion-item__button:after {
+  content: '\002B'; /* Plus sign */
+  font-family: var(--font--font-awesome);
+  font-size: calc(25/16 * 1rem);
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 900;
+}
+
+.accordion-item--expanded button.accordion-item__button:after {
+  content: '\2212'; /* Minus sign */
+}
+
+.accordion-item__content[aria-hidden="true"] {
+  display: none;
+}

@@ -1,0 +1,32 @@
+@import "../../variables";
+
+.background-media {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  &:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: var(--color--background--overlay, rgba(0, 0, 0, 0.3));
+    pointer-events: none;
+  }
+
+  div:not(.contextual):not([data-contextual-id]) {
+    width: 100%;
+    height: 100%;
+  }
+
+  img, video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

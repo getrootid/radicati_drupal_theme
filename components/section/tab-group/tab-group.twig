@@ -1,0 +1,19 @@
+{%
+ set classes = [
+  'component',
+  'component--section',
+  'tab-group',
+  (tabs_position) ? 'tab-group--tabs-position-' ~ tabs_position: 'tab-group--tabs-no-position'
+]
+
+%}
+
+<section {{ content_attributes.addClass(classes) }}>
+  <nav class="tab-group__nav" role="tablist">
+    <ul class="tab-group__nav__list"></ul>
+  </nav>
+
+  <div class="tab-group__tabs">
+    {% block tabs %}{% endblock %}
+  </div>
+</section>

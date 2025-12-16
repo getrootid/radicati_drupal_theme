@@ -8,12 +8,6 @@ global-styles:
   dependencies:
     - core/drupal.displace
 
-ckeditor5:
-  version: 1.x
-  css:
-    theme:
-      dist/css/ckeditor.css: { preprocess: false }
-
 fitvids:
   version: 2.x
   js:
@@ -43,7 +37,7 @@ sticky-footer:
 offcanvas:
   version: 1.x
   js:
-    assets/styles/30-organisms/100-off-canvas/_off-canvas.js: {}
+    assets/scripts/off-canvas.js: {}
   dependencies:
     - core/jquery
     - core/drupal
@@ -52,7 +46,7 @@ offcanvas:
 offcanvas-menu:
   version: 1.x
   js:
-    assets/styles/20-molecules/410-off-canvas--menu/_offcanvas--menu.js: {}
+    assets/scripts/offcanvas--menu.js: {}
   dependencies:
     - core/jquery
     - core/drupal
@@ -68,13 +62,6 @@ scroll-spy:
   js:
     dist/js/vanillajs-scrollspy/vanillajs-scrollspy.min.js: { minified: true }
 
-jump_menu:
-  version: 1.x
-  js:
-    assets/styles/33-components/jump-menu/_jump-menu.js: {}
-  dependencies:
-    - radicati_drupal_theme/scroll-spy
-
 accessible-tabs:
   version: 1.x
   js:
@@ -87,14 +74,6 @@ accordion:
   dependencies:
     - core/drupal
     - core/once
-
-icon-tabs:
-  version: 1.x
-  js:
-    assets/styles/33-components/icon-tabs/_icon-tabs.js: { minified: false }
-  dependencies:
-    - radicati_drupal_theme/accessible-tabs
-    - drupal/once
 
 radicati-aos:
   version: 1.x

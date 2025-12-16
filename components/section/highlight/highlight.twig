@@ -1,0 +1,14 @@
+{% set classes = [
+  'component',
+  'component--section',
+  'highlight',
+] %}
+<section {{ content_attributes.addClass(classes) }}>
+  <div class="highlight__media slot slot--media">
+    {% block media %}Media Content{% endblock %}
+  </div>
+
+  <div class="highlight__content">
+    {% block body %}Default Content{% endblock %}
+  </div>
+</section>

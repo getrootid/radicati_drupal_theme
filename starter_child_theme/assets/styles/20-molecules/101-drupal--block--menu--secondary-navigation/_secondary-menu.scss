@@ -1,0 +1,21 @@
+@import "../../variables";
+
+nav.menu--secondary-navigation {
+
+  // top level menu
+  > ul.menu {
+    display: flex;
+    flex-direction: row;
+    gap: rem(25px);
+
+    justify-content: flex-end;
+  }
+
+  li.menu-item {
+
+
+    a {
+      text-transform: uppercase;
+    }
+  }
+}

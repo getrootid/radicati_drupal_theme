@@ -1,0 +1,80 @@
+/**
+Setting to handle a collection of styles related to named
+style variants.
+ */
+
+.setting--style {
+
+}
+
+.setting-background--none {
+  --component--color--alt: #232323;
+
+  --color--background: transparent;
+  --color--background--alt: var(--color--gray--five);
+  --color--background--overlay: transparent;
+  --color--text: var(--rad--color--light--text);
+  --color--text--alt: var(--color--gray--two);
+  --color--link: var(--rad--color--light--link);
+
+  --color--button--primary--text: var(--color--gray--five);
+  --color--button--primary--background: var(--color--gray--one);
+  --color--button--primary--background--alt: var(--color--gray--four);
+
+  --color--tab--text: black;
+  --color--tab--selected--text: var(--color--text);
+  --color--tab--selected--background: var(--color--background);
+}
+
+.setting--style--light {
+  --component--color--alt: #232323;
+
+  --color--background: var(--color--gray--five);
+//--color--background--overlay: rgba(0,0,0,0.5);
+  --color--background--overlay: color-mix(in srgb, var(--color--background) 65%, transparent);
+  --color--text: var(--rad--color--light--text);
+  --color--link: var(--rad--color--light--link);
+  --button--primary--text-color: var(--color--gray--five);
+  --button--primary--background-color: var(--color--gray--one);
+
+  /**
+Alt color styles are meant to be used together when there's a background color
+set on the component.
+ */
+  --color--background--alt: var(--color--gray--four);
+  --color--text--alt: var(--color--gray--two);
+  --color--link--alt: var(--rad--color--light--link);
+
+  --color--tab--text: var(--color--gray--two);
+  --color--tab--background: transparent;
+  --color--tab--selected--text: var(--color--text);
+  --color--tab--selected--background: var(--color--background--alt);
+}
+
+.setting--style--dark {
+  --component--color--alt: #b1b1b1;
+
+  --color--background: var(--rad--color--dark--background);
+  --color--background--overlay: rgba(0,0,0,0.35);
+  --color--text: var(--rad--color--dark--text);
+  --color--link: var(--rad--color--dark--link);
+  --button--primary--text-color: var(--rad--color--dark--button--text);
+  --button--primary--background-color: var(--rad--color--dark--button--background);
+  --button--primary--background-color--hover: transparent;
+  --button--primary--text--hover: var(--rad--color--dark--button--background);
+
+
+  --color--background--alt: white;
+  --color--text--alt: black;
+  --color--link--alt: var(--rad--color--light--link);
+  --color--button--primary--text--alt: var(--rad--color--dark--button--text-alt);
+  --color--button--primary--background--alt: var(--rad--color--dark--button--background-alt);
+
+  --color--tab--text: var(--color--gray--five);
+  --color--tab--background: transparent;
+  --color--tab--selected--text: var(--color--gray--two);
+  --color--tab--selected--background: var(--color--gray--five);
+
+// for the layout builder button.
+--gin-color-primary: var(--color--button--primary--text);
+}

@@ -1,0 +1,35 @@
+{% set classes = [
+  'component',
+  'component--section',
+  'media-carousel',
+] %}
+<section {{ content_attributes.addClass(classes) }}>
+  <div class="media-carousel__title slot slot--section-title">
+    {% block title %}<h2>Card Carousel</h2>{% endblock %}
+  </div>
+
+  <div class="media-carousel__content slot slot--content">
+    {% block body %}{% endblock %}
+  </div>
+
+  {% set items_r = block('items') %}
+
+  <div class="media-carousel__carousel-wrapper">
+    {% embed "radicati_drupal_theme:carousel" with {
+      title: "Media Carousel",
+      slides_per_page_desktop: 1,
+      slides_per_page_tablet: 1,
+      slides_per_page_default: 1,
+      arrows: true,
+      pagination: false,
+      loop: false,
+      autoplay: false,
+    } %}
+      {% block slides %}
+        {{ items_r|raw }}
+      {% endblock %}
+    {% endembed %}
+  </div>
+
+  {% block readmore %}{% endblock %}
+</section>

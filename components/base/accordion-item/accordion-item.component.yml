@@ -1,0 +1,23 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+name: Accordion Item
+#replaces: radicati_drupal_theme:accordion-item
+props:
+  type: object
+  properties:
+    start_open:
+      title: Start Open
+      type: boolean
+      default: false
+      description: Determines if the accordion item is open by default.
+    title:
+      title: Title
+      type: string
+      description: The title of the accordion item.
+      examples:
+        - Frequently Asked Questions
+slots:
+  body:
+    title: Body
+    examples:
+      - This is the content of the accordion item.

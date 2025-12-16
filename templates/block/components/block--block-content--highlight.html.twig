@@ -1,15 +1,28 @@
 {% extends "block--block-content.html.twig" %}
 
 {% block outer_content %}
-  <div{{ content_attributes.addClass('highlight') }}>
-    <div class="highlight__media">
+  {% embed "radicati_drupal_theme:highlight" with {
+    content_attributes: content_attributes.addClass('highlight')
+  } %}
+    {% block media %}
       {{ content.field_component_media }}
-    </div>
-    <div class="highlight__content">
-      {{ content.field_component_title }}
-      {{ content.field_component_blurb }}
-      {{ content.field_component_read_more }}
-    </div>
-  </div>
+    {% endblock %}
+
+    {% block body %}
+      {{ content|without('field_component_media') }}
+    {% endblock %}
+  {% endembed %}
+
+
+{#  <div{{ content_attributes.addClass('highlight') }}>#}
+{#    <div class="highlight__media">#}
+{#      {{ content.field_component_media }}#}
+{#    </div>#}
+{#    <div class="highlight__content">#}
+{#      {{ content.field_component_title }}#}
+{#      {{ content.field_component_blurb }}#}
+{#      {{ content.field_component_read_more }}#}
+{#    </div>#}
+{#  </div>#}
 {% endblock %}
 

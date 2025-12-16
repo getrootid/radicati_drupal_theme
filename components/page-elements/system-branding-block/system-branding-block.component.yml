@@ -1,0 +1,25 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json'
+
+name: System Branding Block
+# replaces: radicati_drupal_theme:system-branding-block
+status: stable
+group: Page Elements
+noUi: true
+props:
+  type: object
+  properties:
+    use_svg_logo:
+      type: boolean
+      title: Use SVG Logo
+      default: false
+    site_name:
+      type: string
+      title: Site Name
+      default: "My Awesome Website"
+    site_slogan:
+      type: string
+      title: Site Slogan
+      default: "The best site in the universe."
+    logo:
+      type: string
+      title: Logo Url

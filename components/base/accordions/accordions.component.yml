@@ -1,0 +1,21 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+# This component isn't strictly necessary for accordions to function,
+# but it serves as a container for multiple accordion items, allowing
+# for better organization and potential future enhancements.
+
+name: Accordions
+#replaces: radicati_drupal_theme:accordions
+noUi: true
+props:
+  type: object
+  properties:
+    only_one_open:
+      title: Only One Open?
+      type: boolean
+      default: false
+      description: Determines if only one accordion item can be open at a time.
+slots:
+  accordion_items:
+    title: Accordion Items
+    description: Slot for multiple Accordion Item components.

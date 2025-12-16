@@ -1,0 +1,108 @@
+.tab-group {
+  display: flex;
+
+  .field--item, .field--tabs {
+  }
+}
+
+/* If the tabs position is top or bottom, have the display be vertical
+  if it's left or right, have it be horizontal */
+
+.tab-group--tabs-position-top,
+.tab-group--tabs-position-bottom {
+  flex-direction: column;
+
+  .tab-group__nav__list {
+    display: flex;
+    flex-direction: row;
+
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+}
+
+.tab-group--tabs-position-left,
+.tab-group--tabs-position-right {
+  flex-direction: row;
+
+  .tab-group__nav {
+    flex: 0 0 calc(256/16 * 1rem);
+    background-color: #dddddd;
+  }
+
+  .tab-group__nav__list {
+    display: flex;
+    flex-direction: column;
+
+
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .tab-group__tabs {
+    flex: 1 1 auto;
+  }
+}
+
+
+.tab-group--tabs-position-top {
+  .tab-group__nav {
+    order: -1;
+  }
+}
+
+.tab-group--tabs-position-bottom {
+  .tab-group__nav {
+    order: 1;
+  }
+}
+
+.tab-group--tabs-position-left {
+  .tab-group__nav {
+    order: -1;
+    flex-direction: column;
+  }
+}
+
+.tab-group--tabs-position-right {
+  .tab-group__nav {
+    order: 1;
+    flex-direction: column;
+  }
+}
+
+.tab-group--tabs-position-top button.tab-group__nav__button {
+  border: 0;
+  padding: 15px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  background: lightblue;
+
+  margin-right: calc(10/16 * 1rem);
+
+  &[aria-selected="true"] {
+    background: blue;
+    color: white;
+  }
+}
+
+.tab-group--tabs-position-left button.tab-group__nav__button {
+  border-bottom: 1px solid black;
+  padding: calc(5/16 * 1rem) calc(10/16 * 1rem);
+  background: white;
+  color: black;
+  width: 100%
+}
+
+
+.icon-tabs .tab__label {
+}
+
+.icon-tabs .tab__content {
+}
+
+.tab__panel[hidden] {
+  display: none;
+}

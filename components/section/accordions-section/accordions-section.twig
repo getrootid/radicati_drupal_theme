@@ -1,0 +1,26 @@
+{% set classes = [
+  'component',
+  'component--section',
+  'accordions-section'
+] %}
+<section {{ content_attributes.addClass(classes) }}>
+  <div class="accordions-section__title">
+    {% block title %}<h2>Accordions Section</h2>{% endblock %}
+  </div>
+
+  {% if block('accordions') %}
+    {% set accordions_r = block('accordions') %}
+
+    <div class="accordions-section__accordions-wrapper">
+      {% embed "radicati_drupal_theme:accordions" with {
+        only_one_open: true
+      } %}
+        {% block accordion_items %}
+          {{ accordions_r|raw }}
+        {% endblock %}
+      {% endembed %}
+    </div>
+  {% endif %}
+
+  {% block readmore %}{% endblock %}
+</section>

@@ -1,0 +1,31 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+# The Jump Menu will show what section the user is currently in. It doesn't make an effort
+# to stay on the display. That should be done by the container it is placed in or the styling
+# of the page.
+
+name: Jump Menu
+#replaces: radicati_drupal_theme:jump-menu
+props:
+  type: object
+  properties:
+    items:
+      type: array
+      items:
+        type: object
+        properties:
+          label:
+            type: string
+            title: Label
+            description: "The text label for the menu item."
+          anchor:
+            type: string
+            title: Anchor
+            description: "The anchor ID that this menu item links to."
+slots:
+  label:
+    title: Label
+    description: "Label to display next to the tabs."
+libraryOverrides:
+  dependencies:
+    - radicati_drupal_theme/scroll-spy

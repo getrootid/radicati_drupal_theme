@@ -1,0 +1,32 @@
+{% set classes = [
+  'component',
+  'component--section',
+  'testimonial',
+] %}
+<section {{ content_attributes.addClass(classes) }}>
+  <div class="testimonial__inner">
+    {% if block('media') is defined and block('media')|trim is not empty %}
+      <div class="testimonial__media">{% block media %}Media Content{% endblock %}</div>
+    {% endif %}
+
+    <div class="testimonial__content">
+      <blockquote class="testimonial__quote">
+        {{ quote_content }}
+
+        <footer class="testimonial__author">
+          {% if quote_author_name %}
+            <div class="testimonial__author__name">
+              {{ quote_author_name }}
+            </div>
+          {% endif %}
+
+          {% if quote_author_title %}
+            <div class="testimonial__author__title">
+              {{ quote_author_title }}
+            </div>
+          {% endif %}
+        </footer>
+      </blockquote>
+    </div>
+  </div>
+</section>

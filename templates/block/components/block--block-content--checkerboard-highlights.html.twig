@@ -1,0 +1,11 @@
+{% extends "block--block-content.html.twig" %}
+
+{% block outer_content %}
+  {% embed "radicati_drupal_theme:checkerboard-highlights" with {
+    content_attributes: content_attributes,
+  } %}
+    {% block items %}
+      {{ content }}
+    {% endblock %}
+  {% endembed %}
+{% endblock %}

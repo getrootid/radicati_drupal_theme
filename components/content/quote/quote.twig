@@ -1,0 +1,9 @@
+<blockquote {{ content_attributes.addClass('content-quote') }}>
+  {{ quote_text }}
+
+  {% if quote_byline %}
+    <footer class="content-quote__footer">
+      {{ quote_byline }}
+    </footer>
+  {% endif %}
+</blockquote>

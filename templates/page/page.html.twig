@@ -1,32 +1,20 @@
 <div id="page" class="full-site-wrapper">
   {{ page.site_notification }}
 
-  <header class="header" id="site-header">
-    <div class="header__inner">
-      <div class="header__branding-wrapper">
-        {{ page.header_branding }}
-      </div>
+  {% embed "radicati_drupal_theme:header-two-row" %}
+    {% block branding %}{{ page.header_branding }}{% endblock %}
+    {% block primary_nav %}{{ page.primary_navigation }}{% endblock %}
+    {% block secondary_nav %}{{ page.secondary_navigation }}{% endblock %}
+    {% block search_dropdown %}{{ page.search }}{% endblock %}
+  {% endembed %}
 
-      <div class="header__primary-nav-wrapper">
-        {{ page.primary_navigation }}
-      </div>
+  {% embed "radicati_drupal_theme:off-canvas" with {
 
-      <div class="header__secondary-nav-wrapper">
-        {{ page.secondary_navigation }}
-      </div>
-    </div>
-
-    <div id="search-dropdown">
-      {{ page.search }}
-    </div>
-  </header>
-
-  <section id="off-canvas" class='off-canvas'
-           tabindex="-1" aria-modal="true" role="dialog" aria-hidden="true">
-    {{ page.off_canvas_header }}
-    {{ page.off_canvas }}
-    {{ page.off_canvas_footer }}
-  </section>
+  } %}
+    {% block header %} {{ page.off_canvas_header }} {% endblock %}
+    {% block content %} {{ page.off_canvas }} {% endblock %}
+    {% block footer %} {{ page.off_canvas_footer }} {% endblock %}
+  {% endembed %}
 
   {% block hero %}
     {{ page.hero }}
@@ -75,26 +63,11 @@
     </main>
   </div>
 
-  <footer class="footer">
-    <div class="footer__inner">
-      <div class="footer__footer-region footer__footer-region--footer-one">
-        {{ page.footer_one }}
-      </div>
-
-      <div class="footer__footer-region footer__footer-region--footer-two">
-        {{ page.footer_two }}
-      </div>
-
-      <div class="footer__footer-region footer__footer-region--footer-three">
-        {{ page.footer_three }}
-      </div>
-    </div>
-
-    <div class="footer__copyright-wrapper">
-      <div class="footer__copyright-wrapper-inner">
-        {{ page.copyright }}
-      </div>
-    </div>
-  </footer>
+  {% embed "radicati_drupal_theme:footer-large" %}
+    {% block column_one %}{{ page.footer_one }}{% endblock %}
+    {% block column_two %}{{ page.footer_two }}{% endblock %}
+    {% block column_three %}{{ page.footer_three }}{% endblock %}
+    {% block copyright %}{{ page.copyright }}{% endblock %}
+  {% endembed %}
   <div class='off-canvas__overlay oc-overlay'></div>
 </div>

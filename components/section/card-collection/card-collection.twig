@@ -1,0 +1,18 @@
+{% set classes = [
+  'component',
+  'component--section',
+  'card-collection',
+  items_per_row ? 'card-collection--items-per-row--' ~ items_per_row,
+  items_per_row ? 'has-card-collection--items-per-row',
+] %}
+<section {{ content_attributes.addClass(classes) }}>
+  <div class="card-collection__header">
+    {% block header %}Default Content 2{% endblock %}
+  </div>
+
+  <div class="card-collection__cards">
+    {% block cards %}{% endblock %}
+  </div>
+
+  {% block readmore %}{% endblock %}
+</section>

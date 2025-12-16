@@ -1,0 +1,19 @@
+{% set classes = [
+  'component',
+  'component--section',
+  'large-hero',
+] %}
+<section {{ content_attributes.addClass(classes) }}>
+  <div class="large-hero__media background-media slot slot--background-media">
+    {% block media %}Media Content{% endblock %}</div>
+
+  <div class="large-hero__content">
+    {% block body %}Default Content{% endblock %}
+
+    {% if block('actions') is defined and block('actions')|trim is not empty %}
+      <div class="large-hero__actions slot slot--readmore">
+        {% block actions %}{% endblock %}
+      </div>
+    {% endif %}
+  </div>
+</section>

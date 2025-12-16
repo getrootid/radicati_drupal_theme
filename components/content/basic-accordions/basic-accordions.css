@@ -1,0 +1,13 @@
+
+.basic__accordions-wrapper {
+
+
+  @media (min-width: calc(768/16 * 1rem)) {
+  }
+
+  @media (min-width: calc(992/16 * 1rem)) {
+  }
+
+  @media (min-width: calc(1200/16 * 1rem)) {
+  }
+}

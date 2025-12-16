@@ -1,0 +1,21 @@
+{% extends "block--block-content.html.twig" %}
+
+{% block outer_content %}
+  {% embed "radicati_drupal_theme:accordions-section" with {
+    content_attributes: content_attributes,
+    only_one_open: true,
+  } %}
+    {% block title %}
+      {{ content|without('field_accordions_items', 'field_component_read_more') }}
+    {% endblock %}
+
+    {% block accordions %}
+      {{ content.field_accordions_items }}
+    {% endblock %}
+
+    {% block actions %}
+      {{ content.field_component_read_more }}
+    {% endblock %}
+  {% endembed %}
+{% endblock %}
+

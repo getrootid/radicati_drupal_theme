@@ -1,0 +1,22 @@
+
+.accordions-section__accordions-wrapper {
+  padding: calc(25/16 * 1rem) calc(20/16 * 1rem);
+  border: 1px solid #333333;
+  border-radius: calc(8/16 * 1rem);
+  background-color: #f9f9f9;
+
+  max-width: 80vw;
+  margin: 0 auto;
+
+  @media (min-width: calc(768/16 * 1rem)) {
+    max-width: calc(600/16 * 1rem);
+  }
+
+  @media (min-width: calc(992/16 * 1rem)) {
+    max-width: calc(800/16 * 1rem);
+  }
+
+  @media (min-width: calc(1200/16 * 1rem)) {
+    max-width: calc(1000/16 * 1rem);
+  }
+}

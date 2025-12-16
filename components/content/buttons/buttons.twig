@@ -1,0 +1,9 @@
+{% set classes = [
+  'buttons',
+  'buttons--alignment--' ~ (buttons_alignment is defined ? buttons_alignment : 'left'),
+  'buttons--direction--' ~ (buttons_direction is defined ? buttons_direction : 'horizontal'),
+] %}
+
+<div {{ content_attributes.addClass(classes) }}>
+  {% block buttons %}{% endblock %}
+</div>

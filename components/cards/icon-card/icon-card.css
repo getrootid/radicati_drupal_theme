@@ -1,0 +1,24 @@
+.icon-card {
+  margin-bottom: calc(25/16 * 1rem);
+  text-align: center;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: calc(12/16 * 1rem);
+  }
+
+
+}
+
+.icon-card__title {
+  text-transform: uppercase;
+
+  a {
+    color: black;
+    --color--link: black;
+    text-decoration: none;
+    font-size: calc(19/16 * 1rem);
+  }
+}

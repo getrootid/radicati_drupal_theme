@@ -1,0 +1,17 @@
+
+.media-carousel {
+  max-width: 90vw;
+  margin: 0 auto;
+}
+
+.media-carousel__carousel-wrapper {
+
+  @media (min-width: calc(786/16 * 1rem)) {
+    margin: 0 auto;
+    max-width: calc(700/16 * 1rem);
+  }
+
+  @media (min-width: calc(992/16 * 1rem)) {
+    max-width: calc(900/16 * 1rem);
+  }
+}

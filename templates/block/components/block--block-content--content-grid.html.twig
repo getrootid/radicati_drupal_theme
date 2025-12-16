@@ -1,0 +1,20 @@
+{% extends "block--block-content.html.twig" %}
+
+{% block outer_content %}
+  {% embed "radicati_drupal_theme:content-grid" with {
+    content_attributes: content_attributes
+  } %}
+    {% block title %}
+      {{ content.field_component_title }}
+    {% endblock %}
+
+    {% block body %}
+      {{ content|without('field_component_title', 'field_component_readmore') }}
+    {% endblock %}
+
+    {% block readmore %}
+      {{ content.field_component_readmore }}
+    {% endblock %}
+  {% endembed %}
+{% endblock %}
+

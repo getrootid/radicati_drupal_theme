@@ -1,0 +1,9 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+name: Media Card
+#replaces: radicati_drupal_theme:media-card
+slots:
+  media:
+    title: Media
+  caption:
+    title: Caption

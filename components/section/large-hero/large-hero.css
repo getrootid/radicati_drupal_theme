@@ -1,0 +1,78 @@
+.large-hero {
+  position: relative;
+  width: 100%;
+  height: calc(500/16 * 1rem);
+}
+
+.field-large-hero-button {
+
+}
+
+
+.large-hero__content {
+  /*background-color: color-mix(in srgb, var(--color--background) 87%, transparent);*/
+
+  background: #999999cc;
+
+
+  @media (min-width: calc(768/16 * 1rem)) {
+    position: absolute;
+    border-radius: calc(15/16 * 1rem);
+  }
+
+  @media (min-width: calc(992/16 * 1rem)) {
+    padding: calc(15/16 * 1rem) calc(35/16 * 1rem);
+  }
+}
+
+.large-hero__content {
+  @media (min-width: calc(768/16 * 1rem)) {
+    left: calc(80/16 * 1rem);
+    bottom: calc(35/16 * 1rem);
+  }
+
+  @media (min-width: calc(992/16 * 1rem)) {
+    left: calc(150/16 * 1rem);
+    bottom: calc(75/16 * 1rem);
+  }
+}
+
+/* TODO: Fix this to not rely on the wrapper div!!! */
+
+/*.block--block-content--large-hero.setting-layout--media-on-right .large-hero__content {*/
+/*  @media (min-width: calc(768/16 * 1rem)) {*/
+/*    left: calc(80/16 * 1rem);*/
+/*    bottom: calc(35/16 * 1rem);*/
+/*  }*/
+
+/*  @media (min-width: calc(992/16 * 1rem)) {*/
+/*    left: calc(150/16 * 1rem);*/
+/*    bottom: calc(75/16 * 1rem);*/
+/*  }*/
+/*}*/
+
+/*.block--block-content--large-hero.setting-layout--media-on-left .large-hero__content {*/
+/*  @media (min-width: calc(768/16 * 1rem)) {*/
+/*    right: calc(80/16 * 1rem);*/
+/*    bottom: calc(35/16 * 1rem);*/
+/*  }*/
+
+/*  @media (min-width: calc(992/16 * 1rem)) {*/
+/*    right: calc(150/16 * 1rem);*/
+/*    bottom: calc(75/16 * 1rem);*/
+/*  }*/
+/*}*/
+
+/*.block--block-content--large-hero.setting-layout--media-on-top .large-hero__content {*/
+/*  @media (min-width: calc(768/16 * 1rem)) {*/
+/*    flex-direction: row-reverse;*/
+/*    left: 50%;*/
+/*    transform: translateX(-50%);*/
+/*    bottom: calc(35/16 * 1rem);*/
+/*    text-align: center;*/
+/*  }*/
+
+/*  @media (min-width: calc(992/16 * 1rem)) {*/
+/*    bottom: calc(75/16 * 1rem);*/
+/*  }*/
+/*}*/

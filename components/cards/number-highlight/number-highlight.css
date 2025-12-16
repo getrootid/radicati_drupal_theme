@@ -1,0 +1,17 @@
+.number-highlight {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: calc(15/16 * 1rem) 0;
+}
+
+.number-highlight__value {
+  font-size: calc(55/16 * 1rem);
+  font-weight: 700;
+}
+
+.number-highlight__label {
+  font-size: calc(24/16 * 1rem);
+  margin-left: calc(16/16 * 1rem);
+  font-weight: 400;
+}

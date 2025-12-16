@@ -1,0 +1,12 @@
+{% extends "block--block-content.html.twig" %}
+
+{% block outer_content %}
+  {% embed "radicati_drupal_theme:form-section" with {
+    content_attributes: content_attributes
+  } %}
+    {% block body %}
+      {{ content }}
+    {% endblock %}
+  {% endembed %}
+{% endblock %}
+

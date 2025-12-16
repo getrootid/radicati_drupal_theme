@@ -1,0 +1,23 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+name: Buttons
+# replaces: radicati_drupal_theme:formatted-content
+group: Content
+props:
+  type: object
+  properties:
+    button_alignment:
+      type: string
+      title: Button Alignment
+      description: "Alignment of the buttons within the component."
+      enum: ['left', 'center', 'right']
+      default: 'left'
+    button_direction:
+      type: string
+      title: Button Direction
+      description: "Direction of the buttons within the component."
+      enum: ['horizontal', 'vertical']
+      default: 'horizontal'
+slots:
+  buttons:
+    title: Buttons

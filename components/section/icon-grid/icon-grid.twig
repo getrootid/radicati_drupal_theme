@@ -1,0 +1,25 @@
+{% set classes = [
+  'component',
+  'component--section',
+  'icon-grid',
+  "icon-grid--items-per-row--" ~ items_per_row|default("3")
+] %}
+<section {{ content_attributes.addClass(classes) }}>
+  <div class="icon-grid__inner">
+    {% if block('header') is defined and block('header')|trim is not empty %}
+      <header class="icon-grid__header">
+        {% block header %}{% endblock %}
+      </header>
+    {% endif %}
+
+    <div class="icon-grid__icons">
+      {% block icons %}{% endblock %}
+    </div>
+
+    {% if block('actions') is defined and block('actions')|trim is not empty %}
+      <div class="icon-grid__actions slot slot--readmore">
+        {% block actions %}{% endblock %}
+      </div>
+    {% endif %}
+  </div>
+</section>

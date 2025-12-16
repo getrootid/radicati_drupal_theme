@@ -1,0 +1,10 @@
+{% set classes = [
+  'component',
+  'component--section',
+  'form-section',
+] %}
+<section {{ content_attributes.addClass(classes) }}>
+  <div class="form-section__content">
+    {% block body %}Default Content{% endblock %}
+  </div>
+</section>

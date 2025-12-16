@@ -1,0 +1,35 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+name: Icon Card
+#replaces: radicati_drupal_theme:icon-card
+props:
+  type: object
+  properties:
+    link:
+      type: string
+      title: Link
+      examples: [
+        '/',
+        "https://www.google.com",
+        '/about-us'
+      ]
+    link_target:
+      type: string
+      title: Link
+      enum: [
+        '',
+        "_blank",
+        '_self'
+      ]
+      examples: [
+        '',
+        "_blank",
+        '_self'
+      ]
+slots:
+  media:
+    title: Media
+  title:
+    title: Title
+  body:
+    title: Body

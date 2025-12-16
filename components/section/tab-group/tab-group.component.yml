@@ -1,0 +1,32 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+name: Tab Group
+#replaces: radicati_drupal_theme:tab-group
+status: stable
+group: Test
+props:
+  type: object
+  properties:
+    content_attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper attributes.
+    tabs_position:
+      type: string
+      title: Tabs Position
+      examples: [
+        'top',
+        'left',
+        'right',
+        'bottom'
+      ]
+      description: "Position that tabs should be placed on a large display."
+      enum: ['top', 'left', 'right', 'bottom']
+      default: 'top'
+slots:
+  tabs:
+    title: Tabs
+    description: "Tab items to display."
+libraryOverrides:
+  dependencies:
+    - radicati_drupal_theme/accessible-tabs

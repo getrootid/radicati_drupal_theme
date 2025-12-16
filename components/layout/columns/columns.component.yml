@@ -1,0 +1,19 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json'
+
+# This will likely need updating since keeping it as working
+# in both EX and LB might be tricky/impossible.
+
+name: Columns
+# replaces: radicati_drupal_theme:columns
+status: stable
+group: Layout
+props:
+  type: object
+  properties:
+    columns:
+      title: Formatted Content
+      description: 'A text area with a rich text editor to create formatted content.'
+      type: string
+      contentMediaType: text/html
+      examples:
+        - '<p>This is a paragraph with <strong>bold</strong> text.</p><ul><li>List item 1</li><li>List item 2</li></ul>'

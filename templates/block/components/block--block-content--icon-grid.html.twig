@@ -1,0 +1,23 @@
+{% extends "block--block-content.html.twig" %}
+
+{% block outer_content %}
+  {% set items_per_row = content.field_setting_items_per_row|render|striptags|clean_class %}
+
+  {% embed "radicati_drupal_theme:icon-grid" with {
+    content_attributes: content_attributes,
+    items_per_row: items_per_row
+  } %}
+    {% block header %}
+      {{ content|without('field_icon_grid__items', 'field_component_read_more', 'field_setting_items_per_row') }}
+    {% endblock %}
+
+    {% block icons %}
+      {{ content.field_icon_grid__items }}
+    {% endblock %}
+
+    {% block actions %}
+      {{ content.field_component_read_more }}
+    {% endblock %}
+  {% endembed %}
+{% endblock %}
+

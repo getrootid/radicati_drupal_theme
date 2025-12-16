@@ -1,0 +1,18 @@
+{% extends "paragraph.html.twig" %}
+
+{% block content %}
+  {% embed "radicati_drupal_theme:collection-card" with {
+    content_attributes: content_attributes
+  } %}
+
+    {% block media %}
+      {% if not paragraph.field_card_media.isEmpty() %}
+        {{ content.field_card_media }}
+      {% endif %}
+    {% endblock %}
+
+    {% block body %}
+      {{ content|without('field_card_media') }}
+    {% endblock %}
+  {% endembed %}
+{% endblock %}

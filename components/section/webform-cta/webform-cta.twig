@@ -1,0 +1,23 @@
+{% set classes = [
+  'component',
+  'component--section',
+  'webform-cta',
+] %}
+<section {{ content_attributes.addClass(classes) }}>
+  <div class="webform-cta__outer">
+    {% if block('background') is defined and block('background')|trim is not empty %}
+      <div class="webform-cta__background background-media">
+        {% block background %}{% endblock %}
+      </div>
+    {% endif %}
+
+    <div class="webform-cta__inner">
+      <div class='webform-cta__content'>
+        {% block body %}{% endblock %}
+      </div>
+      <div class="webform-cta__form">
+        {% block form %}{% endblock %}
+      </div>
+    </div>
+  </div>
+</section>

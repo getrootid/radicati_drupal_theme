@@ -1,0 +1,40 @@
+.card-collection {
+
+  .field-cards-cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+
+    .field--item {
+
+    }
+  }
+}
+
+.card-collection--items-per-row--two {
+  .field-cards-cards {
+    .field--item {
+      width: calc(50% - 20px);
+      margin: 0 10px;
+    }
+  }
+}
+
+.card-collection--items-per-row--three {
+  .field-cards-cards {
+    .field--item {
+      width: calc(33% - 20px);
+      margin: 0 10px;
+    }
+  }
+}
+
+.card-collection--items-per-row--four {
+  .field-cards-cards {
+    .field--item {
+      width: calc(25% - 20px);
+      margin: 0 10px;
+    }
+  }
+}
+

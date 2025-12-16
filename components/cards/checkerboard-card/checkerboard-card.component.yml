@@ -1,0 +1,12 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+name: Checkerboard Card
+#replaces: radicati_drupal_theme:checkerboard-card
+slots:
+  media:
+    title: Media
+  body:
+    title: Body
+  actions:
+    title: Actions
+    description: Buttons or links for actions related to the card.

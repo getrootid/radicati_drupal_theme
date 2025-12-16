@@ -1,0 +1,75 @@
+{% stories large_hero with { title: "Large Hero"} %}
+
+  {% story default with {
+    name: "Default",
+    args: {
+      title: "<h1>Large Hero Title</h1>",
+      content: "<p>This is a description for the large hero component.</p>",
+      media: "<img src='https://placecats.com/800/400' alt='Placeholder Image' />",
+      actions: "<a href='#' class='button'>Call to Action</a>"
+    }
+  } %}
+    {% embed "radicati_drupal_theme:large-hero" with {
+      content_attributes: create_attribute()
+    } %}
+      {% block media %}
+        {{ media|raw }}
+      {% endblock %}
+
+      {% block body %}
+        {{ title|raw }}
+        {{ content|raw }}
+      {% endblock %}
+
+      {% block actions %}
+        {{ actions|raw }}
+      {% endblock %}
+    {% endembed %}
+  {% endstory %}
+
+  {% story noactions with {
+    name: "No Actions",
+    args: {
+      title: "<h1>Large Hero Title</h1>",
+      content: "<p>This is a description for the large hero component.</p>",
+      media: "<img src='https://placecats.com/800/400' alt='Placeholder Image' />",
+    }
+  } %}
+    {% embed "radicati_drupal_theme:large-hero" with {
+    } %}
+      {% block media %}
+        {{ media|raw }}
+      {% endblock %}
+
+      {% block body %}
+        {{ title|raw }}
+        {{ content|raw }}
+      {% endblock %}
+    {% endembed %}
+  {% endstory %}
+
+  {% story nobody with {
+    name: "No Body Content",
+    args: {
+      title: "<h1>Large Hero Title</h1>",
+      media: "<img src='https://placecats.com/800/400' alt='Placeholder Image' />",
+      actions: "<a href='#' class='button'>Call to Action</a>"
+    }
+  } %}
+    {% embed "radicati_drupal_theme:large-hero" with {
+    } %}
+      {% block media %}
+        {{ media|raw }}
+      {% endblock %}
+
+      {% block body %}
+        {{ title|raw }}
+      {% endblock %}
+
+      {% block actions %}
+        {{ actions|raw }}
+      {% endblock %}
+    {% endembed %}
+  {% endstory %}
+
+{% endstories %}

@@ -1,0 +1,31 @@
+.jump-menu {
+  padding: calc(10/16 * 1rem) calc(15/16 * 1rem);
+  border-bottom: 1px solid #cccccc;
+  background-color: lightgray;
+}
+
+.jump-menu__label {
+  margin-right: calc(15/16 * 1rem);
+  font-weight: bold;
+  float: left;
+}
+
+.jump-menu__items {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.jump-menu__item {
+
+  a {
+    text-decoration: none;
+    margin: 0 calc(7/16 * 1rem);
+  }
+
+  a.active {
+    font-weight: bold;
+  }
+}

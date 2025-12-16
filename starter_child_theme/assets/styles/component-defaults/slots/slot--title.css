@@ -1,0 +1,11 @@
+
+.slot--section-title {
+  margin-bottom: calc(40/16 * 1rem);
+
+  h2 {
+    font-size: calc(42/16 * 1rem);
+    font-weight: bold;
+    line-height: calc(38/16 * 1rem);
+    text-align: center;
+  }
+}

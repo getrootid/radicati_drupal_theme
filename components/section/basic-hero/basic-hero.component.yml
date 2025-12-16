@@ -1,0 +1,22 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+name: Basic Hero Section
+#replaces: radicati_drupal_theme:basic-hero
+props:
+  type: object
+  properties:
+    style:
+      type: string
+      title: Color
+      examples: [
+        'purple',
+        'blue',
+        'green'
+      ]
+      description: "Named style to use, generally using the background color as a reference."
+      enum: ['purple', 'blue', 'green']
+slots:
+  media:
+    title: Media
+  body:
+    title: Content

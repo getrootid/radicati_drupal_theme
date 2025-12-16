@@ -1,0 +1,11 @@
+<div {{ content_attributes.addClass('collection-card') }}>
+  {% if block('media') is defined and block('media')|trim is not empty %}
+    <div class="collection-card__media">
+      {% block media %}{% endblock %}
+    </div>
+  {% endif %}
+
+  <div class="collection-card__body">
+    {% block body %}{% endblock %}
+  </div>
+</div>

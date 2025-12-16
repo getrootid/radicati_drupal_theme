@@ -1,19 +1,33 @@
 @import "../../variables";
 
 .header__primary-nav-wrapper {
+  position: relative;
 }
 
 .radicati-search-form {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 100;
+  padding: 1.25em;
+  background: var(--color--gray--two);
 
+  visibility: hidden;
 
   &[aria-hidden="false"] {
+    visibility: visible;
   }
 
   form {
-
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: rem(10px);
   }
 
   button {
-
+    border: 0;
+    background: transparent;
+    font-size: rem(21px);
   }
 }

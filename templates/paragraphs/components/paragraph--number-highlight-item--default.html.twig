@@ -1,0 +1,10 @@
+{% extends "paragraph.html.twig" %}
+
+{% block content %}
+  {% embed "radicati_drupal_theme:number-highlight" with {
+    content_attributes: content_attributes,
+    highlight_value: content.field_number_highlight__value,
+    highlight_label: content.field_number_highlight__label
+  } %}
+  {% endembed %}
+{% endblock %}

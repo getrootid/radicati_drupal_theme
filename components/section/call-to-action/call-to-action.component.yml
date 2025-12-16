@@ -1,0 +1,32 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+name: Call to Action
+#replaces: radicati_drupal_theme:call-to-action
+props:
+  type: object
+  properties:
+    style:
+      type: string
+      title: Color
+      examples: [
+        'purple',
+        'blue',
+        'green'
+      ]
+      description: "Named style to use, generally using the background color as a reference."
+      enum: ['purple', 'blue', 'green']
+    layout:
+      type: string
+      title: Layout
+      examples: [
+        'media-left',
+        'media-right',
+        'media-top'
+      ]
+      description: "Layout of the call to action section."
+      enum: ['media-left', 'media-right']
+slots:
+  media:
+    title: Media
+  body:
+    title: Content

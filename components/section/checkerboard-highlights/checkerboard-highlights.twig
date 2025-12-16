@@ -1,0 +1,10 @@
+{% set classes = [
+  'component',
+  'component--section',
+  'checkerboard-highlights',
+] %}
+<section {{ content_attributes.addClass(classes) }}>
+  <div class="checkerboard-highlights__items">
+    {% block items %}{% endblock %}
+  </div>
+</section>

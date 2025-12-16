@@ -1,15 +1,20 @@
 {% extends "block--block-content.html.twig" %}
 
 {% block outer_content %}
-  <div{{ content_attributes.addClass('large-hero') }}>
-    <div class='large-hero__background'>
+  {% embed "radicati_drupal_theme:large-hero" with {
+    content_attributes: content_attributes
+  } %}
+    {% block media %}
       {{ content.field_component_background_media }}
-    </div>
-    <div class="large-hero__content">
-      {{ content.field_component_title }}
-      {{ content.field_component_blurb }}
+    {% endblock %}
+
+    {% block body %}
+      {{ content|without('field_component_background_media', 'field_component_read_more') }}
+    {% endblock %}
+
+    {% block actions %}
       {{ content.field_component_read_more }}
-    </div>
-  </div>
+    {% endblock %}
+  {% endembed %}
 {% endblock %}
 

@@ -1,0 +1,21 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json'
+
+name: System Messages
+# replaces: radicati_drupal_theme:system-messages
+status: stable
+group: Page Elements
+noUi: true
+props:
+  type: object
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper attributes.
+    messages_list:
+      type: array
+      title: Messages List
+      description: List of system messages to display.
+    status_headings:
+      type: array
+      title: Status Headings

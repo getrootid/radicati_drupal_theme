@@ -1,0 +1,23 @@
+
+
+.tab__label {
+  display: flex;
+  align-items: center;
+}
+
+.tab__label__text {
+  font-size: calc(18/16 * 1rem);
+  text-transform: uppercase;
+  color: #333333;
+  margin-right: calc(10/16 * 1rem);
+}
+
+
+.tab__label__icon {
+  margin-left: auto;
+
+  img {
+    height: calc(45/16 * 1rem);
+    width: auto;
+  }
+}

@@ -1,0 +1,31 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+name: Person Listing Simple Card
+#replaces: radicati_drupal_theme:person-listing-simple-card
+props:
+  type: object
+  properties:
+    person_full_name:
+      type: string
+      title: Full Name
+      examples: [
+        'Rosalee Neumark',
+        'Meg Claypool',
+        'Bob Gourley'
+      ]
+    person_pronouns:
+      type: string
+      title: Pronouns
+      examples: [
+        'She/Her',
+        'He/Him',
+        'They/Them'
+      ]
+    person_position:
+      type: string
+      title: Position
+      examples: [
+        'Chief Marketing Officer',
+        'Senior Developer',
+        'Project Manager'
+      ]
