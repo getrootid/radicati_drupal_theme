@@ -8,6 +8,7 @@ description: This is formatted content.
 # replaces: radicati_drupal_theme:formatted-content
 status: stable
 group: Content
+weight: -1
 props:
   type: object
   properties:

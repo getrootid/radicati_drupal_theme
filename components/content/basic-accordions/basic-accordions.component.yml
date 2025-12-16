@@ -2,6 +2,8 @@ $schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schema
 
 name: Basic Accordions
 #replaces: radicati_drupal_theme:basic-accordions
+group: Content
+weight: 100
 slots:
   accordions:
     title: Accordions

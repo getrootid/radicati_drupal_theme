@@ -9,7 +9,14 @@
 {% endif %}
 <section {{ content_attributes.addClass(classes) }}>
   <div class="large-hero__media background-media slot slot--background-media">
-    {% block media %}Media Content{% endblock %}
+    {% if background_image is iterable %}
+      {% include "canvas:image" with background_image|merge({
+        sizes: '100vw',
+        loding: 'eager'
+      }) only %}
+    {% else %}
+      {{ background_image|render }}
+    {% endif %}
   </div>
 
   <div class="large-hero__content">
