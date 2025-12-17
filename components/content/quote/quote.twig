@@ -1,3 +1,6 @@
+{% if content_attributes is not defined %}
+  {% set content_attributes = create_attribute() %}
+{% endif %}
 <blockquote {{ content_attributes.addClass('content-quote') }}>
   {{ quote_text }}
 

@@ -5,8 +5,6 @@ name: Heading
 group: Content
 props:
   type: object
-
-  category: Component
   properties:
     heading_level:
       title: Heading Level

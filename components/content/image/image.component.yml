@@ -3,8 +3,8 @@ $schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schema
 # This will likely need updating since keeping it as working
 # in both EX and LB might be tricky/impossible.
 
-name: Media
-# replaces: radicati_drupal_theme:media
+name: Image
+# replaces: radicati_drupal_theme:image
 group: Content
 props:
   type: object

@@ -6,12 +6,18 @@ group: Content
 props:
   type: object
   properties:
+    content_attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper attributes.
     quote_text:
+      title: Quote Text
       type: string
       contentMediaType: text/html
       examples:
         - '<p>If I had a fish for every time I saw a mellon then I have have a paddock of haddock.</p>'
     quote_byline:
+      title: Quote Byline
       type: string
       examples:
           - 'Jason Neumark Mickela, the first.'

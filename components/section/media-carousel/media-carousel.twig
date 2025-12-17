@@ -3,6 +3,9 @@
   'component--section',
   'media-carousel',
 ] %}
+{% if content_attributes is not defined %}
+  {% set content_attributes = create_attribute() %}
+{% endif %}
 <section {{ content_attributes.addClass(classes) }}>
   <div class="media-carousel__title slot slot--section-title">
     {% block title %}<h2>Card Carousel</h2>{% endblock %}
@@ -12,24 +15,28 @@
     {% block body %}{% endblock %}
   </div>
 
-  {% set items_r = block('items') %}
+  {% if block('items') is defined and block('items')|trim is not empty %}
+    {% set items_r = block('items') %}
 
-  <div class="media-carousel__carousel-wrapper">
-    {% embed "radicati_drupal_theme:carousel" with {
-      title: "Media Carousel",
-      slides_per_page_desktop: 1,
-      slides_per_page_tablet: 1,
-      slides_per_page_default: 1,
-      arrows: true,
-      pagination: false,
-      loop: false,
-      autoplay: false,
-    } %}
-      {% block slides %}
-        {{ items_r|raw }}
-      {% endblock %}
-    {% endembed %}
+    <div class="media-carousel__carousel-wrapper">
+      {% embed "radicati_drupal_theme:carousel" with {
+        title: "Media Carousel",
+        slides_per_page_desktop: 1,
+        slides_per_page_tablet: 1,
+        slides_per_page_default: 1,
+        arrows: true,
+        pagination: false,
+        loop: false,
+        autoplay: false,
+      } %}
+        {% block slides %}
+          {{ items_r|raw }}
+        {% endblock %}
+      {% endembed %}
+    </div>
+  {% endif %}
+
+  <div class="media-carousel__readmore">
+    {% block readmore %}{% endblock %}
   </div>
-
-  {% block readmore %}{% endblock %}
 </section>

@@ -1,22 +1,36 @@
 $schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
 
-name: Basic Hero Section
+name: Basic Hero
 #replaces: radicati_drupal_theme:basic-hero
+group: Hero
 props:
   type: object
   properties:
-    style:
+    content_attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper attributes.
+    title:
       type: string
-      title: Color
-      examples: [
-        'purple',
-        'blue',
-        'green'
-      ]
-      description: "Named style to use, generally using the background color as a reference."
-      enum: ['purple', 'blue', 'green']
-slots:
-  media:
-    title: Media
-  body:
-    title: Content
+      title: Title
+      description: "Is both the title displayed and the page's main title for accessibility."
+      default: "Our Snazzy Page"
+    blurb:
+      type: string
+      title: Blurb
+      description: "A short description or tagline for the hero section."
+      default: "Welcome to our awesome website where we do amazing things."
+      contentMediaType: text/html
+      examples:
+        - '<p>Puppies deserve love too!</p>'
+    background_image:
+      $ref: json-schema-definitions://canvas.module/image
+      type: [ 'object', 'string' ]
+      title: Image
+      description: >
+        Some beautiful background image for the hero section.
+      examples:
+        - src: 'https://picsum.photos/1200/600'
+          alt: 'Some kind of pictograph'
+          width: 1200
+          height: 600

@@ -2,11 +2,38 @@ $schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schema
 
 name: Checkerboard Card
 #replaces: radicati_drupal_theme:checkerboard-card
+group: Cards
+props:
+  type: object
+  properties:
+    content_attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper attributes.
+    title:
+      type: string
+      title: Title
+      description: "The title of the card, will display as an h2."
+      default: "Our Snazzy Page"
+    blurb:
+      type: string
+      title: Blurb
+      description: "A short description or tagline for the hero section."
+      default: "Welcome to our awesome website where we do amazing things."
+      contentMediaType: text/html
+      examples:
+        - '<p>Puppies deserve love too!</p>'
+    background_image:
+      $ref: json-schema-definitions://canvas.module/image
+      type: ['object', 'string']
+      title: Image
+      description: >
+        Some beautiful background image for the hero section.
+      examples:
+        - src: 'https://picsum.photos/1200/600'
+          alt: 'Some kind of pictograph'
+          width: 1200
+          height: 600
 slots:
-  media:
-    title: Media
-  body:
-    title: Body
   actions:
     title: Actions
-    description: Buttons or links for actions related to the card.

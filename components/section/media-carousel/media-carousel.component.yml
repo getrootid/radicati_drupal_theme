@@ -7,16 +7,10 @@ name: Media Carousel
 props:
   type: object
   properties:
-    style:
-      type: string
-      title: Color
-      examples: [
-        'purple',
-        'blue',
-        'green'
-      ]
-      description: "Named style to use, generally using the background color as a reference."
-      enum: ['purple', 'blue', 'green']
+    content_attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper attributes.
 slots:
   title:
     title: Title

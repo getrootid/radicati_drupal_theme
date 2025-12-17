@@ -3,10 +3,24 @@
   'component--section',
   'basic-hero'
 ] %}
+{# if content attributes isn't set, use create_attriburte() #}
+{% if content_attributes is not defined %}
+  {% set content_attributes = create_attribute() %}
+{% endif %}
 <section {{ content_attributes.addClass(classes) }}>
-  <div class="basic-hero__media background-media">{% block media %}Media Content{% endblock %}</div>
+  <div class="basic-hero__media background-media">
+    {% if background_image is iterable %}
+      {% include "canvas:image" with background_image|merge({
+        sizes: '100vw',
+        loding: 'eager'
+      }) only %}
+    {% else %}
+      {{ background_image|render }}
+    {% endif %}
+  </div>
 
   <div class="basic-hero__content">
-    {% block body %}Default Content 2{% endblock %}
+    <h1 class="basic-hero__title">{{ title }}</h1>
+    <div class="basic-hero__blurb">{{ blurb }}</div>
   </div>
 </section>

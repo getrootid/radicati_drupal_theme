@@ -3,6 +3,9 @@
   'component--section',
   'webform-cta',
 ] %}
+{% if content_attributes is not defined %}
+  {% set content_attributes = create_attribute() %}
+{% endif %}
 <section {{ content_attributes.addClass(classes) }}>
   <div class="webform-cta__outer">
     {% if block('background') is defined and block('background')|trim is not empty %}

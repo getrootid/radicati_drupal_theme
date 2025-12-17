@@ -1,5 +1,6 @@
 
 .basic__accordions-wrapper {
+  min-height: calc(30/16 * 1rem);
 
 
   @media (min-width: calc(768/16 * 1rem)) {
