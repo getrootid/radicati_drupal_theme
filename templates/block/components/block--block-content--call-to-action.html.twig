@@ -3,14 +3,13 @@
 {% block content %}
   {% block outer_content %}
     {% embed "radicati_drupal_theme:call-to-action" with {
-      content_attributes: content_attributes
+      content_attributes: content_attributes,
+      title: content.field_component_title.0,
+      blurb: content.field_component_blurb.0,
+      image: content.field_component_media|render,
     } %}
-      {% block media %}
-        {{ content.field_component_media }}
-      {% endblock %}
-
-      {% block body %}
-        {{ content|without('field_component_media') }}
+      {% block actions %}
+        {{ content.field_component_read_more }}
       {% endblock %}
     {% endembed %}
   {% endblock %}

@@ -2,6 +2,8 @@ $schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schema
 
 name: Person Listing Simple Card
 #replaces: radicati_drupal_theme:person-listing-simple-card
+# TODO: Maybe make this a noUi component?
+group: Cards
 props:
   type: object
   properties:

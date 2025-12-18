@@ -2,16 +2,11 @@
 
 {% block outer_content %}
   {% embed "radicati_drupal_theme:webform-cta" with {
-    content_attributes: content_attributes
+    content_attributes: content_attributes,
+    title: content.field_component_title.0,
+    blurb: content.field_component_blurb.0,
+    background_image: content.field_component_background_media|render,
   } %}
-    {% block background %}
-      {{ content.field_component_background_media }}
-    {% endblock %}
-
-    {% block body %}
-      {{ content|without('field_webform_cta_form', 'field_component_background_media') }}
-    {% endblock %}
-
     {% block form %}
       {{ content.field_webform_cta_form }}
     {% endblock %}

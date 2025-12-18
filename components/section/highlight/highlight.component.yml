@@ -5,20 +5,51 @@ $schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schema
 
 name: Highlight
 #replaces: radicati_drupal_theme:highlight
+group: Page Sections
 props:
   type: object
   properties:
-    color:
+    content_attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper attributes.
+    image:
+      $ref: json-schema-definitions://canvas.module/image
+      type: [ 'object', 'string' ]
+      title: Image
+      description: >
+        Some beautiful background image for the hero section.
+      examples:
+        - src: 'https://picsum.photos/1200/600'
+          alt: 'Some kind of pictograph'
+          width: 1200
+          height: 600
+    title:
       type: string
-      title: Color
-      examples: [
-        'primary'
-      ]
-      description: "Background color to use for the chip, one of 'primary' or 'secondary'."
-      # The enum directive restricts the possible values in the element to our list.
-      enum: ['primary', 'secondary']
+      title: Title
+      description: "Is both the title displayed and the page's main title for accessibility."
+      default: "Our Snazzy Page"
+    blurb:
+      type: ['string', 'object', 'null']
+      title: Blurb
+      description: "A short description or tagline for the hero section."
+      default: ""
+      contentMediaType: text/html
+      examples:
+        - '<p>Puppies deserve love too!</p>'
+    media_position:
+      type: string
+      title: Media Position
+      description: Position of the media relative to the text content.
+      enum:
+        - setting-layout--media-on-left
+        - setting-layout--media-on-right
+        - setting-layout--media-on-top
+      meta:enum:
+        setting-layout--media-on-left: Media on Left
+        setting-layout--media-on-right: Media on Right
+        setting-layout--media-on-top: Media on Top
+      default: setting-layout--media-on-right
 slots:
-  media:
-    title: Media
-  body:
-    title: Content
+  actions:
+    title: Actions

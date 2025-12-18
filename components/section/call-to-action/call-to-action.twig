@@ -2,11 +2,30 @@
   'component',
   'component--section',
   'call-to-action',
+  content_position ? content_position : ''
 ] %}
-<section {{ content_attributes.addClass([classes]) }}>
-  <div class="call-to-action__media">{% block media %}Media Content{% endblock %}</div>
+{% if content_attributes is not defined %}
+  {% set content_attributes = create_attribute() %}
+{% endif %}
+<section {{ content_attributes.addClass(classes) }}>
+  <div class="call-to-action__media">
+    {% if image is iterable %}
+      {% include "canvas:image" with image|merge({
+        sizes: '(min-width: calc(982/16 * 1rem)) 50vw, 100vw',
+        loding: 'lazy',
+        height: 600
+      }) only %}
+    {% else %}
+      {{ image|render }}
+    {% endif %}
+  </div>
 
   <div class="call-to-action__content">
-    {% block body %}Default Content 2{% endblock %}
+    <h2 class="call-to-action__title">{{ title }}</h2>
+    <div class="call-to-action__blurb">{{ blurb }}</div>
+
+    <div class="call-to-action__actions slot slot--actions">
+      {% block actions %}{% endblock %}
+    </div>
   </div>
 </section>

@@ -2,6 +2,7 @@ $schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schema
 
 name: Stat Card
 #replaces: radicati_drupal_theme:stat-card
+group: Cards
 props:
   type: object
   properties:

@@ -6,6 +6,7 @@ $schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schema
 
 name: Jump Menu
 #replaces: radicati_drupal_theme:jump-menu
+group: Page Sections
 props:
   type: object
   properties:

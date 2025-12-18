@@ -8,15 +8,22 @@
 {% endif %}
 <section {{ content_attributes.addClass(classes) }}>
   <div class="webform-cta__outer">
-    {% if block('background') is defined and block('background')|trim is not empty %}
-      <div class="webform-cta__background background-media">
-        {% block background %}{% endblock %}
-      </div>
-    {% endif %}
+    <div class="webform-cta__background background-media">
+      {% if background_image is iterable %}
+        {% include "canvas:image" with background_image|merge({
+          sizes: '(min-width: calc(982/16 * 1rem)) 50vw, 100vw',
+          loding: 'lazy',
+          height: 600
+        }) only %}
+      {% else %}
+        {{ background_image }}
+      {% endif %}
+    </div>
 
     <div class="webform-cta__inner">
       <div class='webform-cta__content'>
-        {% block body %}{% endblock %}
+        <h2 class="webform-cta__title">{{ title }}</h2>
+        <div class="webform-cta__blurb">{{ blurb }}</div>
       </div>
       <div class="webform-cta__form">
         {% block form %}{% endblock %}

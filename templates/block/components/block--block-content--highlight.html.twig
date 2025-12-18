@@ -2,27 +2,14 @@
 
 {% block outer_content %}
   {% embed "radicati_drupal_theme:highlight" with {
-    content_attributes: content_attributes.addClass('highlight')
+    content_attributes: content_attributes.addClass('highlight'),
+    image: content.field_component_media.0|render,
+    title: content.field_component_title.0,
+    blurb: content.field_component_blurb
   } %}
-    {% block media %}
-      {{ content.field_component_media }}
-    {% endblock %}
-
-    {% block body %}
-      {{ content|without('field_component_media') }}
+    {% block actions %}
+      {{ content.field_component_read_more }}
     {% endblock %}
   {% endembed %}
-
-
-{#  <div{{ content_attributes.addClass('highlight') }}>#}
-{#    <div class="highlight__media">#}
-{#      {{ content.field_component_media }}#}
-{#    </div>#}
-{#    <div class="highlight__content">#}
-{#      {{ content.field_component_title }}#}
-{#      {{ content.field_component_blurb }}#}
-{#      {{ content.field_component_read_more }}#}
-{#    </div>#}
-{#  </div>#}
 {% endblock %}
 

@@ -1,8 +1,43 @@
 
 .call-to-action {
-  /*padding: rem(var(--component-padding) 0);*/
+  padding: calc(20/16 * 1rem) 5vw;
   position: relative;
   width: 100%;
+
+  @media (min-width: calc(992/16 * 1rem)) {
+    padding: calc(50/16 * 1rem) 0;
+  }
+}
+
+.call-to-action {
+
+  &.setting--content-layout--center {
+    .call-to-action__content {
+      align-items: center;
+    }
+    .call-to-action__actions {
+      justify-content: center;
+    }
+  }
+
+  &.setting--content-layout--left {
+    .call-to-action__content {
+      align-items: flex-start;
+    }
+    .call-to-action__actions {
+      justify-content: flex-start;
+    }
+  }
+
+  &.setting--content-layout--right {
+    .call-to-action__content {
+      align-items: flex-end;
+    }
+
+    .call-to-action__actions {
+      justify-content: flex-end;
+    }
+  }
 }
 
 .call-to-action__media {
@@ -19,7 +54,9 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: color-mix(in srgb, var(--color--background) 65%, transparent);
+    pointer-events: none;
+    /*background-color: color-mix(in srgb, var(--color--background) 85%, transparent);*/
+    background-color: rgba(0, 0, 0, 0.45);
   }
 
   div:not(.contextual):not([data-drupal-ajax-container]):not([data-contextual-id]) {
@@ -38,8 +75,35 @@
 .call-to-action__content {
   padding: 0 3rem;
   position: relative;
+  display: flex;
+  flex-direction: column;
+
+
+  --color--text: white;
+  --color--link: white;
+
 
   h2, h3, h4, h5, h6 {
     margin-top: 0;
+    color: var(--color--text);
   }
+
+  p {
+    color: var(--color--text);
+  }
+
+  a {
+    color: var(--color--link)
+  }
+}
+
+.call-to-action__title {
+  font-size: calc(45/16 * 1rem);
+  text-transform: uppercase;
+}
+
+.call-to-action__actions {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }

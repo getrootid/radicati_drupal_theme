@@ -2,6 +2,8 @@ $schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schema
 
 name: Icon Grid
 #replaces: radicati_drupal_theme:icon-grid
+group: Page Sections
+
 props:
   type: object
   properties:

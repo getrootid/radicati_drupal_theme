@@ -1,0 +1,16 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json'
+
+name: Local Tasks
+# replaces: radicati_drupal_theme:local-tasks
+status: stable
+group: Page Elements
+noUi: true
+props:
+  type: object
+  properties:
+    primary:
+      type: object
+      title: Primary Tabs
+    secondary:
+      type: object
+      title: Secondary Tabs

@@ -3,7 +3,7 @@ $schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schema
 name: Tab Group
 #replaces: radicati_drupal_theme:tab-group
 status: stable
-group: Test
+group: Page Sections
 props:
   type: object
   properties:
