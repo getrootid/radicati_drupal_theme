@@ -38,3 +38,7 @@
 
   }
 }
+
+.collection-card__actions {
+  width: 100%;
+}

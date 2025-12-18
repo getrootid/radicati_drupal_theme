@@ -7,10 +7,6 @@ group: Page Sections
 #replaces: radicati_drupal_theme:testimonial
 props:
   type: object
-  group: Layout
-  category: Layout
-  Folder: Layout
-  folder: Layout
   properties:
     quote_content:
       title: Quote Content

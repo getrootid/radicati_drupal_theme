@@ -3,8 +3,43 @@ $schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schema
 name: Collection Card
 group: Cards
 #replaces: radicati_drupal_theme:collection-card
+props:
+  type: object
+  properties:
+    content_attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper attributes.
+    image:
+      $ref: json-schema-definitions://canvas.module/image
+      type: [ 'object', 'string' ]
+      title: Image
+      description: >
+        Some beautiful image for the card.
+      examples:
+        - src: 'https://picsum.photos/1200/600'
+          alt: 'Some kind of pictograph'
+          width: 1200
+          height: 600
+    title:
+      type: string
+      title: Title
+      description: "The Call to Action Title, will be an H2."
+      default: "Our Snazzy Page"
+    tag:
+      type: string
+      title: Tag
+      description: "A small tag or label for the card."
+      default: "Category"
+    blurb:
+      type: ['string', 'object', 'null']
+      title: Blurb
+      description: "A short description or tagline for the hero section."
+      default: ""
+      contentMediaType: text/html
+      examples:
+        - '<p>Puppies deserve love too!</p>'
 slots:
-  media:
-    title: Media
-  body:
-    title: Body
+  actions:
+    title: Actions
+    description: The action buttons or links for the card.

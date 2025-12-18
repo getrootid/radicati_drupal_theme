@@ -1,11 +1,32 @@
+{% if content_attributes is not defined %}
+  {% set content_attributes = create_attribute() %}
+{% endif %}
 <div {{ content_attributes.addClass('collection-card') }}>
-  {% if block('media') is defined and block('media')|trim is not empty %}
+  {% if image %}
     <div class="collection-card__media">
-      {% block media %}{% endblock %}
+      {% if image is iterable %}
+        {% include "canvas:image" with image|merge({
+          sizes: '100vw, (min-width: calc(768/16 * 1rem)) 33vw',
+          loding: 'lazy'
+        }) only %}
+      {% else %}
+        {{ image|render }}
+      {% endif %}
     </div>
   {% endif %}
 
   <div class="collection-card__body">
-    {% block body %}{% endblock %}
+    <h3 class="collection-card__title">{{ title }}</h3>
+    {% if tag  %}
+      <div class="collection-card__tag">{{ tag }}</div>
+    {% endif %}
+
+    <div class="collection-card__blurb">{{ blurb }}</div>
+
+    {% if block('actions') is defined and block('actions')|trim is not empty %}
+      <div class="collection-card__actions slot slot--readmore">
+        {% block actions %}{% endblock %}
+      </div>
+    {% endif %}
   </div>
 </div>
