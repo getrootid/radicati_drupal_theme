@@ -5,14 +5,29 @@
   items_per_row ? 'card-collection--items-per-row--' ~ items_per_row,
   items_per_row ? 'has-card-collection--items-per-row',
 ] %}
+{% if content_attributes is not defined %}
+  {% set content_attributes = create_attribute() %}
+{% endif %}
 <section {{ content_attributes.addClass(classes) }}>
   <div class="card-collection__header">
-    {% block header %}Default Content 2{% endblock %}
+    {% if title %}
+      <h2 class="card-collection__title component--title">
+        {{ title }}
+      </h2>
+    {% endif %}
+
+    {% if blurb %}
+      <div class="card-collection__blurb component--blurb">
+        {{ blurb }}
+      </div>
+    {% endif %}
   </div>
 
-  <div class="card-collection__cards">
+  <div class="card-collection__cards component--cards">
     {% block cards %}{% endblock %}
   </div>
 
-  {% block readmore %}{% endblock %}
+  <div class="card-collection__actions slot slot--actions">
+    {% block actions %}{% endblock %}
+  </div>
 </section>

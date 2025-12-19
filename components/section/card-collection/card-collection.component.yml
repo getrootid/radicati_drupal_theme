@@ -6,6 +6,23 @@ group: Page Sections
 props:
   type: object
   properties:
+    content_attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper attributes.
+    title:
+      type: string
+      title: Title
+      description: "The Call to Action Title, will be an H2."
+      default: "Section Title"
+    blurb:
+      type: [ 'string', 'object', 'null' ]
+      title: Blurb
+      description: "A short description or tagline for this section."
+      default: ""
+      contentMediaType: text/html
+      examples:
+        - '<p>This is a nice collection of items.</p>'
     items_per_row:
       type: string
       title: Items Per Row
@@ -21,20 +38,15 @@ props:
         'five',
         'six'
       ]
-    style:
-      type: string
-      title: Color
-      examples: [
-        'purple',
-        'blue',
-        'green'
-      ]
-      description: "Named style to use, generally using the background color as a reference."
-      enum: ['purple', 'blue', 'green']
+      meta:enum:
+        two: Two
+        three: Three
+        four: Four
+        five: Five
+        six: Six
 slots:
-  header:
-    title: Header
   cards:
     title: Cards
-  readmore:
-    title: Read More Link
+    description: The cards to be displayed in this collection.
+  actions:
+    title: Actions

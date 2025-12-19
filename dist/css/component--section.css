@@ -1,0 +1,6 @@
+.component--section {
+
+  padding-top: calc(45/16 * 1rem);
+  padding-bottom: calc(45/16 * 1rem);
+
+}

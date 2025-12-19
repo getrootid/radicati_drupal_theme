@@ -1,0 +1,10 @@
+.component--title {
+
+  font-size: calc(42/16 * 1rem);
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+
+}

@@ -8,6 +8,17 @@ global-styles:
   dependencies:
     - core/drupal.displace
 
+component-base-styles:
+  version: 1.x
+  css:
+    theme:
+      dist/css/component--section.css: { preprocess: false }
+      dist/css/component--title.css: { preprocess: false }
+      dist/css/component--blurb.css: { preprocess: false }
+      dist/css/component--slot--actions.css: { preprocess: false }
+      dist/css/component--card.css: { preprocess: false }
+
+
 fitvids:
   version: 2.x
   js:

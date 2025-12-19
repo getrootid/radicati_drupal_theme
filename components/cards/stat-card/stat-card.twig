@@ -1,4 +1,12 @@
-<div {{ content_attributes.addClass('stat-card') }}>
+{% set classes = [
+  'component',
+  'component--card',
+  'stat-card'
+] %}
+{% if content_attributes is not defined %}
+  {% set content_attributes = create_attribute() %}
+{% endif %}
+<div {{ content_attributes.addClass(classes) }}>
   {% if block('media') is defined and block('media')|trim is not empty %}
     <div class="stat-card__media">
       {% block media %}{% endblock %}

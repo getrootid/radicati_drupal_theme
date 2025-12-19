@@ -24,7 +24,7 @@ props:
     title:
       type: string
       title: Title
-      description: "The Call to Action Title, will be an H2."
+      description: "The Call to Action Title, will be an H3."
       default: "Our Snazzy Page"
     tag:
       type: string
