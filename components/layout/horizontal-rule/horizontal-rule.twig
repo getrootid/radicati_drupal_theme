@@ -1,0 +1,29 @@
+{#<hr class="component component--horizontal-rule {{ spacing|default('') }}">#}
+<div class="unicorn-container">
+  <svg class="unicorn" viewBox="0 0 120 80" width="80" height="60" xmlns="http://www.w3.org/2000/svg">
+    <path d="M25,45 C10,40 5,60 15,70" fill="none" stroke="#FF69B4" stroke-width="4" stroke-linecap="round" />
+    <path d="M22,45 C7,40 2,60 12,70" fill="none" stroke="#FFD700" stroke-width="2" stroke-linecap="round" />
+
+    <path d="M30,60 Q30,35 60,35 L85,35 Q95,35 95,55 L90,65 L35,65 Z" fill="#FFD1DC" />
+
+    <rect x="38" y="60" width="5" height="15" rx="2" fill="#FFD1DC" />
+    <rect x="75" y="60" width="5" height="15" rx="2" fill="#FFD1DC" />
+    <rect x="38" y="72" width="5" height="3" fill="#A45EE5" /> <rect x="75" y="72" width="5" height="3" fill="#A45EE5" /> <path d="M75,40 L90,20 Q110,20 110,40 Q110,50 95,50" fill="#FFD1DC" />
+
+    <path d="M85,25 Q75,5 55,20" fill="none" stroke="#FF595E" stroke-width="3" stroke-linecap="round" />
+    <path d="M82,28 Q72,8 52,23" fill="none" stroke="#FFCA3A" stroke-width="3" stroke-linecap="round" />
+    <path d="M79,31 Q69,11 49,26" fill="none" stroke="#1982C4" stroke-width="3" stroke-linecap="round" />
+
+    <path d="M95,22 L105,2 L110,18" fill="url(#hornGradient)" />
+    <defs>
+      <linearGradient id="hornGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#FFF5B1" />
+        <stop offset="100%" style="stop-color:#FFD700" />
+      </linearGradient>
+    </defs>
+
+    <circle cx="102" cy="32" r="1.5" fill="#333" />
+  </svg>
+
+  <hr class="track component component--horizontal-rule {{ spacing|default('') }}">
+</div>

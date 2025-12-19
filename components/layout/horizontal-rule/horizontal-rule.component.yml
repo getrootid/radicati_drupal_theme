@@ -1,0 +1,36 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json'
+
+# This is only used in Canvas, not Layout Builder.
+
+name: Horizontal Rule
+description: Divides a section of content with a horizontal line.
+# replaces: radicati_drupal_theme:horizontal-rule
+status: stable
+group: Layout
+props:
+  type: object
+  properties:
+    spacing:
+      type: string
+      title: Spacing
+      description: >
+          Define the vertical spacing for this region.
+      default: 'component--spacing--normal'
+      examples:
+        - 'component--spacing--none'
+        - 'component--spacing--small'
+        - 'component--spacing--normal'
+        - 'component--spacing--large'
+        - 'component--spacing--xlarge'
+      enum:
+        - 'component--spacing--none'
+        - 'component--spacing--small'
+        - 'component--spacing--normal'
+        - 'component--spacing--large'
+        - 'component--spacing--xlarge'
+      meta:enum:
+        component--spacing--none: No Spacing
+        component--spacing--small: Small Spacing
+        component--spacing--normal: Normal Spacing
+        component--spacing--large: Large Spacing
+        component--spacing--xlarge: Extra Large Spacing

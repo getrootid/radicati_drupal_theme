@@ -1,0 +1,47 @@
+hr.component {
+  border: none;
+  margin: 0;
+  background-color: var(--color--text);
+  height: calc(2/16 * 1rem);
+  background-clip: content-box;
+}
+
+
+section.region.component--style--pink .unicorn-container {
+  position: relative;
+  padding: 20px 0;
+  overflow: hidden; /* Prevents scrollbars as the unicorn moves */
+}
+
+section.region.component--style--pink .track {
+  border: none;
+  border-top: 2px solid #ddd;
+  margin: 0;
+}
+
+section.region.component--style--pink .unicorn {
+  position: absolute;
+  bottom: 12px; /* Adjust this to sit perfectly on your line */
+  left: -50px;
+  animation: gallop 8s linear infinite;
+}
+
+@keyframes gallop {
+  0% {
+    left: -50px;
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-5deg); /* Slight lean forward */
+  }
+  50% {
+    transform: rotate(5deg); /* Slight lean back */
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    left: 100%;
+    transform: rotate(0deg);
+  }
+}

@@ -17,6 +17,7 @@ component-base-styles:
       dist/css/component--blurb.css: { preprocess: false }
       dist/css/component--slot--actions.css: { preprocess: false }
       dist/css/component--card.css: { preprocess: false }
+      dist/css/component--spacing.css: { preprocess: false }
       dist/css/component.css: { preprocess: false }
 
 
