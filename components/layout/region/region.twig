@@ -1,0 +1,15 @@
+{% set classes = [
+  'component',
+  'component--layout--region',
+  'region',
+  region_style,
+  outer_width,
+  inner_width
+] %}
+<section class="{{ classes|join(' ') }}">
+  <div class="region__inner">
+    {% block region %}
+      {{ content }}
+    {% endblock %}
+  </div>
+</section>

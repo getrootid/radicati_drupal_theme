@@ -88,6 +88,7 @@
   display: flex;
   flex-direction: column;
   gap: calc(20/16 * 1rem);
+  position: relative;
 
   @media (min-width: calc(768/16 * 1rem)) {
     flex-direction: row;
@@ -108,7 +109,7 @@
   }
 
 
-  .field-component-title  h2, h3, h4, h5, h6 {
+  .field-component-title, h2, h3, h4, h5, h6 {
     margin-top: calc(5/16 * 1rem);
     font-size: calc(30/16 * 1rem);
     text-align: left;
@@ -118,7 +119,14 @@
 .webform-cta__form {
   flex: 1 1 auto;
   padding: calc(10/16 * 1rem);
-  background-color: darkgray;
+  z-index: 2;
+
+  /* If color--card--background is set, use that otherwise use a default
+   either way, make this transparent */
+  background-color: var(--color--card--background, #f0f0f0);
+
+  /* similar to above, use color--card--text if it's available, if not use color--text */
+  color: var(--color--card--text, var(--color--text));
 
 
   @media (min-width: calc(768/16 * 1rem)) {

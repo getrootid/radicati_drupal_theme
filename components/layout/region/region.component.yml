@@ -1,0 +1,74 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json'
+
+# This is only used in Canvas, not Layout Builder.
+
+name: Page Region
+description: Used to define regions within a page layout. Regions can contain multiple components and help structure the page content.
+# replaces: radicati_drupal_theme:region
+status: stable
+group: Layout
+props:
+  type: object
+  properties:
+    outer_width:
+      type: string
+      title: Outer Width
+      description: >
+          Define the outer width of this region. Set to full width if a style with a background color is used.
+      default: 'outer-width--full'
+      examples:
+        - 'outer-width--full'
+        - 'outer-width--wide'
+        - 'outer-width--normal'
+      enum:
+        - 'outer-width--full'
+        - 'outer-width--wide'
+        - 'outer-width--normal'
+        - 'outer-width--narrow'
+      meta:enum:
+        outer-width--full: Full Width
+        outer-width--wide: Wide
+        outer-width--normal: Normal
+        outer-width--narrow: Narrow
+    inner_width:
+      type: string
+      title: Inner Width
+      description: >
+          Define the inner width of the content within this region.
+      default: 'inner-width--normal'
+      examples:
+        - 'inner-width--full'
+        - 'inner-width--wide'
+        - 'inner-width--normal'
+        - 'inner-width--narrow'
+      enum:
+        - 'inner-width--full'
+        - 'inner-width--wide'
+        - 'inner-width--normal'
+        - 'inner-width--narrow'
+      meta:enum:
+        inner-width--full: Full Width
+        inner-width--wide: Wide
+        inner-width--normal: Normal
+        inner-width--narrow: Narrow
+    region_style:
+      type: string
+      title: Style
+      description: >
+          Choose a predefined style for this region. Components placed in this region will be styled accordingly.
+      default: 'component--style--light'
+      examples:
+          - 'component--style--light'
+          - 'component--style--dark'
+      enum:
+          - 'component--style--light'
+          - 'component--style--dark'
+          - 'component--style--pink'
+      meta:enum:
+        component--style--light: Light
+        component--style--dark: Dark
+        component--style--pink: Pink
+slots:
+  content:
+    title: Content
+    description: Add components to this region to build out the page layout.

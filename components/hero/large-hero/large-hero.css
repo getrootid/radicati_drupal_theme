@@ -12,8 +12,12 @@
 .large-hero__content {
   /*background-color: color-mix(in srgb, var(--color--background) 87%, transparent);*/
 
-  background: #999999cc;
+  /* If color--card--background is set, use that otherwise use a default
+     either way, make this transparent */
+  background-color: color-mix(in srgb, var(--color--card--background, #f0f0f0) 87%, transparent);
 
+  /* similar to above, use color--card--text if it's available, if not use color--text */
+  color: var(--color--card--text, var(--color--text));
 
   @media (min-width: calc(768/16 * 1rem)) {
     position: absolute;

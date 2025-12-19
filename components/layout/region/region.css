@@ -1,0 +1,110 @@
+section.region {
+  background-color: var(--color--background);
+
+  div.region__inner {
+    margin: 0 auto;
+  }
+}
+
+
+/**
+    Uses css variables to pass color styles to components within the region.
+ */
+section.region.component--style--pink {
+  --color--background: #F603A3;
+  --color--text: white;
+  --color--heading: #6500C5;
+  --color--link: #6500C5;
+
+
+  --color--card--background: #FFB0DE;
+  --color--card--text: black;
+  --color--card--heading: #6500C5;
+  --color--card--link: #6500C5;
+
+  /* inject a little extra fun */
+  h1 {
+    &:before {
+      content: "💖";
+    }
+
+    &:after {
+      content: "🌺";
+    }
+  }
+
+  h2 {
+    &:before, &:after {
+      content: "💗";
+    }
+  }
+
+  h3 {
+    &:before, &:after {
+      content: "🦄";
+    }
+  }
+
+  h4 {
+    &:before {
+      content: "💘";
+    }
+  }
+
+  a.button {
+    &:before, &:after {
+      content: "✨";
+    }
+  }
+}
+
+section.region.component--style--light {
+  --color--background: white;
+  --color--text: black;
+  --color--heading: black;
+  --color--link: #333333;
+
+  --color--card--background: #f0f0f0;
+  --color--card--text: black;
+  --color--card--heading: black;
+  --color--card--link: #333333;
+}
+
+section.region.component--style--dark {
+  --color--background: #333333;
+  --color--text: white;
+  --color--heading: white;
+  --color--link: #aaaaaa;
+
+
+  --color--card--background: black;
+  --color--card--text: white;
+  --color--card--heading: #f1f1f1;
+  --color--card--link: #aaaaaa;
+}
+
+
+
+
+/* The styles below here should generally not be changed. */
+section.region.outer-width--full {
+
+}
+
+section.region.inner-width--normal {
+  div.region__inner {
+    max-width: var(--rad--content-width-normal);
+  }
+}
+
+section.region.inner-width--wide {
+  div.region__inner {
+    max-width: var(--rad--content-width-wide);
+  }
+}
+
+section.region.inner-width--narrow {
+  div.region__inner {
+    max-width: var(--rad--content-width-narrow);
+  }
+}

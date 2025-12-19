@@ -1,7 +1,17 @@
-.component--card {
+.component.component--card {
   margin-bottom: 45px;
-  background-color: white;
   box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   padding: calc(15/16 * 1rem);
+
+  color: var(--color--card--text);
+  background-color: var(--color--card--background);
+
+  a {
+    color: var(--color--card--link);
+  }
+
+  h2, h3, h4, h5, h6 {
+    color: var(--color--card--heading);
+  }
 }

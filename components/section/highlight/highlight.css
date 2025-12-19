@@ -4,6 +4,7 @@
 }
 
 section.highlight {
+  padding: 0;
 
   @media (min-width: calc(992/16 * 1rem)) {
     height: calc(600/16 * 1rem);
