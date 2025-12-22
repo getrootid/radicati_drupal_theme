@@ -1,0 +1,10 @@
+<button id="test" class="popup-content-button__button">this is a test</button>
+<div id="test-content" class="popup-content__background {{ show_popup_content ? "show" }}">
+  <div class="popup-content__content">
+    <div class="popup-content__content__inner">
+      <div class="slot slot--content">
+        {% block content %}{% endblock %}
+      </div>
+    </div>
+  </div>
+</div>

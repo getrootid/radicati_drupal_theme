@@ -1,0 +1,90 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json'
+
+# This is only used in Canvas, not Layout Builder.
+
+name: Group
+description: Used to define regions within a page layout. Regions can contain multiple components and help structure the page content.
+# replaces: radicati_drupal_theme:region
+status: stable
+group: Layout
+props:
+  type: object
+  properties:
+    direction:
+      type: string
+      title: Direction
+      description: >
+          Define the direction the group displays in.
+      default: 'component--direction--vertical'
+      examples:
+        - 'component--direction--vertical'
+        - 'component--direction--horizontal--reversed'
+      enum:
+        - 'component--direction--vertical'
+        - 'component--direction--horizontal'
+        - 'component--direction--vertical--reversed'
+        - 'component--direction--horizontal--reversed'
+      meta:enum:
+        component--direction--vertical: Vertical
+        component--direction--horizontal: Horizontal
+        component--direction--vertical--reversed: Vertical (reversed)
+        component--direction--horizontal--reversed: Horizontal (reversed)
+    alignment:
+      type: string
+      title: Alignment
+      description: >
+        Define how the group is aligned within its parent container.
+      default: 'component--align--center'
+      examples:
+        - 'component--align--start'
+        - 'component--align--end'
+      enum:
+        - 'component--align--start'
+        - 'component--align--center'
+        - 'component--align--end'
+      meta:enum:
+        component--align--start: Start
+        component--align--center: Center
+        component--align--end: End
+    padding:
+      type: string
+      title: Group Padding
+      description: >
+          The size of the padding around the group of items.
+      default: 'padding--medium'
+      examples:
+        - 'component--padding--normal'
+        - 'component--padding--small'
+      enum:
+        - 'component--padding--none'
+        - 'component--padding--small'
+        - 'component--padding--medium'
+        - 'component--padding--large'
+      meta:enum:
+        component--padding--none: None
+        component--padding--small: Small
+        component--padding--medium: Medium
+        component--padding--large: Large
+    gap:
+        type: string
+        title: Gap Between Items
+        description: >
+          The size of the gap between items in the group.
+        default: 'gap--medium'
+        examples:
+          - 'component--gap--small'
+          - 'component--gap--large'
+        enum:
+          - 'component--gap--none'
+          - 'component--gap--small'
+          - 'component--gap--medium'
+          - 'component--gap--large'
+        meta:enum:
+          component--gap--none: None
+          component--gap--small: Small
+          component--gap--medium: Medium
+          component--gap--large: Large
+slots:
+  content:
+    title: Content
+    description: Add components to this group to build out the page layout.

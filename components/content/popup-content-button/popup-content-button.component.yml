@@ -1,0 +1,31 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+name: Popup Content Button
+# replaces: radicati_drupal_theme:popup-content-button
+group: Content
+props:
+  type: object
+  properties:
+    button_text:
+      type: string
+      title: Button Text
+    button_style:
+      type: string
+      title: Button Style
+      default: "button button--black"
+      #$ref: theme:/radicati_drupal_theme/schema-definitions.json#$defs/buttonStyles
+      enum:
+        - "button button--white"
+        - "button button--black"
+        - "button button--gray"
+      meta:enum:
+        button button--white: White
+        button button--black: Black
+        button button--gray: Gray
+    show_popup_content:
+      type: boolean
+      title: Show Popup Content
+      default: false
+slots:
+  content:
+    title: Content

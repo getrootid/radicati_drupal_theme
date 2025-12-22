@@ -25,6 +25,10 @@
     }
   }
 
+  .carousel__slides {
+    width: 100%;
+  }
+
   .splide__arrow--prev {
     left: 1rem;
     transform: scaleX(-1) translateY(-50%);

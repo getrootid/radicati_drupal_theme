@@ -1,0 +1,7 @@
+section.group {
+  background-color: var(--color--background);
+
+  div.region__inner {
+    margin: 0 auto;
+  }
+}

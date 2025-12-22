@@ -1,0 +1,19 @@
+{% set classes = [
+  'component',
+  'component--layout--group',
+  'group',
+  {{ direction : 'component--direction' }}
+  direction,
+  {{ padding : 'component--padding' }}
+  padding,
+  {{ alignment : 'component--alignment' }}
+  alignment,
+  gap
+] %}
+<section class="{{ classes|join(' ') }}">
+  <div class="group__inner">
+    {% block region %}
+      {{ content }}
+    {% endblock %}
+  </div>
+</section>
