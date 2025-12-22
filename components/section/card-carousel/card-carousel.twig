@@ -8,22 +8,24 @@
     {% block title %}<h2>Card Carousel</h2>{% endblock %}
   </div>
 
-  {% set cards_r = block('cards') %}
+  {% if block('cards') is defined and block('cards')|trim is not empty %}
+    {% set cards_r = block('cards') %}
 
-  <div class="card-carousel__carousel-wrapper">
-    {% embed "radicati_drupal_theme:carousel" with {
-      title: "Card Carousel",
-      slides_per_page_desktop: 3,
-      slides_per_page_tablet: 2,
-      slides_per_page_default: 2,
-      arrows: true,
-      pagination: true
-    } %}
-      {% block slides %}
-        {{ cards_r|raw }}
-      {% endblock %}
-    {% endembed %}
-  </div>
+    <div class="card-carousel__carousel-wrapper">
+      {% embed "radicati_drupal_theme:carousel" with {
+        title: "Card Carousel",
+        slides_per_page_desktop: 3,
+        slides_per_page_tablet: 2,
+        slides_per_page_default: 2,
+        arrows: true,
+        pagination: true
+      } %}
+        {% block slides %}
+          {{ cards_r|raw }}
+        {% endblock %}
+      {% endembed %}
+    </div>
+  {% endif %}
 
   <div class="card-collection__actions">
     {% block readmore %}{% endblock %}
