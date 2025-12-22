@@ -8,7 +8,7 @@
     {% block title %}<h2>Accordions Section</h2>{% endblock %}
   </div>
 
-  {% if block('accordions') %}
+  {% if block('accordions') is defined and block('accordions')|trim is not empty %}
     {% set accordions_r = block('accordions') %}
 
     <div class="accordions-section__accordions-wrapper">

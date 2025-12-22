@@ -4,6 +4,10 @@ name: Basic Accordions
 #replaces: radicati_drupal_theme:basic-accordions
 group: Content
 weight: 100
+props:
+  type: object
+  additionalProperties: false
+  properties: {}
 slots:
   accordions:
     title: Accordions

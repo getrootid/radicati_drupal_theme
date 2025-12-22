@@ -7,6 +7,10 @@ name: Columns
 # replaces: radicati_drupal_theme:columns
 status: stable
 group: Layout
+props:
+  type: object
+  additionalProperties: false
+  properties: {}
 slots:
   columns:
     title: Columns

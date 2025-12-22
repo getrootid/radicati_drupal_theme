@@ -3,6 +3,10 @@ $schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schema
 name: Media Card
 #replaces: radicati_drupal_theme:media-card
 group: Cards
+props:
+  type: object
+  additionalProperties: false
+  properties: {}
 slots:
   media:
     title: Media

@@ -8,6 +8,10 @@ name: Large Footer
 status: stable
 group: Page Elements
 noUi: true
+props:
+  type: object
+  additionalProperties: false
+  properties: {}
 slots:
   footer_one:
     title: Column 1

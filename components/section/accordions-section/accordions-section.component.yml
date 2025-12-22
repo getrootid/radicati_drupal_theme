@@ -4,9 +4,11 @@ name: Accordions Section
 #replaces: radicati_drupal_theme:accordions-section
 group: Page Sections
 props:
-  accordions:
   type: object
-
+  additionalProperties: false
+  properties: {}
+  accordions:
+    properties: {}
 slots:
   title:
     title: Content
