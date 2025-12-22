@@ -5,6 +5,10 @@ name: Off-Canvas
 status: stable
 group: Page Elements
 noUi: true
+props:
+  type: object
+  additionalProperties: false
+  properties: {}
 slots:
   header:
     title: Header

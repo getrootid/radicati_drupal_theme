@@ -7,7 +7,10 @@ $schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schema
 name: Form Section
 #replaces: radicati_drupal_theme:form-section
 group: Page Sections
-
+props:
+  type: object
+  additionalProperties: false
+  properties: {}
 slots:
   body:
     title: Content

@@ -3,6 +3,10 @@ $schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schema
 name: Numbers Highlight
 #replaces: radicati_drupal_theme:numbers-highlight
 group: Content
+props:
+  type: object
+  additionalProperties: false
+  properties: {}
 slots:
   body:
     title: Content

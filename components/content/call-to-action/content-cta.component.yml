@@ -4,6 +4,10 @@ name: Content Call to Action
 #replaces: radicati_drupal_theme:content-cta
 group: Content
 weight: 50
+props:
+  type: object
+  additionalProperties: false
+  properties: {}
 slots:
   title:
     title: Title
