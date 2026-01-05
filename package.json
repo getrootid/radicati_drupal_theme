@@ -38,6 +38,5 @@
     "vanillajs-scrollspy": "^3.0.3"
   },
   "scripts": {
-    "postinstall": "./scripts/copy_npm_scripts.sh"
   }
 }
