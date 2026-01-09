@@ -16,7 +16,7 @@ a.button {
   border-radius: calc(5/16 * 1rem);
 
   background: var(--button--background-color);
-  color: var(--button--text-color);
+  color: var(--button--text-color) !important;
   text-decoration: none;
   border: 2px solid var(--button--border-color);
 
@@ -24,13 +24,13 @@ a.button {
 
   &:focus, &:hover {
     background: var(--button--background-color--hover);
-    color: var(--button--text-color--hover);
+    color: var(--button--text-color--hover) !important;
     --color--link: var(--button--text-color--hover);
     border-color: var(--button--border-color--hover);
   }
 }
 
-a.button--black {
+a.button--black, a.button--dark {
   --button--background-color: black;
   --button--text-color: white;
   --button--background-color--hover: white;
@@ -46,7 +46,7 @@ a.button--white {
   --button--border-color--hover: black;
 }
 
-a.button--gray {
+a.button--gray, a.button--light {
   --button--background-color: #e0e0e0;
   --button--text-color: black;
   --button--background-color--hover: black;

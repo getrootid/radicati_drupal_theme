@@ -1,7 +1,7 @@
 {% extends "block--block-content.html.twig" %}
 
 {% block outer_content %}
-  {% embed "radicati_drupal_theme:buttons" with {
+  {% embed "radicati_drupal_theme:button-group" with {
     buttons_alignment: content.field_setting_alignment|render|striptags|clean_class,
     buttons_direction: content.field_setting_direction|render|striptags|clean_class,
   } %}
@@ -10,4 +10,3 @@
     {% endblock %}
   {% endembed %}
 {% endblock %}
-
