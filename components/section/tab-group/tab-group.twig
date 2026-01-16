@@ -5,8 +5,11 @@
   'tab-group',
   (tabs_position) ? 'tab-group--tabs-position-' ~ tabs_position: 'tab-group--tabs-no-position'
 ]
-
 %}
+
+{% if content_attributes is not defined %}
+  {% set content_attributes = create_attribute() %}
+{% endif %}
 
 <section {{ content_attributes.addClass(classes) }}>
   <nav class="tab-group__nav" role="tablist">

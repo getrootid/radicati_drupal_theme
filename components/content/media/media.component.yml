@@ -1,0 +1,14 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+name: Media
+#replaces: radicati_drupal_theme:media
+group: Content
+props:
+  type: object
+  additionalProperties: false
+  properties: {}
+slots:
+  media:
+    title: Media
+  caption:
+    title: Caption

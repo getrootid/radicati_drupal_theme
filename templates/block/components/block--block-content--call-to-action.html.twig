@@ -6,8 +6,15 @@
       content_attributes: content_attributes,
       title: content.field_component_title.0,
       blurb: content.field_component_blurb.0,
-      image: content.field_component_media|render,
+      label: content.field_cta_label.0,
+      subtitle: content.field_component_sub_title.0,
+      alignment: content.field_setting_alignment|render,
+      style: content.field_setting_style|render,
     } %}
+      {% block media %}
+        {{ content.field_component_media }}
+      {% endblock %}
+
       {% block actions %}
         {{ content.field_component_read_more }}
       {% endblock %}

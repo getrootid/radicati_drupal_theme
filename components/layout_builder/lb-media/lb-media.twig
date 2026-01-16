@@ -1,0 +1,11 @@
+<div class="lb-media card card--no-background">
+  <div class="lb-media__inner card--inner">
+    {% block media %}{% endblock %}
+
+    {% if block('caption') is defined and block('caption')|trim is not empty %}
+      <div class="lb-media-card__caption">
+        {% block caption %}{% endblock %}
+      </div>
+    {% endif %}
+  </div>
+</div>

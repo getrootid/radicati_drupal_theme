@@ -6,7 +6,10 @@ group: Content
 props:
   type: object
   additionalProperties: false
-  properties: {}
+  properties:
+    alignment:
+      type: string
+      title: Content Alignment
 slots:
-  body:
+  items:
     title: Content

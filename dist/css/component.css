@@ -11,3 +11,32 @@
     color: var(--color--heading);
   }
 }
+
+.card {
+  color: var(--color--text);
+
+  a {
+    color: var(--color--link);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--color--heading);
+  }
+}
+
+/**
+    Content components have a default margin between items so they don't bump up against each other.
+ */
+.component--content {
+  margin-bottom: var(--rad--com--content--margin);
+}
+
+.component--section {
+  background-color: var(--color--background);
+  padding: var(--rad--com--section--padding) 0;
+}
+
+.component--section .component--inner {
+  max-width: var(--rad--content-width-normal);
+  margin: 0 auto;
+}

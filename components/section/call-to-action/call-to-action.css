@@ -11,7 +11,7 @@
 
 .call-to-action {
 
-  &.setting--content-layout--center {
+  &.setting--alignment--center {
     .call-to-action__content {
       align-items: center;
     }
@@ -20,7 +20,7 @@
     }
   }
 
-  &.setting--content-layout--left {
+  &.setting--alignment--left {
     .call-to-action__content {
       align-items: flex-start;
     }
@@ -29,7 +29,7 @@
     }
   }
 
-  &.setting--content-layout--right {
+  &.setting--alignment--right {
     .call-to-action__content {
       align-items: flex-end;
     }
@@ -56,7 +56,7 @@
     height: 100%;
     pointer-events: none;
     /*background-color: color-mix(in srgb, var(--color--background) 85%, transparent);*/
-    background-color: rgba(0, 0, 0, 0.45);
+    background-color: var(--color--background--overlay);
   }
 
   div:not(.contextual):not([data-drupal-ajax-container]):not([data-contextual-id]) {
@@ -78,11 +78,6 @@
   display: flex;
   flex-direction: column;
 
-
-  --color--text: white;
-  --color--link: white;
-
-
   h2, h3, h4, h5, h6 {
     margin-top: 0;
     color: var(--color--text);
@@ -100,6 +95,7 @@
 .call-to-action__title {
   font-size: calc(45/16 * 1rem);
   text-transform: uppercase;
+  font-family: sans-serif;
 }
 
 .call-to-action__actions {

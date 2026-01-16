@@ -2,9 +2,12 @@
   'component',
   'component--section',
   'checkerboard-highlights',
+  style ?? ''
 ] %}
 <section class="{{ classes|join(' ') }}">
-  <div class="checkerboard-highlights__items">
-    {% block items %}{% endblock %}
+  <div class="checkerboard-highlights__inner component--inner">
+    <div class="checkerboard-highlights__items slot slot--items">
+      {% block items %}{% endblock %}
+    </div>
   </div>
 </section>

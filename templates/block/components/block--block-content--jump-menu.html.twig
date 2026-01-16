@@ -13,10 +13,8 @@
   {% endfor %}
   {% embed "radicati_drupal_theme:jump-menu" with {
     content_attributes: content_attributes,
+    label: content.field_jump_menu_label,
     items: items
   } %}
-    {% block label %}
-      {{ content.field_jump_menu_label }}
-    {% endblock %}
   {% endembed %}
 {% endblock %}

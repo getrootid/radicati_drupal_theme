@@ -1,3 +1,12 @@
-<div {{ content_attributes.addClass('formatted-content') }}>
+{% set classes = [
+  'component',
+  'component--content',
+  'formatted-content',
+] %}
+{# if content attributes isn't set, use create_attriburte() #}
+{% if content_attributes is not defined %}
+  {% set content_attributes = create_attribute() %}
+{% endif %}
+<div {{ content_attributes.addClass(classes) }}>
   {{ content }}
 </div>

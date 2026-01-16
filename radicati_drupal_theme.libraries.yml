@@ -11,18 +11,22 @@ global-styles:
 component-base-styles:
   version: 1.x
   css:
-    theme:
+    layout:
+      dist/css/component.css: { preprocess: false }
       dist/css/component--gap.css: { preprocess: false }
       dist/css/component--padding.css: { preprocess: false }
       dist/css/component--direction.css: { preprocess: false }
       dist/css/component--align.css: { preprocess: false }
       dist/css/component--section.css: { preprocess: false }
       dist/css/component--title.css: { preprocess: false }
+      dist/css/component--field--sub-title.css: { preprocess: false }
       dist/css/component--blurb.css: { preprocess: false }
       dist/css/component--slot--actions.css: { preprocess: false }
       dist/css/component--card.css: { preprocess: false }
       dist/css/component--spacing.css: { preprocess: false }
-      dist/css/component.css: { preprocess: false }
+      dist/css/component--style--light.css: { preprocess: false }
+      dist/css/component--style--dark.css: { preprocess: false }
+
 
 
 fitvids:

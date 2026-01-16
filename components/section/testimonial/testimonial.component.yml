@@ -8,7 +8,7 @@ group: Page Sections
 props:
   type: object
   properties:
-    quote_content:
+    quote_text:
       title: Quote Content
       type: string
       contentMediaType: text/html
@@ -31,3 +31,7 @@ props:
 slots:
   media:
     title: Media
+  actions:
+    title: Actions
+    description: >
+      A slot for buttons or links related to the testimonial, such as "Read More" or "Contact Us".

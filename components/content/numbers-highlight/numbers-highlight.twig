@@ -1,5 +1,15 @@
-<div {{ content_attributes.addClass('numbers-highlight') }}>
-  <div class="numbers-highlight__content">
-    {% block body %}Default Content 2{% endblock %}
+{% set classes = [
+  'component',
+  'component--content',
+  'numbers-highlight',
+  alignment,
+] %}
+{# if content attributes isn't set, use create_attriburte() #}
+{% if content_attributes is not defined %}
+  {% set content_attributes = create_attribute() %}
+{% endif %}
+<div {{ content_attributes.addClass(classes) }}>
+  <div class="numbers-highlight__items">
+    {% block items %}{% endblock %}
   </div>
 </div>

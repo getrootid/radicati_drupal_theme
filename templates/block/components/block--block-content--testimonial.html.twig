@@ -1,0 +1,24 @@
+{% extends "block--block-content.html.twig" %}
+
+{% block outer_content %}
+  {% embed "radicati_drupal_theme:testimonial" with {
+    content_attributes: content_attributes,
+    quote_text: content.field_quote_quote,
+    quote_author_name: content.field_quote_citation_name,
+    quote_author_title: content.field_quote_citation_title,
+    style: content.field_setting_style|render
+  } %}
+    {% block media %}
+      {{ content.field_component_media }}
+    {% endblock %}
+
+    {% block background_media %}
+      {{ content.field_component_background_media }}
+    {% endblock %}
+
+    {% block actions %}
+      {{ content.field_component_read_more }}
+    {% endblock %}
+  {% endembed %}
+{% endblock %}
+

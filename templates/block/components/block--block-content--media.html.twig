@@ -1,10 +1,7 @@
 {% extends "block--block-content.html.twig" %}
 
 {% block outer_content %}
-  {% embed "radicati_drupal_theme:media" with {
-    content_attributes: content_attributes,
-    display_mode: content.field_setting_media_display_mode|render|striptags|trim|clean_class
-  } %}
+  {% embed "radicati_drupal_theme:lb-media-wrapper" %}
     {% block media %}
       {{ content.field_media__media_item }}
     {% endblock %}

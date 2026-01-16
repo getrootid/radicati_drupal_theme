@@ -1,0 +1,19 @@
+{% set classes = [
+  'component',
+  'component--content',
+  'media'
+] %}
+{% if content_attributes is not defined %}
+  {% set content_attributes = create_attribute() %}
+{% endif %}
+<div {{ content_attributes.addClass(classes) }}>
+  <div class="media__media">
+    {% block media %}{% endblock %}
+  </div>
+
+  {% if block('caption') is defined and block('caption')|trim is not empty %}
+    <div class="media__caption">
+      {% block caption %}{% endblock %}
+    </div>
+  {% endif %}
+</div>

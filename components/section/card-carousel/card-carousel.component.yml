@@ -14,17 +14,21 @@ props:
       description: Wrapper attributes.
     style:
       type: string
-      title: Color
-      examples: [
-        'purple',
-        'blue',
-        'green'
-      ]
-      description: "Named style to use, generally using the background color as a reference."
-      enum: ['purple', 'blue', 'green']
+      title: Style
+      description: >
+        The style of the Call to Action section.
+    # Style will need to work really different in LB than in Canvas
+    title:
+      type: string
+      title: Title
+      description: "The section title, will be an H2."
+      default: "Our Snazzy Page"
+    subtitle:
+      type: string
+      title: Sub-Title
+      description: "A sub-title."
+      default: ""
 slots:
-  title:
-    title: Content
   cards:
     title: Cards
     allowedComponents:

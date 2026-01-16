@@ -3,6 +3,8 @@
 {% block outer_content %}
   {% embed "radicati_drupal_theme:heading" with {
     content_attributes: content_attributes,
+    alignment: content.field_setting_alignment|render,
+    size: content.field_setting_size|render,
     heading_text: content.field_component_heading.0['#text'],
     heading_level: content.field_component_heading.0['#size']
   } %}

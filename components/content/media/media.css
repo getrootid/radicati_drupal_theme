@@ -1,0 +1,18 @@
+.component.media {
+  .media__media img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .media__caption {
+    font-size: calc(18/16 * 1rem);
+    line-height: calc(28/16 * 1rem);
+
+    padding: calc(25/16 * 1rem) calc(20/16 * 1rem) calc(20/16 * 1rem) calc(20/16 * 1rem);
+
+    border: 1px solid darkgray;
+    border-top: none;
+  }
+}
+

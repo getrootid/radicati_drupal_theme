@@ -1,13 +1,24 @@
-<nav{{ content_attributes.addClass('jump-menu') }}>
-  <span class="jump-menu__label">{% block label %}Jump Menu{% endblock %}</span>
+{% set classes = [
+  'component',
+  'component--content',
+  'jump-menu',
+] %}
+{# if content attributes isn't set, use create_attriburte() #}
+{% if content_attributes is not defined %}
+  {% set content_attributes = create_attribute() %}
+{% endif %}
+<nav{{ content_attributes.addClass(classes) }}>
+  <div class="jump-menu__inner component--inner">
+    <span class="jump-menu__label">{{ label }}</span>
 
-  <ul class="jump-menu__items">
-    {% for key, item in items %}
-        <li class="jump-menu__item">
-          <a href="{{ item.anchor }}">
-            {{ item.label }}
-          </a>
-        </li>
-    {% endfor %}
-  </ul>
+    <ul class="jump-menu__items">
+      {% for key, item in items %}
+          <li class="jump-menu__item">
+            <a href="{{ item.anchor }}">
+              {{ item.label }}
+            </a>
+          </li>
+      {% endfor %}
+    </ul>
+  </div>
 </nav>

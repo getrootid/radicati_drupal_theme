@@ -1,4 +1,78 @@
 .ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close .ui-icon.ui-icon-closethick {
   transform: none;
   background: none;
+
+}
+
+.js-layout-builder-category .glb-claro-details__wrapper,
+.glb-layout-builder-browser .glb-claro-details__wrapper {
+  flex-direction: column;
+  gap: 0 !important;
+}
+
+// May be too broad
+.glb-claro-details__summary {
+  padding: 0.5rem 0.5rem 0.5rem 3rem !important;
+}
+
+
+// Layout Builder Browser Item List
+.layout-builder-browser-block-item {
+  margin: 0.1rem 0 !important;
+  flex: 1 1 100%;
+  width: 100%;
+
+  &:hover {
+    background-color: transparent !important;
+  }
+}
+
+
+.js-layout-builder-block-link {
+  text-decoration: none;
+  font-size: 0.95rem;
+  line-height: 1.1rem;
+  color: black !important;
+  width: 100%;
+  display: inline-block;
+
+  img {
+    display: none;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+
+.ui-dialog fieldset:not(.fieldgroup) {
+  border: 0;
+  background-color: #aeaeff33;
+  padding: 0 1rem !important;
+
+  legend {
+    position: relative;
+  }
+
+  .fieldset__wrapper {
+    padding-top: 2rem;
+
+    div:first-child {
+      margin-top: 0.5rem !important;
+    }
+
+    div:last-child {
+      margin-bottom: 1rem !important;
+    }
+  }
+}
+
+.ief-entity-operations {
+  padding: 0 1.3rem;
+
+  input {
+    padding: 0.5rem 1rem;
+    background: red;
+  }
 }

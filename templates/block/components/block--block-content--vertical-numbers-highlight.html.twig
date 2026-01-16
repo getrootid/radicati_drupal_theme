@@ -2,10 +2,11 @@
 
 {% block outer_content %}
   {% embed "radicati_drupal_theme:numbers-highlight" with {
-    content_attributes: content_attributes
+    content_attributes: content_attributes,
+    alignment: content.field_setting_alignment|render,
   } %}
-    {% block body %}
-      {{ content }}
+    {% block items %}
+      {{ content.field_vertical_highlight__item }}
     {% endblock %}
   {% endembed %}
 {% endblock %}

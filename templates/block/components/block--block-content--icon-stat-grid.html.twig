@@ -1,22 +1,18 @@
 {% extends "block--block-content.html.twig" %}
 
 {% block outer_content %}
-  {#  This is super ugly, has to be a better way! #}
-  {% set items_per_row = content.field_setting_items_per_row|field_target_entity.name.value|lower %}
-
   {% embed "radicati_drupal_theme:icon-stat-grid" with {
     content_attributes: content_attributes,
-    items_per_row: items_per_row
+    title: content.field_component_title,
+    subtitle: content.field_component_sub_title,
+    style: content.field_setting_style|render,
+    items_per_row: content.field_setting_items_per_row|render
   } %}
-    {% block header %}
-      {{ content|without('field_setting_items_per_row', 'field_icon_stat_items', 'field_component_read_more') }}
-    {% endblock %}
-
     {% block cards %}
       {{ content.field_icon_stat_items }}
     {% endblock %}
 
-    {% block readmore %}
+    {% block actions %}
       {{ content.field_component_read_more }}
     {% endblock %}
 

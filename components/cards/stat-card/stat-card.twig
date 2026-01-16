@@ -1,6 +1,5 @@
 {% set classes = [
-  'component',
-  'component--card',
+  'card',
   'stat-card'
 ] %}
 {% if content_attributes is not defined %}
@@ -8,17 +7,11 @@
 {% endif %}
 <div {{ content_attributes.addClass(classes) }}>
   {% if block('media') is defined and block('media')|trim is not empty %}
-    <div class="stat-card__media">
+    <div class="stat-card__media slot slot--media">
       {% block media %}{% endblock %}
     </div>
   {% endif %}
 
   <div class="stat-card__value">{{ stat_value }}</div>
   <div class="stat-card__label">{{ stat_label }}</div>
-
-  {% if block('body') is defined and block('body')|trim is not empty %}
-    <div class="stat-card__body">
-      {% block body %}{% endblock %}
-    </div>
-  {% endif %}
 </div>

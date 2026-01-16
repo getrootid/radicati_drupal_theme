@@ -1,6 +1,6 @@
 {% extends "paragraph.html.twig" %}
 
-{% block content %}
+{% block paragraph %}
   {% embed "radicati_drupal_theme:stat-card" with {
     content_attributes: content_attributes,
     stat_value: content.field_stat_value,
@@ -11,10 +11,6 @@
       {% if not paragraph.field_stat_icon.isEmpty() %}
         {{ content.field_stat_icon }}
       {% endif %}
-    {% endblock %}
-
-    {% block body %}
-      {{ content|without('field_stat_label', 'field_stat_value', 'field_stat_icon') }}
     {% endblock %}
   {% endembed %}
 {% endblock %}

@@ -4,11 +4,8 @@
   {% embed "radicati_drupal_theme:accordions-section" with {
     content_attributes: content_attributes,
     only_one_open: true,
+    title: content.field_component_title.0,
   } %}
-    {% block title %}
-      {{ content|without('field_accordions_items', 'field_component_read_more') }}
-    {% endblock %}
-
     {% block accordions %}
       {{ content.field_accordions_items }}
     {% endblock %}

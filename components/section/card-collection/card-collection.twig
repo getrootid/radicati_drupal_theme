@@ -2,32 +2,40 @@
   'component',
   'component--section',
   'card-collection',
-  items_per_row ? 'card-collection--items-per-row--' ~ items_per_row,
-  items_per_row ? 'has-card-collection--items-per-row',
+  items_per_row ? items_per_row,
+  style ?? ''
 ] %}
 {% if content_attributes is not defined %}
   {% set content_attributes = create_attribute() %}
 {% endif %}
 <section {{ content_attributes.addClass(classes) }}>
-  <div class="card-collection__header">
-    {% if title %}
-      <h2 class="card-collection__title component--title">
-        {{ title }}
-      </h2>
-    {% endif %}
+  <div class="card-collection__inner component--inner">
+    <div class="card-collection__header">
+      {% if title %}
+        <h2 class="card-collection__title component--title">
+          {{ title }}
+        </h2>
+      {% endif %}
 
-    {% if blurb %}
-      <div class="card-collection__blurb component--blurb">
-        {{ blurb }}
-      </div>
-    {% endif %}
-  </div>
+      {% if subtitle %}
+        <p class="card-collection__sub-title component--sub-title">
+          {{ subtitle }}
+        </p>
+      {% endif %}
 
-  <div class="card-collection__cards component--cards">
-    {% block cards %}{% endblock %}
-  </div>
+      {% if blurb %}
+        <p class="card-collection__blurb component--blurb">
+          {{ blurb }}
+        </p>
+      {% endif %}
+    </div>
 
-  <div class="card-collection__actions slot slot--actions">
-    {% block actions %}{% endblock %}
+    <div class="card-collection__cards component--cards slot slot--cards">
+      {% block cards %}{% endblock %}
+    </div>
+
+    <div class="card-collection__actions slot slot--actions">
+      {% block actions %}{% endblock %}
+    </div>
   </div>
 </section>

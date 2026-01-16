@@ -5,14 +5,18 @@ name: Accordions Section
 group: Page Sections
 props:
   type: object
-  additionalProperties: false
-  properties: {}
-  accordions:
-    properties: {}
+  properties:
+    content_attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper attributes.
+    title:
+      type: string
+      title: Title
+      description: "The section title, will be an H2."
+      default: "Accordions Section"
 slots:
-  title:
-    title: Content
-#  accordions:
-#    title: Accordions
+  accordions:
+    title: Accordions
   readmore:
     title: Read More Link

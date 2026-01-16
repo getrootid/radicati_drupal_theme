@@ -2,16 +2,27 @@
   'component',
   'component--section',
   'testimonial',
+  style
 ] %}
+
+{% if content_attributes is not defined %}
+  {% set content_attributes = create_attribute() %}
+{% endif %}
 <section {{ content_attributes.addClass(classes) }}>
-  <div class="testimonial__inner">
+  {% if block('background_media') is defined and block('background_media')|trim is not empty %}
+    <div class="testimonial__background-media background-media slot slot--background-media">
+      {% block background_media %}Media Content{% endblock %}
+    </div>
+  {% endif %}
+
+  <div class="testimonial__inner component--inner">
     {% if block('media') is defined and block('media')|trim is not empty %}
-      <div class="testimonial__media">{% block media %}Media Content{% endblock %}</div>
+      <div class="testimonial__media slot slot--media">{% block media %}Media Content{% endblock %}</div>
     {% endif %}
 
     <div class="testimonial__content">
       <blockquote class="testimonial__quote">
-        {{ quote_content }}
+        {{ quote_text }}
 
         <footer class="testimonial__author">
           {% if quote_author_name %}
@@ -27,6 +38,10 @@
           {% endif %}
         </footer>
       </blockquote>
+
+      <div class="testimonial__actions slot slot--actions">
+        {% block actions %}Actions{% endblock %}
+      </div>
     </div>
   </div>
 </section>

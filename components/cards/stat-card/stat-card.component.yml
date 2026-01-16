@@ -15,7 +15,7 @@ props:
         'four'
       ]
     stat_label:
-      type: string
+      type: ['string', 'object', 'null']
       title: Statistic Label
       contentMediaType: text/html
       examples:
@@ -23,5 +23,3 @@ props:
 slots:
   media:
     title: Media
-  body:
-    title: Body

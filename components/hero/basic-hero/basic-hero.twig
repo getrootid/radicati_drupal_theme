@@ -9,18 +9,18 @@
 {% endif %}
 <section {{ content_attributes.addClass(classes) }}>
   <div class="basic-hero__media background-media">
-    {% if background_image is iterable %}
-      {% include "canvas:image" with background_image|merge({
-        sizes: '100vw',
-        loding: 'eager'
-      }) only %}
-    {% else %}
-      {{ background_image|render }}
-    {% endif %}
+    {% block media %}{% endblock %}
+{#    {% if background_image is iterable %}#}
+{#      {% include "canvas:image" with background_image|merge({#}
+{#        sizes: '100vw',#}
+{#        loding: 'eager'#}
+{#      }) only %}#}
+{#    {% else %}#}
+{#      {{ background_image|render }}#}
+{#    {% endif %}#}
   </div>
 
   <div class="basic-hero__content">
     <h1 class="basic-hero__title">{{ title }}</h1>
-    <div class="basic-hero__blurb">{{ blurb }}</div>
   </div>
 </section>

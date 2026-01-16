@@ -1,0 +1,35 @@
+.heading.component {
+  font-size: 1.35rem;
+  font-family: sans-serif;
+  text-transform: uppercase;
+
+  color: var(--color--text);
+
+  &.setting--alignment--left {
+    text-align: left;
+  }
+
+  &.setting--alignment--center {
+    text-align: center;
+  }
+
+  &.setting--alignment--right {
+    text-align: right;
+  }
+
+  &.setting--size--small {
+    font-size: 1.25rem;
+  }
+
+  &.setting--size--medium {
+    font-size: 1.5rem;
+  }
+
+  &.setting--size--large {
+    font-size: 2rem;
+  }
+
+  &.setting--size--extra-large {
+    font-size: 2.5rem;
+  }
+}

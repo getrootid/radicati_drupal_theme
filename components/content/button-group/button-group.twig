@@ -1,7 +1,9 @@
 {% set classes = [
+  'component',
+  'component--content',
   'buttons',
-  'buttons--alignment--' ~ (buttons_alignment is defined ? buttons_alignment : 'left'),
-  'buttons--direction--' ~ (buttons_direction is defined ? buttons_direction : 'horizontal'),
+  alignment,
+  direction,
 ] %}
 
 <div class="{{ classes|join(' ') }}">

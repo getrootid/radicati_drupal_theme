@@ -37,6 +37,5 @@
     "scrollreveal": "^4.0.9",
     "vanillajs-scrollspy": "^3.0.3"
   },
-  "scripts": {
-  }
+  "scripts": {}
 }

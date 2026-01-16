@@ -3,9 +3,10 @@
 {% block outer_content %}
   {% embed "radicati_drupal_theme:checkerboard-highlights" with {
     content_attributes: content_attributes,
+    style: content.field_setting_style|render,
   } %}
     {% block items %}
-      {{ content }}
+      {{ content.field_chhi_items }}
     {% endblock %}
   {% endembed %}
 {% endblock %}

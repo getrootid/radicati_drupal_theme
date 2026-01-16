@@ -16,24 +16,26 @@ props:
       description: "The title of the card, will display as an h2."
       default: "Our Snazzy Page"
     blurb:
-      type: string
+      type: ['string', 'object', 'null']
       title: Blurb
       description: "A short description or tagline for the hero section."
       default: "Welcome to our awesome website where we do amazing things."
       contentMediaType: text/html
       examples:
         - '<p>Puppies deserve love too!</p>'
-    background_image:
-      $ref: json-schema-definitions://canvas.module/image
-      type: ['object', 'string']
-      title: Image
-      description: >
-        Some beautiful background image for the hero section.
-      examples:
-        - src: 'https://picsum.photos/1200/600'
-          alt: 'Some kind of pictograph'
-          width: 1200
-          height: 600
+#    background_image:
+#      $ref: json-schema-definitions://canvas.module/image
+#      type: ['object', 'string']
+#      title: Image
+#      description: >
+#        Some beautiful background image for the hero section.
+#      examples:
+#        - src: 'https://picsum.photos/1200/600'
+#          alt: 'Some kind of pictograph'
+#          width: 1200
+#          height: 600
 slots:
+  media:
+    title: Media
   actions:
     title: Actions

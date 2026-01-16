@@ -3,10 +3,16 @@
 {% block outer_content %}
   {% embed "radicati_drupal_theme:highlight" with {
     content_attributes: content_attributes.addClass('highlight'),
-    image: content.field_component_media.0|render,
     title: content.field_component_title.0,
-    blurb: content.field_component_blurb
+    blurb: content.field_component_blurb,
+    alignment: content.field_setting_alignment|render,
+    style: content.field_setting_style|render,
+    layout: content.field_setting_layout|render,
   } %}
+    {% block media %}
+      {{ content.field_component_media }}
+    {% endblock %}
+
     {% block actions %}
       {{ content.field_component_read_more }}
     {% endblock %}

@@ -1,11 +1,15 @@
 
 .card-carousel {
-  max-width: 90vw;
   margin: 0 auto;
 
   .splide__slide {
     margin-right: calc(24/16 * 1rem);
   }
+}
+
+.card-carousel__inner {
+  max-width: var(--rad--content-width--normal);
+  margin: 0 auto;
 }
 
 .card-carousel__carousel-wrapper {

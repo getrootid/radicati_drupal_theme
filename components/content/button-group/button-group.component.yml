@@ -6,18 +6,14 @@ group: Content
 props:
   type: object
   properties:
-    button_alignment:
+    alignment:
       type: string
-      title: Button Alignment
-      description: "Alignment of the buttons within the component."
-      enum: ['left', 'center', 'right']
-      default: 'left'
-    button_direction:
+      title: Content Alignment
+    direction:
       type: string
-      title: Button Direction
-      description: "Direction of the buttons within the component."
-      enum: ['horizontal', 'vertical']
-      default: 'horizontal'
+      title: Layout
+      description: >
+        The layout of the Highlight component.
 slots:
   buttons:
     title: Buttons

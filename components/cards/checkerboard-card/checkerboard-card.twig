@@ -1,13 +1,18 @@
-<div class="checkerboard-card">
+{% set classes = [
+  'card',
+  'checkerboard-card',
+] %}
+<div class="{{ classes|join(' ') }}">
     <div class="checkerboard-card__media">
-      {% if background_image is iterable %}
-        {% include "canvas:image" with background_image|merge({
-          sizes: '100vw',
-          loding: 'eager'
-        }) only %}
-      {% else %}
-        {{ background_image|render }}
-      {% endif %}
+      {% block media %}{% endblock %}
+{#      {% if background_image is iterable %}#}
+{#        {% include "canvas:image" with background_image|merge({#}
+{#          sizes: '100vw',#}
+{#          loding: 'eager'#}
+{#        }) only %}#}
+{#      {% else %}#}
+{#        {{ background_image|raw }}#}
+{#      {% endif %}#}
     </div>
 
   <div class="checkerboard-card__content">

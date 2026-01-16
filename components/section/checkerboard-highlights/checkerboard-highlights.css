@@ -4,39 +4,9 @@
 
 .checkerboard-highlights__items {
 
-  /* TODO: The below only works in layout builder! */
-  .field-chhi-items .field--item:nth-child(even)
-  /*.checkerboard-card:nth-child(even) {*/
-  {
-
-    .checkerboard-card {
-      --color--background: lightgray;
-      --color--text: black;
-      --color--link: darkgray;
+  .checkerboard-card:nth-child(odd) {
+    @media (min-width: calc(768 / 16 * 1em)) {
+      flex-direction: row-reverse;
     }
-
-  }
-
-  .field-chhi-items .field--item:nth-child(odd)
-  /*.checkerboard-card:nth-child(odd) {*/
-  {
-    .checkerboard-card {
-      --color--background: #333333;
-      --color--text: white;
-      --color--link: pink;
-
-      @media (min-width: calc(768/16 * 1em)) {
-        flex-direction: row-reverse;
-      }
-
-
-    }
-
-  }
-}
-
-.checkerboard-highlights__items .checkerboard-card:nth-child(even) {
-  @media (min-width: calc(768/16 * 1em)) {
-    flex-direction: row-reverse;
   }
 }

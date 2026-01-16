@@ -1,15 +1,13 @@
 {% extends "block--block-content.html.twig" %}
 
 {% block outer_content %}
-  {% embed "radicati_drupal_theme:testimonial" with {
+  {% embed "radicati_drupal_theme:quote" with {
     content_attributes: content_attributes,
-    quote_content: content.field_quote_quote,
+    quote_text: content.field_quote_quote,
     quote_author_name: content.field_quote_citation_name,
     quote_author_title: content.field_quote_citation_title,
+    alignment: content.field_setting_alignment|render,
   } %}
-    {% block media %}
-      {{ content.field_quote_media }}
-    {% endblock %}
   {% endembed %}
 {% endblock %}
 

@@ -10,6 +10,10 @@ group: Page Sections
 props:
   type: object
   properties:
+    label:
+      type: ['string', 'object', 'null']
+      title: Label
+      description: "The label that will be next to the menu items."
     items:
       type: array
       items:
@@ -23,10 +27,6 @@ props:
             type: string
             title: Anchor
             description: "The anchor ID that this menu item links to."
-slots:
-  label:
-    title: Label
-    description: "Label to display next to the tabs."
 libraryOverrides:
   dependencies:
     - radicati_drupal_theme/scroll-spy

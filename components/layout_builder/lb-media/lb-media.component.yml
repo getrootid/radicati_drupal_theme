@@ -1,0 +1,14 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+# This component simply serves as a pass-through for image and video media types.
+# It shouldn't be used in canvas and probably doesn't need any styles associated with it.
+
+name: LB Media
+#replaces: radicati_drupal_theme:lb-media
+noUi: true
+slots:
+  media:
+    title: Media Item
+  caption:
+    title: Caption
+    description: "A caption for the media item, if applicable."

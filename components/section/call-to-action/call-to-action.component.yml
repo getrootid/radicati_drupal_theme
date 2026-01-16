@@ -10,22 +10,32 @@ props:
       type: Drupal\Core\Template\Attribute
       title: Attributes
       description: Wrapper attributes.
-    image:
-      $ref: json-schema-definitions://canvas.module/image
-      type: [ 'object', 'string' ]
-      title: Image
-      description: >
-        Some beautiful background image for the hero section.
-      examples:
-        - src: 'https://picsum.photos/1200/600'
-          alt: 'Some kind of pictograph'
-          width: 1200
-          height: 600
+#    image:
+#      $ref: json-schema-definitions://canvas.module/image
+#      type: [ 'object', 'string' ]
+#      title: Image
+#      description: >
+#        Some beautiful background image for the hero section.
+#      examples:
+#        - src: 'https://picsum.photos/1200/600'
+#          alt: 'Some kind of pictograph'
+#          width: 1200
+#          height: 600
     title:
       type: string
       title: Title
       description: "The Call to Action Title, will be an H2."
       default: "Our Snazzy Page"
+    subtitle:
+      type: string
+      title: Sub-Title
+      description: "A sub-title."
+      default: ""
+    label:
+      type: string
+      title: Label
+      description: "Extra information, something meant to catch the reader's eye."
+      default: ""
     blurb:
       type: ['string', 'object', 'null']
       title: Blurb
@@ -34,19 +44,31 @@ props:
       contentMediaType: text/html
       examples:
         - '<p>Puppies deserve love too!</p>'
-    content_position:
+    alignment:
       type: string
-      title: Content Position
-      description: Position of the content inside this section.
-      enum:
-        - setting--content-layout--center
-        - setting--content-layout--left
-        - setting--content-layout--right
-      meta:enum:
-        setting--content-layout--center: Center
-        setting--content-layout--left: Left
-        setting--content-layout--right: Right
-      default: setting--content-layout--center
+      title: Content Alignment
+      description: This should only be used by Layout Builder.
+    style:
+      type: string
+      title: Style
+      description: >
+        The style of the Call to Action section.
+# Style will need to work really different in LB than in Canvas
+# For now, assume we're in LB and don't use an enum.
+
+#    content_position:
+#      type: string
+#      title: Content Position
+#      description: Position of the content inside this section.
+#      enum:
+#        - setting--alignment--center
+#        - setting--alignment--left
+#        - setting--alignment--right
+#      meta:enum:
+#        setting--alignment--center: Center
+#        setting--alignment--left: Left
+#        setting--alignment--right: Right
+#      default: setting--alignment--center
 slots:
   actions:
     title: Actions

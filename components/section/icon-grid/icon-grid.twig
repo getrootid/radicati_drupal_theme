@@ -2,22 +2,31 @@
   'component',
   'component--section',
   'icon-grid',
-  "icon-grid--items-per-row--" ~ items_per_row|default("3")
+  style ?? '',
+  items_per_row ? items_per_row,
 ] %}
-<section {{ content_attributes.addClass(classes) }}>
-  <div class="icon-grid__inner">
-    {% if block('header') is defined and block('header')|trim is not empty %}
-      <header class="icon-grid__header">
-        {% block header %}{% endblock %}
-      </header>
-    {% endif %}
 
-    <div class="icon-grid__icons">
+{% if content_attributes is not defined %}
+  {% set content_attributes = create_attribute() %}
+{% endif %}
+<section {{ content_attributes.addClass(classes) }}>
+  <div class="icon-grid__inner component--inner">
+    <header class="icon-grid__header">
+      <h2 class="icon-grid__title component--title">{{ title }}</h2>
+
+      <p class="card-collection__sub-title component--sub-title">
+        {{ subtitle }}
+      </p>
+
+      <p class="icon-grid__blurb component--blurb">{{ blurb }}</p>
+    </header>
+
+    <div class="icon-grid__icons slot slot--icons">
       {% block icons %}{% endblock %}
     </div>
 
     {% if block('actions') is defined and block('actions')|trim is not empty %}
-      <div class="icon-grid__actions slot slot--readmore">
+      <div class="icon-grid__actions slot slot--actions">
         {% block actions %}{% endblock %}
       </div>
     {% endif %}

@@ -69,6 +69,15 @@
   --rad--brakpoint--xl: 90rem;
   --rad--breakpoint--xxl: 100rem;
 
+  --rad--com--content--margin--small: 0.25rem;
+  --rad--com--content--margin--medium: 0.5rem;
+  --rad--com--content--margin--large: 1rem;
+
+  --rad--com--section--padding--small: 0.25rem;
+  --rad--com--section--padding--medium: 0.5rem;
+  --rad--com--section--padding--large: 1rem;
+
+
   --rad--off-canvas-background: white;
   --rad--off-canvas-width--default: 90vw;
   --rad--off-canvas-width--sm: 20rem;
@@ -103,6 +112,8 @@
   --rad--content-width-normal: var(--rad--content-width--default);
   --rad--content-width-wide: var(--rad--content-width-wide--default);
   --rad--off-canvas-width: var(--rad--off-canvas-width--default);
+  --rad--com--content--margin: var(--rad--com--content--margin--small);
+  --rad--com--section--padding: var(--rad--com--section--padding--small);
 
   @include media($breakpoint-sm) {
     --rad--content-width-narrow: var(--rad--content-width-narrow--sm);
@@ -115,12 +126,16 @@
     --rad--content-width-narrow: var(--rad--content-width-narrow--md);
     --rad--content-width-normal: var(--rad--content-width--md);
     --rad--content-width-wide: var(--rad--content-width-wide--md);
+    --rad--com--content--margin: var(--rad--com--content--margin--medium);
+    --rad--com--section--padding: var(--rad--com--section--padding--medium);
   }
 
   @include media($breakpoint-lg) {
     --rad--content-width-narrow: var(--rad--content-width-narrow--lg);
     --rad--content-width-normal: var(--rad--content-width--lg);
     --rad--content-width-wide: var(--rad--content-width-wide--lg);
+    --rad--com--content--margin: var(--rad--com--content--margin--large);
+    --rad--com--section--padding: var(--rad--com--section--padding--large);
   }
 
   @include media($breakpoint-xl) {

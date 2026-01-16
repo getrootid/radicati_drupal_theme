@@ -2,22 +2,17 @@
 
 {% block outer_content %}
   {% embed "radicati_drupal_theme:media-carousel" with {
-    content_attributes: content_attributes
+    content_attributes: content_attributes,
+    title: content.field_component_title,
+    display_carousel: true,
+    style: content.field_setting_style|render,
   } %}
-
-    {% block title %}
-      {{ content.field_component_title }}
-    {% endblock %}
-
-    {% block body %}
-      {{ content|without('field_component_title', 'field_media_carousel__items', 'field_component_read_more') }}
-    {% endblock %}
 
     {% block items %}
       {{ content.field_media_carousel__items }}
     {% endblock %}
 
-    {% block readmore %}
+    {% block actions %}
       {{ content.field_component_read_more }}
     {% endblock %}
 

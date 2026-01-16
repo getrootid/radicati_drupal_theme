@@ -2,32 +2,42 @@
   'component',
   'component--section',
   'card-carousel',
+  style ?? ''
 ] %}
-<section {{ content_attributes.addClass([classes]) }}>
-  <div class="card-carousel__title slot slot--section-title">
-    {% block title %}<h2>Card Carousel</h2>{% endblock %}
-  </div>
 
-  {% if block('cards') is defined and block('cards')|trim is not empty %}
-    {% set cards_r = block('cards') %}
+{# if content attributes isn't set, use create_attriburte() #}
+{% if content_attributes is not defined %}
+  {% set content_attributes = create_attribute() %}
+{% endif %}
+<section {{ content_attributes.addClass(classes) }}>
+  <div class="card-carousel__inner component--inner">
+    <h2 class="card-carousel__title component--title">
+      {{ title }}
+    </h2>
 
-    <div class="card-carousel__carousel-wrapper">
-      {% embed "radicati_drupal_theme:carousel" with {
-        title: "Card Carousel",
-        slides_per_page_desktop: 3,
-        slides_per_page_tablet: 2,
-        slides_per_page_default: 2,
-        arrows: true,
-        pagination: true
-      } %}
-        {% block slides %}
-          {{ cards_r|raw }}
-        {% endblock %}
-      {% endembed %}
+    <p class="card-carousel__sub-title component--sub-title">{{ subtitle }}</p>
+
+    {% if block('cards') is defined and block('cards')|trim is not empty %}
+      {% set cards_r = block('cards') %}
+
+      <div class="card-carousel__carousel-wrapper slot slot--cards">
+        {% embed "radicati_drupal_theme:carousel" with {
+          title: "Card Carousel",
+          slides_per_page_desktop: 3,
+          slides_per_page_tablet: 2,
+          slides_per_page_default: 2,
+          arrows: true,
+          pagination: true
+        } %}
+          {% block slides %}
+            {{ cards_r|raw }}
+          {% endblock %}
+        {% endembed %}
+      </div>
+    {% endif %}
+
+    <div class="card-collection__actions slot slot--actions">
+      {% block readmore %}{% endblock %}
     </div>
-  {% endif %}
-
-  <div class="card-collection__actions">
-    {% block readmore %}{% endblock %}
   </div>
 </section>

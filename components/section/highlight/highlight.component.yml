@@ -13,17 +13,17 @@ props:
       type: Drupal\Core\Template\Attribute
       title: Attributes
       description: Wrapper attributes.
-    image:
-      $ref: json-schema-definitions://canvas.module/image
-      type: [ 'object', 'string' ]
-      title: Image
-      description: >
-        Some beautiful background image for the hero section.
-      examples:
-        - src: 'https://picsum.photos/1200/600'
-          alt: 'Some kind of pictograph'
-          width: 1200
-          height: 600
+#    image:
+#      $ref: json-schema-definitions://canvas.module/image
+#      type: [ 'object', 'string' ]
+#      title: Image
+#      description: >
+#        Some beautiful background image for the hero section.
+#      examples:
+#        - src: 'https://picsum.photos/1200/600'
+#          alt: 'Some kind of pictograph'
+#          width: 1200
+#          height: 600
     title:
       type: string
       title: Title
@@ -37,19 +37,21 @@ props:
       contentMediaType: text/html
       examples:
         - '<p>Puppies deserve love too!</p>'
-    media_position:
+    style:
       type: string
-      title: Media Position
-      description: Position of the media relative to the text content.
-      enum:
-        - setting-layout--media-on-left
-        - setting-layout--media-on-right
-        - setting-layout--media-on-top
-      meta:enum:
-        setting-layout--media-on-left: Media on Left
-        setting-layout--media-on-right: Media on Right
-        setting-layout--media-on-top: Media on Top
-      default: setting-layout--media-on-right
+      title: Style
+      description: >
+        The style of the Call to Action section.
+    alignment:
+      type: string
+      title: Content Alignment
+    layout:
+      type: string
+      title: Layout
+      description: >
+        The layout of the Highlight component.
 slots:
+  media:
+    title: Media
   actions:
     title: Actions

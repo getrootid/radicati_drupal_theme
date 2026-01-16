@@ -26,12 +26,14 @@ props:
         - "button button--gray"
         - "button button--dark"
         - "button button--light"
+        - "action-link"
       meta:enum:
         button button--white: White
         button button--black: Black
         button button--gray: Gray
         button button--dark: Dark
         button button--light: Light
+        action-link: Action Link
     new_tab:
       type: boolean
       title: Open in New Tab

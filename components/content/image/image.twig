@@ -1,7 +1,0 @@
-{% set classes = [
-  "media",
-  display_mode ? 'media--' ~ display_mode,
-] %}
-<div {{ content_attributes.addClass(classes) }}>
-  <img src="{{ image.src }}" alt="{{ image.alt }}" class="media__image" />
-</div>

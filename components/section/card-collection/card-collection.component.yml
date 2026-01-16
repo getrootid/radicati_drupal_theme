@@ -13,37 +13,39 @@ props:
     title:
       type: string
       title: Title
-      description: "The Call to Action Title, will be an H2."
-      default: "Section Title"
-    blurb:
-      type: [ 'string', 'object', 'null' ]
-      title: Blurb
-      description: "A short description or tagline for this section."
+      description: "The section title, will be an H2."
+      default: "Our Snazzy Page"
+    subtitle:
+      type: string
+      title: Sub-Title
+      description: "A sub-title."
       default: ""
-      contentMediaType: text/html
-      examples:
-        - '<p>This is a nice collection of items.</p>'
+    style:
+      type: string
+      title: Style
+      description: >
+        The style of the Call to Action section.
     items_per_row:
       type: string
       title: Items Per Row
       examples: [
-        'two',
-        'three',
-        'four'
+        'setting--items-per-row--two',
+        'setting--items-per-row--three',
+        'setting--items-per-row--four'
       ]
       enum: [
-        'two',
-        'three',
-        'four',
-        'five',
-        'six'
+        'setting--items-per-row--two',
+        'setting--items-per-row--three',
+        'setting--items-per-row--four',
+        'setting--items-per-row--five',
+        'setting--items-per-row--six'
       ]
       meta:enum:
-        two: Two
-        three: Three
-        four: Four
-        five: Five
-        six: Six
+        setting--items-per-row--two: Two
+        setting--items-per-row--three: Three
+        setting--items-per-row--four: Four
+        setting--items-per-row--five: Five
+        setting--items-per-row--six: Six
 slots:
   cards:
     title: Cards

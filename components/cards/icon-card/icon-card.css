@@ -1,23 +1,23 @@
 .icon-card {
   margin-bottom: calc(25/16 * 1rem);
   text-align: center;
+}
+
+.icon-card__media {
+  width: calc(125/16 * 1rem);
+  margin: 0 auto calc(15/16 * 1rem) auto;
 
   img {
     width: 100%;
     height: auto;
-    display: block;
-    margin-bottom: calc(12/16 * 1rem);
   }
-
-
 }
 
 .icon-card__title {
   text-transform: uppercase;
+  font-family: sans-serif;
 
   a {
-    color: black;
-    --color--link: black;
     text-decoration: none;
     font-size: calc(19/16 * 1rem);
   }

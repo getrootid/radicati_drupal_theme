@@ -4,25 +4,25 @@
   grid-template-columns: 1fr 1fr;
 }
 
-.icon-grid--items-per-row--three {
+.icon-grid.setting--items-per-row--three {
   .icon-grid__icons {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
-.icon-grid--items-per-row--four {
+.icon-grid.setting--items-per-row--four {
   .icon-grid__icons {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
-.icon-grid--items-per-row--five {
+.icon-grid.setting--items-per-row--five {
   .icon-grid__icons {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
 }
 
-.icon-grid--items-per-row--six {
+.icon-grid.setting--items-per-row--six {
   .icon-grid__icons {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }

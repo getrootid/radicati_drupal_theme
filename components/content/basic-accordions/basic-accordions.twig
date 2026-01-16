@@ -1,4 +1,13 @@
-<div {{ content_attributes.addClass('basic-accordions') }}>
+{% set classes = [
+    'component',
+    'component--content',
+    'basic-accordions',
+] %}
+{# if content attributes isn't set, use create_attriburte() #}
+{% if content_attributes is not defined %}
+    {% set content_attributes = create_attribute() %}
+{% endif %}
+<div {{ content_attributes.addClass(classes) }}>
 
   {% if block('accordions') is defined and block('accordions')|trim is not empty %}
     {% set accordions_r = block('accordions') %}

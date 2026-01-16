@@ -15,6 +15,7 @@
     height: 100%;
     content: "";
     background: var(--color--background--overlay, rgba(0, 0, 0, 0.3));
+    opacity: var( --color--background--overlay--opacity, 0.5);
     pointer-events: none;
   }
 

@@ -23,17 +23,21 @@ props:
       contentMediaType: text/html
       examples:
         - '<p>Puppies deserve love too!</p>'
-    background_image:
-      $ref: json-schema-definitions://canvas.module/image
-      type: ['object', 'string']
-      title: Image
-      description: >
-        Some beautiful background image for the hero section.
-      examples:
-        - src: 'https://picsum.photos/1200/600'
-          alt: 'Some kind of pictograph'
-          width: 1200
-          height: 600
+#    background_image:
+#      $ref: json-schema-definitions://canvas.module/image
+#      type: ['object', 'string']
+#      title: Image
+#      description: >
+#        Some beautiful background image for the hero section.
+#      examples:
+#        - src: 'https://picsum.photos/1200/600'
+#          alt: 'Some kind of pictograph'
+#          width: 1200
+#          height: 600
 slots:
+  media:
+    title: Media
+    description: >
+      A media slot for an image, video, or other media element to be displayed in the hero section.
   actions:
     title: Actions

@@ -1,4 +1,11 @@
-<div {{ content_attributes.addClass('media-card') }}>
+{% set classes = [
+  'card',
+  'media-card',
+] %}
+{% if content_attributes is not defined %}
+  {% set content_attributes = create_attribute() %}
+{% endif %}
+<div {{ content_attributes.addClass(classes) }}>
   <div class="media-card__media">
     {% block media %}{% endblock %}
   </div>

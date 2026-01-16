@@ -3,6 +3,10 @@
   'component--section',
   'people-listing',
 ] %}
+
+{% if content_attributes is not defined %}
+  {% set content_attributes = create_attribute() %}
+{% endif %}
 <section {{ content_attributes.addClass(classes) }}>
   {% if block('header') is defined and block('header')|trim is not empty %}
     <div class="people-listing__header">

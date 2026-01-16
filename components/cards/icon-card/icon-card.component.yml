@@ -6,6 +6,19 @@ group: Cards
 props:
   type: object
   properties:
+    title:
+      type: string
+      title: Title
+      description: "The title of the card, will display as an h2."
+      default: "Our Snazzy Page"
+    blurb:
+      type: ['string', 'object', 'null']
+      title: Blurb
+      description: "A short description or tagline for the hero section."
+      default: "Welcome to our awesome website where we do amazing things."
+      contentMediaType: text/html
+      examples:
+        - '<p>Puppies deserve love too!</p>'
     link:
       type: string
       title: Link
@@ -30,7 +43,3 @@ props:
 slots:
   media:
     title: Media
-  title:
-    title: Title
-  body:
-    title: Body

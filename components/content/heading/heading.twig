@@ -1,3 +1,14 @@
-<{{ heading_level|default("h2") }} {{ content_attributes.addClass('heading') }}>
+{% set classes = [
+  'component',
+  'component--content',
+  'heading',
+  alignment,
+  size
+] %}
+{# if content attributes isn't set, use create_attriburte() #}
+{% if content_attributes is not defined %}
+  {% set content_attributes = create_attribute() %}
+{% endif %}
+<{{ heading_level|default("h2") }} {{ content_attributes.addClass(classes) }}>
   {{ heading_text }}
 </{{ heading_level|default("h2") }}>

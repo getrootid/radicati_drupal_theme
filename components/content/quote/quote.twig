@@ -1,12 +1,27 @@
+{% set classes = [
+  'component',
+  'component--content',
+  'inline-quote',
+  alignment,
+] %}
+{# if content attributes isn't set, use create_attriburte() #}
 {% if content_attributes is not defined %}
   {% set content_attributes = create_attribute() %}
 {% endif %}
-<blockquote {{ content_attributes.addClass('content-quote') }}>
+<blockquote {{ content_attributes.addClass(classes) }}>
   {{ quote_text }}
 
-  {% if quote_byline %}
-    <footer class="content-quote__footer">
-      {{ quote_byline }}
+  {% if quote_author_title or quote_author_name %}
+    <footer class="inline-quote__footer">
+      <div class="inline-quote__author-name">
+        {{ quote_author_name }}
+      </div>
+
+      {% if quote_author_title %}
+        <div class="inline-quote__author-title">
+          {{ quote_author_title }}
+        </div>
+      {% endif %}
     </footer>
   {% endif %}
 </blockquote>

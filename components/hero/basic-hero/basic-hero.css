@@ -2,6 +2,8 @@
   position: relative;
   width: 100%;
   height: calc(350/16 * 1rem);
+
+  --color--background--overlay: #e1e1e1aa
 }
 
 .basic-hero__content {
@@ -51,4 +53,17 @@
   @media (min-width: calc(992/16 * 1rem)) {
     bottom: calc(50/16 * 1rem);
   }
+}
+
+.basic-hero__content {
+  background-color: black;
+  padding: 1rem;
+}
+
+h1.basic-hero__title {
+  color: white;
+  font-family: sans-serif;
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin: 0;
 }

@@ -10,17 +10,17 @@ props:
       type: Drupal\Core\Template\Attribute
       title: Attributes
       description: Wrapper attributes.
-    image:
-      $ref: json-schema-definitions://canvas.module/image
-      type: [ 'object', 'string' ]
-      title: Image
-      description: >
-        Some beautiful image for the card.
-      examples:
-        - src: 'https://picsum.photos/1200/600'
-          alt: 'Some kind of pictograph'
-          width: 1200
-          height: 600
+#    image:
+#      $ref: json-schema-definitions://canvas.module/image
+#      type: [ 'object', 'string' ]
+#      title: Image
+#      description: >
+#        Some beautiful image for the card.
+#      examples:
+#        - src: 'https://picsum.photos/1200/600'
+#          alt: 'Some kind of pictograph'
+#          width: 1200
+#          height: 600
     title:
       type: string
       title: Title
@@ -40,6 +40,9 @@ props:
       examples:
         - '<p>Puppies deserve love too!</p>'
 slots:
+  media:
+    title: Media
+    description: The media (image or video) for the card.
   actions:
     title: Actions
     description: The action buttons or links for the card.

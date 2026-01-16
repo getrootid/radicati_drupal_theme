@@ -24,3 +24,13 @@ props:
       type: string
       examples:
         - 'This is Heading Text'
+    size:
+      title: Size
+      type: string
+      default: "setting--size--small"
+      enum: [
+          "setting--size--small",
+          "setting--size--medium",
+          "setting--size--large",
+          "setting--size--extra-large"
+      ]

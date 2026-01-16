@@ -3,9 +3,14 @@
   'component--section',
   'accordions-section'
 ] %}
+
+{# if content attributes isn't set, use create_attriburte() #}
+{% if content_attributes is not defined %}
+  {% set content_attributes = create_attribute() %}
+{% endif %}
 <section {{ content_attributes.addClass(classes) }}>
-  <div class="accordions-section__title">
-    {% block title %}<h2>Accordions Section</h2>{% endblock %}
+  <div class="accordions-section__title component--title">
+    <h2>{{ title }}</h2>
   </div>
 
   {% if block('accordions') is defined and block('accordions')|trim is not empty %}
@@ -22,7 +27,7 @@
     </div>
   {% endif %}
 
-  <div>
+  <div class="component--read-more">
     {% block readmore %}{% endblock %}
   </div>
 </section>

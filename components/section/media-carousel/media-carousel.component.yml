@@ -13,12 +13,18 @@ props:
       type: Drupal\Core\Template\Attribute
       title: Attributes
       description: Wrapper attributes.
+    title:
+      type: string
+      title: Title
+      description: "The Call to Action Title, will be an H2."
+      default: "Section Title"
+    display_carousel:
+      type: boolean
+      title: Display Carousel
+      description: "Whether to display the media items in a carousel or as a grid."
+      default: true
 slots:
-  title:
-    title: Title
-  body:
-    title: Content
   items:
     title: Media Items
-  readmore:
-    title: Read More Link
+  actions:
+    title: Actions

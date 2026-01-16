@@ -1,7 +1,6 @@
 
 .media-carousel {
-  max-width: 90vw;
-  margin: 0 auto;
+
 }
 
 .media-carousel__carousel-wrapper {
@@ -13,5 +12,21 @@
 
   @media (min-width: calc(992/16 * 1rem)) {
     max-width: calc(900/16 * 1rem);
+  }
+}
+
+/* This is for the editing interface, to make it easy to add/arrange multiple items. */
+
+.media-carousel__carousel-wrapper .drop-zone {
+  padding: 0.5rem;
+  background: #fafaff;
+  display: flex;
+  flex-direction: row;
+
+  > * {
+    margin: 0.5rem;
+    border: 1px solid black;
+    padding: 1rem;
+    max-width: 150px;
   }
 }

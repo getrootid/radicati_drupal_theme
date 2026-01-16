@@ -3,11 +3,14 @@
 {% block content %}
   {% embed "radicati_drupal_theme:collection-card" with {
     content_attributes: content_attributes,
-    image: paragraph.field_card_media.isEmpty() ? null : content.field_card_media|render,
     title: content.field_card_title.0,
     tag: paragraph.field_card_tag.isEmpty() ? null : content.field_card_tag.0,
     blurb: content.field_card_blurb.0
   } %}
+    {% block media %}
+      {{ content.field_card_media }}
+    {% endblock %}
+
     {% block actions %}
       {{ content.field_card_link }}
     {% endblock %}

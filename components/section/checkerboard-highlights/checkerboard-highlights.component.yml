@@ -11,6 +11,11 @@ props:
       title: Attributes
       description: Wrapper attributes.
       default: {}
+    style:
+      type: string
+      title: Style
+      description: >
+        The style of the Call to Action section.
 slots:
   items:
     title: Items

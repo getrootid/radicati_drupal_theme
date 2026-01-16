@@ -7,29 +7,46 @@ group: Page Sections
 props:
   type: object
   properties:
+    title:
+      type: string
+      title: Title
+      description: "Is both the title displayed and the page's main title for accessibility."
+      default: "Our Snazzy Page"
+    blurb:
+      type: ['string', 'object', 'null']
+      title: Blurb
+      description: "A short description or tagline for the hero section."
+      default: ""
+      contentMediaType: text/html
+      examples:
+        - '<p>Puppies deserve love too!</p>'
     style:
       type: string
-      title: Color
-      examples: [
-        'purple',
-        'blue',
-        'green'
-      ]
-      description: "Named style to use, generally using the background color as a reference."
-      enum: ['purple', 'blue', 'green']
+      title: Style
+      description: >
+        The style of the Call to Action section.
     items_per_row:
       type: string
       title: Items Per Row
       examples: [
-        'three',
-        'four',
-        'five'
+        'setting--items-per-row--two',
+        'setting--items-per-row--three',
+        'setting--items-per-row--four'
       ]
-      description: "Number of items to show per row."
-      enum: ["one", "two", "three", "four", "five", "six"]
+      enum: [
+        'setting--items-per-row--two',
+        'setting--items-per-row--three',
+        'setting--items-per-row--four',
+        'setting--items-per-row--five',
+        'setting--items-per-row--six'
+      ]
+      meta:enum:
+        setting--items-per-row--two: Two
+        setting--items-per-row--three: Three
+        setting--items-per-row--four: Four
+        setting--items-per-row--five: Five
+        setting--items-per-row--six: Six
 slots:
-  header:
-    title: Header
   icons:
     title: Content
   actions:

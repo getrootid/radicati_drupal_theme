@@ -5,8 +5,11 @@
     content_attributes: content_attributes,
     title: content.field_component_title.0,
     blurb: content.field_component_blurb.0,
-    background_image: content.field_component_background_media.0|render
   } %}
+
+    {% block media %}
+      {{ content.field_component_background_media }}
+    {% endblock %}
 
     {% block actions %}
       {{ content.field_component_read_more }}

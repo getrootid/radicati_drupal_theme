@@ -2,12 +2,11 @@
 
 {% block outer_content %}
   {% embed "radicati_drupal_theme:card-carousel" with {
-    content_attributes: content_attributes
+    content_attributes: content_attributes,
+    style: content.field_setting_style|render,
+    title: content.field_component_title.0,
+    subtitle: content.field_component_sub_title.0
   } %}
-    {% block title %}
-      {{ content|without('field_carousel_cards', 'field_component_read_more') }}
-    {% endblock %}
-
     {% block cards %}
       {{ content.field_carousel_cards }}
     {% endblock %}

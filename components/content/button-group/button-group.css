@@ -11,21 +11,27 @@
   }
 }
 
-.buttons--alignment--left {
-  text-align: left;
-  justify-content: flex-start;
-}
+.buttons {
+  &.setting--alignment--left {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 
-.buttons--alignment--center {
-  text-align: center;
-  justify-content: center;
-}
+  &.setting--alignment--center {
+    justify-content: center;
+    align-items: center;
+  }
 
-.buttons--alignment--right {
-  text-align: right;
-  justify-content: flex-end;
-}
+  &.setting--alignment--right {
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
 
-.buttons--direction--vertical {
-  flex-direction: column;
+  &.setting--direction--vertical {
+    flex-direction: column;
+  }
+
+  &.setting--direction--horizontal {
+    flex-direction: row;
+  }
 }
