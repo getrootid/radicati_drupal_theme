@@ -1,0 +1,6 @@
+{% if image %}
+  {% include 'canvas:image' with image|merge({
+    sizes: '(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw',
+    loading: 'lazy',
+  }) only %}
+{% endif %}

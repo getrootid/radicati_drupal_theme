@@ -1,0 +1,15 @@
+{% extends "node.html.twig" %}
+
+{% block default_title %}{% endblock %}
+
+{% block content %}
+  <div{{ content_attributes.addClass('card-horizontal') }}>
+    <div class="card-horizontal__image">
+      {{ content.field_featured_image }}
+    </div>
+
+    <div class="card-horizontal__content">
+      {{ content|without('field_featured_image') }}
+    </div>
+  </div>
+{% endblock %}

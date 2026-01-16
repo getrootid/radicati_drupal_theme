@@ -1,0 +1,67 @@
+.setting--style--dark {
+  --event--type--color: black;
+  --event--type--background: #eeeeee;
+}
+.setting--style--light {
+  --event--type--color: white;
+  --event--type--background: #303030;
+}
+
+.event-card {
+  position: relative;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.event-card__media {
+  width: 100%;
+  height: calc(235/16 * 1rem);
+
+  img {
+    width: 100%;
+    height: calc(235/16 * 1rem);
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.event-card__content {
+  padding: 0.5rem 1rem;
+}
+
+.event-card__date {
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0.5rem;
+  font-family: Helvetia, sans-serif;
+  background-color: var(--color--background);
+  transform: translateY(-50%);
+}
+
+.event-card__date-month {
+  font-weight: bold;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.event-card__date-day {
+  color: var(--color--text--highlight);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.event-card__type {
+  float: right;
+  display: inline-flex;
+  color: var(--event--type--color);
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: var(--event--type--background);
+  border-radius: 5px;
+}

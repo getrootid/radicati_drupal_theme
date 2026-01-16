@@ -8,15 +8,11 @@
     style: content.field_setting_style|render,
     items_per_row: content.field_setting_items_per_row|render
   } %}
-    {% block header %}
-      {{ content|without('field_setting_items_per_row', 'field_cards_cards', 'field_component_read_more') }}
-    {% endblock %}
-
     {% block cards %}
       {{ content.field_cards_cards }}
     {% endblock %}
 
-    {% block readmore %}
+    {% block actions %}
       {{ content.field_component_read_more }}
     {% endblock %}
 

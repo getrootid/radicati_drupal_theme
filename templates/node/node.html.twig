@@ -77,33 +77,34 @@
   view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
 ]
 %}
-{{ attach_library('claro/classy.node') }}
-<article{{ attributes.addClass(classes) }}>
+{% block content_wrapper %}
+  <article{{ attributes.addClass(classes) }}>
 
-  {{ title_prefix }}
-  {% block default_title %}
-    {% if label and not page %}
-      <h2{{ title_attributes }}>
-        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-      </h2>
+    {{ title_prefix }}
+    {% block default_title %}
+      {% if label and not page %}
+        <h2{{ title_attributes }}>
+          <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+        </h2>
+      {% endif %}
+    {% endblock %}
+    {{ title_suffix }}
+
+    {% if display_submitted %}
+      <footer class="node__meta">
+        {{ author_picture }}
+        <div{{ author_attributes.addClass('node__submitted') }}>
+          {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+          {{ metadata }}
+        </div>
+      </footer>
     {% endif %}
-  {% endblock %}
-  {{ title_suffix }}
 
-  {% if display_submitted %}
-    <footer class="node__meta">
-      {{ author_picture }}
-      <div{{ author_attributes.addClass('node__submitted') }}>
-        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-        {{ metadata }}
+    {% block content %}
+      <div{{ content_attributes.addClass('node__content') }}>
+        {{ content }}
       </div>
-    </footer>
-  {% endif %}
+    {% endblock %}
 
-  {% block content %}
-    <div{{ content_attributes.addClass('node__content') }}>
-      {{ content }}
-    </div>
-  {% endblock %}
-
-</article>
+  </article>
+{% endblock %}

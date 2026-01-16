@@ -7,38 +7,44 @@ props:
   type: object
   properties:
     title:
-      type: string
+      type: ['string', 'object', 'null']
       title: Title
       description: "The title of the card, will display as an h2."
       default: "Our Snazzy Page"
-    blurb:
+    url:
       type: ['string', 'object', 'null']
-      title: Blurb
-      description: "A short description or tagline for the hero section."
-      default: "Welcome to our awesome website where we do amazing things."
-      contentMediaType: text/html
-      examples:
-        - '<p>Puppies deserve love too!</p>'
-    link:
-      type: string
       title: Link
       examples: [
         '/',
         "https://www.google.com",
         '/about-us'
       ]
-    link_target:
-      type: string
-      title: Link
-      enum: [
-        '',
-        "_blank",
-        '_self'
-      ]
+    blurb:
+      type: ['string', 'object', 'null']
+      title: Blurb
+    date:
+      type: [ 'string', 'object', 'null' ]
+      title: Date
       examples: [
-        '',
-        "_blank",
-        '_self'
+        '1978-07-25',
+        '2016-01-21',
+        '1980-07-17'
+      ]
+    time:
+      type: [ 'string', 'object', 'null' ]
+      title: Time
+      examples: [
+        '7:00 PM UTC',
+        '10:30 AM PST',
+        '1:00 PM'
+      ]
+    type:
+      type: [ 'string', 'object', 'null' ]
+      title: Type
+      examples: [
+        'Online',
+        'Workshop',
+        'Conference'
       ]
 slots:
   media:

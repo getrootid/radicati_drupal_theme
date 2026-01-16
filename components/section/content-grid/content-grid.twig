@@ -2,21 +2,31 @@
   'component',
   'component--section',
   'content-grid',
+  items_per_row ? items_per_row,
+  style ?? ''
 ] %}
 
 {% if content_attributes is not defined %}
   {% set content_attributes = create_attribute() %}
 {% endif %}
 <section {{ content_attributes.addClass(classes) }}>
-  <div class="slot slot--section-title content-grid__title">
-    {% block title %}Default Title 2{% endblock %}
-  </div>
+  <div class="content-grid__inner component--inner">
+    <h2 class="content-grid__title component--title">
+      {{ title }}
+    </h2>
 
-  <div class="slot slot--body content-grid__content">
-    {% block body %}Default Content 2{% endblock %}
-  </div>
+    {% if subtitle %}
+      <p class="content-grid__sub-title component--sub-title">
+        {{ subtitle }}
+      </p>
+    {% endif %}
 
-  <div class="slot slot--readmore content-grid__readmore component--read-more">
-    {% block readmore %}Default Read More 2{% endblock %}
+    <div class="slot slot--cards content-grid__cards component--cards">
+      {% block cards %}Default Content 2{% endblock %}
+    </div>
+
+    <div class="slot slot--actions content-grid__actions">
+      {% block actions %}Default Read More 2{% endblock %}
+    </div>
   </div>
 </section>

@@ -10,7 +10,46 @@ group: Page Sections
 props:
   type: object
   additionalProperties: false
-  properties: {}
+  properties:
+    title:
+      type: string
+      title: Title
+      description: "The title of the content grid section."
+      default: "Explore Our Content"
+    subtitle:
+      type: string
+      title: Subtitle
+      description: "The subtitle of the content grid section."
+      default: "Discover articles, news, and updates"
+    style:
+      type: string
+      title: Style
+      description: >
+        The style of the Call to Action section.
+      items_per_row:
+        type: string
+        title: Items Per Row
+        examples: [
+          'setting--items-per-row--two',
+          'setting--items-per-row--three',
+          'setting--items-per-row--four'
+        ]
+        enum: [
+          'setting--items-per-row--two',
+          'setting--items-per-row--three',
+          'setting--items-per-row--four',
+          'setting--items-per-row--five',
+          'setting--items-per-row--six'
+        ]
+        meta:enum:
+          setting--items-per-row--two: Two
+          setting--items-per-row--three: Three
+          setting--items-per-row--four: Four
+          setting--items-per-row--five: Five
+          setting--items-per-row--six: Six
 slots:
-  body:
-    title: Content
+  cards:
+    title: Cards
+    description: The cards to be displayed in this collection.
+  actions:
+    title: Actions

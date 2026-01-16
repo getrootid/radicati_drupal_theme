@@ -2,18 +2,18 @@
 
 {% block outer_content %}
   {% embed "radicati_drupal_theme:content-grid" with {
-    content_attributes: content_attributes
+    content_attributes: content_attributes,
+    title: content.field_component_title,
+    subtitle: content.field_component_sub_title,
+    style: content.field_setting_style|render,
+    items_per_row: content.field_setting_items_per_row|render
   } %}
-    {% block title %}
-      {{ content.field_component_title }}
+    {% block cards %}
+      {{ content.field_content_grid_items }}
     {% endblock %}
 
-    {% block body %}
-      {{ content|without('field_component_title', 'field_component_readmore') }}
-    {% endblock %}
-
-    {% block readmore %}
-      {{ content.field_component_readmore }}
+    {% block actions %}
+      {{ content.field_component_read_more }}
     {% endblock %}
   {% endembed %}
 {% endblock %}

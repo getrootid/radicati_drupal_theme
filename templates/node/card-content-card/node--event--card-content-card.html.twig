@@ -1,0 +1,18 @@
+{% extends "node.html.twig" %}
+
+
+{% block content_wrapper %}
+  {% embed "radicati_drupal_theme:event-card" with {
+    title: content.title,
+    blurb: content.field_summary,
+    date: node.field_event_date.0.value|date("Y-m-d g:i A T"),
+    time: node.field_event_date.0.value|date("g:i A T"),
+    type: content.field_event__tax_type,
+    url: url,
+  } %}
+
+    {% block media %}
+      {{ content.field_featured_image }}
+    {% endblock %}
+  {% endembed %}
+{% endblock %}

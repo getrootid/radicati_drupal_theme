@@ -1,5 +1,6 @@
 .setting--style--light {
   --color--text: black;
+  --color--text--highlight: #ee2323;
   --color--link: #333333;
   --color--background: white;
   --color--background--overlay: #e1e1e1;

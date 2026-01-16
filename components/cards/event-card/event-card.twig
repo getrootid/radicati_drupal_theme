@@ -1,1 +1,31 @@
-happy now?
+<article class="event-card card card--whole-card-link">
+  <div class="event-card__inner card--inner">
+    <div class="event-card__media slot slot--media">
+
+      {% if block('media') is defined and block('media')|trim is not empty %}
+        {{ block('media') }}
+      {% else %}
+        <img src="./assets/default.webp" alt="Nirvana Event Flyer (default value)" />
+      {% endif %}
+    </div>
+
+    <div class="event-card__content card--content">
+      <time class="event-card__date" datetime="{{ date|date("Y-m-d g:i A T") }}">
+        <abbr class="event-card__date-month" title="{{ date|date("F") }}">{{ date|date("M") }}</abbr>
+        <span class="event-card__date-day">{{ date|date("d") }}</span>
+      </time>
+
+      <div class="event-card__type">{{ type }}</div>
+
+      <h3 class="event-card__title card--title">
+        <a href="{{ url }}">{{ title }}</a>
+      </h3>
+
+      <p class="event-card__summary card--summary">
+        {{ blurb }}
+      </p>
+
+      <p class="event-card__time">{{ time }}</p>
+    </div>
+  </div>
+</article>
