@@ -27,7 +27,7 @@ props:
       description: "The Call to Action Title, will be an H3."
       default: "Our Snazzy Page"
     tag:
-      type: string
+      type: [ 'object', 'string', 'null' ]
       title: Tag
       description: "A small tag or label for the card."
       default: "Category"

@@ -16,3 +16,5 @@ gulpfile.local.json
 #############
 **/dist/css/maps
 **/*.css.map
+
+package-lock.json
