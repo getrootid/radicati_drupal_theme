@@ -1,39 +1,21 @@
 
 header.header-two-row {
   position: relative;
-  background: var(--color--gray--three);
   z-index: 10;
-
-  color: var(--color--gray--one);
-  a, button {
-    color: var(--color--gray--one);
-  }
 }
 
-.header-two-row__inner {
-  display: grid;
-  margin: 0 auto;
-  max-width: var(--rad--content-width-normal);
-
-
-  grid-template-areas:
-    "branding";
+.header-two-row__row {
 
   @media (min-width: calc(576/16 * 1rem)) {
 
   }
 
   @media (min-width: calc(768/16 * 1rem)) {
-    grid-template-areas:
-      "branding"
-      "secondarynav"
-      "primarynav";
+
   }
 
   @media (min-width: calc(992/16 * 1rem)) {
-    grid-template-areas:
-      "branding  secondarynav"
-      "branding  primarynav";
+
   }
 
   @media (min-width: calc(1200/16 * 1rem)) {
@@ -42,20 +24,120 @@ header.header-two-row {
 
 }
 
+.header-two-row__row-inner {
+  margin: 0 auto;
+  max-width: var(--rad--content-width-normal);
+}
+
+/** The header rows **/
+.header-two-row__top-row {
+
+
+  .header-two-row__row-inner {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.header-two-row__bottom-row  {
+
+  background: var(--color--heritage-navy);
+
+  .header-two-row__row-inner {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
+
+
+
+
 .header-two-row__branding-wrapper {
-  grid-area: branding;
 }
 
 .header-two-row__primary-nav-wrapper {
-  grid-area: primarynav;
+  margin-left: auto;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-.header-two-row__secondary-nav-wrapper {
-  grid-area: secondarynav;
-}
 
-.primary_navigation {
+.region--primary-navigation {
   display: flex;
   justify-content: flex-end;
   flex-direction: row;
+
+  /**
+      The primary nav is normally done with the Superfish module.
+   */
+  ul.sf-menu {
+    margin-right: calc(15/16 * -1rem);
+
+    li.sf-depth-1 {
+      a {
+        font-weight: 600;
+        text-transform: uppercase;
+        padding: calc(10 / 16 * 1rem) calc(15 / 16 * 1rem);
+        display: block;
+        font-family: "Lucida Grande", Verdana, sans-serif;
+        font-size: calc(24/16 * 1rem);
+        background: transparent;
+        color: white;
+        text-decoration: none;
+
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+
+        &:hover, &:focus {
+          text-decoration: underline;
+          text-decoration-color: var(--color--heritage-gold);
+          text-decoration-thickness: 3px;
+          text-underline-offset: 0.45rem;
+          outline: none;
+        }
+      }
+    }
+
+    li.sf-depth-2 {
+      a {
+        font-weight: 400;
+        text-transform: none;
+        padding: calc(8 / 16 * 1rem) calc(12 / 16 * 1rem);
+        display: block;
+      }
+    }
+  }
+}
+
+/**
+Secondary Navigation styles
+ */
+
+.header-two-row__row-inner {
+
+  .navigation {
+
+    ul.menu--level-1 {
+      margin: 0;
+      padding: 1.5rem 0;
+      list-style: none;
+      display: flex;
+      gap: calc(20 / 16 * 1rem);
+      flex-direction: row;
+
+      li {
+
+      }
+
+      a {
+        color: var(--color--academic-gold);
+        font-family: "Lucida Grande", Verdana, sans-serif;
+        font-size: calc(14/16 * 1rem);
+        font-weight: 600;
+        text-decoration: none;
+      }
+    }
+  }
 }

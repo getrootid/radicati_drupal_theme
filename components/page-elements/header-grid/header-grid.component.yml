@@ -1,0 +1,27 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json'
+
+name: "Header: Grid"
+# replaces: radicati_drupal_theme:header_grid
+status: stable
+group: Page Elements
+noUi: true
+props:
+  type: object
+  properties:
+    is_sticky:
+      type: boolean
+      title: Sticky Header
+      description: Enable to make the header stick to the top of the page when scrolling.
+      default: false
+slots:
+  branding:
+    title: Branding
+    description: Area for logo or site name.
+  secondary_nav:
+    title: Secondary Navigation
+    description: Area for secondary navigation menu.
+  primary_nav:
+    title: Primary Navigation
+    description: Area for primary navigation menu.
+  search_dropdown:
+    title: Search Dropdown

@@ -1,15 +1,22 @@
 <header class="header-two-row" id="site-header">
-  <div class="header-two-row__inner">
-    <div class="header-two-row__branding-wrapper">
-      {% block branding %}test{% endblock %}
+  <div class="header-two-row__row header-two-row__top-row">
+    <div class="header-two-row__row-inner">
+      <div class="header-two-row__secondary-nav-wrapper">
+        {% block secondary_nav %}test{% endblock %}
+      </div>
     </div>
 
-    <div class="header-two-row__primary-nav-wrapper">
-      {% block primary_nav %}test{% endblock %}
-    </div>
+  </div>
 
-    <div class="header-two-row__secondary-nav-wrapper">
-      {% block secondary_nav %}test{% endblock %}
+  <div class="header-two-row__row header-two-row__bottom-row">
+    <div class="header-two-row__row-inner">
+      <div class="header-two-row__branding-wrapper">
+        {% block branding %}test{% endblock %}
+      </div>
+
+      <div class="header-two-row__primary-nav-wrapper">
+        {% block primary_nav %}test{% endblock %}
+      </div>
     </div>
   </div>
 
