@@ -7,16 +7,16 @@ props:
   type: object
   properties:
     button_text:
-      type: string
+      type: ['string', 'null']
       title: Button Text
 #    TODO: Verify this works. when I first tested it didn't, but that might just be canvas issues.
     url:
-      type: string
+      type: ['string', 'null']
       title: Url
       description: The button url, can be either internal or external. Internal links should look like /about-us
       format: uri
     button_style:
-      type: string
+      type: ['string', 'null']
       title: Button Style
       default: "button button--black"
       #$ref: theme:/radicati_drupal_theme/schema-definitions.json#$defs/buttonStyles

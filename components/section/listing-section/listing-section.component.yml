@@ -1,0 +1,55 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+name: Listing Section
+#replaces: radicati_drupal_theme:listing-section
+group: Page Sections
+noUi: true
+props:
+  type: object
+  properties:
+    content_attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper attributes.
+    title:
+      type: string
+      title: Title
+      description: "The section title, will be an H2."
+      default: "Our Content Listing"
+    subtitle:
+      type: string
+      title: Sub-Title
+      description: "A sub-title."
+      default: ""
+    style:
+      type: string
+      title: Style
+      description: >
+        The style of the Call to Action section.
+    items_per_row:
+      type: string
+      title: Items Per Row
+      examples: [
+        'setting--items-per-row--two',
+        'setting--items-per-row--three',
+        'setting--items-per-row--four'
+      ]
+      enum: [
+        'setting--items-per-row--two',
+        'setting--items-per-row--three',
+        'setting--items-per-row--four',
+        'setting--items-per-row--five',
+        'setting--items-per-row--six'
+      ]
+      meta:enum:
+        setting--items-per-row--two: Two
+        setting--items-per-row--three: Three
+        setting--items-per-row--four: Four
+        setting--items-per-row--five: Five
+        setting--items-per-row--six: Six
+slots:
+  listing_view:
+    title: Listing View
+    description: The listing View that contains the content.
+  actions:
+    title: Actions
