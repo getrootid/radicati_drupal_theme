@@ -1,10 +1,7 @@
 '$schema': 'https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json'
 
-# This will likely need updating since keeping it as working
-# in both EX and LB might be tricky/impossible.
-
 name: Large Footer
-# replaces: radicati_drupal_theme:footer_large
+# replaces: radicati_drupal_theme:footer-large
 status: stable
 group: Page Elements
 noUi: true

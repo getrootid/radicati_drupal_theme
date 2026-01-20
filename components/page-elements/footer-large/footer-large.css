@@ -1,21 +1,139 @@
 footer.footer-large {
   background: black;
-  padding-top: calc(20/16 * 1rem);
+  padding-top: calc(55/16 * 1rem);
   color: var(--color--gray--five);
   position: relative;
   z-index: 10;
 }
 
-.footer__inner {
-  max-width: var(--rad--content-width-normal);
+.footer-large__top__inner {
+  display: flex;
+  flex-direction: column;
+  max-width: var(--rad--content-width-wide);
   margin: 0 auto;
+
+  @media (min-width: calc(768/16 * 1rem)) {
+    flex-direction: row;
+    gap: calc(25/16 * 1rem);
+  }
 }
 
-.footer__copyright-wrapper {
-  max-width: var(--rad--content-width-normal);
+/**
+    Basic blocks will normally have p tags inside them. Make sure the first one has no margin.
+ */
+.footer-large__top__column {
+
+  p:first-child {
+    margin-top: 0;
+  }
+}
+
+
+/*
+  Footer Columns
+*/
+.footer-large__top__column--1 {
+  flex: 0 0 calc(300/16 * 1rem);
+  margin-bottom: calc(20/16 * 1rem);
+}
+
+.footer-large__top__column--2 {
+  flex: 1 1 auto;
+  margin-top: calc(20 / 16 * 1rem);
+
+  @media (min-width: calc(768/16 * 1rem)) {
+    margin-top: 0;
+  }
+}
+
+.footer-large__top__column--3 {
+  flex: 0 0 calc(220 / 16 * 1rem);
+  margin-top: calc(20 / 16 * 1rem);
+  margin-left: auto;
+  font-size: calc(18/16 * 1rem);
+
+  @media (min-width: calc(768/16 * 1rem)) {
+    margin-top: 0;
+  }
+}
+
+
+.footer-large__copyright {
+  background-color: white;
+  color: black;
+}
+
+.footer-large__copyright-inner {
+  max-width: var(--rad--content-width-wide);
   margin: 0 auto;
-  padding: calc(15/16 * 1rem) 0 calc(20/16 * 1rem) 0;
+  padding: calc(10/16 * 1rem) calc(10/16 * 1rem);
 
   font-size: calc(14/16 * 1rem);
-  text-align: center;
+  text-align: left;
+
+  /** Hide contextual menu, at the bottom of the page it messes with the design **/
+  [data-contextual-id] {
+    display: none;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+
+/**
+    Generic Footer Menu Styles
+ */
+footer.footer-large nav.block-menu {
+  ul.menu--level-1 {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    /*
+    Top level menu items.
+     */
+
+    li.menu__item--level-1 {
+      margin: 0 calc(40/16 * 1rem) calc(40/16 * 1rem) 0;
+    }
+
+    a.menu__link--level-1 {
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: calc(18/16 * 1rem);
+      font-family: "Lucida Grande", Verdana, sans-serif;
+      margin-bottom: calc(15/16 * 1rem);
+    }
+  }
+
+  /**
+      Footer Menu - Second Level
+   */
+  ul.menu--level-2 {
+    list-style: none;
+    margin: calc(10 / 16 * 1rem) 0 0 0;
+    padding: 0;
+
+    /*
+    Second level menu items.
+     */
+
+    li.menu__item--level-2 {
+      margin: 0 0 calc(5 / 16 * 1rem) 0;
+    }
+
+    a.menu__link--level-2 {
+      color: var(--color--gray--five);
+      text-decoration: none;
+      font-size: calc(16 / 16 * 1rem);
+      font-family: "Lucida Grande", Verdana, sans-serif;
+    }
+  }
+
 }
