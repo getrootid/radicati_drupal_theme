@@ -25,7 +25,11 @@
         {{ blurb }}
       </p>
 
-      <p class="event-card__time">{{ time }}</p>
+      {% if time and not is_all_day %}
+        <p class="event-card__time">{{ time }}</p>
+      {% else %}
+        <p class="event-card__time event-card__time--all-day">{{ "All Day"|t }}</p>
+      {% endif %}
     </div>
   </div>
 </article>

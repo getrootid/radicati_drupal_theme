@@ -38,6 +38,11 @@ props:
         '10:30 AM PST',
         '1:00 PM'
       ]
+    is_all_day:
+      type: ['boolean', 'null' ]
+      title: All Day Event
+      description: Whether the event lasts all day.
+      default: false
     type:
       type: [ 'string', 'object', 'null' ]
       title: Type

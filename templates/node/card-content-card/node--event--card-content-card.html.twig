@@ -2,12 +2,26 @@
 
 
 {% block content_wrapper %}
+  {% set event_date = node.field_event__date.0.getValue() %}
+  {% set estart = event_date.value %}
+  {% set eend = event_date.end_value %}
+
+  {# Smart date has All Day events start at midnight and end at 11:59pm #}
+  {# So, check to see if the event starts at midnight and ends at 11:59pm, keeping in mind that it might
+   # be different days. #}
+  {% if estart|date("g:i A") == "12:00 AM" and eend|date("g:i A") == "11:59 PM" %}
+    {% set allday = true %}
+  {% else %}
+    {% set allday = false %}
+  {% endif %}
+
   {% embed "radicati_drupal_theme:event-card" with {
     title: content.title,
     blurb: content.field_summary,
-    date: node.field_event_date.0.value|date("Y-m-d g:i A T"),
-    time: node.field_event_date.0.value|date("g:i A T"),
+    date: node.field_event__date.0.value|date("Y-m-d g:i A T"),
+    time: node.field_event__date.0.value|date("g:i A T"),
     type: content.field_event__tax_type,
+    is_all_day: allday,
     url: url,
   } %}
 
