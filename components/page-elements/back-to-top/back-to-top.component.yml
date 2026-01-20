@@ -1,0 +1,22 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json'
+
+name: Back to Top Block
+# replaces: radicati_drupal_theme:back-to-top
+status: stable
+group: Page Elements
+noUi: true
+props:
+  type: object
+  additionalProperties: false
+  properties:
+    text:
+      type: ['string', 'null']
+      title: Button Text
+      description: The text that appears on the back to top button.
+      default: 'Back to Top'
+    icon_classes:
+      type: ['string', 'null']
+      title: Icon Classes
+      description: >
+        Additional CSS classes for the icon element.
+      default: 'fa-solid fa-chevron-up'
