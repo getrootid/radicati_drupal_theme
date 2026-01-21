@@ -22,17 +22,17 @@ props:
 #          width: 1200
 #          height: 600
     title:
-      type: string
+      type: ['string', 'object', 'null']
       title: Title
       description: "The Call to Action Title, will be an H2."
       default: "Our Snazzy Page"
     subtitle:
-      type: string
+      type: ['string', 'object', 'null']
       title: Sub-Title
       description: "A sub-title."
       default: ""
     label:
-      type: string
+      type: ['string', 'object', 'null']
       title: Label
       description: "Extra information, something meant to catch the reader's eye."
       default: ""
@@ -45,11 +45,11 @@ props:
       examples:
         - '<p>Puppies deserve love too!</p>'
     alignment:
-      type: string
+      type: ['string', 'object', 'null']
       title: Content Alignment
       description: This should only be used by Layout Builder.
     style:
-      type: string
+      type: ['string', 'object', 'null']
       title: Style
       description: >
         The style of the Call to Action section.
