@@ -1,0 +1,43 @@
+/**
+ * Site Alerts can have arbitrary css classes added to them, so the ones here are more
+ * examples than a complete list.
+ */
+
+.site-alert {
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0.25rem;
+  background-color: var(--color--background);
+}
+
+.site-alert__title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: var(--color--title);
+}
+
+.site-alert__message {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: var(--color--text);
+
+  a {
+    color: var(--color--link);
+  }
+}
+
+
+.site-alert--level-1 {
+  --color--background: #ee0000;
+  --color--title: white;
+  --color--text: white;
+  --color--link: #22ccaa;
+}
+
+.site-alert--level-2 {
+  --color--background: #f2ff55;
+  --color--title: black;
+  --color--text: black;
+  --color--link: charcoal;
+}

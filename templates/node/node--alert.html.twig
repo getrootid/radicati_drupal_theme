@@ -1,0 +1,9 @@
+{% extends "node.html.twig" %}
+
+{% block content_wrapper %}
+  {% include "radicati_drupal_theme:site-alert" with {
+    alert_title: content.title,
+    alert_message: content.field_alert__description,
+    alert_level: node.field_alert__level.0.entity.field_alert_level_class.value
+  } %}
+{% endblock %}

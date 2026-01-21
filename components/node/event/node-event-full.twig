@@ -1,0 +1,31 @@
+{% set classes = [
+  'node--event--full'
+] %}
+<div {{ content_attributes.addClass(classes) }}>
+  <div class="node-event-full__inner">
+    <div class="node-event-full__title-wrapper">
+      <h1 class="node-event-full__title">
+        {{ title }}
+      </h1>
+    </div>
+
+    <div class="node-event-full__details-wrapper">
+      <div class="node-event-full__featured-image">
+        {{ featured_image }}
+      </div>
+
+      <div class="node-event-full__event-type">
+        {{ event_type }}
+      </div>
+
+      <div class="node-event-full__date-time">
+        {{ event_date_time }}
+      </div>
+    </div>
+
+    <div class="node-event-full__content-wrapper">
+      {% block content %}{% endblock %}
+    </div>
+  </div>
+</div>
+

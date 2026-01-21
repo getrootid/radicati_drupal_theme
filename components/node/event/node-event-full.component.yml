@@ -1,0 +1,33 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+name: Node Event Full
+#replaces: radicati_drupal_theme:node-event-full
+noUi: true
+props:
+  type: object
+  properties:
+    content_attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper attributes.
+    title:
+      type: ['string', 'object', 'null']
+      title: Title
+      description: The title of the event node.
+    featured_image:
+      type: [ 'object', 'null' ]
+      title: Featured Image
+      description: An optional image
+    event_date_time:
+      type: ['string', 'null']
+      title: Event Date and Time
+      description: The date and time of the event.
+    event_type:
+      type: [ 'string', 'object', 'null' ]
+      title: Event Type
+      description: The type of event node.
+
+slots:
+  content:
+    title: Content
+    description: The main content of the event node.

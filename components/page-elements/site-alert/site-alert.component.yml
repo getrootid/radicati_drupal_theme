@@ -1,0 +1,21 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json'
+
+name: Site Alert
+# replaces: radicati_drupal_theme:site-alert
+status: stable
+group: Page Elements
+noUi: true
+props:
+  type: object
+  additionalProperties: false
+  properties:
+    alert_title:
+      type: ['string', 'null']
+      title: Button Text
+      description: The title of the alert
+      default: 'Red Alert'
+    alert_message:
+      type: ['string', 'null']
+      title: Alert Message
+      description: >
+        Detailed information about the alert.

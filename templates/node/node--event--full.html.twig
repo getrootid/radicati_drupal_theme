@@ -1,0 +1,15 @@
+{% extends "node.html.twig" %}
+
+{% block content %}
+  {% embed "radicati_drupal_theme:node-event-full" with {
+    content_attributes: content_attributes,
+    title: node.label(),
+    featured_image: content.field_featured_image,
+    event_type: content.field_event__tax_type,
+    event_date_time: content.field_event__date,
+  } %}
+    {% block content %}
+      {{ content|without('field_featured_image', 'field_event__date', 'field_event__tax_type') }}
+    {% endblock %}
+  {% endembed %}
+{% endblock %}

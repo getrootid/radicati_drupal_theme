@@ -1,0 +1,12 @@
+{% set classes = [
+  'site-alert',
+  alert_level
+] %}
+<article class="{{ classes|join(' ') }}">
+  <h2 class="site-alert__title">
+    {{ alert_title }}
+  </h2>
+  <div class="site-alert__message">
+    {{ alert_message }}
+  </div>
+</article>
