@@ -1,0 +1,12 @@
+{% extends "block--block-content.html.twig" %}
+
+{% block outer_content %}
+  {% include "radicati_drupal_theme:site-notice" with {
+    content_attributes: content_attributes,
+    notice_title: content.field_site_notice__title,
+    notice_blurb: content.field_site_notice__blurb,
+    notice_button: content.field_site_notice__link,
+    close_button: content.sitenotice_close_wrapper
+  } %}
+{% endblock %}
+

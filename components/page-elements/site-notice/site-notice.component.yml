@@ -1,0 +1,35 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json'
+
+name: Site Notice
+replaces: radicati_drupal_theme:site-notice
+status: stable
+group: Page Elements
+noUi: true
+props:
+  type: object
+  additionalProperties: false
+  properties:
+    content_attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper attributes.
+    notice_title:
+      type: ['string', 'null']
+      title: Notice Title
+      description: The title of the notice
+      default: 'Red Alert'
+    notice_blurb:
+      type: ['string', 'null']
+      title: Notice Blurb
+      description: >
+        Detailed information about the notice.
+    notice_button:
+      type: ['string', 'object', 'null']
+      title: Notice Button
+      description: The fully formed button/link HTML for the notice.
+      default: '<a href="#">Learn More</a>'
+    close_button:
+      type: [ 'string', 'object', 'null' ]
+      title: Radicati Site Notice Close Button
+      description: Automatically added by the Site Notice module.
+      default: '<a href="#">Learn More</a>'

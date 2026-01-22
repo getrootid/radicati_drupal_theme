@@ -1,0 +1,30 @@
+
+{% set classes = [
+  'site-notice'
+] %}
+{% if content_attributes is not defined %}
+  {% set content_attributes = create_attribute() %}
+{% endif %}
+<article {{ content_attributes.addClass(classes) }}>
+  <div class="site-notice__inner">
+    <div class="site-notice__content">
+      <h2 class="site-notice__title">
+        {{ notice_title }}
+      </h2>
+
+      {% if notice_blurb %}
+        <div class="site-notice__blurb">
+          {{ notice_blurb }}
+        </div>
+      {% endif %}
+    </div>
+
+    {% if notice_button %}
+      <div class="site-notice__button">
+        {{ notice_button }}
+      </div>
+    {% endif %}
+
+    {{ close_button }}
+  </div>
+</article>
