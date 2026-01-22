@@ -35,6 +35,8 @@
   background-color: var(--color--background);
   padding: var(--rad--com--section--padding) 0;
   box-sizing: border-box;
+
+  padding-inline: 1.5rem;
 }
 
 .component--section .component--inner {
