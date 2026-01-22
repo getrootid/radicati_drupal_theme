@@ -44,8 +44,12 @@ footer.footer-large {
   Footer Columns
 */
 .footer-large__top__column--1 {
-  flex: 0 0 calc(300/16 * 1rem);
+  flex: 0 0 calc(200/16 * 1rem);
   margin-bottom: calc(20/16 * 1rem);
+
+  @media (min-width: calc(1200/16 * 1rem)) {
+    flex: 0 0 calc(300/16 * 1rem);
+  }
 }
 
 .footer-large__top__column--2 {

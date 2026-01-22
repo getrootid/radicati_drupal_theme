@@ -1,7 +1,7 @@
 <div class="site-branding">
 
   {% if site_logo %}
-    <a class="site-branding__link" href="/" rel="home">
+    <a class="site-branding__link" href="/" rel="home" title="{{ site_name ~ ' Homepage'|t }}">
       {% if use_svg_logo %}
 {#  TODO: Add svg logo code here. Should output the svg text from the file.      #}
       {% else %}

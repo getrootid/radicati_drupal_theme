@@ -1,0 +1,13 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json'
+
+name: Breadcrumbs Block
+replaces: radicati_drupal_theme:breadcrumbs
+status: stable
+group: Page Elements
+noUi: true
+props:
+  type: object
+  properties:
+    breadcrumb:
+      type: array
+      title: Breadcrumb Items

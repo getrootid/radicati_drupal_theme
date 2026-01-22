@@ -1,0 +1,28 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json'
+
+name: Dropdown Menu
+replaces: radicati_drupal_theme:dropdown-menu
+status: stable
+group: Page Elements
+noUi: true
+props:
+  type: object
+  additionalProperties: false
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper attributes.
+    items:
+      type: ['object', 'null']
+      title: Menu Items
+    max_menu_levels:
+      type: 'integer'
+      title: Max Dropdown Levels
+      description: >
+          The maximum number of dropdown levels to display.
+      default: 2
+libraryOverrides:
+  dependencies:
+    - drupal/drupal
+    - drupal/once
