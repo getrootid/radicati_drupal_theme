@@ -1,7 +1,7 @@
 '$schema': 'https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json'
 
 name: Dropdown Menu
-replaces: radicati_drupal_theme:dropdown-menu
+# replaces: radicati_drupal_theme:dropdown-menu
 status: stable
 group: Page Elements
 noUi: true
