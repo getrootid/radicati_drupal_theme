@@ -10,11 +10,22 @@ footer.footer-large {
   display: flex;
   flex-direction: column;
   max-width: var(--rad--content-width-wide);
-  margin: 0 auto;
+  margin-inline: 2rem;
+  justify-content: center;
 
   @media (min-width: calc(768/16 * 1rem)) {
     flex-direction: row;
+    gap: calc(15/16 * 1rem);
+    flex-wrap: wrap;
+
+  }
+
+  @media (min-width: calc(992/16 * 1rem)) {
+    flex-direction: row;
     gap: calc(25/16 * 1rem);
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    justify-content: flex-start;
   }
 }
 
@@ -49,11 +60,14 @@ footer.footer-large {
 .footer-large__top__column--3 {
   flex: 0 0 calc(220 / 16 * 1rem);
   margin-top: calc(20 / 16 * 1rem);
-  margin-left: auto;
   font-size: calc(18/16 * 1rem);
-
+  
   @media (min-width: calc(768/16 * 1rem)) {
     margin-top: 0;
+  }
+
+  @media (min-width: calc(992/16 * 1rem)) {
+    margin-left: auto;
   }
 }
 
