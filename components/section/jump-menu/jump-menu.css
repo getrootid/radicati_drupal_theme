@@ -1,11 +1,12 @@
 .jump-menu {
-  padding: calc(10/16 * 1rem) calc(15/16 * 1rem);
+  padding: calc(20/16 * 1rem) 0;
   border-bottom: 1px solid #cccccc;
   background-color: lightgray;
 }
 
 .jump-menu__label {
   margin-right: calc(15/16 * 1rem);
+  font-size: calc(26/16 * 1rem);
   font-weight: bold;
   float: left;
 }
@@ -21,7 +22,10 @@
 .jump-menu__item {
 
   a {
+    font-family: "Lucida Grande", Verdana, sans-serif;
+    color: #333333;
     text-decoration: none;
+    font-size: calc(22/16 * 1rem);
     margin: 0 calc(7/16 * 1rem);
   }
 
