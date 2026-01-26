@@ -12,11 +12,13 @@
 {% endif %}
 
 <section {{ content_attributes.addClass(classes) }}>
-  <nav class="tab-group__nav" role="tablist">
-    <ul class="tab-group__nav__list"></ul>
-  </nav>
+  <div class="tab-group__inner component--inner">
+    <nav class="tab-group__nav" role="tablist">
+      <ul class="tab-group__nav__list"></ul>
+    </nav>
 
-  <div class="tab-group__tabs">
-    {% block tabs %}{% endblock %}
+    <div class="tab-group__tabs">
+      {% block tabs %}{% endblock %}
+    </div>
   </div>
 </section>

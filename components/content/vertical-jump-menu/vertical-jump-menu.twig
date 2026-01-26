@@ -1,0 +1,44 @@
+{% set classes = [
+  'component',
+  'component--content',
+  'vertical-jump-menu',
+] %}
+{# if content attributes isn't set, use create_attriburte() #}
+{% if content_attributes is not defined %}
+  {% set content_attributes = create_attribute() %}
+{% endif %}
+<div {{ content_attributes.setAttribute('id', 'vjm'|clean_unique_id).addClass(classes) }}>
+  <div class="vertical-jump-menu__inner">
+    <div class="vertical-jump-menu__nav-wrapper">
+      <nav class="vertical-jump-menu__nav">
+        <ul class="vertical-jump-menu__nav-list">
+          {% for key, item in items %}
+            <li class="vertical-jump-menu__nav-item">
+              <a class="vertical-jump-menu__anchor-link" href="#{{ item.anchor }}">
+                {{ item.label }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+
+    <div class="vertical-jump-menu__content-wrapper">
+      {% for key, item in items %}
+        <section id="{{ item.anchor }}" class="vertical-jump-menu__section">
+          <h2 class="vertical-jump-menu__section-title">
+            {{ item.title }}
+          </h2>
+          <div class="vertical-jump-menu__section-content">
+            {{ item.content|raw }}
+
+            {% if item.button %}
+              {{ item.button|raw }}
+            {% endif %}
+          </div>
+        </section>
+      {% endfor %}
+    </div>
+  </div>
+
+</div>

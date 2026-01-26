@@ -1,15 +1,17 @@
 {% extends "paragraph.html.twig" %}
 
-{% block content %}
+{% block paragraph %}
   {% embed "radicati_drupal_theme:highlight" with {
     content_attributes: content_attributes,
+    title: content.field_card_title,
+    blurb: content.field_card_blurb,
   } %}
     {% block media %}
       {{ content.field_card_media }}
     {% endblock %}
 
-    {% block body %}
-      {{ content|without('field_card_media') }}
+    {% block actions %}
+      {{ content.field_card_link }}
     {% endblock %}
   {% endembed %}
 {% endblock %}

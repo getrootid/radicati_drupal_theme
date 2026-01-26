@@ -8,7 +8,7 @@
 .tab__label__text {
   font-size: calc(18/16 * 1rem);
   text-transform: uppercase;
-  color: #333333;
+  color: var(--color--text);
   margin-right: calc(10/16 * 1rem);
 }
 

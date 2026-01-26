@@ -1,0 +1,33 @@
+{% extends "block--block-content.html.twig" %}
+
+{% block outer_content %}
+  {# node.field_vjm__menu_items is a paragraphs field, it has a label, title, and content #}
+  {# Iterate through the content and build an array and send in the items to the component. #}
+  {# Also generate a anchor based on the title #}
+  {% set items = [] %}
+  {% for key, item in content.field_vjm__menu_items %}
+    {% if key|first != "#" %}
+      {% set title = item['#paragraph'].field_vjump__section_title.getValue()[0].value %}
+      {% set label = item['#paragraph'].field_vjump__menu_label.getValue()[0].value %}
+      {% set anchor = title|clean_class %}
+      {% set content = item['#paragraph'].field_vjump__section_content.getValue()[0].value %}
+
+      {% set button_content = drupal_field('field_vjump__button', 'paragraph', item['#paragraph'].id()) %}
+
+
+      {% set items = items|merge([{
+        'title': title,
+        'label': label,
+        'anchor': anchor,
+        'content': content,
+        'button': button_content,
+      }]) %}
+    {% endif %}
+  {% endfor %}
+
+
+  {% include "radicati_drupal_theme:vertical-jump-menu" with {
+    items: items
+  } only %}
+{% endblock %}
+

@@ -4,13 +4,15 @@
   Drupal.behaviors.jumpMenu = {
     attach: function (context, settings) {
 
-      const jumpMenu = document.querySelector('.jump-menu__items');
-      if(!jumpMenu) {
+      const jumpMenu = document.querySelector('.vertical-jump-menu__nav-list');
+
+      if (!jumpMenu) {
         return;
       }
 
-      const scrollspy = VanillaScrollspy({ menu: jumpMenu });
-
+      const scrollspy = VanillaScrollspy({
+        menu: jumpMenu
+      });
       scrollspy.init();
     }
   };

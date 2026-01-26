@@ -78,13 +78,15 @@
   padding: 15px;
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
-  background: lightblue;
+  background-color: #333333;
+  --color--text: white;
 
   margin-right: calc(10/16 * 1rem);
 
   &[aria-selected="true"] {
-    background: blue;
-    color: white;
+    background-color: #cccccc;
+    --color--text: black;
+
   }
 }
 
@@ -101,6 +103,12 @@
 }
 
 .icon-tabs .tab__content {
+}
+
+
+.tab__panel {
+  padding: 2rem;
+  background-color: #bababa;
 }
 
 .tab__panel[hidden] {

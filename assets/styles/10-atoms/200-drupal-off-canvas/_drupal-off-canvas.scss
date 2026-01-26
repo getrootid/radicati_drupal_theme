@@ -115,10 +115,48 @@
     padding: 0;
   }
 
-  div.ief-form.ief-form-row .glb-form-wrapper .glb-form-wrapper {
-    display: flex;
-    flex-direction: row;
+  .paragraphs-nested {
+    //background-color: rgba(128, 0, 0, 0.2);
   }
+
+  /**
+    * This needs to be column to prevent nested paragraph forms from breaking.
+   */
+  div.ief-form.ief-form-row > .glb-form-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ief-form-row > .glb-form-wrapper > .glb-form-wrapper:not([class^="field"]) {
+    flex-direction: row !important;
+    padding-bottom: 1rem;
+    border-bottom: 5px solid black;
+  }
+
+  div.ief-form-row .paragraphs-nested {
+    padding: 1rem;
+  }
+
+  div.ief-form-row .paragraphs-nested > .glb-form-wrapper {
+    flex-direction: column;
+
+
+    &:last-child {
+      flex-direction: row;
+    }
+  }
+
+  /**
+    * Try to have buttons display in a row, and smaller than normal.
+   */
+  //div.ief-form.ief-form-row .glb-form-wrapper .glb-form-wrapper input[type="submit"] {
+  //  display: inline-flex !important;
+  //  padding: 1rem 1.5rem !important;
+  //  font-size: rem(13px) !important;
+  //  margin-right: rem(10px) !important;
+  //  float: left;
+  //}
+
 
   // Weird issues with summary/details sections
   details.glb-claro-details {

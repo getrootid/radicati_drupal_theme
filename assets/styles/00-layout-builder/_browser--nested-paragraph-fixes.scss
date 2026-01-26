@@ -1,0 +1,53 @@
+.ief-row-entity {
+
+
+  // Image previews can get a little unwieldy in nested paragraphs, so limit their size
+  img {
+    max-width: 5rem;
+    height: auto;
+  }
+
+  // Make Sure nested paragraphs open in column mode and not row.
+
+}
+
+
+
+/**
+ * Icon Tabs has a child paragraph that only allows a single paragraph inside it.
+ * hide the draggable thingy for that single paragraph to prevent confusion.
+ */
+.glb-form-wrapper .paragraph-type--highlight-tab .tabledrag-cell--only-drag {
+  display: none !important;
+}
+
+/**
+  * Try to get rid of some extra spacing in this component.
+  */
+
+#drupal-off-canvas-wrapper .glb-form-wrapper .paragraph-type--highlight-tab {
+  > td {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .paragraphs-tabs-wrapper {
+    margin-bottom: 0 !important;
+  }
+
+  .fieldset {
+    margin-bottom: 0 !important;
+
+    .fieldset__wrapper {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  details {
+    margin-bottom: 0 !important;
+  }
+
+  .field--type-link {
+    margin-bottom: 0 !important;
+  }
+}

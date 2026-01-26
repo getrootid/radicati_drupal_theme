@@ -1,0 +1,35 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+name: Vertical Jump Menu
+#replaces: radicati_drupal_theme:vertical-jump-menu
+group: Content
+props:
+  type: object
+  properties:
+    items:
+      type: array
+      items:
+        type: object
+        properties:
+          label:
+            type: string
+            title: Label
+            description: "The text label for the menu item."
+          anchor:
+            type: string
+            title: Anchor
+            description: "The anchor ID that this menu item links to."
+          title:
+            type: ['string', 'null']
+            title: Title
+            description: "An optional title attribute for the menu item link."
+          content:
+            type: ['string', 'null']
+            title: Content
+            description: "Optional additional content or description for the menu item."
+          button:
+            type: ['object', 'string', 'null']
+            title: Button
+libraryOverrides:
+  dependencies:
+    - radicati_drupal_theme/scroll-spy

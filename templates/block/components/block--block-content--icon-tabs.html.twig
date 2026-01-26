@@ -3,8 +3,12 @@
 {% block outer_content %}
   {% embed "radicati_drupal_theme:tab-group" with {
     content_attributes: content_attributes,
-    tabs_position: content.field_setting__tabs_position|render|striptags|clean_class
+    tabs_position: 'top',
+    tabs_alignment: 'end',
   } %}
     {% block tabs %}{{ content.field_icon_tabs__tabs }}{% endblock %}
   {% endembed %}
+
+  {# tabs_position: content.field_setting__tabs_position|render|striptags|clean_class #}
+
 {% endblock %}
