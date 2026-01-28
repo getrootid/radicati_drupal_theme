@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   height: calc(650/16 * 1rem);
-  margin-bottom: calc(50/16 * 1rem);
+  margin-bottom: 3rem;
 }
 
 .field-extra-large-hero-button {
@@ -57,12 +57,11 @@
   width: 80%;
   display: flex;
   gap: 2rem;
-
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   left: 50%;
-  transform: translateX(-50%) translateY(50%);
-  bottom: 0;
+  transform: translateX(-50%);
+  bottom: -2.5rem;
 
   > * {
     flex: 0 0 calc(25% - 6rem);
