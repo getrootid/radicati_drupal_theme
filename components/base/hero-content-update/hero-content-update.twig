@@ -1,0 +1,10 @@
+<article class="hero-content hero-content-update">
+  <h2 class="hero-content-update__title">
+    {% if url %}
+      <a href="{{ url }}">{{ title }}</a>
+    {% else %}
+      {{ title }}
+    {% endif %}
+  </h2>
+  <div class="hero-content-update__blurb">{{ blurb }}</div>
+</article>

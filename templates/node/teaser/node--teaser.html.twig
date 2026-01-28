@@ -1,0 +1,14 @@
+{% extends "node.html.twig" %}
+
+{% block content %}
+  {% embed "radicati_drupal_theme:teaser" with {
+    content_attributes: content_attributes,
+    title: node.label(),
+    url: url,
+    blurb: content.field_summary,
+  } %}
+    {% block media %}
+      {{ content.field_featured_image }}
+    {% endblock %}
+  {% endembed %}
+{% endblock %}

@@ -1,33 +1,34 @@
 {% set classes = [
   'component',
   'component--section',
-  'listing-section',
+  'listing-grid',
+  items_per_row ? items_per_row,
   style ?? ''
 ] %}
 {% if content_attributes is not defined %}
   {% set content_attributes = create_attribute() %}
 {% endif %}
 <section {{ content_attributes.addClass(classes) }}>
-  <div class="listing-listing__inner component--inner">
-    <div class="listing-listing__header">
+  <div class="listing-grid__inner component--inner">
+    <div class="listing-grid__header">
       {% if title %}
-        <h2 class="listing-listing component--title">
+        <h2 class="listing-grid component--title">
           {{ title }}
         </h2>
       {% endif %}
 
       {% if subtitle %}
-        <p class="listing-listing__sub-title component--sub-title">
+        <p class="listing-grid__sub-title component--sub-title">
           {{ subtitle }}
         </p>
       {% endif %}
     </div>
 
-    <div class="listing-listing__listing-view slot slot--listing-view">
+    <div class="listing-grid__listing-view slot slot--listing-view">
       {% block listing_view %}{% endblock %}
     </div>
 
-    <div class="listing-listing__actions slot slot--actions">
+    <div class="listing-grid__actions slot slot--actions">
       {% block actions %}{% endblock %}
     </div>
   </div>

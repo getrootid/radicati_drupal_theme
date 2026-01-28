@@ -1,0 +1,19 @@
+{% extends "block--block-content.html.twig" %}
+
+{% block outer_content %}
+  {% embed "radicati_drupal_theme:extra-large-hero" with {
+    content_attributes: content_attributes,
+    title: content.field_component_title.0,
+    blurb: content.field_component_blurb.0,
+  } %}
+
+    {% block media %}
+      {{ content.field_component_background_media }}
+    {% endblock %}
+
+    {% block content_items %}
+      {{ content.field_hero_content_items }}
+    {% endblock %}
+  {% endembed %}
+{% endblock %}
+

@@ -1,0 +1,32 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+name: Extra Large Hero
+#replaces: radicati_drupal_theme:large-hero
+group: Hero
+props:
+  type: object
+  properties:
+    content_attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper attributes.
+    title:
+      type: string
+      title: Title
+      description: "Is both the title displayed and the page's main title for accessibility."
+      default: "Our Snazzy Page"
+    blurb:
+      type: string
+      title: Blurb
+      description: "A short description or tagline for the hero section."
+      default: "Welcome to our awesome website where we do amazing things."
+      contentMediaType: text/html
+      examples:
+        - '<p>Puppies deserve love too!</p>'
+slots:
+  media:
+    title: Media
+    description: >
+      A media slot for an image, video, or other media element to be displayed in the hero section.
+  content_items:
+    title: Content Items

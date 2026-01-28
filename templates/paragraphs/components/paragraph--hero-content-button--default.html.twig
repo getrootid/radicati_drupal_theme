@@ -1,0 +1,9 @@
+{% extends "paragraph.html.twig" %}
+
+{% block paragraph %}
+  {% embed "radicati_drupal_theme:hero-content-button" %}
+    {% block button %}
+      {{ content.field_card_button }}
+    {% endblock %}
+  {% endembed %}
+{% endblock %}

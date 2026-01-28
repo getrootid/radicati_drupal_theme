@@ -1,0 +1,9 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+name: Hero Content Update
+#replaces: radicati_drupal_theme:hero-content-update
+noUi: true
+slots:
+  button:
+    title: Button
+    description: A button slot for the content update.

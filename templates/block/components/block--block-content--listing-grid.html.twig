@@ -1,11 +1,12 @@
 {% extends "block--block-content.html.twig" %}
 
 {% block outer_content %}
-  {% embed "radicati_drupal_theme:listing-section" with {
+  {% embed "radicati_drupal_theme:listing-grid" with {
     content_attributes: content_attributes,
     title: content.field_component_title,
     subtitle: content.field_component_sub_title,
     style: content.field_setting_style|render,
+    items_per_row: content.field_setting_items_per_row|render,
   } %}
     {% block listing_view %}
       {{ content.field_listing_section_view }}

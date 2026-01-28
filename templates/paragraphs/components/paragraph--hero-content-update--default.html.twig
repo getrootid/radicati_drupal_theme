@@ -1,0 +1,9 @@
+{% extends "paragraph.html.twig" %}
+
+{% block paragraph %}
+  {% include "radicati_drupal_theme:hero-content-update" with {
+    title: content.field_card_title,
+    blurb: content.field_card_blurb,
+    url: content.field_card_link.0['#url'] ? content.field_card_link.0['#url'] : null
+  }%}
+{% endblock %}

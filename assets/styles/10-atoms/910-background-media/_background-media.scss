@@ -7,6 +7,9 @@
   top: 0;
   left: 0;
 
+  // Might have to remove this, it was added for extra large hero.
+  z-index: -1;
+
   &:after {
     position: absolute;
     left: 0;

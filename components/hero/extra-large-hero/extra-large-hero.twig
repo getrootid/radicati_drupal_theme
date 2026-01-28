@@ -1,0 +1,25 @@
+{% set classes = [
+  'extra-large-hero',
+  'component',
+  'component--section',
+] %}
+{# if content attributes isn't set, use create_attriburte() #}
+{% if content_attributes is not defined %}
+  {% set content_attributes = create_attribute() %}
+{% endif %}
+<section {{ content_attributes.addClass(classes) }}>
+  <div class="extra-large-hero__media background-media slot slot--background-media">
+    {% block media %}{% endblock %}
+  </div>
+
+  <div class="extra-large-hero__content">
+    <h1 class="extra-large-hero__title">{{ title }}</h1>
+    <div class="extra-large-hero__blurb">{{ blurb }}</div>
+  </div>
+
+  {% if block('content_items') is defined and block('content_items')|trim is not empty %}
+    <div class="extra-large-hero__content-items slot slot--content-items">
+      {% block content_items %}{% endblock %}
+    </div>
+  {% endif %}
+</section>

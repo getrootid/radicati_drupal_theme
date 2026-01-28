@@ -32,6 +32,11 @@
   }
 }
 
+.card--no-border {
+  box-shadow: none;
+  border-radius: 0;
+}
+
 .card--whole-card-link {
   a {
     &:after {

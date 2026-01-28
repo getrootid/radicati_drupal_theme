@@ -1,0 +1,29 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+name: Teaser
+#replaces: radicati_drupal_theme:teaser
+group: Cards
+props:
+  type: object
+  properties:
+    title:
+      type: ['string', 'object', 'null']
+      title: Title
+      description: "The title of the card, will display as an h2."
+      default: "Our Snazzy Page"
+    url:
+      type: ['string', 'object', 'null']
+      title: Link
+      examples: [
+        '/',
+        "https://www.google.com",
+        '/about-us'
+      ]
+    blurb:
+      type: ['string', 'object', 'null']
+      title: Blurb
+slots:
+  media:
+    title: Media
+  additional_info:
+    title: Additional Info

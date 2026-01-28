@@ -1,5 +1,10 @@
 $schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
 
+# This is based on Views and is unlikely to change in Canvas, since what we want
+# is data being rendered from Drupal.
+
+# TODO: Find a way to respect the view display type.
+
 name: Listing Section
 #replaces: radicati_drupal_theme:listing-section
 group: Page Sections
@@ -25,28 +30,7 @@ props:
       type: string
       title: Style
       description: >
-        The style of the Call to Action section.
-    items_per_row:
-      type: string
-      title: Items Per Row
-      examples: [
-        'setting--items-per-row--two',
-        'setting--items-per-row--three',
-        'setting--items-per-row--four'
-      ]
-      enum: [
-        'setting--items-per-row--two',
-        'setting--items-per-row--three',
-        'setting--items-per-row--four',
-        'setting--items-per-row--five',
-        'setting--items-per-row--six'
-      ]
-      meta:enum:
-        setting--items-per-row--two: Two
-        setting--items-per-row--three: Three
-        setting--items-per-row--four: Four
-        setting--items-per-row--five: Five
-        setting--items-per-row--six: Six
+        The style of the section.
 slots:
   listing_view:
     title: Listing View

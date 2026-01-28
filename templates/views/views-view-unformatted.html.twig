@@ -29,13 +29,18 @@
 {% endif %}
 <div class="views-rows">
   {% for row in rows %}
-    {%
-      set row_classes = [
-      default_row_class ? 'views-row',
-    ]
-    %}
-    <div{{ row.attributes.addClass(row_classes) }}>
-      {{- row.content -}}
-    </div>
+    {% if default_row_class %}
+      {%
+        set row_classes = [
+        default_row_class ? 'views-row',
+      ]
+      %}
+      <div{{ row.attributes.addClass(row_classes) }}>
+        {{- row.content -}}
+      </div>
+    {% else %}
+      {{ row.content }}
+    {% endif %}
   {% endfor %}
+
 </div>

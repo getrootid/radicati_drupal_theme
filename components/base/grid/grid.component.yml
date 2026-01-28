@@ -1,0 +1,72 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+name: Grid
+#replaces: radicati_drupal_theme:grid
+noUi: true
+props:
+  type: object
+  properties:
+    content_attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper attributes.
+    items:
+      type: array
+      title: Items
+      description: The items to display in the grid.
+    items_per_row__desktop:
+      type: string
+      title: Items Per Row (Desktop)
+      examples: [
+        'setting--items-per-row--two',
+        'setting--items-per-row--three',
+        'setting--items-per-row--four'
+      ]
+      enum: [
+        'setting--items-per-row--two',
+        'setting--items-per-row--three',
+        'setting--items-per-row--four',
+        'setting--items-per-row--five',
+        'setting--items-per-row--six'
+      ]
+      meta:enum:
+        setting--items-per-row--two: Two
+        setting--items-per-row--three: Three
+        setting--items-per-row--four: Four
+        setting--items-per-row--five: Five
+        setting--items-per-row--six: Six
+    items_per_row__tablet:
+      type: string
+      title: Items Per Row (Tablet)
+      examples: [
+        'setting--items-per-row--two',
+        'setting--items-per-row--three',
+        'setting--items-per-row--four'
+      ]
+      enum: [
+        'setting--items-per-row--two',
+        'setting--items-per-row--three',
+        'setting--items-per-row--four',
+        'setting--items-per-row--five',
+        'setting--items-per-row--six'
+      ]
+      meta:enum:
+        setting--items-per-row--two: Two
+        setting--items-per-row--three: Three
+        setting--items-per-row--four: Four
+        setting--items-per-row--five: Five
+        setting--items-per-row--six: Six
+    items_per_row__mobile:
+      type: string
+      title: Items Per Row (Mobile)
+      examples: [
+        'setting--items-per-row--one',
+        'setting--items-per-row--two',
+      ]
+      enum: [
+        'setting--items-per-row--one',
+        'setting--items-per-row--two',
+      ]
+      meta:enum:
+        setting--items-per-row--one: One
+        setting--items-per-row--two: Two

@@ -1,0 +1,24 @@
+.hero-content-update {
+  display: flex;
+  flex-direction: column;
+  gap: calc(20/16 * 1rem);
+  padding: 2rem;
+  background-color: #333333;
+  border-radius: 2rem;
+}
+
+.hero-content-update__title {
+  margin: 0;
+  padding: 0;
+  --color--heading: white;
+
+  a {
+    color: white;
+    text-decoration: none;
+
+  }
+}
+
+.hero-content-update__blurb {
+  color: white;
+}

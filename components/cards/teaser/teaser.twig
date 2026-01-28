@@ -1,0 +1,21 @@
+<article class="teaser card card--no-border">
+  <div class="teaser__inner card--inner">
+    {% if block('media') is defined and block('media')|trim is not empty %}
+      <div class="teaser__media slot slot--media">
+        {{ block('media') }}
+      </div>
+    {% endif %}
+
+    <div class="teaser__content card--content">
+      <h3 class="teaser__title card--title">
+        <a href="{{ url }}">{{ title }}</a>
+      </h3>
+
+      {% block additional_info %}{% endblock %}
+
+      <p class="teaser__summary card--summary">
+        {{ blurb }}
+      </p>
+    </div>
+  </div>
+</article>
