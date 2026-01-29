@@ -17,17 +17,17 @@ props:
       title: Attributes
       description: Wrapper attributes.
     title:
-      type: string
+      type: ['string', 'null']
       title: Title
       description: "The section title, will be an H2."
       default: "Our Content Listing"
     subtitle:
-      type: string
+      type: ['string', 'null']
       title: Sub-Title
       description: "A sub-title."
       default: ""
     style:
-      type: string
+      type: ['string', 'null']
       title: Style
       description: >
         The style of the section.

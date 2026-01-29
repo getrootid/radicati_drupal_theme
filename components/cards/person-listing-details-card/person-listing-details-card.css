@@ -1,17 +1,45 @@
-.number-highlight {
+.person-detailed-listing {
+  margin-bottom: 1.5rem;
+}
+
+.person-detailed-listing__inner {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: calc(15/16 * 1rem) 0;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  @media (min-width: calc(768/16 * 1rem)) {
+    flex-direction: row;
+  }
 }
 
-.number-highlight__value {
-  font-size: calc(55/16 * 1rem);
-  font-weight: 700;
+.person-detailed-listing__media {
+  flex: 1 1 auto;
+  max-width: calc(200/16 * 1rem);
+
+  @media (min-width: calc(768/16 * 1rem)) {
+    flex: 0 0 calc(200/16 * 1rem);
+    width: calc(200/16 * 1rem);
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 
-.number-highlight__label {
-  font-size: calc(24/16 * 1rem);
-  margin-left: calc(16/16 * 1rem);
-  font-weight: 400;
+.person-detailed-listing__name {
+  font-size: calc(28/16 * 1rem);
+  font-weight: bold;
+  font-family: "Lucida Grande", Verdana, sans-serif;
+}
+
+.person-detailed-listing__pronouns {
+  font-size: calc(16/16 * 1rem);
+  font-style: italic;
+}
+
+.person-detailed-listing__position {
+  text-transform: uppercase;
+  font-size: calc(16/16 * 1rem);
+  margin-bottom: 1.5rem;
 }

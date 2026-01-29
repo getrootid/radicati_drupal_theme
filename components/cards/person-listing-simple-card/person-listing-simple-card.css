@@ -1,0 +1,21 @@
+.simple-listing__name {
+  font-size: calc(22/16 * 1rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.25rem;
+}
+
+.simple-listing__pronouns {
+  font-size: calc(14/16 * 1rem);
+  font-weight: 400;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+  text-transform: lowercase;
+}
+
+.simple-listing__position {
+  font-size: calc(16/16 * 1rem);
+  font-weight: 400;
+  line-height: 1.4;
+  font-style: italic;
+}

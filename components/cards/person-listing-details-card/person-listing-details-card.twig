@@ -1,34 +1,36 @@
 {% set classes = [
+  'person-detailed-listing',
   'card',
-  'detailed-listing',
+  'card--no-border',
 ] %}
 {% if content_attributes is not defined %}
   {% set content_attributes = create_attribute() %}
 {% endif %}
 <div {{ content_attributes.addClass(classes) }}>
-  {% if block('media') is defined and block('media')|trim is not empty %}
-    <div class="detailed-listing__media">
-      {% block media %}{% endblock %}
-    </div>
-  {% endif %}
-
-
-  <div class="detailed-listing__content">
-    <div class="detailed-listing__name-line">
-      <span class="detailed-listing__name">
-        {{ person_full_name }}
-      </span>
-      {% if person_pronouns %}
-        <span class="detailed-listing__pronouns">{{ person_pronouns }}</span>
-      {% endif %}
-    </div>
-
-    {% if person_position %}
-      <div class="detailed-listing__position">{{ person_position }}</div>
+  <div class="person-detailed-listing__inner card--inner">
+    {% if block('media') is defined and block('media')|trim is not empty %}
+      <div class="person-detailed-listing__media slot slot--media">
+        {% block media %}{% endblock %}
+      </div>
     {% endif %}
 
-    <div class="details-listing__body">
-      {% block body %}{% endblock %}
+    <div class="person-detailed-listing__content">
+      <div class="person-detailed-listing__name-line">
+        <span class="person-detailed-listing__name">
+          {{ person_full_name }}
+        </span>
+        {% if person_pronouns %}
+          <span class="person-detailed-listing__pronouns">{{ person_pronouns }}</span>
+        {% endif %}
+      </div>
+
+      {% if person_position %}
+        <div class="person-detailed-listing__position">{{ person_position }}</div>
+      {% endif %}
+
+      <div class="person-details-listing__body">
+        {% block body %}{% endblock %}
+      </div>
     </div>
   </div>
 </div>

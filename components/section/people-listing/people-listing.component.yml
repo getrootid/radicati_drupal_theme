@@ -7,18 +7,26 @@ group: Page Sections
 props:
   type: object
   properties:
-    color:
+    content_attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper attributes.
+    title:
+      type: ['string', 'null']
+      title: Title
+      description: "The section title, will be an H2."
+      default: "Our Content Listing"
+    subtitle:
+      type: ['string', 'null']
+      title: Sub-Title
+      description: "A sub-title."
+      default: ""
+    style:
       type: string
-      title: Color
-      examples: [
-        'primary'
-      ]
-      description: "Background color to use for the chip, one of 'primary' or 'secondary'."
-      # The enum directive restricts the possible values in the element to our list.
-      enum: ['primary', 'secondary']
+      title: Style
+      description: >
+        The style of the section.
 slots:
-  header:
-    title: Header
   detail_items:
     title: Detail Items
   simple_items:

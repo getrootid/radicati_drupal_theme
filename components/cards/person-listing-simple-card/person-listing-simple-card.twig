@@ -1,11 +1,12 @@
 {% set classes = [
-  'card',
   'simple-listing',
+  'card',
+  'card--no-border',
 ] %}
 {% if content_attributes is not defined %}
   {% set content_attributes = create_attribute() %}
 {% endif %}
-<div {{ content_attributes.addClass(classes) }}>
+<article {{ content_attributes.addClass(classes) }}>
   <div class="simple-listing__content">
     <div class="simple-listing__name-line">
       <span class="simple-listing__name">
@@ -20,4 +21,4 @@
       <div class="simple-listing__position">{{ person_position }}</div>
     {% endif %}
   </div>
-</div>
+</article>

@@ -1,8 +1,6 @@
 {% extends "node.html.twig" %}
 
-{% block default_title %}{% endblock %}
-
-{% block content %}
+{% block content_wrapper %}
   {% embed "radicati_drupal_theme:person-listing-simple-card" with {
     content_attributes: content_attributes,
     person_full_name: content.field_person_first_name.0|render ~ ' ' ~ content.field_person_last_name.0|render,

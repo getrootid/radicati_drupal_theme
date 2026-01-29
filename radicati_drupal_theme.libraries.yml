@@ -18,7 +18,7 @@ component-base-styles:
       dist/css/component--direction.css: { preprocess: false }
       dist/css/component--align.css: { preprocess: false }
       dist/css/component--section.css: { preprocess: false }
-      dist/css/component--title.css: { preprocess: false }
+      dist/css/component--field--title.css: { preprocess: false }
       dist/css/component--field--sub-title.css: { preprocess: false }
       dist/css/component--blurb.css: { preprocess: false }
       dist/css/component--slot--actions.css: { preprocess: false }
