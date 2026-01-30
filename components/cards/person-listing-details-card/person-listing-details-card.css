@@ -43,3 +43,11 @@
   font-size: calc(16/16 * 1rem);
   margin-bottom: 1.5rem;
 }
+
+.person-details-listing__body {
+
+  > * {
+    margin-bottom: 1rem;
+  }
+
+}
