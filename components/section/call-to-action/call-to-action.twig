@@ -10,7 +10,7 @@
   {% set content_attributes = create_attribute() %}
 {% endif %}
 <section {{ content_attributes.addClass(classes) }}>
-  <div class="call-to-action__media slot slot--media">
+  <div class="call-to-action__media slot slot--media background-media">
     {% block media %}{% endblock %}
 {#    {% if image is iterable %}#}
 {#      {% include "canvas:image" with image|merge({#}

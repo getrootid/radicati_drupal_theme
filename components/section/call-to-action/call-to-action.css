@@ -40,37 +40,37 @@
   }
 }
 
-.call-to-action__media {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+/*.call-to-action__media {*/
+/*  width: 100%;*/
+/*  height: 100%;*/
+/*  position: absolute;*/
+/*  top: 0;*/
+/*  left: 0;*/
 
-  &:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    /*background-color: color-mix(in srgb, var(--color--background) 85%, transparent);*/
-    background-color: var(--color--background--overlay);
-  }
+/*  &:after {*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    pointer-events: none;*/
+/*    !*background-color: color-mix(in srgb, var(--color--background) 85%, transparent);*!*/
+/*    background-color: var(--color--background--overlay);*/
+/*  }*/
 
-  div:not(.contextual):not([data-drupal-ajax-container]):not([data-contextual-id]) {
-    width: 100%;
-    height: 100%;
-  }
+/*  div:not(.contextual):not([data-drupal-ajax-container]):not([data-contextual-id]) {*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*  }*/
 
-  img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-}
+/*  img {*/
+/*    display: block;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    object-fit: cover;*/
+/*  }*/
+/*}*/
 
 .call-to-action__content {
   padding: 0 3rem;
