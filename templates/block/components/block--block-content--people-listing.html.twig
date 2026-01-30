@@ -4,7 +4,7 @@
   {% embed "radicati_drupal_theme:people-listing" with {
     content_attributes: content_attributes,
     title: content.field_component_title,
-    subtitle: content.field_component_sub_title,
+    subtitle: content.field_component_sub_title_long,
     style: content.field_setting_style|render,
   } %}
     {% block detail_items %}{{ content.field_people_listing_details }}{% endblock %}
