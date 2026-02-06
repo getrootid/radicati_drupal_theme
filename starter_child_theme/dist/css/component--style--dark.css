@@ -1,0 +1,27 @@
+.setting--style--dark {
+  --color--text: white;
+  --color--text--highlight: #ee2323;
+  --color--link: #cccccc;
+  --color--background: #121212;
+  --color--background--overlay: #000000;
+  --color--background--overlay--opacity: 0.5;
+
+  /**
+  Cards displayed in a dark style need to have a light background and dark text
+  to stand out against the dark background.
+   */
+  .card {
+    --color--text: black;
+    --color--link: #0000EE;
+    --color--background: lightgray;
+    --color--background--overlay: #ffffff;
+  }
+
+  .card--no-background {
+    --color--text: white;
+    --color--link: #cccccc;
+    --color--background: transparent;
+    --color--background--overlay: transparent;
+    --color--background--overlay--opacity: 0;
+  }
+}

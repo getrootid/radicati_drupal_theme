@@ -9,8 +9,19 @@ name: Form Section
 group: Page Sections
 props:
   type: object
-  additionalProperties: false
-  properties: {}
+  properties:
+    title:
+      type: [ 'string', 'object', 'null' ]
+      title: Title
+      description: "The Call to Action Title, will be an H2."
+      default: "Our Snazzy Page"
+    subtitle:
+      type: [ 'string', 'object', 'null' ]
+      title: Sub-Title
+      description: "A sub-title."
+      default: ""
 slots:
-  body:
-    title: Content
+  form:
+    title: Form Content
+  actions:
+    title: Actions

@@ -8,6 +8,14 @@ libraries:
   - starter_child_theme/global-styles
   - starter_child_theme/component-styles
 
+libraries-override:
+  radicati_drupal_theme/component-base-styles:
+    css:
+      theme:
+        dist/css/component--style--light.css: dist/css/component--style--light.css
+        dist/css/component--style--dark.css: dist/css/component--style--dark.css
+
+
 regions:
   site_notification: Site Notification
   header_branding: Header Branding

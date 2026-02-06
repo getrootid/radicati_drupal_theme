@@ -11,17 +11,17 @@ props:
       type: Drupal\Core\Template\Attribute
       title: Attributes
       description: Wrapper attributes.
-    background_image:
-      $ref: json-schema-definitions://canvas.module/image
-      type: [ 'object', 'string' ]
-      title: Image
-      description: >
-        Some beautiful background image for the hero section.
-      examples:
-        - src: 'https://picsum.photos/1200/600'
-          alt: 'Some kind of pictograph'
-          width: 1200
-          height: 600
+#    background_image:
+#      $ref: json-schema-definitions://canvas.module/image
+#      type: [ 'object', 'string' ]
+#      title: Image
+#      description: >
+#        Some beautiful background image for the hero section.
+#      examples:
+#        - src: 'https://picsum.photos/1200/600'
+#          alt: 'Some kind of pictograph'
+#          width: 1200
+#          height: 600
     title:
       type: string
       title: Title

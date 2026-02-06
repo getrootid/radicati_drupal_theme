@@ -15,6 +15,11 @@ props:
       title: Url
       description: The button url, can be either internal or external. Internal links should look like /about-us
       format: uri
+    link_context:
+      type: ['string', 'null']
+      title: Link Context
+      description: >
+        Used to add additional context for screen readers. For example, a button that says "Learn more" Can add "about our services".
     button_style:
       type: ['string', 'null']
       title: Button Style

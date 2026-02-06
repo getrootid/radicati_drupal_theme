@@ -1,14 +1,27 @@
 {% set classes = [
+  'form-section',
   'component',
   'component--section',
-  'form-section',
+  content_position ? content_position : '',
+  alignment ?? '',
+  style ?? ''
 ] %}
-
 {% if content_attributes is not defined %}
   {% set content_attributes = create_attribute() %}
 {% endif %}
 <section {{ content_attributes.addClass(classes) }}>
-  <div class="form-section__content">
-    {% block body %}Default Content{% endblock %}
+  <div class="form-section__inner component--inner">
+    <header class="form-section__content">
+      <h2 class="form-section__title component--title">{{ title }}</h2>
+      <div class="form-section__sub-title component--long-subtitle">{{ subtitle }}</div>
+    </header>
+
+    <div class="form-section__form slot slot--form">
+      {% block form %}{% endblock %}
+    </div>
+
+    <footer class="form-section__actions slot slot--actions">
+      {% block actions %}{% endblock %}
+    </footer>
   </div>
 </section>

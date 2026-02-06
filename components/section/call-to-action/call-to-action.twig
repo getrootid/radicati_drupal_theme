@@ -23,14 +23,16 @@
 {#    {% endif %}#}
   </div>
 
-  <div class="call-to-action__content">
-    <p class="call-to-action__label">{{ label }}</p>
-    <h2 class="call-to-action__title">{{ title }}</h2>
-    <p class="call-to-action__sub-title">{{ subtitle }}</p>
-    <p class="call-to-action__blurb">{{ blurb }}</p>
+  <div class="call-to-action__inner component--inner">
+    <div class="call-to-action__content">
+      <p class="call-to-action__label">{{ label }}</p>
+      <h2 class="call-to-action__title">{{ title }}</h2>
+      <p class="call-to-action__sub-title">{{ subtitle }}</p>
+      <p class="call-to-action__blurb">{{ blurb }}</p>
 
-    <div class="call-to-action__actions slot slot--actions">
-      {% block actions %}{% endblock %}
+      <div class="call-to-action__actions slot slot--actions">
+        {% block actions %}{% endblock %}
+      </div>
     </div>
   </div>
 </section>

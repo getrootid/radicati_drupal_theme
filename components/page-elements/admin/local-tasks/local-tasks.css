@@ -30,7 +30,8 @@
       background: #154415;
 
       &.is-active {
-        color: #f8f2d3;
+        color: white;
+        font-weight: bold;
         background: rgb(47, 131, 96);
       }
     }

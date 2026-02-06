@@ -2,10 +2,18 @@
 
 {% block outer_content %}
   {% embed "radicati_drupal_theme:form-section" with {
-    content_attributes: content_attributes
+    content_attributes: content_attributes,
+    title: content.field_component_title.0,
+    subtitle: content.field_component_sub_title.0,
+    alignment: content.field_setting_alignment|render,
+    style: content.field_setting_style|render,
   } %}
-    {% block body %}
-      {{ content }}
+    {% block form %}
+      {{ content.field_form_section_form }}
+    {% endblock %}
+
+    {% block actions %}
+      {{ content.field_component_read_more }}
     {% endblock %}
   {% endembed %}
 {% endblock %}

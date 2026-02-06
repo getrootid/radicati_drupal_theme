@@ -1,4 +1,7 @@
 <a href="{{ url }}" {{ new_tab ? 'target="_blank" rel="noopener noreferrer"' : '' }}
   class="{{ button_style }}" >
   {{ button_text }}
+  {% if link_context %}
+    <span class="visually-hidden">{{ link_context }}</span>
+  {% endif %}
 </a>

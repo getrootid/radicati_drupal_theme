@@ -9,6 +9,7 @@ libraries:
   - radicati_drupal_theme/offcanvas
   - radicati_drupal_theme/offcanvas-menu
   - radicati_drupal_theme/component-base-styles
+  - radicati_drupal_theme/form-styles
 
 
 #ckeditor_stylesheets:
