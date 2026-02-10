@@ -7,7 +7,15 @@ global-styles:
     dist/js/drupalDisplace.js: {}
   dependencies:
     - core/drupal.displace
+    - radicati_drupal_theme/variables
     - radicati_drupal_theme/fonts
+
+
+variables:
+  version: 1.x
+  css:
+    theme:
+      dist/css/variables.css: { preprocess: false }
 
 fonts:
   version: 1.x

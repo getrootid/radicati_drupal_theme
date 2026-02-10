@@ -1,0 +1,23 @@
+::root {
+  --color--text: black;
+  --color--text--highlight: #ee2323;
+  --color--link: #333333;
+  --color--background: white;
+  --color--background--overlay: black;
+  --color--background--overlay--opacity: 0.25;
+
+  --color--sprout-green: #73C389;
+  --color--ada-green: #2F8360;
+  --color--red: #E4504E;
+  --color--blue: #4A4280;
+
+  --component--padding--small: calc(30/16 * 1rem);
+  --component--padding--normal: calc(66/16 * 1rem);
+  --component--padding--large: calc(80/16 * 1rem);
+  --component--padding--xlarge: calc(100/16 * 1rem);
+
+  --font-family--inter: 'Inter', sans-serif;
+  --font-family--domine: 'Domine', serif;
+  --font-family--barlow: 'Barlow', sans-serif;
+}
+
