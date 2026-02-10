@@ -26,6 +26,11 @@ props:
       title: Title
       description: "The Call to Action Title, will be an H3."
       default: "Our Snazzy Page"
+    title_url:
+      type: ['string', 'null']
+      title: Title URL
+      description: "If a url is provided, the title will output as a link. This should not be used in conjunction with a button."
+      format: uri
     tag:
       type: [ 'object', 'string', 'null' ]
       title: Tag

@@ -1,0 +1,26 @@
+.component {
+  &.component--spacing--none {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  &.component--spacing--small {
+    padding-top: calc(15/16 * 1rem);
+    padding-bottom: calc(15/16 * 1rem);
+  }
+
+  &.component--spacing--normal {
+    padding-top: calc(30/16 * 1rem);
+    padding-bottom: calc(30/16 * 1rem);
+  }
+
+  &.component--spacing--large {
+    padding-top: calc(45/16 * 1rem);
+    padding-bottom: calc(45/16 * 1rem);
+  }
+
+  &.component--spacing--xlarge {
+    padding-top: calc(60/16 * 1rem);
+    padding-bottom: calc(60/16 * 1rem);
+  }
+}

@@ -6,16 +6,22 @@ global-styles:
   dependencies:
     - radicati_drupal_theme/global-styles
 
-component-styles:
+component-base-styles:
   version: 1.x
   css:
-    theme:
-      assets/styles/component-defaults/component-defaults.css: { preprocess: false }
-      assets/styles/component-defaults/settings/setting--background-media.css: { preprocess: false }
-      assets/styles/component-defaults/settings/setting--fixed-background.css: { preprocess: false }
-      assets/styles/component-defaults/settings/setting--style.css: { preprocess: false }
-      assets/styles/component-defaults/slots/slot--readmore.css: { preprocess: false }
-      assets/styles/component-defaults/slots/slot--title.css: { preprocess: false }
-      assets/styles/component-defaults/slots/slot--subtitle.css: { preprocess: false }
-  dependencies:
-    - starter_child_theme/global-styles
+    layout:
+      dist/css/component.css: { preprocess: false }
+      dist/css/component--gap.css: { preprocess: false }
+      dist/css/component--padding.css: { preprocess: false }
+      dist/css/component--direction.css: { preprocess: false }
+      dist/css/component--align.css: { preprocess: false }
+      dist/css/component--section.css: { preprocess: false }
+      dist/css/component--field--title.css: { preprocess: false }
+      dist/css/component--field--sub-title.css: { preprocess: false }
+      dist/css/component--field--long-subtitle.css: { preprocess: false }
+      dist/css/component--blurb.css: { preprocess: false }
+      dist/css/component--slot--actions.css: { preprocess: false }
+      dist/css/component--card.css: { preprocess: false }
+      dist/css/component--spacing.css: { preprocess: false }
+      dist/css/component--style--light.css: { preprocess: false }
+      dist/css/component--style--dark.css: { preprocess: false }

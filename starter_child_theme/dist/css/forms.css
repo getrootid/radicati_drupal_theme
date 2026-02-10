@@ -1,0 +1,87 @@
+form {
+
+}
+
+label {
+  display: block;
+  margin-block: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.2;
+
+  &.form-required {
+    &::after {
+      content: " *";
+      color: red;
+    }
+  }
+}
+
+
+input {
+
+}
+
+input[type="color"],
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"] {
+  max-width: 100%;
+  min-height: 2.5rem;
+  padding: 0 1rem;
+  color: black;
+  border: 1px solid #333333;
+  border-radius: 0;
+  background-color: white;
+  font-family: inherit;
+  font-size: inherit;
+  appearance: none;
+
+  @media (min-width: calc(768/16 * 1em)) {
+    width: auto;
+  }
+}
+
+select {
+
+
+}
+
+.form-item {
+  margin-block: 1rem;
+
+  label {
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    font-weight: 600;
+    font-family: "Lucida Grande", Verdana, sans-serif;
+  }
+
+  input[type="color"],
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="url"],
+  input[type="number"],
+  input[type="date"],
+  input[type="time"],
+  input[type="datetime-local"],
+  input[type="month"],
+  input[type="week"] {
+  }
+
+  label[for] {
+    cursor: pointer;
+  }
+}

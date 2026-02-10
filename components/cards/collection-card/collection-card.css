@@ -7,10 +7,15 @@
     }
   }
 
-  .field-card-title {
+  .collection-card__title {
     font-size: 26px;
     font-weight: bold;
     margin-bottom: 9px;
+  }
+
+  .collection-card__title-link {
+    text-decoration: none;
+    color: inherit;
   }
 
   .field-card-tag {

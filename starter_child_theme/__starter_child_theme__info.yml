@@ -9,11 +9,7 @@ libraries:
   - starter_child_theme/component-styles
 
 libraries-override:
-  radicati_drupal_theme/component-base-styles:
-    css:
-      theme:
-        dist/css/component--style--light.css: dist/css/component--style--light.css
-        dist/css/component--style--dark.css: dist/css/component--style--dark.css
+  radicati_drupal_theme/component-base-styles: __starter_child_theme__/component-base-styles
 
 
 regions:

@@ -1,0 +1,51 @@
+.component.component--card {
+  margin-bottom: 45px;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: calc(15/16 * 1rem);
+
+  color: var(--color--card--text);
+  background-color: var(--color--card--background);
+
+  a {
+    color: var(--color--card--link);
+  }
+
+  h2, h3, h4, h5, h6 {
+    color: var(--color--card--heading);
+  }
+}
+
+.card {
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+
+  color: var(--color--card--text);
+  background-color: var(--color--card--background);
+
+  a {
+    color: var(--color--card--link);
+  }
+
+  h2, h3, h4, h5, h6 {
+    color: var(--color--card--heading);
+  }
+}
+
+.card--no-border {
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.card--whole-card-link {
+  a {
+    &:after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: "";
+    }
+  }
+}

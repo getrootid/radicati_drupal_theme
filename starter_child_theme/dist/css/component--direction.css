@@ -1,0 +1,19 @@
+.component--direction {
+  display: flex;
+}
+
+.component--direction--vertical {
+  flex-direction: column;
+}
+
+.component--direction--horizontal {
+  flex-direction: row;
+}
+
+.component--direction--vertical--reversed {
+  flex-direction: column-reverse;
+}
+
+.component--direction--horizontal--reversed {
+  flex-direction: row-reverse;
+}

@@ -1,0 +1,78 @@
+/* Default styles for all components */
+
+.component {
+  color: var(--color--text);
+
+  a {
+    color: var(--color--link);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--color--heading);
+  }
+}
+
+.card {
+  color: var(--color--text);
+
+  a {
+    color: var(--color--link);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--color--heading);
+  }
+}
+
+/**
+    Content components have a default margin between items so they don't bump up against each other.
+ */
+.component--content {
+  margin-bottom: var(--rad--com--content--margin);
+}
+
+.component--section {
+  background-color: var(--color--background);
+  padding: var(--rad--com--section--padding) 0;
+  box-sizing: border-box;
+
+  padding-inline: 1.5rem;
+}
+
+/*.component--section .component--inner {*/
+/*  max-width: var(--rad--content-width-normal);*/
+/*  margin: 0 auto;*/
+/*}*/
+
+/* Handle the inner width. Full width layouts will define an inner width as well. */
+/* use that for the component--inner max-width */
+.layout-width--full.layout-inner-width--narrow .component--inner {
+  max-width: var(--rad--content-width-narrow);
+  margin: 0 auto;
+}
+
+.layout-width--full.layout-inner-width--normal .component--inner {
+  max-width: var(--rad--content-width-normal);
+  margin: 0 auto;
+}
+
+.layout-width--full.layout-inner-width--wide .component--inner {
+  max-width: var(--rad--content-width-wide);
+  margin: 0 auto;
+}
+
+/** Unset the default inner width styles on site sections. */
+.layout-width--full.layout-inner-width--narrow > * {
+  max-width: unset;
+  margin: unset;
+}
+
+.layout-width--full.layout-inner-width--normal > * {
+  max-width: unset;
+  margin: unset;
+}
+
+.layout-width--full.layout-inner-width--wide > * {
+  max-width: unset;
+  margin: unset;
+}

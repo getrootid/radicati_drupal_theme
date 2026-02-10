@@ -5,7 +5,8 @@
     content_attributes: content_attributes,
     title: content.field_card_title.0,
     tag: paragraph.field_card_tag.isEmpty() ? null : content.field_card_tag.0,
-    blurb: content.field_card_blurb.0
+    blurb: content.field_card_blurb.0,
+    title_url: paragraph.field_card_link.isEmpty() ? null : content.field_card_link.0['#url']
   } %}
     {% block media %}
       {{ content.field_card_media }}

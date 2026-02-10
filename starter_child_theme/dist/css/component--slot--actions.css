@@ -1,0 +1,6 @@
+.slot--actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: calc(25/16 * 1rem) 0 0 0;
+}
