@@ -3,10 +3,7 @@ global-styles:
   css:
     theme:
       dist/css/styles.css: {  }
-  js:
-    dist/js/drupalDisplace.js: {}
   dependencies:
-    - core/drupal.displace
     - radicati_drupal_theme/variables
 
 
@@ -147,4 +144,3 @@ details-hover-card:
   dependencies:
     - core/once
     - core/drupal
-    - core/drupal.displace
