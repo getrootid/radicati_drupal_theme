@@ -109,3 +109,12 @@ function radicati_drupal_theme_theme_suggestions_taxonomy_term_alter(array &$sug
   $suggestions[] = 'taxonomy_term__' . $sanitized_view_mode;
   $suggestions[] = 'taxonomy_term__' . $term->bundle() . '__' . $sanitized_view_mode;
 }
+
+function radicati_drupal_theme_theme_preprocess_image_style(&$variables) {
+
+  $hero_blocks = ['large_hero', 'hero_small', 'hero_extra_large'];
+
+  if (isset($variables['style_name']) && in_array($variables['style_name'], ['radicati_hero_background', 'radicati_hero_background_small', 'radicati_hero_background_extra_large'])) {
+    $variables['attributes']['fetchpriority'] = 'high';
+  }
+}

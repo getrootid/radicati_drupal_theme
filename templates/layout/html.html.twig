@@ -12,6 +12,12 @@
     <title>{{ head_title|safe_join(' | ') }}</title>
     <css-placeholder token="{{ placeholder_token }}">
     <js-placeholder token="{{ placeholder_token }}">
+
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+      <style>
+        {{ source(directory ~ "/dist/css/font--inter.css") }}
+      </style>
   </head>
   <body{{ attributes.addClass(body_classes) }}>
     {#

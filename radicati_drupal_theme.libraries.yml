@@ -2,52 +2,54 @@ global-styles:
   version: 1.x
   css:
     theme:
-      dist/css/styles.css: { preprocess: false }
+      dist/css/styles.css: {  }
   js:
     dist/js/drupalDisplace.js: {}
   dependencies:
     - core/drupal.displace
     - radicati_drupal_theme/variables
-    - radicati_drupal_theme/fonts
 
 
 variables:
   version: 1.x
   css:
     theme:
-      dist/css/variables.css: { preprocess: false }
+      dist/css/variables.css: {  }
 
-fonts:
-  version: 1.x
-  css:
-    theme:
-      dist/css/font--inter.css: { preprocess: false }
+# This is output in  html.html.twig - change when drupal supports inlining critial css
+#fonts:
+#  version: 1.x
+#  css:
+#    theme:
+#      dist/css/font--inter.css: {  }
 
 form-styles:
   version: 1.x
   css:
     layout:
-      dist/css/forms.css: { preprocess: false }
+      dist/css/forms.css: {  }
 
 component-base-styles:
   version: 1.x
   css:
     layout:
-      dist/css/component.css: { preprocess: false }
-      dist/css/component--gap.css: { preprocess: false }
-      dist/css/component--padding.css: { preprocess: false }
-      dist/css/component--direction.css: { preprocess: false }
-      dist/css/component--align.css: { preprocess: false }
-      dist/css/component--section.css: { preprocess: false }
-      dist/css/component--field--title.css: { preprocess: false }
-      dist/css/component--field--sub-title.css: { preprocess: false }
-      dist/css/component--field--long-subtitle.css: { preprocess: false }
-      dist/css/component--blurb.css: { preprocess: false }
-      dist/css/component--slot--actions.css: { preprocess: false }
-      dist/css/component--card.css: { preprocess: false }
-      dist/css/component--spacing.css: { preprocess: false }
-      dist/css/component--style--light.css: { preprocess: false }
-      dist/css/component--style--dark.css: { preprocess: false }
+      dist/css/component.css: {  }
+      dist/css/component--gap.css: {  }
+      dist/css/component--padding.css: {  }
+      dist/css/component--direction.css: {  }
+      dist/css/component--align.css: {  }
+      dist/css/component--section.css: {  }
+      dist/css/component--field--title.css: {  }
+      dist/css/component--field--sub-title.css: {  }
+      dist/css/component--field--long-subtitle.css: {  }
+      dist/css/component--blurb.css: {  }
+      dist/css/component--slot--actions.css: {  }
+      dist/css/component--card.css: {  }
+      dist/css/component--spacing.css: {  }
+      dist/css/component--style--light.css: {  }
+      dist/css/component--style--dark.css: {  }
+  dependencies:
+    - radicati_drupal_theme/variables
 
 
 
@@ -82,7 +84,6 @@ offcanvas:
   js:
     assets/scripts/off-canvas.js: {}
   dependencies:
-    - core/jquery
     - core/drupal
     - core/once
 
@@ -91,7 +92,6 @@ offcanvas-menu:
   js:
     assets/scripts/offcanvas--menu.js: {}
   dependencies:
-    - core/jquery
     - core/drupal
     - core/once
 
@@ -143,7 +143,7 @@ aos:
 details-hover-card:
   version: 1.x
   js:
-    assets/styles/20-molecules/126-details-hover-card/_details-hover-card.js: { preprocess: false }
+    assets/styles/20-molecules/126-details-hover-card/_details-hover-card.js: {  }
   dependencies:
     - core/once
     - core/drupal
