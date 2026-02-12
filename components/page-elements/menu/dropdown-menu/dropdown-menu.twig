@@ -68,12 +68,7 @@ We call a macro which calls itself to render the full tree.
         %}
 
         <li{{ item.attributes.addClass(item_classes) }}>
-          {#
-          A unique HTML ID should be used, but that isn't available through
-          Twig yet, so the |clean_id filter is used for now.
-          @see https://www.drupal.org/project/drupal/issues/3115445
-          #}
-          {% set aria_id = (item.title ~ '-submenu-' ~ loop.index )|clean_id %}
+          {% set aria_id = (item.title ~ '-submenu-' ~ loop.index )|clean_unique_id %}
 
           {{ link(item.title, item.url, { 'class': link_classes }) }}
 

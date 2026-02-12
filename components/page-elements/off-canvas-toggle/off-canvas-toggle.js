@@ -13,6 +13,13 @@ Drupal.behaviors.offCanvasToggle = {
       });
     });
 
+    // If someone clicks on the overlay, close the off-canvas
+    once('ocOverlayClick', '#off-canvas-overlay').forEach((element) => {
+      element.addEventListener('click', function(e) {
+        toggleOffCanvas(toggles, offcanvas, overlay);
+      });
+    });
+
 
     once('ocWindowKeydown', 'body').forEach((element) => {
       document.addEventListener('keydown', (e) => {
@@ -22,9 +29,9 @@ Drupal.behaviors.offCanvasToggle = {
         }
 
         var focusable = offcanvas.querySelectorAll('a[href], button, input, textarea, select, details, [tabindex]:not([tabindex="-1"])');
-        // Remove hidden elements from the $focusable list
 
-        focusable = [...focusable].filter((el) => isFocusable);
+        // Remove hidden elements from the $focusable list
+        focusable = [...focusable].filter(isFocusable);
         var first = focusable[0];
         var last  = focusable.at(-1);
 
@@ -53,6 +60,7 @@ Drupal.behaviors.offCanvasToggle = {
     });
 
     const isFocusable = element => {
+
       if (!(element instanceof HTMLElement)) {
         return false;
       }
@@ -60,6 +68,12 @@ Drupal.behaviors.offCanvasToggle = {
       const knownFocusableElements =
         'a[href],area[href],button:not([disabled]),details,iframe,object,input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[contentEditable="true"],[tabindex]:not([tabindex^="-"])';
       if (element.matches(knownFocusableElements)) {
+
+        // Check if element has a positive height
+        const { width, height } = element.getBoundingClientRect();
+        if (width === 0 && height === 0) {
+          return false;
+        }
         return true;
       }
 
@@ -98,6 +112,9 @@ Drupal.behaviors.offCanvasToggle = {
         overlay.classList.add('off-canvas__overlay--active');
 
       } else {
+        // When hiding the off-canvas, set the focus back to the toggle button that controls the off-canvas
+        toggles.item(0).focus();
+
         offcanvas.setAttribute('aria-hidden', 'true');
         toggles.forEach((el) => el.setAttribute('aria-expanded', 'false') );
         overlay.classList.remove('off-canvas__overlay--active');
