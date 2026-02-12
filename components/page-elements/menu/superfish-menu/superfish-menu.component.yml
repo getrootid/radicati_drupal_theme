@@ -1,0 +1,23 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json'
+
+name: Superfish Menu
+# replaces: radicati_drupal_theme:superfish-menu
+status: stable
+group: Page Elements
+noUi: true
+props:
+  type: object
+  additionalProperties: false
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper attributes.
+    items:
+      type: ['object', 'null']
+      title: Menu Items
+libraryOverrides:
+  dependencies:
+    - drupal/drupal
+    - drupal/once
+    - superfish/superfish
