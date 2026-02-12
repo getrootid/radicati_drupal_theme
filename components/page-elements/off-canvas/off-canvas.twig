@@ -1,6 +1,19 @@
 <section id="off-canvas" class='off-canvas'
          tabindex="-1" aria-modal="true" role="dialog" aria-hidden="true">
-  {% block header %}{% endblock %}
-  {% block content %}{% endblock %}
-  {% block footer %}{% endblock %}
+  <div class="off-canvas__controls">
+    {% include "radicati_drupal_theme:off-canvas-toggle" with {
+      id: "close-menu",
+      text: 'Close',
+      icon_classes: 'fa-solid fa-xmark',
+      icon_classes_active: 'fa-solid fa-bars',
+      hide_text: true
+    }%}
+  </div>
+
+
+  <div class="off-canvas__inner">
+    {% block header %}{% endblock %}
+    {% block content %}{% endblock %}
+    {% block footer %}{% endblock %}
+  </div>
 </section>

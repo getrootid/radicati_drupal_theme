@@ -2,7 +2,7 @@
   <div class="header-two-row__row header-two-row__top-row">
     <div class="header-two-row__row-inner">
       <div class="header-two-row__secondary-nav-wrapper">
-        {% block secondary_nav %}test{% endblock %}
+        {% block secondary_nav %}{% endblock %}
       </div>
     </div>
 
@@ -11,12 +11,21 @@
   <div class="header-two-row__row header-two-row__bottom-row">
     <div class="header-two-row__row-inner">
       <div class="header-two-row__branding-wrapper">
-        {% block branding %}test{% endblock %}
+        {% block branding %}{% endblock %}
       </div>
 
       <div class="header-two-row__primary-nav-wrapper">
-        {% block primary_nav %}test{% endblock %}
+        {% block primary_nav %}{% endblock %}
       </div>
+
+      <div class="header-two-row__menu-button-wrapper">
+        {% include "radicati_drupal_theme:off-canvas-toggle" with {
+          id: "off-canvas-toggle",
+          text: 'Menu',
+          icon_classes: 'fa-solid fa-bars',
+          icon_classes_active: 'fa-solid fa-xmark',
+          hide_text: false
+        } %}
     </div>
   </div>
 

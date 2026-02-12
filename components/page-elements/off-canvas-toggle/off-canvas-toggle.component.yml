@@ -1,0 +1,38 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json'
+
+name: Back to Top Block
+# replaces: radicati_drupal_theme:off-canvas-toggle
+status: stable
+group: Page Elements
+noUi: true
+props:
+  type: object
+  additionalProperties: false
+  properties:
+    id:
+      type: string
+      title: ID
+      description: The id of the element, in html.
+    text:
+      type: ['string', 'null']
+      title: Button Text
+      description: The text that appears on the back to top button.
+      default: 'Back to Top'
+    text_position:
+      type: ['string', 'null']
+      title: Text Position
+      description: >
+        The position of the text relative to the icon. Options are 'before' or 'after'.
+      default: 'before'
+    icon_classes:
+      type: ['string', 'null']
+      title: Icon Classes
+      description: >
+        Additional CSS classes for the icon element.
+      default: 'fa-solid fa-chevron-up'
+    hide_text:
+      type: boolean
+      title: Hide Text
+      description: >
+        Whether to visually hide the text, while keeping it accessible to screen readers.
+      default: false

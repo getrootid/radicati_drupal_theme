@@ -1,0 +1,12 @@
+<button id='{{ id }}'
+        class="off-canvas-toggle off-canvas-toggle--{{ label_display }}"
+        aria-controls="off-canvas"
+        data-alt-icon-classes="{{ icon_classes_active }}">
+  {% if icon_classes %}<i class="{{ icon_classes }}"></i>{% endif %}
+
+  {% if hide_text %}
+    <span class="visually-hidden">{{ text }}</span>
+  {% else %}
+    <span class="radicati-button__label">{{ text }}</span>
+  {% endif %}
+</button>

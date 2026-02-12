@@ -1,0 +1,10 @@
+button.off-canvas-toggle {
+  color: black;
+  font-size: calc(18/16 * 1rem);
+  background: none;
+  cursor: pointer;
+
+  border: 1px solid black;
+  padding: calc(10/16 * 1rem) calc(15/16 * 1rem);
+  border-radius: calc(6/16 * 1rem);
+}
