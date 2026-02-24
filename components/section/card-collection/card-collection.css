@@ -14,39 +14,79 @@
 
 .card-collection__cards {
   width: 100%;
-
   display: grid;
-  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  grid-template-columns: 1fr;
   gap: calc(26/16 * 1rem);
+
+  @media (min-width: calc(768/16 * 1rem)) {
+    grid-template-columns: repeat(3, minmax(150px, 1fr));
+  }
 }
 
 .card-collection.setting--items-per-row--two {
   .card-collection__cards {
-    grid-template-columns: repeat(2, minmax(250px, 1fr));
+    grid-template-columns: 1fr;
+
+    @media (min-width: calc(768/16 * 1rem)) {
+      grid-template-columns: repeat(2, minmax(150px, 1fr));
+    }
   }
 }
 
 .card-collection.setting--items-per-row--three {
   .card-collection__cards {
-    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    grid-template-columns: 1fr;
+
+    @media (min-width: calc(768/16 * 1rem)) {
+      grid-template-columns: repeat(3, minmax(150px, 1fr));
+    }
   }
 }
 
 .card-collection.setting--items-per-row--four {
+
   .card-collection__cards {
-    grid-template-columns: repeat(4, minmax(250px, 1fr));
+
+    @media (min-width: calc(768/16 * 1rem)) {
+      grid-template-columns: repeat(2, minmax(150px, 1fr));
+    }
+
+    @media (min-width: calc(992/16 * 1rem)) {
+      grid-template-columns: repeat(4, minmax(150px, 1fr));
+    }
+
+    @media (min-width: calc(1200/16 * 1rem)) {
+      grid-template-columns: repeat(4, minmax(150px, 1fr));
+    }
   }
 }
 
 .card-collection.setting--items-per-row--five {
   .card-collection__cards {
-    grid-template-columns: repeat(5, minmax(250px, 1fr));
+    @media (min-width: calc(768/16 * 1rem)) {
+      grid-template-columns: repeat(2, minmax(150px, 1fr));
+    }
+
+    @media (min-width: calc(1200/16 * 1rem)) {
+      grid-template-columns: repeat(5, minmax(150px, 1fr));
+    }
   }
 }
 
 .card-collection.setting--items-per-row--six {
   .card-collection__cards {
-    grid-template-columns: repeat(6, minmax(250px, 1fr));
+    @media (min-width: calc(768/16 * 1rem)) {
+      grid-template-columns: repeat(3, minmax(150px, 1fr));
+    }
+
+    @media (min-width: calc(992/16 * 1rem)) {
+      grid-template-columns: repeat(3, minmax(150px, 1fr));
+    }
+
+    @media (min-width: calc(1200/16 * 1rem)) {
+      grid-template-columns: repeat(6, minmax(150px, 1fr));
+    }
+
   }
 }
 
