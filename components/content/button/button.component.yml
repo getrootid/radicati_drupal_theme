@@ -25,20 +25,21 @@ props:
       title: Button Style
       default: "button button--black"
       #$ref: theme:/radicati_drupal_theme/schema-definitions.json#$defs/buttonStyles
-      enum:
-        - "button button--white"
-        - "button button--black"
-        - "button button--gray"
-        - "button button--dark"
-        - "button button--light"
-        - "action-link"
-      meta:enum:
-        button button--white: White
-        button button--black: Black
-        button button--gray: Gray
-        button button--dark: Dark
-        button button--light: Light
-        action-link: Action Link
+      # having enum values here means that all future child themes have to include those values!!!
+#      enum:
+#        - "button button--white"
+#        - "button button--black"
+#        - "button button--gray"
+#        - "button button--dark"
+#        - "button button--light"
+#        - "action-link"
+#      meta:enum:
+#        button button--white: White
+#        button button--black: Black
+#        button button--gray: Gray
+#        button button--dark: Dark
+#        button button--light: Light
+#        action-link: Action Link
     new_tab:
       type: boolean
       title: Open in New Tab
