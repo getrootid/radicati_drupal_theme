@@ -33,15 +33,12 @@
         tabLabel.forEach(function( label) {
           var tabPanel = label.getAttribute('data-tab');
           var button = document.createElement("button");
-          var navItem = document.createElement("li");
-          navItem.className = "tab-group__nav__item";
 
           button.className = "tab-group__nav__button";
           button.innerHTML = label.outerHTML;
           button.role = "tab";
           button.setAttribute('aria-controls', tabPanel);
-          navItem.appendChild(button);
-          navList.appendChild(navItem);
+          navList.appendChild(button);
           button.setAttribute('id', tabPanel + "--tab");
           label.remove();
         } );
