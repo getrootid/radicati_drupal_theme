@@ -1,4 +1,4 @@
-(function (Drupal, once) {
+(function (Drupal) {
   Drupal.behaviors.radBacktoTop = {
     attach: function attach(context) {
       var jumper = document.querySelector(".back-to-top__wrapper");
@@ -14,4 +14,4 @@
       document.addEventListener("scroll", positionCheck, { passive: true });
     }
   };
-})(Drupal, once);
+})(Drupal);

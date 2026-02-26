@@ -18,6 +18,6 @@ props:
       title: Menu Items
 libraryOverrides:
   dependencies:
-    - drupal/drupal
-    - drupal/once
+    - core/drupal
+    - core/once
     - superfish/superfish

@@ -21,3 +21,9 @@ slots:
     title: Body
     examples:
       - This is the content of the accordion item.
+libraryOverrides:
+  #  js:
+  #    off-canvas-menu.js: { type: file, preprocess: true, minified: false, attributes: { async: true } }
+  dependencies:
+    - core/drupal
+    - core/once

@@ -1,4 +1,4 @@
-(function(Drupal) {
+(function(Drupal, once) {
   Drupal.behaviors.offcanvasMenu = {
     attach: function (context, settings) {
       // Use context to filter the DOM to only the elements of interest,
@@ -31,4 +31,4 @@
       });
     }
   };
-})(Drupal);
+})(Drupal, once);

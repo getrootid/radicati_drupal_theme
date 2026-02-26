@@ -19,3 +19,7 @@ slots:
   accordion_items:
     title: Accordion Items
     description: Slot for multiple Accordion Item components.
+libraryOverrides:
+  dependencies:
+    - core/drupal
+    - core/once
