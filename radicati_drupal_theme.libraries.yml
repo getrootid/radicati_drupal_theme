@@ -36,6 +36,7 @@ component-base-styles:
       dist/css/component--direction.css: {  }
       dist/css/component--align.css: {  }
       dist/css/component--section.css: {  }
+      dist/css/component--content.css: {  }
       dist/css/component--field--title.css: {  }
       dist/css/component--field--sub-title.css: {  }
       dist/css/component--field--long-subtitle.css: {  }

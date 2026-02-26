@@ -1,5 +1,15 @@
 /*@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');*/
 
+@font-face {
+  font-family: "Inter-Sans-Fallback";
+  src: local('Helvetica Neue'), local('HelveticaNeue'), local('Helvetica'), local('Arial'), sans-serif;
+  /*ascent-override: 90.20%;*/
+  /*descent-override: 22.48%;*/
+  line-gap-override: 0.00%;
+  font-weight: 400;
+  size-adjust: 107%;
+}
+
 /*
  Google Fonts: Inter
 */

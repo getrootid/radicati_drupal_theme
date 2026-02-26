@@ -2,7 +2,7 @@ global-styles:
   version: 1.x
   css:
     theme:
-      dist/css/hip-styles.css: { preprocess: false }
+      dist/css/hip-styles.css: {  }
   dependencies:
     - radicati_drupal_theme/global-styles
 
@@ -10,18 +10,19 @@ component-base-styles:
   version: 1.x
   css:
     layout:
-      dist/css/component.css: { preprocess: false }
-      dist/css/component--gap.css: { preprocess: false }
-      dist/css/component--padding.css: { preprocess: false }
-      dist/css/component--direction.css: { preprocess: false }
-      dist/css/component--align.css: { preprocess: false }
-      dist/css/component--section.css: { preprocess: false }
-      dist/css/component--field--title.css: { preprocess: false }
-      dist/css/component--field--sub-title.css: { preprocess: false }
-      dist/css/component--field--long-subtitle.css: { preprocess: false }
-      dist/css/component--blurb.css: { preprocess: false }
-      dist/css/component--slot--actions.css: { preprocess: false }
-      dist/css/component--card.css: { preprocess: false }
-      dist/css/component--spacing.css: { preprocess: false }
-      dist/css/component--style--light.css: { preprocess: false }
-      dist/css/component--style--dark.css: { preprocess: false }
+      dist/css/component.css: {  }
+      dist/css/component--gap.css: {  }
+      dist/css/component--padding.css: {  }
+      dist/css/component--direction.css: {  }
+      dist/css/component--align.css: {  }
+      dist/css/component--section.css: {  }
+      dist/css/component--content.css: {  }
+      dist/css/component--field--title.css: {  }
+      dist/css/component--field--sub-title.css: {  }
+      dist/css/component--field--long-subtitle.css: {  }
+      dist/css/component--blurb.css: {  }
+      dist/css/component--slot--actions.css: {  }
+      dist/css/component--card.css: {  }
+      dist/css/component--spacing.css: {  }
+      dist/css/component--style--light.css: {  }
+      dist/css/component--style--dark.css: {  }

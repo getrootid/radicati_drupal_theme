@@ -11,12 +11,15 @@
   --color--red: #E4504E;
   --color--blue: #4A4280;
 
+  --component--inline--margin--normal: calc(15/16 * 1rem);
+  --component--inline--margin--large: calc(30/16 * 1rem);
+
   --component--padding--small: calc(30/16 * 1rem);
   --component--padding--normal: calc(66/16 * 1rem);
   --component--padding--large: calc(80/16 * 1rem);
   --component--padding--xlarge: calc(100/16 * 1rem);
 
-  --font-family--inter: 'Inter', sans-serif;
+  --font-family--inter: 'Inter', "Inter-Sans-Fallback", sans-serif;
   --font-family--domine: 'Domine', serif;
   --font-family--barlow: 'Barlow', sans-serif;
 }
