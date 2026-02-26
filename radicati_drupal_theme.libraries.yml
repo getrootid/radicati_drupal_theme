@@ -49,7 +49,10 @@ component-base-styles:
   dependencies:
     - radicati_drupal_theme/variables
 
-
+accessible-tabs:
+  version: 1.x
+  js:
+    assets/styles/10-atoms/975-accessible-tabs/_tabs.js: { minified: false }
 
 fitvids:
   version: 2.x
