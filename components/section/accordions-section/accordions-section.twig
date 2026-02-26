@@ -9,25 +9,27 @@
   {% set content_attributes = create_attribute() %}
 {% endif %}
 <section {{ content_attributes.addClass(classes) }}>
-  <div class="accordions-section__title component--title">
-    <h2>{{ title }}</h2>
-  </div>
-
-  {% if block('accordions') is defined and block('accordions')|trim is not empty %}
-    {% set accordions_r = block('accordions') %}
-
-    <div class="accordions-section__accordions-wrapper">
-      {% embed "radicati_drupal_theme:accordions" with {
-        only_one_open: true
-      } %}
-        {% block accordion_items %}
-          {{ accordions_r|raw }}
-        {% endblock %}
-      {% endembed %}
+  <div class="accordions-section__inner component--inner">
+    <div class="accordions-section__title component--title">
+      <h2>{{ title }}</h2>
     </div>
-  {% endif %}
 
-  <div class="component--read-more">
-    {% block readmore %}{% endblock %}
+    {% if block('accordions') is defined and block('accordions')|trim is not empty %}
+      {% set accordions_r = block('accordions') %}
+
+      <div class="accordions-section__accordions-wrapper">
+        {% embed "radicati_drupal_theme:accordions" with {
+          only_one_open: true
+        } %}
+          {% block accordion_items %}
+            {{ accordions_r|raw }}
+          {% endblock %}
+        {% endembed %}
+      </div>
+    {% endif %}
+
+    <div class="component--read-more">
+      {% block readmore %}{% endblock %}
+    </div>
   </div>
 </section>
