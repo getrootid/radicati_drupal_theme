@@ -14,6 +14,7 @@ a.button {
   display: inline-flex;
   padding: calc(10/16 * 1rem) calc(25/16 * 1rem);
   border-radius: calc(5/16 * 1rem);
+  line-height: 1.1;
 
   background: var(--button--background-color);
   color: var(--button--text-color) !important;
