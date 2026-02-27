@@ -1,8 +1,10 @@
 .setting--style--light {
+  --color--heading: var(--color--ada-green);
   --color--text: black;
+  --color--text--muted: #333333;
   --color--text--highlight: #ee2323;
   --color--link: #333333;
-  --color--background: white;
+  --color--background: var(--color--rootid-almost-white);
   --color--background--overlay: #e1e1e1;
   --color--background--overlay--opacity: 0.5;
 

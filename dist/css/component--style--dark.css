@@ -1,10 +1,11 @@
 .setting--style--dark {
   --color--text: white;
+  --color--text--muted: #cccccc;
   --color--text--highlight: #ee2323;
   --color--link: #cccccc;
   --color--background: #121212;
   --color--background--overlay: #000000;
-  --color--background--overlay--opacity: 0.5;
+  --color--background--overlay--opacity: 0.2;
 
   /**
   Cards displayed in a dark style need to have a light background and dark text
