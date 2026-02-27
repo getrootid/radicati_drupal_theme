@@ -6,17 +6,11 @@
   {% set content_attributes = create_attribute() %}
 {% endif %}
 <div {{ content_attributes.addClass(classes) }}>
+  {% if block('media') is defined and block('media')|trim is not empty %}
     <div class="collection-card__media slot slot--media">
       {% block media %}{% endblock %}
-{#      {% if image is iterable %}#}
-{#        {% include "canvas:image" with image|merge({#}
-{#          sizes: '100vw, (min-width: calc(768/16 * 1rem)) 33vw',#}
-{#          loding: 'lazy'#}
-{#        }) only %}#}
-{#      {% else %}#}
-{#        {{ image|render }}#}
-{#      {% endif %}#}
     </div>
+  {% endblock %}
 
   <div class="collection-card__body">
     <h3 class="collection-card__title">

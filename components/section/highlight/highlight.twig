@@ -11,18 +11,21 @@
 {% endif %}
 <section {{ content_attributes.addClass(classes) }}>
   <div class="highlight__inner">
-    <div class="highlight__media slot slot--media">
-      {% block media %}{% endblock %}
-  {#    {% if image is iterable %}#}
-  {#      {% include "canvas:image" with image|merge({#}
-  {#        sizes: '(min-width: calc(982/16 * 1rem)) 50vw, 100vw',#}
-  {#        loding: 'lazy',#}
-  {#        height: 600#}
-  {#      }) only %}#}
-  {#    {% else %}#}
-  {#      {{ image|render }}#}
-  {#    {% endif %}#}
-    </div>
+    {% if block('media') is defined and block('media')|trim is not empty %}
+
+      <div class="highlight__media slot slot--media">
+        {% block media %}{% endblock %}
+    {#    {% if image is iterable %}#}
+    {#      {% include "canvas:image" with image|merge({#}
+    {#        sizes: '(min-width: calc(982/16 * 1rem)) 50vw, 100vw',#}
+    {#        loding: 'lazy',#}
+    {#        height: 600#}
+    {#      }) only %}#}
+    {#    {% else %}#}
+    {#      {{ image|render }}#}
+    {#    {% endif %}#}
+      </div>
+    {% endblock %}
 
     <div class="highlight__content">
       <h2 class="highlight__title">{{ title }}</h2>
