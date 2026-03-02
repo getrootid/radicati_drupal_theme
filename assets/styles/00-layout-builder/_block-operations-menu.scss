@@ -63,7 +63,7 @@
           margin-bottom: 5px;
           color: black;
           opacity: 1 !important;
-          font-family: "Font Awesome 6 Pro";
+          font-family: var(--font--font-awesome);
         }
       }
     }
@@ -82,7 +82,7 @@
           font-size: rem(22px);
           color: red;
           margin-bottom: 5px;
-          font-family: "Font Awesome 6 Pro";
+          font-family: var(--font--font-awesome);
         }
       }
 
