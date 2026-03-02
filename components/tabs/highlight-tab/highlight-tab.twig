@@ -1,0 +1,26 @@
+{% set classes = [
+  'component',
+  'highlight-tab',
+  style ?? '',
+] %}
+{% if content_attributes is not defined %}
+  {% set content_attributes = create_attribute() %}
+{% endif %}
+<article {{ content_attributes.addClass(classes) }}>
+  <div class="highlight-tab__inner card">
+    {% if block('media') is defined and block('media')|trim is not empty %}
+      <div class="highlight-tab__media slot slot--media">
+        {% block media %}{% endblock %}
+      </div>
+    {% endif %}
+
+    <div class="highlight-tab__content">
+      <h2 class="highlight-tab__title">{{ title }}</h2>
+      <div class="highlight-tab__blurb">{{ blurb }}</div>
+
+      <div class="highlight-tab__actions slot slot--actions">
+        {% block actions %}{% endblock %}
+      </div>
+    </div>
+  </div>
+</article>
