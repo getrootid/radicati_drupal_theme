@@ -1,4 +1,5 @@
 .setting--style--dark {
+  --color--section--heading: var(--color--ada-green);
   --color--text: white;
   --color--text--muted: #cccccc;
   --color--text--highlight: #ee2323;
@@ -16,6 +17,11 @@
     --color--link: #0000EE;
     --color--background: lightgray;
     --color--background--overlay: #ffffff;
+
+    --color--card--text: black;
+    --color--card--background: var(--color--rootid-almost-white);
+    --color--card--link: var(--color--red);
+    --color--card--heading: var(--color--blue);
   }
 
   .card--no-background {
@@ -24,5 +30,10 @@
     --color--background: transparent;
     --color--background--overlay: transparent;
     --color--background--overlay--opacity: 0;
+
+    --color--card--text: white;
+    --color--card--background: trasnsparent;
+    --color--card--link: var(--color--red);
+    --color--card--heading: white;
   }
 }

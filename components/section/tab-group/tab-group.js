@@ -27,6 +27,12 @@
         // For each tab panel element, iterate through the tabs and move the
         // .tab__label div into a new button element that is placed in the .tab-panel__nav__list list.
 
+        if(tabs[i].getAttribute('data-tabs-initialized') === 'true') {
+          continue;
+        } else {
+          tabs[i].setAttribute('data-tabs-initialized', 'true');
+        }
+
         var tabLabel = tabs[i].querySelectorAll('.tab__label');
         var navList = tabs[i].querySelector('.tab-group__nav__list');
 

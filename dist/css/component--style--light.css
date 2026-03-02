@@ -1,4 +1,5 @@
 .setting--style--light {
+  --color--section--heading: var(--color--ada-green);
   --color--heading: var(--color--ada-green);
   --color--text: black;
   --color--text--muted: #333333;
@@ -14,6 +15,11 @@
     --color--background: darkgray;
     --color--background--overlay: #000000;
     --color--background--overlay--opacity: 0.5;
+
+    --color--card--text: black;
+    --color--card--background: transparent;
+    --color--card--link: #0000EE;
+    --color--card--heading: var(--color--red);
   }
 
   .card--no-background {

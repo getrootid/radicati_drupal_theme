@@ -5,8 +5,6 @@
 
 .stat-card {
   text-align: center;
-
-  background-color: var(--color--background);
   border-radius: calc(6/16 * 1rem);
   padding: calc(20/16 * 1rem);
   /*height: 100%;*/
@@ -25,7 +23,6 @@
 
 .stat-card__value {
   font-size: calc(42/16 * 1rem);
-  color: var(--color--text);
 }
 
 .stat-card__label {
@@ -33,10 +30,6 @@
 
   h2, h3, h4, p {
     margin: calc(10/16 * 1em) 0 calc(20/16 * 1rem) 0;
-    color: var(--color--text);
   }
 
-  a {
-    color: var(--color--link);
-  }
 }
