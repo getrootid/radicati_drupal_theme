@@ -17,10 +17,14 @@
 #drupal-off-canvas-wrapper {
   .ui-dialog-titlebar {
     font-size: rem(13px);
-    height: 45px !important;
+    height: 12px !important;
 
     --gin-bg-layer: var(--gin-bg-header);
     //--gin-color-title: var(--gin-color-info);
+  }
+
+  .ui-dialog-title {
+    margin: 0 !important;
   }
 
   &:not(.drupal-off-canvas-reset).ui-dialog-content, .ui-dialog-content {
