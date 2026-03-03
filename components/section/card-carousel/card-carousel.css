@@ -3,7 +3,7 @@
   margin: 0 auto;
 
   .splide__slide {
-    margin-right: calc(24/16 * 1rem);
+    /*margin-right: calc(24/16 * 1rem);*/
   }
 }
 
