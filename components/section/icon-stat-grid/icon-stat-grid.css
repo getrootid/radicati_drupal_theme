@@ -11,29 +11,71 @@
 .icon-stat-grid__cards {
   display: grid;
   gap: calc(22/16 * 1rem);
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
 }
 
 .icon-stat-grid.setting--items-per-row--three {
-  .icon-stat-grid__cards {
-    grid-template-columns: 1fr 1fr 1fr;
+
+  @media (min-width: calc(768 / 16 * 1rem)) {
+    .icon-stat-grid__cards {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
   }
 }
 
 .icon-stat-grid.setting--items-per-row--four {
-  .icon-stat-grid__cards {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  @media (min-width: calc(768/16 * 1rem)) {
+    .icon-stat-grid__cards {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (min-width: calc(992/16 * 1rem)) {
+    .icon-stat-grid__cards {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
   }
 }
 
 .icon-stat-grid.setting--items-per-row--five {
-  .icon-stat-grid__cards {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  @media (min-width: calc(768/16 * 1rem)) {
+    .icon-stat-grid__cards {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (min-width: calc(992/16 * 1rem)) {
+    .icon-stat-grid__cards {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  @media (min-width: calc(1200/16 * 1rem)) {
+    .icon-stat-grid__cards {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
   }
 }
 
 .icon-stat-grid.setting--items-per-row--six {
-  .icon-stat-grid__cards {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  @media (min-width: calc(768/16 * 1rem)) {
+    .icon-stat-grid__cards {
+      grid-template-columns: 1fr 1fr;
+    }
   }
+
+  @media (min-width: calc(992/16 * 1rem)) {
+    .icon-stat-grid__cards {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  @media (min-width: calc(1200/16 * 1rem)) {
+    .icon-stat-grid__cards {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+  }
+
+
 }

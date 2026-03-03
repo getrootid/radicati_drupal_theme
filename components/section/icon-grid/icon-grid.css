@@ -1,10 +1,6 @@
 .icon-grid__icons {
   display: grid;
   gap: calc(22/16 * 1rem);
-  grid-template-columns: 1fr 1fr;
-}
-
-.icon-grid__icons {
   grid-template-columns: 1fr;
 }
 
