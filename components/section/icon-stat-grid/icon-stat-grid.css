@@ -14,8 +14,15 @@
   grid-template-columns: 1fr;
 }
 
-.icon-stat-grid.setting--items-per-row--three {
+.icon-stat-grid.setting--items-per-row--two {
+  @media (min-width: calc(768 / 16 * 1rem)) {
+    .icon-stat-grid__cards {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
 
+.icon-stat-grid.setting--items-per-row--three {
   @media (min-width: calc(768 / 16 * 1rem)) {
     .icon-stat-grid__cards {
       grid-template-columns: 1fr 1fr 1fr;
