@@ -26,8 +26,10 @@
           slides_per_page_desktop: 3,
           slides_per_page_tablet: 2,
           slides_per_page_default: 2,
+          active_on_mobile: false,
           arrows: true,
-          pagination: true
+          pagination: true,
+          hide_until_active: true,
         } %}
           {% block slides %}
             {{ cards_r|raw }}

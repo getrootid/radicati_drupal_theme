@@ -1,5 +1,4 @@
 .carousel {
-
   .splide__arrow {
     position: absolute;
     top: 50%;
@@ -56,5 +55,23 @@
       }
     }
   }
+}
 
+.carousel--hide-until-active {
+  .carousel__slides {
+    display: none;
+  }
+
+  &.splide.is-active .carousel__slides {
+    display: block;
+  }
+}
+
+/* if the carousel isn't active on mobile, then don't hide */
+.carousel--inactive-on-mobile {
+  @media (max-width: calc(767/16 * 1rem)) {
+    .carousel__slides {
+      display: block;
+    }
+  }
 }

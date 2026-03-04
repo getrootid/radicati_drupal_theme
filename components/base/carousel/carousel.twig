@@ -3,9 +3,11 @@
   perPage: slides_per_page_default is defined ? slides_per_page_default : 1,
   breakpoints: {
     768: {
+      destroy: false,
       perPage: slides_per_page_tablet is defined ? slides_per_page_tablet : 1,
     },
     992: {
+      destroy: false,
       perPage: slides_per_page_desktop is defined ? slides_per_page_desktop : 2,
     }
   },
@@ -14,7 +16,19 @@
   arrows: arrows is defined ? arrows : true,
   pagination: pagination is defined ? pagination : true,
 } %}
-<div class="carousel"
+{% if active_on_mobile is defined and not active_on_mobile %}
+  {% set options = options|merge({'breakpoints': {
+    0: {
+      destroy: true
+    }
+  }}) %}
+{% endif %}
+{% set classes = [
+  'carousel',
+  hide_until_active is defined and hide_until_active ? 'carousel--hide-until-active' : '',
+  active_on_mobile is defined and not active_on_mobile ? 'carousel--inactive-on-mobile' : '',
+] %}
+<div class="{{ classes|join(' ') }}"
     aria-label="{{ title }}"
     data-splide='{{ options|json_encode|e('html_attr') }}'>
   <div class="carousel__slides">
