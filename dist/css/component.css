@@ -53,16 +53,19 @@
 .layout-width--full.layout-inner-width--narrow .component--inner {
   max-width: var(--rad--content-width-narrow);
   margin: 0 auto;
+  width: 100%;
 }
 
 .layout-width--full.layout-inner-width--normal .component--inner {
   max-width: var(--rad--content-width-normal);
   margin: 0 auto;
+  width: 100%;
 }
 
 .layout-width--full.layout-inner-width--wide .component--inner {
   max-width: var(--rad--content-width-wide);
   margin: 0 auto;
+  width: 100%;
 }
 
 /** Unset the default inner width styles on site sections. */

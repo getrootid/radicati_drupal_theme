@@ -5,6 +5,17 @@
   }
 }
 
+/** eliminate the popping of content when the tabs are loaded **/
+.tab-group__nav__list {
+  display: none;
+  min-height: calc(75/16 * 1rem);
+
+  @media (min-width: calc(768/16 * 1rem)) {
+    display: flex;
+  }
+}
+
+
 /* If the tabs position is top or bottom, have the display be vertical
   if it's left or right, have it be horizontal */
 
@@ -13,7 +24,6 @@
   flex-direction: column;
 
   .tab-group__nav__list {
-    display: flex;
     flex-direction: row;
 
     margin: 0;
@@ -32,9 +42,7 @@
   }
 
   .tab-group__nav__list {
-    display: flex;
     flex-direction: column;
-
 
     margin: 0;
     padding: 0;
@@ -79,13 +87,13 @@
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
   background-color: #333333;
-  --color--text: white;
+  --color--text: black;
 
   margin-right: calc(10/16 * 1rem);
 
   &[aria-selected="true"] {
     background-color: #cccccc;
-    --color--text: black;
+    --color--text: white;
 
   }
 }
@@ -107,10 +115,18 @@
 
 
 .tab__panel {
-  padding: 2rem;
-  background-color: #bababa;
+  margin-bottom: calc(20/16 * 1rem);
+
+  @media (min-width: calc(768/16 * 1rem)) {
+    margin-bottom: 0;
+  }
 }
 
 .tab__panel[hidden] {
-  display: none;
+  display: block;
+
+  @media (min-width: calc(768/16 * 1rem)) {
+    display: none;
+  }
+
 }
