@@ -106,10 +106,16 @@ footer.footer-large {
 footer.footer-large nav.block-menu {
   ul.menu--level-1 {
     display: flex;
-    flex-direction: row;
+    gap: calc(15/16 * 1rem);
+    flex-direction: column;
     list-style: none;
     margin: 0;
     padding: 0;
+
+    @media (min-width: calc(768/16 * 1rem)) {
+      gap: calc(40/16 * 1rem);
+      flex-direction: row;
+    }
 
     /*
     Top level menu items.
