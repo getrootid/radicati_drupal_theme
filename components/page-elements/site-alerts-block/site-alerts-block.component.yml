@@ -1,0 +1,10 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json'
+
+name: Site Alerts
+#replaces: radicati_drupal_theme:site-alerts-block
+status: stable
+group: Page Elements
+noUi: true
+slots:
+  alerts:
+    title: Alerts

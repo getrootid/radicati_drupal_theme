@@ -1,0 +1,11 @@
+{% set classes = [
+  'site-alerts-block',
+  'component',
+  'component--section'
+] %}
+<section class="{{ classes|join(' ') }}">
+  <div class="site-alerts-block__inner component--inner">
+    <h2 class="component--title visually-hidden">{{ "Alerts"|t }}</h2>
+    {% block alerts %}{% endblock %}
+  </div>
+</section>
