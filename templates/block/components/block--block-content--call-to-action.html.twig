@@ -4,10 +4,10 @@
   {% block outer_content %}
     {% embed "radicati_drupal_theme:call-to-action" with {
       content_attributes: content_attributes,
-      title: content.field_component_title.0,
-      blurb: content.field_component_blurb.0,
-      label: content.field_cta_label.0,
-      subtitle: content.field_component_sub_title.0,
+      title: content.field_component_title.0|render,
+      blurb: content.field_component_blurb.0|render,
+      label: content.field_cta_label.0|render,
+      subtitle: content.field_component_sub_title.0|render,
       alignment: content.field_setting_alignment|render,
       style: content.field_setting_style|render,
     } %}

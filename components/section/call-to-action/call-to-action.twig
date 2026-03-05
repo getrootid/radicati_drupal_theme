@@ -28,10 +28,16 @@
 
   <div class="call-to-action__inner component--inner">
     <div class="call-to-action__content">
-      <p class="call-to-action__label">{{ label }}</p>
+      {% if label %}
+        <p class="call-to-action__label">{{ label }}</p>
+      {% endif %}
       <h2 class="call-to-action__title">{{ title }}</h2>
-      <p class="call-to-action__sub-title">{{ subtitle }}</p>
-      <div class="call-to-action__blurb">{{ blurb }}</div>
+      {% if subtitle %}
+        <p class="call-to-action__sub-title">{{ subtitle }}</p>
+      {% endif %}
+      {% if blurb %}
+        <div class="call-to-action__blurb">{{ blurb }}</div>
+      {% endif %}
 
       <div class="call-to-action__actions slot slot--actions">
         {% block actions %}{% endblock %}
