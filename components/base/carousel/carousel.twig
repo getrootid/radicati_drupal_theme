@@ -1,28 +1,26 @@
 {# Create the splide settings object from the properties.  #}
+{% set breakpoints = {
+  768: {
+    destroy: false,
+    perPage: slides_per_page_tablet is defined ? slides_per_page_tablet : 1,
+  },
+  992: {
+    destroy: false,
+    perPage: slides_per_page_desktop is defined ? slides_per_page_desktop : 2,
+  }
+} %}
+{% if active_on_mobile is defined and not active_on_mobile %}
+  {% set breakpoints = {0: { destroy: true}} +  breakpoints %}
+{% endif %}
+
 {% set options = {
   perPage: slides_per_page_default is defined ? slides_per_page_default : 1,
-  breakpoints: {
-    768: {
-      destroy: false,
-      perPage: slides_per_page_tablet is defined ? slides_per_page_tablet : 1,
-    },
-    992: {
-      destroy: false,
-      perPage: slides_per_page_desktop is defined ? slides_per_page_desktop : 2,
-    }
-  },
+  breakpoints: breakpoints,
   gap: 22,
   mediaQuery: 'min',
   arrows: arrows is defined ? arrows : true,
   pagination: pagination is defined ? pagination : true,
 } %}
-{% if active_on_mobile is defined and not active_on_mobile %}
-  {% set options = options|merge({'breakpoints': {
-    0: {
-      destroy: true
-    }
-  }}) %}
-{% endif %}
 {% set classes = [
   'carousel',
   hide_until_active is defined and hide_until_active ? 'carousel--hide-until-active' : '',
