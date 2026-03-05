@@ -1,5 +1,9 @@
-{% embed "rootid_edu_theme:site-alerts-block" %}
-  {% block alerts %}
-    {{ content }}
-  {% endblock %}
-{% endembed %}
+{% extends "block.html.twig" %}
+
+{% block content %}
+  {% embed "rootid_edu_theme:site-alerts-block" %}
+    {% block alerts %}
+      {{ content }}
+    {% endblock %}
+  {% endembed %}
+{% endblock %}
