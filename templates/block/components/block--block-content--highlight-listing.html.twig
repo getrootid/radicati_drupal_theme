@@ -1,0 +1,22 @@
+{% extends "block--block-content.html.twig" %}
+
+{% block outer_content %}
+  {% embed "radicati_drupal_theme:highlight-listing" with {
+    content_attributes: content_attributes.addClass('highlight-listing'),
+    title: content.field_component_title.0,
+    url: content.field_component_url.0.url,
+  } %}
+    {% block media %}
+      {{ content.field_component_media }}
+    {% endblock %}
+
+    {% block listing %}
+      {{ content.field_listing_section_view }}
+    {% endblock %}
+
+    {% block actions %}
+      {{ content.field_component_read_more }}
+    {% endblock %}
+  {% endembed %}
+{% endblock %}
+

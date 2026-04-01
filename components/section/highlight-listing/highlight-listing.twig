@@ -1,0 +1,40 @@
+{% set classes = [
+  'component',
+  'component--section',
+  'highlight-listing',
+] %}
+
+{% if content_attributes is not defined %}
+  {% set content_attributes = create_attribute() %}
+{% endif %}
+<section {{ content_attributes.addClass(classes) }}>
+  <div class="highlight-listing__inner component--inner">
+    <article class="highlight-listing__highlight card">
+      {% if block('actions') is defined and block('actions')|trim is not empty %}
+        <div class="slot slot--media highlight-listing__highlight__media">
+          {% block media %}{% endblock %}
+        </div>
+      {% endif %}
+      <div class="highlight-listing__highlight__content">
+        {% if url %}
+          <a href="{{ url }}" class="card--whole-card-link">
+            <h2 class="highlight-listing__title component--title">{{ title }}</h2>
+          </a>
+        {% else %}
+          <h2 class="highlight-listing__title component--title">{{ title }}</h2>
+        {% endif %}
+      </div>
+
+    </article>
+
+    <div class="highlight-listing__listing">
+      {% block listing %}{% endblock %}
+    </div>
+
+    {% if block('actions') is defined and block('actions')|trim is not empty %}
+      <div class="highlight-listing__actions slot slot--actions">
+        {% block actions %}{% endblock %}
+      </div>
+    {% endif %}
+  </div>
+</section>

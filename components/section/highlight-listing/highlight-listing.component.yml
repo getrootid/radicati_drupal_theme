@@ -1,0 +1,28 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+name: Highlight Listing
+#replaces: radicati_drupal_theme:highlight-listing
+group: Page Sections
+
+props:
+  type: object
+  properties:
+    content_attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Attributes
+      description: Wrapper attributes.
+    title:
+      type: [ 'string', 'object', 'null' ]
+      title: Title
+      description: "Is both the title displayed and the page's main title for accessibility."
+      default: "Our Snazzy Page"
+    url:
+      type: [ 'string', 'object', 'null' ]
+      title: Url
+slots:
+  media:
+    title: Media
+  actions:
+    title: Actions
+  listing:
+    title: Listing

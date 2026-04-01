@@ -6,7 +6,7 @@
 button.accordion-item__button {
   position: relative;
   width: 100%;
-  padding: 1rem;
+  padding: 1rem 2rem 1rem 1rem;
   background-color: lightgray;
   color: #333333;
   border: 0;
