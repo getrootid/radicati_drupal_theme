@@ -75,7 +75,7 @@
       {% endfor %}
       {# Add an ellipsis if there are further next pages. #}
       {% if ellipses.next %}
-        <li class="pager__item pager__item--ellipsis" role="presentation">&hellip;</li>
+        <li class="pager__item pager__item--ellipsis"><span class="visually-hidden" aria-label="{{ "ellipses"|t }}">&hellip;</span></li>
       {% endif %}
       {# Print next item if we are not on the last page. #}
       {% if items.next %}
